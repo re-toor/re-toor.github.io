@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on Re-toor</title>
-    <link>http://www.example.com/vi/series/</link>
+    <link>https://re-toor.github.io/vi/series/</link>
     <description>Recent content in Series on Re-toor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://www.example.com/vi/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://re-toor.github.io/vi/series/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Guia do Thema</title>
-      <link>http://www.example.com/vi/series/guia-do-thema/</link>
+      <link>https://re-toor.github.io/vi/series/guia-do-thema/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/vi/series/guia-do-thema/</guid>
+      <guid>https://re-toor.github.io/vi/series/guia-do-thema/</guid>
       <description></description>
     </item>
     

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Re-toor</title>
-    <link>http://www.example.com/vi/</link>
+    <link>https://re-toor.github.io/vi/</link>
     <description>Recent content on Re-toor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 12 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://www.example.com/vi/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://re-toor.github.io/vi/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tryhackme - Simple CTF</title>
-      <link>http://www.example.com/vi/posts/thm-simple-ctf/</link>
+      <link>https://re-toor.github.io/vi/posts/thm-simple-ctf/</link>
       <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/vi/posts/thm-simple-ctf/</guid>
+      <guid>https://re-toor.github.io/vi/posts/thm-simple-ctf/</guid>
       <description>Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF của Tryhackme - Simple CTF. Géc gô!!!
 Vẫn như thường lệ, việc đầu tiên cần làm là quét cổng. Tôi sẽ dùng rustscan cho nhanh. Ưu điểm của thằng này là quét full port rất nhanh, ngoài ra nó cũng có thể tích hợp nmap.
 Có 3 port đang mở:
@@ -21,10 +21,10 @@ Có 3 port đang mở:
     
     <item>
       <title>Tryhackme - Pickle Rick</title>
-      <link>http://www.example.com/vi/posts/thm-pickle-rick/</link>
+      <link>https://re-toor.github.io/vi/posts/thm-pickle-rick/</link>
       <pubDate>Sat, 11 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/vi/posts/thm-pickle-rick/</guid>
+      <guid>https://re-toor.github.io/vi/posts/thm-pickle-rick/</guid>
       <description>&amp;ldquo;This Rick and Morty themed challenge requires you to exploit a webserver to find 3 ingredients that will help Rick make his potion to transform himself back into a human from a pickle.&amp;rdquo;
 Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF của Tryhackme - Pickle Rick. Géc gô!!!
 Vẫn như thông thường thôi, việc đầu tiên cần làm là quét cổng. Tôi sẽ dùng rustscan cho nhanh.
@@ -33,19 +33,19 @@ Chúng ta có 2 port đang mở:</description>
     
     <item>
       <title>Guia de Sintaxe Markdown</title>
-      <link>http://www.example.com/vi/posts/markdown-syntax/</link>
+      <link>https://re-toor.github.io/vi/posts/markdown-syntax/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/vi/posts/markdown-syntax/</guid>
+      <guid>https://re-toor.github.io/vi/posts/markdown-syntax/</guid>
       <description>&lt;p&gt;Esse artigo é um exemplo básico para mostrar a sintaxe Markdown que é usada nos arquivos de conteúdo do Hugo. Ele também mostrar como cada elemento básico HTML é estilizado com CSS com os temas do Hugo.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>About me</title>
-      <link>http://www.example.com/vi/about/</link>
+      <link>https://re-toor.github.io/vi/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/vi/about/</guid>
+      <guid>https://re-toor.github.io/vi/about/</guid>
       <description>Liên hệ với tôi:      Github
   Email
   Facebook

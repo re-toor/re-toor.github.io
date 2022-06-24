@@ -2,143 +2,143 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Re-toor</title>
-    <link>http://www.example.com/tags/</link>
+    <link>https://re-toor.github.io/tags/</link>
     <description>Recent content in Tags on Re-toor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 12 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://www.example.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://re-toor.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ftp</title>
-      <link>http://www.example.com/tags/ftp/</link>
+      <link>https://re-toor.github.io/tags/ftp/</link>
       <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/tags/ftp/</guid>
+      <guid>https://re-toor.github.io/tags/ftp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux</title>
-      <link>http://www.example.com/tags/linux/</link>
+      <link>https://re-toor.github.io/tags/linux/</link>
       <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/tags/linux/</guid>
+      <guid>https://re-toor.github.io/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>php</title>
-      <link>http://www.example.com/tags/php/</link>
+      <link>https://re-toor.github.io/tags/php/</link>
       <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/tags/php/</guid>
+      <guid>https://re-toor.github.io/tags/php/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ssh</title>
-      <link>http://www.example.com/tags/ssh/</link>
+      <link>https://re-toor.github.io/tags/ssh/</link>
       <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/tags/ssh/</guid>
+      <guid>https://re-toor.github.io/tags/ssh/</guid>
       <description></description>
     </item>
     
     <item>
       <title>web</title>
-      <link>http://www.example.com/tags/web/</link>
+      <link>https://re-toor.github.io/tags/web/</link>
       <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/tags/web/</guid>
+      <guid>https://re-toor.github.io/tags/web/</guid>
       <description></description>
     </item>
     
     <item>
       <title>html</title>
-      <link>http://www.example.com/tags/html/</link>
+      <link>https://re-toor.github.io/tags/html/</link>
       <pubDate>Sat, 11 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/tags/html/</guid>
+      <guid>https://re-toor.github.io/tags/html/</guid>
       <description></description>
     </item>
     
     <item>
       <title>css</title>
-      <link>http://www.example.com/tags/css/</link>
+      <link>https://re-toor.github.io/tags/css/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/tags/css/</guid>
+      <guid>https://re-toor.github.io/tags/css/</guid>
       <description></description>
     </item>
     
     <item>
       <title>markdown</title>
-      <link>http://www.example.com/tags/markdown/</link>
+      <link>https://re-toor.github.io/tags/markdown/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/tags/markdown/</guid>
+      <guid>https://re-toor.github.io/tags/markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>privacy</title>
-      <link>http://www.example.com/tags/privacy/</link>
+      <link>https://re-toor.github.io/tags/privacy/</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/tags/privacy/</guid>
+      <guid>https://re-toor.github.io/tags/privacy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>shortcodes</title>
-      <link>http://www.example.com/tags/shortcodes/</link>
+      <link>https://re-toor.github.io/tags/shortcodes/</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/tags/shortcodes/</guid>
+      <guid>https://re-toor.github.io/tags/shortcodes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>text</title>
-      <link>http://www.example.com/tags/text/</link>
+      <link>https://re-toor.github.io/tags/text/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/tags/text/</guid>
+      <guid>https://re-toor.github.io/tags/text/</guid>
       <description></description>
     </item>
     
     <item>
       <title>emoji</title>
-      <link>http://www.example.com/tags/emoji/</link>
+      <link>https://re-toor.github.io/tags/emoji/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/tags/emoji/</guid>
+      <guid>https://re-toor.github.io/tags/emoji/</guid>
       <description></description>
     </item>
     
     <item>
       <title>development</title>
-      <link>http://www.example.com/tags/development/</link>
+      <link>https://re-toor.github.io/tags/development/</link>
       <pubDate>Mon, 04 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/tags/development/</guid>
+      <guid>https://re-toor.github.io/tags/development/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hugo</title>
-      <link>http://www.example.com/tags/hugo/</link>
+      <link>https://re-toor.github.io/tags/hugo/</link>
       <pubDate>Mon, 04 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/tags/hugo/</guid>
+      <guid>https://re-toor.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>themes</title>
-      <link>http://www.example.com/tags/themes/</link>
+      <link>https://re-toor.github.io/tags/themes/</link>
       <pubDate>Mon, 04 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.example.com/tags/themes/</guid>
+      <guid>https://re-toor.github.io/tags/themes/</guid>
       <description></description>
     </item>
     

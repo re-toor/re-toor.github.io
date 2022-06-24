@@ -2,258 +2,258 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://www.example.com/vi/categories/</loc>
+    <loc>https://re-toor.github.io/vi/categories/</loc>
     <lastmod>2021-09-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/categories/"
+                href="https://re-toor.github.io/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://www.example.com/vi/categories/"
+                href="https://re-toor.github.io/vi/categories/"
                 />
   </url><url>
-    <loc>http://www.example.com/vi/categories/ctf/</loc>
+    <loc>https://re-toor.github.io/vi/categories/ctf/</loc>
     <lastmod>2021-09-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/categories/ctf/"
+                href="https://re-toor.github.io/categories/ctf/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://www.example.com/vi/categories/ctf/"
+                href="https://re-toor.github.io/vi/categories/ctf/"
                 />
   </url><url>
-    <loc>http://www.example.com/vi/tags/ftp/</loc>
+    <loc>https://re-toor.github.io/vi/tags/ftp/</loc>
     <lastmod>2021-09-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/tags/ftp/"
+                href="https://re-toor.github.io/tags/ftp/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://www.example.com/vi/tags/ftp/"
+                href="https://re-toor.github.io/vi/tags/ftp/"
                 />
   </url><url>
-    <loc>http://www.example.com/vi/tags/linux/</loc>
+    <loc>https://re-toor.github.io/vi/tags/linux/</loc>
     <lastmod>2021-09-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/tags/linux/"
+                href="https://re-toor.github.io/tags/linux/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://www.example.com/vi/tags/linux/"
+                href="https://re-toor.github.io/vi/tags/linux/"
                 />
   </url><url>
-    <loc>http://www.example.com/vi/tags/php/</loc>
+    <loc>https://re-toor.github.io/vi/tags/php/</loc>
     <lastmod>2021-09-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/tags/php/"
+                href="https://re-toor.github.io/tags/php/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://www.example.com/vi/tags/php/"
+                href="https://re-toor.github.io/vi/tags/php/"
                 />
   </url><url>
-    <loc>http://www.example.com/vi/posts/</loc>
+    <loc>https://re-toor.github.io/vi/posts/</loc>
     <lastmod>2021-09-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/posts/"
+                href="https://re-toor.github.io/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://www.example.com/vi/posts/"
+                href="https://re-toor.github.io/vi/posts/"
                 />
   </url><url>
-    <loc>http://www.example.com/vi/</loc>
+    <loc>https://re-toor.github.io/vi/</loc>
     <lastmod>2021-09-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/"
+                href="https://re-toor.github.io/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://www.example.com/vi/"
+                href="https://re-toor.github.io/vi/"
                 />
   </url><url>
-    <loc>http://www.example.com/vi/tags/ssh/</loc>
+    <loc>https://re-toor.github.io/vi/tags/ssh/</loc>
     <lastmod>2021-09-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/tags/ssh/"
+                href="https://re-toor.github.io/tags/ssh/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://www.example.com/vi/tags/ssh/"
+                href="https://re-toor.github.io/vi/tags/ssh/"
                 />
   </url><url>
-    <loc>http://www.example.com/vi/tags/</loc>
+    <loc>https://re-toor.github.io/vi/tags/</loc>
     <lastmod>2021-09-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/tags/"
+                href="https://re-toor.github.io/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://www.example.com/vi/tags/"
+                href="https://re-toor.github.io/vi/tags/"
                 />
   </url><url>
-    <loc>http://www.example.com/vi/posts/thm-simple-ctf/</loc>
+    <loc>https://re-toor.github.io/vi/posts/thm-simple-ctf/</loc>
     <lastmod>2021-09-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/posts/thm-simple-ctf/"
+                href="https://re-toor.github.io/posts/thm-simple-ctf/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://www.example.com/vi/posts/thm-simple-ctf/"
+                href="https://re-toor.github.io/vi/posts/thm-simple-ctf/"
                 />
   </url><url>
-    <loc>http://www.example.com/vi/tags/web/</loc>
+    <loc>https://re-toor.github.io/vi/tags/web/</loc>
     <lastmod>2021-09-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/tags/web/"
+                href="https://re-toor.github.io/tags/web/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://www.example.com/vi/tags/web/"
+                href="https://re-toor.github.io/vi/tags/web/"
                 />
   </url><url>
-    <loc>http://www.example.com/vi/tags/html/</loc>
+    <loc>https://re-toor.github.io/vi/tags/html/</loc>
     <lastmod>2021-09-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/tags/html/"
+                href="https://re-toor.github.io/tags/html/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://www.example.com/vi/tags/html/"
+                href="https://re-toor.github.io/vi/tags/html/"
                 />
   </url><url>
-    <loc>http://www.example.com/vi/posts/thm-pickle-rick/</loc>
+    <loc>https://re-toor.github.io/vi/posts/thm-pickle-rick/</loc>
     <lastmod>2021-09-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/posts/thm-pickle-rick/"
+                href="https://re-toor.github.io/posts/thm-pickle-rick/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://www.example.com/vi/posts/thm-pickle-rick/"
+                href="https://re-toor.github.io/vi/posts/thm-pickle-rick/"
                 />
   </url><url>
-    <loc>http://www.example.com/vi/tags/css/</loc>
+    <loc>https://re-toor.github.io/vi/tags/css/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/tags/css/"
+                href="https://re-toor.github.io/tags/css/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://www.example.com/vi/tags/css/"
+                href="https://re-toor.github.io/vi/tags/css/"
                 />
   </url><url>
-    <loc>http://www.example.com/vi/posts/markdown-syntax/</loc>
+    <loc>https://re-toor.github.io/vi/posts/markdown-syntax/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/posts/markdown-syntax/"
+                href="https://re-toor.github.io/posts/markdown-syntax/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://www.example.com/vi/posts/markdown-syntax/"
+                href="https://re-toor.github.io/vi/posts/markdown-syntax/"
                 />
   </url><url>
-    <loc>http://www.example.com/vi/series/guia-do-thema/</loc>
+    <loc>https://re-toor.github.io/vi/series/guia-do-thema/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://www.example.com/vi/tags/markdown/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://www.example.com/tags/markdown/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://www.example.com/vi/tags/markdown/"
-                />
-  </url><url>
-    <loc>http://www.example.com/vi/series/</loc>
+    <loc>https://re-toor.github.io/vi/tags/markdown/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/series/"
+                href="https://re-toor.github.io/tags/markdown/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://www.example.com/vi/series/"
+                href="https://re-toor.github.io/vi/tags/markdown/"
                 />
   </url><url>
-    <loc>http://www.example.com/vi/categories/sintaxe/</loc>
+    <loc>https://re-toor.github.io/vi/series/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://www.example.com/vi/categories/temas/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://www.example.com/vi/about/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/about/"
+                href="https://re-toor.github.io/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://www.example.com/vi/about/"
+                href="https://re-toor.github.io/vi/series/"
                 />
   </url><url>
-    <loc>http://www.example.com/vi/authors/</loc>
+    <loc>https://re-toor.github.io/vi/categories/sintaxe/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://re-toor.github.io/vi/categories/temas/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://re-toor.github.io/vi/about/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://www.example.com/authors/"
+                href="https://re-toor.github.io/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://www.example.com/vi/authors/"
+                href="https://re-toor.github.io/vi/about/"
+                />
+  </url><url>
+    <loc>https://re-toor.github.io/vi/authors/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://re-toor.github.io/authors/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://re-toor.github.io/vi/authors/"
                 />
   </url>
 </urlset>
