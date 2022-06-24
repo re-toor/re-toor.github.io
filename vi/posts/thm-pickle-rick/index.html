@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+
+    
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; child-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net/; form-action 'self'; frame-src 'self'; img-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://cdn.jsdelivr.net/; script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://cdn.jsdelivr.net/; prefetch-src 'self'; connect-src 'self' https://www.google-analytics.com;">
+
+    
+
+    <meta name="author" content="Hà Tuấn Anh">
+    <meta name="description" content="&ldquo;This Rick and Morty themed challenge requires you to exploit a webserver to find 3 ingredients that will help Rick make his potion to transform himself back into a human from a pickle.&rdquo;
+Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF của Tryhackme - Pickle Rick. Géc gô!!!
+Vẫn như thông thường thôi, việc đầu tiên cần làm là quét cổng. Tôi sẽ dùng rustscan cho nhanh.
+Chúng ta có 2 port đang mở:">
+    <meta name="keywords" content="blog,developer,pentest,hacking,infosec,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Tryhackme - Pickle Rick"/>
+<meta name="twitter:description" content="&ldquo;This Rick and Morty themed challenge requires you to exploit a webserver to find 3 ingredients that will help Rick make his potion to transform himself back into a human from a pickle.&rdquo;
+Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF của Tryhackme - Pickle Rick. Géc gô!!!
+Vẫn như thông thường thôi, việc đầu tiên cần làm là quét cổng. Tôi sẽ dùng rustscan cho nhanh.
+Chúng ta có 2 port đang mở:"/>
+
+    <meta property="og:title" content="Tryhackme - Pickle Rick" />
+<meta property="og:description" content="&ldquo;This Rick and Morty themed challenge requires you to exploit a webserver to find 3 ingredients that will help Rick make his potion to transform himself back into a human from a pickle.&rdquo;
+Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF của Tryhackme - Pickle Rick. Géc gô!!!
+Vẫn như thông thường thôi, việc đầu tiên cần làm là quét cổng. Tôi sẽ dùng rustscan cho nhanh.
+Chúng ta có 2 port đang mở:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.example.com/vi/posts/thm-pickle-rick/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-09-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-09-11T00:00:00+00:00" />
+
+
+
+    <title>
+  Tryhackme - Pickle Rick · Re-toor
+</title>
+
+    
+      <link rel="canonical" href="http://www.example.com/vi/posts/thm-pickle-rick/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.9e3b65824693354f5698fc705afd4c6c867a60cdff70132921677fe7e314cbb4.css" integrity="sha256-njtlgkaTNU9WmPxwWv1MbIZ6YM3/cBMpIWd/5&#43;MUy7Q=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.002ee2378e14c7a68f1f0a53d9694ed252090987c4e768023fac694a4fc5f793.css" integrity="sha256-AC7iN44Ux6aPHwpT2WlO0lIJCYfE52gCP6xpSk/F95M=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <meta name="generator" content="Hugo 0.93.1" />
+  </head>
+
+  
+  
+    
+  
+  <body class="preload-transitions colorscheme-auto">
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/vi">
+      Re-toor
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/vi/posts/">Posts</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/vi/categories/">Categories</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/vi/tags/">Tags</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/vi/about/">About</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="http://www.example.com/posts/thm-pickle-rick/">🇺🇸</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://www.example.com/vi/posts/thm-pickle-rick/">
+              Tryhackme - Pickle Rick
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2021-09-11T00:00:00Z">
+                11/09/2021
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              3-phút đọc
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/vi/categories/ctf/">CTF</a></div>
+
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/vi/tags/web/">web</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/vi/tags/linux/">linux</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/vi/tags/html/">html</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <p><em>&ldquo;This Rick and Morty themed challenge requires you to exploit a webserver to find 3 ingredients that will help Rick make his potion to transform himself back into a human from a pickle.&rdquo;</em></p>
+<p><img src="/images/THM-Pickle%20Rick/intro.png" alt="intro"></p>
+<p>Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF của Tryhackme - <strong>Pickle Rick</strong>. Géc gô!!!</p>
+<p>Vẫn như thông thường thôi, việc đầu tiên cần làm là quét cổng. Tôi sẽ dùng rustscan cho nhanh.</p>
+<p><img src="/images/THM-Pickle%20Rick/scan-port.png" alt="scan port with rustscan">
+Chúng ta có 2 port đang mở:</p>
+<ul>
+<li>port 22 cổng ssh trên ubuntu server</li>
+<li>port 80 với Apache httpd 2.4.18 trên ubuntu server</li>
+</ul>
+<p>Cùng check qua site với port 80 nào.</p>
+<p><img src="/images/THM-Pickle%20Rick/site.png" alt="global site"></p>
+<p>Hmmm&hellip; Cũng không có gì đặc biệt lắm. Thử check qua source xem sao.</p>
+<p>Tôi có thêm 1 link ảnh và 1 username.</p>
+<p><img src="/images/THM-Pickle%20Rick/username.png?style=centerme" alt="username"></p>
+<p>Thường thì để tránh mất thời gian tôi sẽ check thử qua các uri phổ biến: robots.txt, admin, login.php, upload.php, vân vân mây mây&hellip;</p>
+<p>Sau 1 lúc loay hoay thì tôi có thêm 2 uri là <em>robots.txt</em> và <em>login.php</em>.</p>
+<p>Và với <em>robots.txt</em> &ldquo;huyền thoại&rdquo;, tôi có thêm 1 dòng text &ldquo;<em>Wubbalubbadubdub</em>&rdquo; mà tôi cũng chưa hiểu lắm nhưng thôi cứ lưu lại, coi như hint.</p>
+<p><img src="/images/THM-Pickle%20Rick/login-site.png" alt="login-site">
+Với login site, tôi đã thử và SQLi và XSS nhưng không có gì đặc sắc lắm.</p>
+<p>Vậy là chúng ta có 1 site login, có 1 username và 1 đoạn text. Sao không thử lấy đoạn text kia làm password?
+Bingo!!!</p>
+<p><img src="/images/THM-Pickle%20Rick/dashboard.png" alt="dashboard"></p>
+<p>Ta có 1 dashboard đơn giản và chỉ dùng được mục commands, các mục khác cần phải đăng nhập bằng &ldquo;REAL rick&rdquo; chăng???</p>
+<p>Quay lại Command Panel, tôi nhận ra nó giống như 1 terminal kết nối server khi nhập &ldquo;whoami&rdquo; và nó trả lại &ldquo;www-data&rdquo;.</p>
+<p>Thử list file và tôi có 1 file txt khá đặc biệt.</p>
+<p><img src="/images/THM-Pickle%20Rick/dir%20file.png" alt="list file">
+Và vì nó nằm trong thư mục web nên thử mở nó như 1 uri, chúng ta có flag đầu tiên.</p>
+<p>&ldquo;ls&rdquo; 1 lúc thì tôi tìm được 2 user ở trong <em>/home</em> là <strong>rick</strong> và <strong>ubuntu</strong>, trong user <strong>rick</strong> chúng ta tìm được file chứa flag thứ 2.</p>
+<p>Tuy nhiên chúng ta không thể dùng &ldquo;cat&rdquo; để mở được file này. Sau một lúc google thì tôi tìm được &ldquo;less&rdquo; cũng tương tự như &ldquo;cat&rdquo;.</p>
+<p>Sử dụng less và chúng ta có flag thứ 2.</p>
+<p><img src="/images/THM-Pickle%20Rick/second%20flag.png" alt="second flag">
+Đến đây thì thực sự tôi chưa nghĩ ra được cách tìm flag thứ 3. Tôi đã thử tìm file bằng tên với hi vọng tên file flag thứ 3 cũng giống như flag 2: second ingredients nhưng không có gì.</p>
+<p>Thông thường, để có được flag cuối chúng ta phải leo thang đặc quyền lên root, và đa số flag cuối nằm trong thư mục root.</p>
+<p>Trong 1 phút ngáo ngơ tôi quên mất sudo -l =))))</p>
+<p><img src="/images/THM-Pickle%20Rick/sudo%20-l.png" alt="sudo -l">
+Điều này có nghĩa là chúng ta có toàn quyền root mà không cần password.</p>
+<p><img src="/images/THM-Pickle%20Rick/ls%20root.png" alt="third flag">
+Vậy là đã xong. Rooted.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    ©
+    
+    2022
+     Hà Tuấn Anh 
+    ·
+    
+    Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.8fb86376a16e684af472a329aef502dbebcfab65ce264e9750d144912947c602.js" integrity="sha256-j7hjdqFuaEr0cqMprvUC2&#43;vPq2XOJk6XUNFEkSlHxgI="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>

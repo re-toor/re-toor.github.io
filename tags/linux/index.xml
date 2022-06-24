@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on Re-toor</title>
+    <link>http://www.example.com/tags/linux/</link>
+    <description>Recent content in linux on Re-toor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 12 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://www.example.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tryhackme - Simple CTF</title>
+      <link>http://www.example.com/posts/thm-simple-ctf/</link>
+      <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.example.com/posts/thm-simple-ctf/</guid>
+      <description>Hello, this is Neo. Today we have a CTF of Tryhackme - Simple CTF. Let&amp;rsquo;s get root!!!
+Firstly, always, I will scan open port. I use rustscan because it faster than nmap, moreover it can integrates with nmap.
+There&amp;rsquo;re 3 openning port:
+ Port 21 with ftp-vsftpd 3.0.3 Port 80 with web service Apache 2.4.18 on Ubuntu server Port 2222 with ssh service  In port 21, we can login with Anonymous.</description>
+    </item>
+    
+    <item>
+      <title>Tryhackme - Pickle Rick</title>
+      <link>http://www.example.com/posts/thm-pickle-rick/</link>
+      <pubDate>Sat, 11 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.example.com/posts/thm-pickle-rick/</guid>
+      <description>&amp;ldquo;This Rick and Morty themed challenge requires you to exploit a webserver to find 3 ingredients that will help Rick make his potion to transform himself back into a human from a pickle.&amp;rdquo;
+Hello, this is Neo. Today we have a CTF of Tryhackme - Pickle Rick. Let&amp;rsquo;s get root!!!
+Firstly, always, I will scan open port. I use rustscan because it faster than nmap, moreover it can integrates with nmap.</description>
+    </item>
+    
+  </channel>
+</rss>

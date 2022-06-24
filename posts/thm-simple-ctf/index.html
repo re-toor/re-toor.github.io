@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+
+    
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; child-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net/; form-action 'self'; frame-src 'self'; img-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://cdn.jsdelivr.net/; script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://cdn.jsdelivr.net/; prefetch-src 'self'; connect-src 'self' https://www.google-analytics.com;">
+
+    
+
+    <meta name="author" content="Neo Alderson">
+    <meta name="description" content="Hello, this is Neo. Today we have a CTF of Tryhackme - Simple CTF. Let&rsquo;s get root!!!
+Firstly, always, I will scan open port. I use rustscan because it faster than nmap, moreover it can integrates with nmap.
+There&rsquo;re 3 openning port:
+ Port 21 with ftp-vsftpd 3.0.3 Port 80 with web service Apache 2.4.18 on Ubuntu server Port 2222 with ssh service  In port 21, we can login with Anonymous.">
+    <meta name="keywords" content="blog,developer,pentest,hacking,infosec,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Tryhackme - Simple CTF"/>
+<meta name="twitter:description" content="Hello, this is Neo. Today we have a CTF of Tryhackme - Simple CTF. Let&rsquo;s get root!!!
+Firstly, always, I will scan open port. I use rustscan because it faster than nmap, moreover it can integrates with nmap.
+There&rsquo;re 3 openning port:
+ Port 21 with ftp-vsftpd 3.0.3 Port 80 with web service Apache 2.4.18 on Ubuntu server Port 2222 with ssh service  In port 21, we can login with Anonymous."/>
+
+    <meta property="og:title" content="Tryhackme - Simple CTF" />
+<meta property="og:description" content="Hello, this is Neo. Today we have a CTF of Tryhackme - Simple CTF. Let&rsquo;s get root!!!
+Firstly, always, I will scan open port. I use rustscan because it faster than nmap, moreover it can integrates with nmap.
+There&rsquo;re 3 openning port:
+ Port 21 with ftp-vsftpd 3.0.3 Port 80 with web service Apache 2.4.18 on Ubuntu server Port 2222 with ssh service  In port 21, we can login with Anonymous." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.example.com/posts/thm-simple-ctf/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-09-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-09-12T00:00:00+00:00" />
+
+
+
+    <title>
+  Tryhackme - Simple CTF · Re-toor
+</title>
+
+    
+      <link rel="canonical" href="http://www.example.com/posts/thm-simple-ctf/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.9e3b65824693354f5698fc705afd4c6c867a60cdff70132921677fe7e314cbb4.css" integrity="sha256-njtlgkaTNU9WmPxwWv1MbIZ6YM3/cBMpIWd/5&#43;MUy7Q=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.002ee2378e14c7a68f1f0a53d9694ed252090987c4e768023fac694a4fc5f793.css" integrity="sha256-AC7iN44Ux6aPHwpT2WlO0lIJCYfE52gCP6xpSk/F95M=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <meta name="generator" content="Hugo 0.93.1" />
+  </head>
+
+  
+  
+    
+  
+  <body class="preload-transitions colorscheme-auto">
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Re-toor
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Posts</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/categories/">Categories</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/tags/">Tags</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="http://www.example.com/vi/posts/thm-simple-ctf/">🇻🇳</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://www.example.com/posts/thm-simple-ctf/">
+              Tryhackme - Simple CTF
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2021-09-12T00:00:00Z">
+                September 12, 2021
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              2-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/categories/ctf/">CTF</a></div>
+
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/ftp/">ftp</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/web/">web</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/linux/">linux</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/php/">php</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/ssh/">ssh</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <p><img src="/images/THM-Simple-CTF/intro.png" alt="intro"></p>
+<p>Hello, this is Neo. Today we have a CTF of Tryhackme - <strong>Simple CTF</strong>. Let&rsquo;s get root!!!</p>
+<p>Firstly, always, I will scan open port. I use rustscan because it faster than nmap, moreover it can integrates with nmap.</p>
+<p><img src="/images/THM-Simple-CTF/scan-port.png?style=centerme" alt="scan-port"></p>
+<p>There&rsquo;re 3 openning port:</p>
+<ul>
+<li>Port 21 with ftp-vsftpd 3.0.3</li>
+<li>Port 80 with web service Apache 2.4.18 on Ubuntu server</li>
+<li>Port 2222 with ssh service</li>
+</ul>
+<p>In port 21, we can login with Anonymous.</p>
+<p>However when I try list file, server timeout. I try to search on exploit-db to see if there is any exploit for this version 3.0.3, there is only 1 exploit about DoS.</p>
+<p>So let&rsquo;s check around the site.</p>
+<p><img src="/images/THM-Simple-CTF/port80.png?style=centerme" alt="port-80"></p>
+<p>I have a robots.txt and 2 disallow enties. But I can&rsquo;t access it.</p>
+<p>However, I found another name: Mike.</p>
+<p><img src="/images/THM-Simple-CTF/mike.png?style=centerme" alt="mike"></p>
+<p>Look around, I think the second entry in robots.txt is strange, <strong>google</strong> and found it.  Openemr is a health management software and version 5.0.1.3 has <strong>CVE-2018-15139</strong>. But it doesn&rsquo;t seem to work very well because there is no username and password.</p>
+<p>Oke. Back to dirsearch.</p>
+<p>I found a new path that leads to another cms - CMS Made Simple with version 2.2.8.</p>
+<p><img src="/images/THM-Simple-CTF/other-dir.png?style=centerme" alt="other-dir"></p>
+<p>I had a CVE-2019-9053, it used <strong>SQLi</strong> to login without password. Search in exploit-db, I had exploit 46635.</p>
+<p><img src="/images/THM-Simple-CTF/46635.png?style=centerme" alt="46635"></p>
+<p>I wonder why in 2019 that guy is still using python2??? Anyway, let&rsquo;s try to exploit.</p>
+<p><img src="/images/THM-Simple-CTF/exploit.png?style=centerme" alt="exploit"></p>
+<p>And I found the password: <strong>secret</strong>. Login and take a look around to see if there is any place to upload shells, but this site has a lot of stuff, I&rsquo;m a bit lazy.</p>
+<p><img src="/images/THM-Simple-CTF/site-cms.png?style=centerme" alt="site-cms"></p>
+<p>I forgot that I still had port 2222 ssh</p>
+<p><img src="/images/THM-Simple-CTF/ssh.png?style=centerme" alt="ssh"></p>
+<p>And I found the <strong>user.txt</strong></p>
+<p>In home directory, I have 2 users <strong>mitch</strong> and <strong>sunbath</strong>.</p>
+<p>Now try to find if there is something running with root.</p>
+<p><img src="/images/THM-Simple-CTF/sudo-l.png?style=centerme" alt="sudo-l"></p>
+<p>I have vim, a text editor. So go to <a href="https://gtfobins.github.io/">GTFOBins</a> and get root.</p>
+<p>We have 2 ways to get the root flag. Firstly, using vim to open the file, this way must determine the location of the file, and ordinarily, the root flag will be in the root directory. And the second way is to get root privileges.</p>
+<p>With the first way, I use sudo to edit file. Got it.</p>
+<p><img src="/images/THM-Simple-CTF/sudo-vim.png?style=centerme" alt="sudo-vim"></p>
+<p>In the second way, I use sudo in GTFOBins</p>
+<p><img src="/images/THM-Simple-CTF/rooted.png?style=centerme" alt="rooted"></p>
+<p>Đã xong. Rooted!!!</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    ©
+    
+    2022
+     Neo Alderson 
+    ·
+    
+    Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.8fb86376a16e684af472a329aef502dbebcfab65ce264e9750d144912947c602.js" integrity="sha256-j7hjdqFuaEr0cqMprvUC2&#43;vPq2XOJk6XUNFEkSlHxgI="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>
