@@ -207,7 +207,7 @@ Có 3 port đang mở:
         <p><img src="/images/THM-Bounty-Hacker/Intro.png" alt="Intro"></p>
 <p>Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF <a href="https://tryhackme.com/room/cowboyhacker">Tryhackme - Bounty Hacker</a>. Géc gô!!!</p>
 <p>Vẫn như thông thường thôi, việc đầu tiên cần làm là quét cổng. Tôi sẽ dùng rustscan cho nhanh và thêm vài tùy chọn của nmap.</p>
-<p><img src="/images/THM-Bounty-Hacker/scan-port.png" alt="scan-port"></p>
+<p><img src="/images/THM-Bounty-Hacker/scan-port.png?style=centerme" alt="scan-port"></p>
 <p>Có 3 port đang mở:</p>
 <ul>
 <li>Port 21 chạy ftp-vsftpd 3.0.3 có thể login với Anonymous</li>
@@ -215,24 +215,24 @@ Có 3 port đang mở:
 <li>Port 80 chạy web service với Apache 2.4.18 trên Ubuntu</li>
 </ul>
 <p>Tôi thử login vào ftp server với anonymous.</p>
-<p><img src="/images/THM-Bounty-Hacker/ftp-server.png" alt="ftp"></p>
+<p><img src="/images/THM-Bounty-Hacker/ftp-server.png?style=centerme" alt="ftp"></p>
 <p>Tôi có 2 file txt ở đây. Clone nó về máy để xem có thông tin gì không.</p>
 <p><code>get locks.txt /home/neo/locks.txt</code></p>
 <p><code>get task.txt /home/neo/task.txt</code></p>
-<p><img src="/images/THM-Bounty-Hacker/task-txt.png" alt="task-txt"></p>
+<p><img src="/images/THM-Bounty-Hacker/task-txt.png?style=centerme" alt="task-txt"></p>
 <p>Tôi có 1 cái tên ở đây: <strong>lin</strong></p>
 <p>Với file <strong>locks.txt</strong>, tôi có 1 list mà tôi nghĩ sẽ dùng để brute-force. Vậy là tôi có 1 cái tên và 1 wordlist. Thử vào web xem có nơi nào để login không.</p>
 <p>Tôi có 1 trang html về 1 cuộc hội thoại và vài cái tên. Không có gì đặc biệt hay kỳ lạ ở đây, mấy dir cơ bản cũng không có. Tôi dùng dirsearch để tìm dir nhưng cũng không thu được gì.</p>
 <p>Vậy thì login vào đâu? Chỉ còn ssh thôi. Hail Hydra!!!</p>
-<p><img src="/images/THM-Bounty-Hacker/hydra.png" alt="Hydra"></p>
+<p><img src="/images/THM-Bounty-Hacker/hydra.png?style=centerme" alt="Hydra"></p>
 <p>Login vào ssh và tôi có user flag nằm trong desktop.</p>
-<p><img src="/images/THM-Bounty-Hacker/user-flag.png" alt="user-flag"></p>
+<p><img src="/images/THM-Bounty-Hacker/user-flag.png?style=centerme" alt="user-flag"></p>
 <p>Thử tìm xem có thư mục nào chạy với quyền root không.</p>
-<p><img src="/images/THM-Bounty-Hacker/sudo-l.png" alt="sudo-l"></p>
+<p><img src="/images/THM-Bounty-Hacker/sudo-l.png?style=centerme" alt="sudo-l"></p>
 <p>Vào <a href="https://gtfobins.github.io/">GTFOBins</a> xem có tar trong đó không.</p>
-<p><img src="/images/THM-Bounty-Hacker/gtfobins.png" alt="gtfobins"></p>
+<p><img src="/images/THM-Bounty-Hacker/gtfobins.png?style=centerme" alt="gtfobins"></p>
 <p>Thử xem có get root được không nào.</p>
-<p><img src="/images/THM-Bounty-Hacker/rooted.png" alt="rooted"></p>
+<p><img src="/images/THM-Bounty-Hacker/rooted.png?style=centerme" alt="rooted"></p>
 <p>Done.</p>
 
       </div>

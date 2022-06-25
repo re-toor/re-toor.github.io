@@ -207,7 +207,7 @@ There&rsquo;re 3 openning port:
         <p><img src="/images/THM-Bounty-Hacker/Intro.png" alt="Intro"></p>
 <p>Hello, this is Neo. Today we have a CTF <a href="https://tryhackme.com/room/cowboyhacker">Tryhackme - Bounty Hacker</a>. Let&rsquo;s get root!!!</p>
 <p>Firstly, always, I will scan open port. I use rustscan because it faster than nmap, moreover it can integrates with nmap.</p>
-<p><img src="/images/THM-Bounty-Hacker/scan-port.png" alt="scan-port"></p>
+<p><img src="/images/THM-Bounty-Hacker/scan-port.png?style=centerme" alt="scan-port"></p>
 <p>There&rsquo;re 3 openning port:</p>
 <ul>
 <li>Port 21 is running ftp-vsftpd 3.0.3 and allow to login with anonymous</li>
@@ -215,24 +215,24 @@ There&rsquo;re 3 openning port:
 <li>Port 80 is running web service with Apache 2.4.18 on Ubuntu</li>
 </ul>
 <p>Try to login to ftp server with anonymous.</p>
-<p><img src="/images/THM-Bounty-Hacker/ftp-server.png" alt="ftp"></p>
+<p><img src="/images/THM-Bounty-Hacker/ftp-server.png?style=centerme" alt="ftp"></p>
 <p>I have 2 txt file in here. Clone it to local machine.</p>
 <p><code>get locks.txt /home/neo/locks.txt</code></p>
 <p><code>get task.txt /home/neo/task.txt</code></p>
-<p><img src="/images/THM-Bounty-Hacker/task-txt.png" alt="task-txt"></p>
+<p><img src="/images/THM-Bounty-Hacker/task-txt.png?style=centerme" alt="task-txt"></p>
 <p>And I have a name: <strong>lin</strong></p>
 <p>With <strong>locks.txt</strong>, I have a list that I think I will use for brute-force. So I have a name and a word list. Try going to the web to see if there&rsquo;s a place to login.</p>
 <p>I have an html page about a conversation and some names. There&rsquo;s nothing special or weird here, the basic dirs aren&rsquo;t there either. I used dirsearch to find the dir but nothing came up.</p>
 <p>So where can I login? SSH. So try to use hydra to burteforce the password with SSH service.</p>
-<p><img src="/images/THM-Bounty-Hacker/hydra.png" alt="Hydra"></p>
+<p><img src="/images/THM-Bounty-Hacker/hydra.png?style=centerme" alt="Hydra"></p>
 <p>Login with the password I found and the user flag in the desktop.</p>
-<p><img src="/images/THM-Bounty-Hacker/user-flag.png" alt="user-flag"></p>
+<p><img src="/images/THM-Bounty-Hacker/user-flag.png?style=centerme" alt="user-flag"></p>
 <p>Now try to find if there is something running with root.</p>
-<p><img src="/images/THM-Bounty-Hacker/sudo-l.png" alt="sudo-l"></p>
+<p><img src="/images/THM-Bounty-Hacker/sudo-l.png?style=centerme" alt="sudo-l"></p>
 <p>Go to <a href="https://gtfobins.github.io/">GTFOBins</a> and see how to get root with &ldquo;tar&rdquo;.</p>
-<p><img src="/images/THM-Bounty-Hacker/gtfobins.png" alt="gtfobins"></p>
+<p><img src="/images/THM-Bounty-Hacker/gtfobins.png?style=centerme" alt="gtfobins"></p>
 <p>Let&rsquo;s try to follow the command.</p>
-<p><img src="/images/THM-Bounty-Hacker/rooted.png" alt="rooted"></p>
+<p><img src="/images/THM-Bounty-Hacker/rooted.png?style=centerme" alt="rooted"></p>
 <p>Done. Rooted!</p>
 
       </div>
