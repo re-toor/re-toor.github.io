@@ -6,14 +6,26 @@
     <description>Recent content in Posts on Re-toor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 12 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://re-toor.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://re-toor.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tryhackme - Bounty Hacker</title>
+      <link>https://re-toor.github.io/posts/thm-bounty-hacker/</link>
+      <pubDate>Wed, 15 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://re-toor.github.io/posts/thm-bounty-hacker/</guid>
+      <description>Hello, this is Neo. Today we have a CTF Tryhackme - Bounty Hacker. Let&amp;rsquo;s get root!!!
+Firstly, always, I will scan open port. I use rustscan because it faster than nmap, moreover it can integrates with nmap.
+There&amp;rsquo;re 3 openning port:
+ Port 21 is running ftp-vsftpd 3.0.3 and allow to login with anonymous Port 22 is running ssh service on Ubuntu server Port 80 is running web service with Apache 2.</description>
+    </item>
+    
     <item>
       <title>Tryhackme - Simple CTF</title>
       <link>https://re-toor.github.io/posts/thm-simple-ctf/</link>
       <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://re-toor.github.io/posts/thm-simple-ctf/</guid>
-      <description>Hello, this is Neo. Today we have a CTF of Tryhackme - Simple CTF. Let&amp;rsquo;s get root!!!
+      <description>Hello, this is Neo. Today we have a CTF Tryhackme - Simple CTF. Let&amp;rsquo;s get root!!!
 Firstly, always, I will scan open port. I use rustscan because it faster than nmap, moreover it can integrates with nmap.
 There&amp;rsquo;re 3 openning port:
  Port 21 with ftp-vsftpd 3.0.3 Port 80 with web service Apache 2.4.18 on Ubuntu server Port 2222 with ssh service  In port 21, we can login with Anonymous.</description>
@@ -26,7 +38,7 @@ There&amp;rsquo;re 3 openning port:
       
       <guid>https://re-toor.github.io/posts/thm-pickle-rick/</guid>
       <description>&amp;ldquo;This Rick and Morty themed challenge requires you to exploit a webserver to find 3 ingredients that will help Rick make his potion to transform himself back into a human from a pickle.&amp;rdquo;
-Hello, this is Neo. Today we have a CTF of Tryhackme - Pickle Rick. Let&amp;rsquo;s get root!!!
+Hello, this is Neo. Today we have a CTF Tryhackme - Pickle Rick. Let&amp;rsquo;s get root!!!
 Firstly, always, I will scan open port. I use rustscan because it faster than nmap, moreover it can integrates with nmap.</description>
     </item>
     

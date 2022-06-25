@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+
+    
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; child-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net/; form-action 'self'; frame-src 'self'; img-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://cdn.jsdelivr.net/; script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://cdn.jsdelivr.net/; prefetch-src 'self'; connect-src 'self' https://www.google-analytics.com;">
+
+    
+
+    <meta name="author" content="Neo Alderson">
+    <meta name="description" content="Hello, this is Neo. Today we have a CTF Tryhackme - Bounty Hacker. Let&rsquo;s get root!!!
+Firstly, always, I will scan open port. I use rustscan because it faster than nmap, moreover it can integrates with nmap.
+There&rsquo;re 3 openning port:
+ Port 21 is running ftp-vsftpd 3.0.3 and allow to login with anonymous Port 22 is running ssh service on Ubuntu server Port 80 is running web service with Apache 2.">
+    <meta name="keywords" content="blog,developer,pentest,hacking,infosec,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Tryhackme - Bounty Hacker"/>
+<meta name="twitter:description" content="Hello, this is Neo. Today we have a CTF Tryhackme - Bounty Hacker. Let&rsquo;s get root!!!
+Firstly, always, I will scan open port. I use rustscan because it faster than nmap, moreover it can integrates with nmap.
+There&rsquo;re 3 openning port:
+ Port 21 is running ftp-vsftpd 3.0.3 and allow to login with anonymous Port 22 is running ssh service on Ubuntu server Port 80 is running web service with Apache 2."/>
+
+    <meta property="og:title" content="Tryhackme - Bounty Hacker" />
+<meta property="og:description" content="Hello, this is Neo. Today we have a CTF Tryhackme - Bounty Hacker. Let&rsquo;s get root!!!
+Firstly, always, I will scan open port. I use rustscan because it faster than nmap, moreover it can integrates with nmap.
+There&rsquo;re 3 openning port:
+ Port 21 is running ftp-vsftpd 3.0.3 and allow to login with anonymous Port 22 is running ssh service on Ubuntu server Port 80 is running web service with Apache 2." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://re-toor.github.io/posts/thm-bounty-hacker/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-09-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-09-15T00:00:00+00:00" />
+
+
+
+    <title>
+  Tryhackme - Bounty Hacker · Re-toor
+</title>
+
+    
+      <link rel="canonical" href="https://re-toor.github.io/posts/thm-bounty-hacker/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.9e3b65824693354f5698fc705afd4c6c867a60cdff70132921677fe7e314cbb4.css" integrity="sha256-njtlgkaTNU9WmPxwWv1MbIZ6YM3/cBMpIWd/5&#43;MUy7Q=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.002ee2378e14c7a68f1f0a53d9694ed252090987c4e768023fac694a4fc5f793.css" integrity="sha256-AC7iN44Ux6aPHwpT2WlO0lIJCYfE52gCP6xpSk/F95M=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <meta name="generator" content="Hugo 0.93.1" />
+  </head>
+
+  
+  
+    
+  
+  <body class="preload-transitions colorscheme-auto">
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Re-toor
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Posts</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/categories/">Categories</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/tags/">Tags</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="https://re-toor.github.io/vi/posts/thm-bounty-hacker/">🇻🇳</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://re-toor.github.io/posts/thm-bounty-hacker/">
+              Tryhackme - Bounty Hacker
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2021-09-15T00:00:00Z">
+                September 15, 2021
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              2-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/categories/ctf/">CTF</a></div>
+
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/ftp/">ftp</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/web/">web</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/linux/">linux</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/ssh/">ssh</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/hydra/">hydra</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/brute-force/">brute-force</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <p><img src="/images/THM-Bounty-Hacker/Intro.png" alt="Intro"></p>
+<p>Hello, this is Neo. Today we have a CTF <a href="https://tryhackme.com/room/cowboyhacker">Tryhackme - Bounty Hacker</a>. Let&rsquo;s get root!!!</p>
+<p>Firstly, always, I will scan open port. I use rustscan because it faster than nmap, moreover it can integrates with nmap.</p>
+<p><img src="/images/THM-Bounty-Hacker/scan-port.png" alt="scan-port"></p>
+<p>There&rsquo;re 3 openning port:</p>
+<ul>
+<li>Port 21 is running ftp-vsftpd 3.0.3 and allow to login with anonymous</li>
+<li>Port 22 is running ssh service on Ubuntu server</li>
+<li>Port 80 is running web service with Apache 2.4.18 on Ubuntu</li>
+</ul>
+<p>Try to login to ftp server with anonymous.</p>
+<p><img src="/images/THM-Bounty-Hacker/ftp-server.png" alt="ftp"></p>
+<p>I have 2 txt file in here. Clone it to local machine.</p>
+<p><code>get locks.txt /home/neo/locks.txt</code></p>
+<p><code>get task.txt /home/neo/task.txt</code></p>
+<p><img src="/images/THM-Bounty-Hacker/task-txt.png" alt="task-txt"></p>
+<p>And I have a name: <strong>lin</strong></p>
+<p>With <strong>locks.txt</strong>, I have a list that I think I will use for brute-force. So I have a name and a word list. Try going to the web to see if there&rsquo;s a place to login.</p>
+<p>I have an html page about a conversation and some names. There&rsquo;s nothing special or weird here, the basic dirs aren&rsquo;t there either. I used dirsearch to find the dir but nothing came up.</p>
+<p>So where can I login? SSH. So try to use hydra to burteforce the password with SSH service.</p>
+<p><img src="/images/THM-Bounty-Hacker/hydra.png" alt="Hydra"></p>
+<p>Login with the password I found and the user flag in the desktop.</p>
+<p><img src="/images/THM-Bounty-Hacker/user-flag.png" alt="user-flag"></p>
+<p>Now try to find if there is something running with root.</p>
+<p><img src="/images/THM-Bounty-Hacker/sudo-l.png" alt="sudo-l"></p>
+<p>Go to <a href="https://gtfobins.github.io/">GTFOBins</a> and see how to get root with &ldquo;tar&rdquo;.</p>
+<p><img src="/images/THM-Bounty-Hacker/gtfobins.png" alt="gtfobins"></p>
+<p>Let&rsquo;s try to follow the command.</p>
+<p><img src="/images/THM-Bounty-Hacker/rooted.png" alt="rooted"></p>
+<p>Done. Rooted!</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    ©
+    
+    2022
+     Neo Alderson 
+    ·
+    
+    Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.8fb86376a16e684af472a329aef502dbebcfab65ce264e9750d144912947c602.js" integrity="sha256-j7hjdqFuaEr0cqMprvUC2&#43;vPq2XOJk6XUNFEkSlHxgI="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>

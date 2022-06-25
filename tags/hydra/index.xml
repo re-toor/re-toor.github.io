@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hydra on Re-toor</title>
+    <link>https://re-toor.github.io/tags/hydra/</link>
+    <description>Recent content in hydra on Re-toor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 15 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://re-toor.github.io/tags/hydra/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tryhackme - Bounty Hacker</title>
+      <link>https://re-toor.github.io/posts/thm-bounty-hacker/</link>
+      <pubDate>Wed, 15 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://re-toor.github.io/posts/thm-bounty-hacker/</guid>
+      <description>Hello, this is Neo. Today we have a CTF Tryhackme - Bounty Hacker. Let&amp;rsquo;s get root!!!
+Firstly, always, I will scan open port. I use rustscan because it faster than nmap, moreover it can integrates with nmap.
+There&amp;rsquo;re 3 openning port:
+ Port 21 is running ftp-vsftpd 3.0.3 and allow to login with anonymous Port 22 is running ssh service on Ubuntu server Port 80 is running web service with Apache 2.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+
+    
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; child-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net/; form-action 'self'; frame-src 'self'; img-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://cdn.jsdelivr.net/; script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://cdn.jsdelivr.net/; prefetch-src 'self'; connect-src 'self' https://www.google-analytics.com;">
+
+    
+
+    <meta name="author" content="Hà Tuấn Anh">
+    <meta name="description" content="Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF Tryhackme - Bounty Hacker. Géc gô!!!
+Vẫn như thông thường thôi, việc đầu tiên cần làm là quét cổng. Tôi sẽ dùng rustscan cho nhanh và thêm vài tùy chọn của nmap.
+Có 3 port đang mở:
+ Port 21 chạy ftp-vsftpd 3.0.3 có thể login với Anonymous Port 22 chạy ssh service trên Ubuntu server Port 80 chạy web service với Apache 2.">
+    <meta name="keywords" content="blog,developer,pentest,hacking,infosec,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Tryhackme - Bounty Hacker"/>
+<meta name="twitter:description" content="Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF Tryhackme - Bounty Hacker. Géc gô!!!
+Vẫn như thông thường thôi, việc đầu tiên cần làm là quét cổng. Tôi sẽ dùng rustscan cho nhanh và thêm vài tùy chọn của nmap.
+Có 3 port đang mở:
+ Port 21 chạy ftp-vsftpd 3.0.3 có thể login với Anonymous Port 22 chạy ssh service trên Ubuntu server Port 80 chạy web service với Apache 2."/>
+
+    <meta property="og:title" content="Tryhackme - Bounty Hacker" />
+<meta property="og:description" content="Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF Tryhackme - Bounty Hacker. Géc gô!!!
+Vẫn như thông thường thôi, việc đầu tiên cần làm là quét cổng. Tôi sẽ dùng rustscan cho nhanh và thêm vài tùy chọn của nmap.
+Có 3 port đang mở:
+ Port 21 chạy ftp-vsftpd 3.0.3 có thể login với Anonymous Port 22 chạy ssh service trên Ubuntu server Port 80 chạy web service với Apache 2." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://re-toor.github.io/vi/posts/thm-bounty-hacker/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-09-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-09-15T00:00:00+00:00" />
+
+
+
+    <title>
+  Tryhackme - Bounty Hacker · Re-toor
+</title>
+
+    
+      <link rel="canonical" href="https://re-toor.github.io/vi/posts/thm-bounty-hacker/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.9e3b65824693354f5698fc705afd4c6c867a60cdff70132921677fe7e314cbb4.css" integrity="sha256-njtlgkaTNU9WmPxwWv1MbIZ6YM3/cBMpIWd/5&#43;MUy7Q=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.002ee2378e14c7a68f1f0a53d9694ed252090987c4e768023fac694a4fc5f793.css" integrity="sha256-AC7iN44Ux6aPHwpT2WlO0lIJCYfE52gCP6xpSk/F95M=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <meta name="generator" content="Hugo 0.93.1" />
+  </head>
+
+  
+  
+    
+  
+  <body class="preload-transitions colorscheme-auto">
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/vi">
+      Re-toor
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/vi/posts/">Posts</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/vi/categories/">Categories</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/vi/tags/">Tags</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/vi/about/">About</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="https://re-toor.github.io/posts/thm-bounty-hacker/">🇺🇸</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://re-toor.github.io/vi/posts/thm-bounty-hacker/">
+              Tryhackme - Bounty Hacker
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2021-09-15T00:00:00Z">
+                15/09/2021
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              2-phút đọc
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/vi/categories/ctf/">CTF</a></div>
+
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/vi/tags/ftp/">ftp</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/vi/tags/web/">web</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/vi/tags/linux/">linux</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/vi/tags/ssh/">ssh</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/vi/tags/hydra/">hydra</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/vi/tags/brute-force/">brute-force</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <p><img src="/images/THM-Bounty-Hacker/Intro.png" alt="Intro"></p>
+<p>Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF <a href="https://tryhackme.com/room/cowboyhacker">Tryhackme - Bounty Hacker</a>. Géc gô!!!</p>
+<p>Vẫn như thông thường thôi, việc đầu tiên cần làm là quét cổng. Tôi sẽ dùng rustscan cho nhanh và thêm vài tùy chọn của nmap.</p>
+<p><img src="/images/THM-Bounty-Hacker/scan-port.png" alt="scan-port"></p>
+<p>Có 3 port đang mở:</p>
+<ul>
+<li>Port 21 chạy ftp-vsftpd 3.0.3 có thể login với Anonymous</li>
+<li>Port 22 chạy ssh service trên Ubuntu server</li>
+<li>Port 80 chạy web service với Apache 2.4.18 trên Ubuntu</li>
+</ul>
+<p>Tôi thử login vào ftp server với anonymous.</p>
+<p><img src="/images/THM-Bounty-Hacker/ftp-server.png" alt="ftp"></p>
+<p>Tôi có 2 file txt ở đây. Clone nó về máy để xem có thông tin gì không.</p>
+<p><code>get locks.txt /home/neo/locks.txt</code></p>
+<p><code>get task.txt /home/neo/task.txt</code></p>
+<p><img src="/images/THM-Bounty-Hacker/task-txt.png" alt="task-txt"></p>
+<p>Tôi có 1 cái tên ở đây: <strong>lin</strong></p>
+<p>Với file <strong>locks.txt</strong>, tôi có 1 list mà tôi nghĩ sẽ dùng để brute-force. Vậy là tôi có 1 cái tên và 1 wordlist. Thử vào web xem có nơi nào để login không.</p>
+<p>Tôi có 1 trang html về 1 cuộc hội thoại và vài cái tên. Không có gì đặc biệt hay kỳ lạ ở đây, mấy dir cơ bản cũng không có. Tôi dùng dirsearch để tìm dir nhưng cũng không thu được gì.</p>
+<p>Vậy thì login vào đâu? Chỉ còn ssh thôi. Hail Hydra!!!</p>
+<p><img src="/images/THM-Bounty-Hacker/hydra.png" alt="Hydra"></p>
+<p>Login vào ssh và tôi có user flag nằm trong desktop.</p>
+<p><img src="/images/THM-Bounty-Hacker/user-flag.png" alt="user-flag"></p>
+<p>Thử tìm xem có thư mục nào chạy với quyền root không.</p>
+<p><img src="/images/THM-Bounty-Hacker/sudo-l.png" alt="sudo-l"></p>
+<p>Vào <a href="https://gtfobins.github.io/">GTFOBins</a> xem có tar trong đó không.</p>
+<p><img src="/images/THM-Bounty-Hacker/gtfobins.png" alt="gtfobins"></p>
+<p>Thử xem có get root được không nào.</p>
+<p><img src="/images/THM-Bounty-Hacker/rooted.png" alt="rooted"></p>
+<p>Done.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    ©
+    
+    2022
+     Hà Tuấn Anh 
+    ·
+    
+    Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.8fb86376a16e684af472a329aef502dbebcfab65ce264e9750d144912947c602.js" integrity="sha256-j7hjdqFuaEr0cqMprvUC2&#43;vPq2XOJk6XUNFEkSlHxgI="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>

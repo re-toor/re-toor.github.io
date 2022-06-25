@@ -13,7 +13,7 @@
       <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://re-toor.github.io/vi/posts/thm-simple-ctf/</guid>
-      <description>Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF của Tryhackme - Simple CTF. Géc gô!!!
+      <description>Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF Tryhackme - Simple CTF. Géc gô!!!
 Vẫn như thường lệ, việc đầu tiên cần làm là quét cổng. Tôi sẽ dùng rustscan cho nhanh. Ưu điểm của thằng này là quét full port rất nhanh, ngoài ra nó cũng có thể tích hợp nmap.
 Có 3 port đang mở:
  Port 21 chạy ftp-vsftpd 3.0.3 Port 80 chạy web service với Apache 2.</description>
