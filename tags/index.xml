@@ -6,7 +6,43 @@
     <description>Recent content in Tags on Re-toor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 15 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://re-toor.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://re-toor.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>exploit-db</title>
+      <link>https://re-toor.github.io/tags/exploit-db/</link>
+      <pubDate>Wed, 22 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://re-toor.github.io/tags/exploit-db/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://re-toor.github.io/tags/linux/</link>
+      <pubDate>Wed, 22 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://re-toor.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ssh</title>
+      <link>https://re-toor.github.io/tags/ssh/</link>
+      <pubDate>Wed, 22 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://re-toor.github.io/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>https://re-toor.github.io/tags/web/</link>
+      <pubDate>Wed, 22 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://re-toor.github.io/tags/web/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>brute-force</title>
       <link>https://re-toor.github.io/tags/brute-force/</link>
@@ -31,33 +67,6 @@
       <pubDate>Wed, 15 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://re-toor.github.io/tags/hydra/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>https://re-toor.github.io/tags/linux/</link>
-      <pubDate>Wed, 15 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://re-toor.github.io/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ssh</title>
-      <link>https://re-toor.github.io/tags/ssh/</link>
-      <pubDate>Wed, 15 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://re-toor.github.io/tags/ssh/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>web</title>
-      <link>https://re-toor.github.io/tags/web/</link>
-      <pubDate>Wed, 15 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://re-toor.github.io/tags/web/</guid>
       <description></description>
     </item>
     
@@ -130,33 +139,6 @@
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://re-toor.github.io/tags/emoji/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>development</title>
-      <link>https://re-toor.github.io/tags/development/</link>
-      <pubDate>Mon, 04 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://re-toor.github.io/tags/development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hugo</title>
-      <link>https://re-toor.github.io/tags/hugo/</link>
-      <pubDate>Mon, 04 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://re-toor.github.io/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>themes</title>
-      <link>https://re-toor.github.io/tags/themes/</link>
-      <pubDate>Mon, 04 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://re-toor.github.io/tags/themes/</guid>
       <description></description>
     </item>
     

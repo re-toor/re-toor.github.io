@@ -6,7 +6,19 @@
     <description>Recent content on Re-toor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 15 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://re-toor.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://re-toor.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tryhackme - LazyAdmin</title>
+      <link>https://re-toor.github.io/posts/thm-lazyadmin/</link>
+      <pubDate>Wed, 22 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://re-toor.github.io/posts/thm-lazyadmin/</guid>
+      <description>Hello, this is Neo. Today we have a CTF Tryhackme - LazyAdmin. Let&amp;rsquo;s go!!!
+Firstly, always, I will scan open port. I use Rustscan because it faster than nmap, moreover it can integrates with nmap.
+There&amp;rsquo;re 2 open port:
+ port 22 with ssh service on Ubuntu server port 80 with Apache httpd 2.4.18 on Ubuntu server  Just a Apache2 Default page. Check around the source code but nothing special.</description>
+    </item>
+    
     <item>
       <title>Tryhackme - Bounty Hacker</title>
       <link>https://re-toor.github.io/posts/thm-bounty-hacker/</link>
@@ -94,15 +106,6 @@ Firstly, always, I will scan open port. I use rustscan because it faster than nm
       
       <guid>https://re-toor.github.io/posts/emoji-support/</guid>
       <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>External Page: Hugo Coder Wiki</title>
-      <link>https://re-toor.github.io/posts/hugo-coder-wiki/</link>
-      <pubDate>Mon, 04 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://re-toor.github.io/posts/hugo-coder-wiki/</guid>
-      <description></description>
     </item>
     
     <item>
