@@ -6,7 +6,19 @@
     <description>Recent content in Posts on Re-toor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 22 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://re-toor.github.io/vi/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://re-toor.github.io/vi/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tryhackme - Ignite</title>
+      <link>https://re-toor.github.io/vi/posts/thm-ignite/</link>
+      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://re-toor.github.io/vi/posts/thm-ignite/</guid>
+      <description>Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF Tryhackme - Ignite. Géc gô!!!
+Vẫn như thông thường thôi, việc đầu tiên cần làm là quét cổng.
+Tôi chỉ có 1 port đang mở là port 80 chạy Apache httpd 2.4.18 trên Ubuntu server.
+Với http-header Fuel CMS, có nghĩa là site này dựng trên cms fuel phiên bản 1.4. Trong file robots.txt có 1 entry là /fuel. Path này sẽ điều hướng web đến trang login của fuel cms.</description>
+    </item>
+    
     <item>
       <title>Tryhackme - LazyAdmin</title>
       <link>https://re-toor.github.io/vi/posts/thm-lazyadmin/</link>

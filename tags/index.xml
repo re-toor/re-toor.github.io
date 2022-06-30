@@ -6,22 +6,40 @@
     <description>Recent content in Tags on Re-toor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 22 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://re-toor.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://re-toor.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>exploit-db</title>
       <link>https://re-toor.github.io/tags/exploit-db/</link>
-      <pubDate>Wed, 22 Sep 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://re-toor.github.io/tags/exploit-db/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>fuel-cms</title>
+      <link>https://re-toor.github.io/tags/fuel-cms/</link>
+      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://re-toor.github.io/tags/fuel-cms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>linux</title>
       <link>https://re-toor.github.io/tags/linux/</link>
-      <pubDate>Wed, 22 Sep 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://re-toor.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>https://re-toor.github.io/tags/web/</link>
+      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://re-toor.github.io/tags/web/</guid>
       <description></description>
     </item>
     
@@ -31,15 +49,6 @@
       <pubDate>Wed, 22 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://re-toor.github.io/tags/ssh/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>web</title>
-      <link>https://re-toor.github.io/tags/web/</link>
-      <pubDate>Wed, 22 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://re-toor.github.io/tags/web/</guid>
       <description></description>
     </item>
     

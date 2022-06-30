@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+
+    
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; child-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net/; form-action 'self'; frame-src 'self'; img-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://cdn.jsdelivr.net/; script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://cdn.jsdelivr.net/; prefetch-src 'self'; connect-src 'self' https://www.google-analytics.com;">
+
+    
+
+    <meta name="author" content="Ha Tuan Anh">
+    <meta name="description" content="Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF Tryhackme - Ignite. Géc gô!!!
+Vẫn như thông thường thôi, việc đầu tiên cần làm là quét cổng.
+Tôi chỉ có 1 port đang mở là port 80 chạy Apache httpd 2.4.18 trên Ubuntu server.
+Với http-header Fuel CMS, có nghĩa là site này dựng trên cms fuel phiên bản 1.4. Trong file robots.txt có 1 entry là /fuel. Path này sẽ điều hướng web đến trang login của fuel cms.">
+    <meta name="keywords" content="blog,developer,pentest,hacking,infosec,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Tryhackme - Ignite"/>
+<meta name="twitter:description" content="Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF Tryhackme - Ignite. Géc gô!!!
+Vẫn như thông thường thôi, việc đầu tiên cần làm là quét cổng.
+Tôi chỉ có 1 port đang mở là port 80 chạy Apache httpd 2.4.18 trên Ubuntu server.
+Với http-header Fuel CMS, có nghĩa là site này dựng trên cms fuel phiên bản 1.4. Trong file robots.txt có 1 entry là /fuel. Path này sẽ điều hướng web đến trang login của fuel cms."/>
+
+    <meta property="og:title" content="Tryhackme - Ignite" />
+<meta property="og:description" content="Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF Tryhackme - Ignite. Géc gô!!!
+Vẫn như thông thường thôi, việc đầu tiên cần làm là quét cổng.
+Tôi chỉ có 1 port đang mở là port 80 chạy Apache httpd 2.4.18 trên Ubuntu server.
+Với http-header Fuel CMS, có nghĩa là site này dựng trên cms fuel phiên bản 1.4. Trong file robots.txt có 1 entry là /fuel. Path này sẽ điều hướng web đến trang login của fuel cms." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://re-toor.github.io/vi/posts/thm-ignite/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-09-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-09-30T00:00:00+00:00" />
+
+
+
+    <title>
+  Tryhackme - Ignite · Re-toor
+</title>
+
+    
+      <link rel="canonical" href="https://re-toor.github.io/vi/posts/thm-ignite/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.f3b7c0d4e0381e6dc91f3e94d21e2c9547f4e3e463cb86179330160f4fe79604.css" integrity="sha256-87fA1OA4Hm3JHz6U0h4slUf04&#43;Rjy4YXkzAWD0/nlgQ=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.002ee2378e14c7a68f1f0a53d9694ed252090987c4e768023fac694a4fc5f793.css" integrity="sha256-AC7iN44Ux6aPHwpT2WlO0lIJCYfE52gCP6xpSk/F95M=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <meta name="generator" content="Hugo 0.93.1" />
+  </head>
+
+  
+  
+    
+  
+  <body class="preload-transitions colorscheme-auto">
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/vi">
+      Re-toor
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/vi/posts/">Posts</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/vi/categories/">Categories</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/vi/tags/">Tags</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/vi/about/">About</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="https://re-toor.github.io/posts/thm-ignite/">🇺🇸</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://re-toor.github.io/vi/posts/thm-ignite/">
+              Tryhackme - Ignite
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2021-09-30T00:00:00Z">
+                30/09/2021
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              2-phút đọc
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/vi/categories/ctf/">CTF</a></div>
+
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/vi/tags/web/">web</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/vi/tags/linux/">linux</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/vi/tags/exploit-db/">exploit-db</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/vi/tags/fuel-cms/">fuel-cms</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <p><img src="/images/THM-Ignite/intro.png" alt="intro"></p>
+<p>Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF <a href="https://tryhackme.com/room/ignite">Tryhackme - Ignite</a>. Géc gô!!!</p>
+<p>Vẫn như thông thường thôi, việc đầu tiên cần làm là quét cổng.</p>
+<p><img src="/images/THM-Ignite/scan-port.png?styel=centerme" alt="scan-port"></p>
+<p>Tôi chỉ có 1 port đang mở là port 80 chạy Apache httpd 2.4.18 trên Ubuntu server.</p>
+<p>Với http-header <em>Fuel CMS</em>, có nghĩa là site này dựng trên cms fuel phiên bản 1.4. Trong file robots.txt có 1 entry là <strong>/fuel</strong>. Path này sẽ điều hướng web đến trang login của fuel cms.</p>
+<p><img src="/images/THM-Ignite/login-site.png?styel=centerme" alt="login-site"></p>
+<p>Tôi thử login vào site bằng username và password mặc định: admin-admin.</p>
+<p><img src="/images/THM-Ignite/dashboard.png?styel=centerme" alt="dashboard"></p>
+<p>Site dashboard cũng không có gì đặc biệt lắm. Thực ra thì khi nhìn thấy fuel cms tôi đã nghĩ đến việc tìm <a href="https://exploit-db.com">exploit-db</a> hoặc searchsploit, nhưng vì được cho login từ đầu nên bây giờ tôi mới thử.</p>
+<p><img src="/images/THM-Ignite/searchsploit.png?styel=centerme" alt="searchsploit"></p>
+<p>Với 3 exploit RCE này, tôi chọn cái thứ 3 vì nó là python code và chạy trên php.</p>
+<p><img src="/images/THM-Ignite/50477.png?styel=centerme" alt="50477"></p>
+<p>Có shell rồi này. Tôi sẽ dùng python reverse shell để trỏ về máy local. Nhưng có vẻ là không được, kể cả các shell khác.</p>
+<p>À! Còn cách khác. Tôi sẽ upload file shell php từ máy local.</p>
+<p>Tạo http server từ máy local.</p>
+<p><img src="/images/THM-Ignite/http-server.png?styel=centerme" alt="http-server"></p>
+<p>Sau đó dùng wget để tải file từ máy local về remote server.</p>
+<p><img src="/images/THM-Ignite/get-shell.png?styel=centerme" alt="get-shell"></p>
+<p>Bật netcat và mở file trên browser. <code>http://MACHIEN-IP/shell.php</code></p>
+<p><img src="/images/THM-Ignite/shell.png?styel=centerme" alt="shell"></p>
+<p>Truy cập user www-data và tôi có user flag.</p>
+<p>Bây giờ đến bước leo thang đặc quyền. Tôi đã thử vài thứ đơn giản như sudo -l hay crontab đều không có kết quả gì. Vì vậy, tôi sẽ tạo http server bằng python và wget <a href="https://github.com/carlospolop/PEASS-ng">linPEAS</a>.</p>
+<p><img src="/images/THM-Ignite/linpeas.png?styel=centerme" alt="linpeas"></p>
+<p>Dạo quanh 1 đống vô cùng nhiều thứ này thì tôi tìm được vài thông tin trong databse fuel_schema.</p>
+<p>Nhập thử pass này với root, xong.</p>
+<p><img src="/images/THM-Ignite/rooted.png?styel=centerme" alt="rooted"></p>
+<p>Rooted!</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    ©
+    
+    2022
+     Ha Tuan Anh 
+    ·
+    
+    Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.8fb86376a16e684af472a329aef502dbebcfab65ce264e9750d144912947c602.js" integrity="sha256-j7hjdqFuaEr0cqMprvUC2&#43;vPq2XOJk6XUNFEkSlHxgI="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>
