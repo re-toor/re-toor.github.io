@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>wireshark on Re-toor</title>
+    <link>https://re-toor.github.io/vi/tags/wireshark/</link>
+    <description>Recent content in wireshark on Re-toor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://re-toor.github.io/vi/tags/wireshark/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tryhackme - Startup</title>
+      <link>https://re-toor.github.io/vi/posts/thm-startup/</link>
+      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://re-toor.github.io/vi/posts/thm-startup/</guid>
+      <description>)
+Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF Tryhackme - Startup. Géc gô!!!
+Vẫn như thông thường thôi, việc đầu tiên cần làm là quét cổng.
+Chúng ta có 3 port đang mở:
+ port 21 với ftp server và cho phép login bằng anonymous. port 22 chạy ssh trên ubuntu server port 80 với Apache httpd 2.4.18 trên ubuntu server  Với port 21, tôi có vài thứ hay ho ở đây.</description>
+    </item>
+    
+  </channel>
+</rss>

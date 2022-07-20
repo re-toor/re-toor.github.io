@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tryhackme on Re-toor</title>
+    <link>https://re-toor.github.io/vi/categories/tryhackme/</link>
+    <description>Recent content in Tryhackme on Re-toor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://re-toor.github.io/vi/categories/tryhackme/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tryhackme - Ignite</title>
+      <link>https://re-toor.github.io/vi/posts/thm-ignite/</link>
+      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://re-toor.github.io/vi/posts/thm-ignite/</guid>
+      <description>Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF Tryhackme - Ignite. Géc gô!!!
+Vẫn như thông thường thôi, việc đầu tiên cần làm là quét cổng.
+Tôi chỉ có 1 port đang mở là port 80 chạy Apache httpd 2.4.18 trên Ubuntu server.
+Với http-header Fuel CMS, có nghĩa là site này dựng trên cms fuel phiên bản 1.4. Trong file robots.txt có 1 entry là /fuel. Path này sẽ điều hướng web đến trang login của fuel cms.</description>
+    </item>
+    
+    <item>
+      <title>Tryhackme - Startup</title>
+      <link>https://re-toor.github.io/vi/posts/thm-startup/</link>
+      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://re-toor.github.io/vi/posts/thm-startup/</guid>
+      <description>)
+Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF Tryhackme - Startup. Géc gô!!!
+Vẫn như thông thường thôi, việc đầu tiên cần làm là quét cổng.
+Chúng ta có 3 port đang mở:
+ port 21 với ftp server và cho phép login bằng anonymous. port 22 chạy ssh trên ubuntu server port 80 với Apache httpd 2.4.18 trên ubuntu server  Với port 21, tôi có vài thứ hay ho ở đây.</description>
+    </item>
+    
+    <item>
+      <title>Tryhackme - Wgel CTF</title>
+      <link>https://re-toor.github.io/vi/posts/wgel-ctf/</link>
+      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://re-toor.github.io/vi/posts/wgel-ctf/</guid>
+      <description>Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF Tryhackme - Wgel CTF. Géc gô!!!
+Reconnaissance    Vẫn như thông thường thôi, việc đầu tiên cần làm là quét cổng.
+PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 2048 94:96:1b:66:80:1b:76:48:68:2d:14:b5:9a:01:aa:aa (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpgV7/18RfM9BJUBOcZI/eIARrxAgEeD062pw9L24Ulo5LbBeuFIv7hfRWE/kWUWdqHf082nfWKImTAHVMCeJudQbKtL1SBJYwdNo6QCQyHkHXslVb9CV1Ck3wgcje8zLbrml7OYpwBlumLVo2StfonQUKjfsKHhR+idd3/P5V3abActQLU8zB0a4m3TbsrZ9Hhs/QIjgsEdPsQEjCzvPHhTQCEywIpd/GGDXqfNPB0Yl/dQghTALyvf71EtmaX/fsPYTiCGDQAOYy3RvOitHQCf4XVvqEsgzLnUbqISGugF8ajO5iiY2GiZUUWVn4MVV1jVhfQ0kC3ybNrQvaVcXd | 256 18:f7:10:cc:5f:40:f6:cf:92:f8:69:16:e2:48:f4:38 (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDCxodQaK+2npyk3RZ1Z6S88i6lZp2kVWS6/f955mcgkYRrV1IMAVQ+jRd5sOKvoK8rflUPajKc9vY5Yhk2mPj8= | 256 b9:0b:97:2e:45:9b:f3:2a:4b:11:c7:83:10:33:e0:ce (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJhXt+ZEjzJRbb2rVnXOzdp5kDKb11LfddnkcyURkYke 80/tcp open http syn-ack Apache httpd 2.</description>
+    </item>
+    
+    <item>
+      <title>Tryhackme - LazyAdmin</title>
+      <link>https://re-toor.github.io/vi/posts/thm-lazyadmin/</link>
+      <pubDate>Wed, 22 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://re-toor.github.io/vi/posts/thm-lazyadmin/</guid>
+      <description>Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF Tryhackme - LazyAdmin. Géc gô!!!
+Vẫn như thông thường thôi, việc đầu tiên cần làm là quét cổng. Tôi sẽ dùng Rustscan cho nhanh và thêm vài tùy chọn của nmap.
+Chúng ta có 2 port đang mở:
+ port 22 chạy ssh trên ubuntu server port 80 với Apache httpd 2.4.18 trên ubuntu server  Với header này có vẻ như web chỉ là default page Apache.</description>
+    </item>
+    
+    <item>
+      <title>Tryhackme - Bounty Hacker</title>
+      <link>https://re-toor.github.io/vi/posts/thm-bounty-hacker/</link>
+      <pubDate>Wed, 15 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://re-toor.github.io/vi/posts/thm-bounty-hacker/</guid>
+      <description>Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF Tryhackme - Bounty Hacker. Géc gô!!!
+Vẫn như thông thường thôi, việc đầu tiên cần làm là quét cổng. Tôi sẽ dùng rustscan cho nhanh và thêm vài tùy chọn của nmap.
+Có 3 port đang mở:
+ Port 21 chạy ftp-vsftpd 3.0.3 có thể login với Anonymous Port 22 chạy ssh service trên Ubuntu server Port 80 chạy web service với Apache 2.</description>
+    </item>
+    
+    <item>
+      <title>Tryhackme - Simple CTF</title>
+      <link>https://re-toor.github.io/vi/posts/thm-simple-ctf/</link>
+      <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://re-toor.github.io/vi/posts/thm-simple-ctf/</guid>
+      <description>Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF Tryhackme - Simple CTF. Géc gô!!!
+Vẫn như thường lệ, việc đầu tiên cần làm là quét cổng. Tôi sẽ dùng rustscan cho nhanh. Ưu điểm của thằng này là quét full port rất nhanh, ngoài ra nó cũng có thể tích hợp nmap.
+Có 3 port đang mở:
+ Port 21 chạy ftp-vsftpd 3.0.3 Port 80 chạy web service với Apache 2.</description>
+    </item>
+    
+    <item>
+      <title>Tryhackme - Pickle Rick</title>
+      <link>https://re-toor.github.io/vi/posts/thm-pickle-rick/</link>
+      <pubDate>Sat, 11 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://re-toor.github.io/vi/posts/thm-pickle-rick/</guid>
+      <description>&amp;ldquo;This Rick and Morty themed challenge requires you to exploit a webserver to find 3 ingredients that will help Rick make his potion to transform himself back into a human from a pickle.&amp;rdquo;
+Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF Tryhackme - Pickle Rick. Géc gô!!!
+Vẫn như thông thường thôi, việc đầu tiên cần làm là quét cổng. Tôi sẽ dùng rustscan cho nhanh.
+Chúng ta có 2 port đang mở:</description>
+    </item>
+    
+  </channel>
+</rss>

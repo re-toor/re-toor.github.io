@@ -6,7 +6,31 @@
     <description>Recent content in ssh on Re-toor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 22 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://re-toor.github.io/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://re-toor.github.io/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tryhackme - Startup</title>
+      <link>https://re-toor.github.io/posts/thm-startup/</link>
+      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://re-toor.github.io/posts/thm-startup/</guid>
+      <description>)
+Hello, this is Neo. Today we have a CTF Tryhackme - Startup. Let&amp;rsquo;s go!!!
+Firstly, always, I will scan open port. I use rustscan because it faster than nmap, moreover it can integrates with nmap.
+I have 3 open port:
+ port 21 with ftp server and I can login by anonymous. port 22 are running ssh on ubuntu server port 80 with Apache httpd 2.4.18 on ubuntu server  In port 21, I have some insteresting here.</description>
+    </item>
+    
+    <item>
+      <title>Tryhackme - Wgel CTF</title>
+      <link>https://re-toor.github.io/posts/wgel-ctf/</link>
+      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://re-toor.github.io/posts/wgel-ctf/</guid>
+      <description>Hello, this is Neo. Today we have a CTF Tryhackme - Wgel CTF. Let&amp;rsquo;s go!!!
+Reconnaissance    Firstly, always, I will scan open port. I use rustscan because it faster than nmap, moreover it can integrates with nmap.
+PORT STATE SERVICE REASON VERSION 22/tcp open ssh syn-ack OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 (Ubuntu Linux; protocol 2.0) | ssh-hostkey: | 2048 94:96:1b:66:80:1b:76:48:68:2d:14:b5:9a:01:aa:aa (RSA) | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpgV7/18RfM9BJUBOcZI/eIARrxAgEeD062pw9L24Ulo5LbBeuFIv7hfRWE/kWUWdqHf082nfWKImTAHVMCeJudQbKtL1SBJYwdNo6QCQyHkHXslVb9CV1Ck3wgcje8zLbrml7OYpwBlumLVo2StfonQUKjfsKHhR+idd3/P5V3abActQLU8zB0a4m3TbsrZ9Hhs/QIjgsEdPsQEjCzvPHhTQCEywIpd/GGDXqfNPB0Yl/dQghTALyvf71EtmaX/fsPYTiCGDQAOYy3RvOitHQCf4XVvqEsgzLnUbqISGugF8ajO5iiY2GiZUUWVn4MVV1jVhfQ0kC3ybNrQvaVcXd | 256 18:f7:10:cc:5f:40:f6:cf:92:f8:69:16:e2:48:f4:38 (ECDSA) | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDCxodQaK+2npyk3RZ1Z6S88i6lZp2kVWS6/f955mcgkYRrV1IMAVQ+jRd5sOKvoK8rflUPajKc9vY5Yhk2mPj8= | 256 b9:0b:97:2e:45:9b:f3:2a:4b:11:c7:83:10:33:e0:ce (ED25519) |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJhXt+ZEjzJRbb2rVnXOzdp5kDKb11LfddnkcyURkYke 80/tcp open http syn-ack Apache httpd 2.</description>
+    </item>
+    
     <item>
       <title>Tryhackme - LazyAdmin</title>
       <link>https://re-toor.github.io/posts/thm-lazyadmin/</link>

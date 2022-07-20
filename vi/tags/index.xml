@@ -8,11 +8,29 @@
     <language>en</language>
     <lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://re-toor.github.io/vi/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>cronjob</title>
+      <link>https://re-toor.github.io/vi/tags/cronjob/</link>
+      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://re-toor.github.io/vi/tags/cronjob/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>exploit-db</title>
       <link>https://re-toor.github.io/vi/tags/exploit-db/</link>
       <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://re-toor.github.io/vi/tags/exploit-db/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ftp</title>
+      <link>https://re-toor.github.io/vi/tags/ftp/</link>
+      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://re-toor.github.io/vi/tags/ftp/</guid>
       <description></description>
     </item>
     
@@ -35,6 +53,15 @@
     </item>
     
     <item>
+      <title>ssh</title>
+      <link>https://re-toor.github.io/vi/tags/ssh/</link>
+      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://re-toor.github.io/vi/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>web</title>
       <link>https://re-toor.github.io/vi/tags/web/</link>
       <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
@@ -44,11 +71,20 @@
     </item>
     
     <item>
-      <title>ssh</title>
-      <link>https://re-toor.github.io/vi/tags/ssh/</link>
-      <pubDate>Wed, 22 Sep 2021 00:00:00 +0000</pubDate>
+      <title>wget</title>
+      <link>https://re-toor.github.io/vi/tags/wget/</link>
+      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://re-toor.github.io/vi/tags/ssh/</guid>
+      <guid>https://re-toor.github.io/vi/tags/wget/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wireshark</title>
+      <link>https://re-toor.github.io/vi/tags/wireshark/</link>
+      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://re-toor.github.io/vi/tags/wireshark/</guid>
       <description></description>
     </item>
     
@@ -58,15 +94,6 @@
       <pubDate>Wed, 15 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://re-toor.github.io/vi/tags/brute-force/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ftp</title>
-      <link>https://re-toor.github.io/vi/tags/ftp/</link>
-      <pubDate>Wed, 15 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://re-toor.github.io/vi/tags/ftp/</guid>
       <description></description>
     </item>
     

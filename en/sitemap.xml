@@ -15,6 +15,19 @@
                 href="https://re-toor.github.io/categories/"
                 />
   </url><url>
+    <loc>https://re-toor.github.io/tags/cronjob/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://re-toor.github.io/vi/tags/cronjob/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://re-toor.github.io/tags/cronjob/"
+                />
+  </url><url>
     <loc>https://re-toor.github.io/categories/ctf/</loc>
     <lastmod>2021-09-30T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -39,6 +52,19 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://re-toor.github.io/tags/exploit-db/"
+                />
+  </url><url>
+    <loc>https://re-toor.github.io/tags/ftp/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://re-toor.github.io/vi/tags/ftp/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://re-toor.github.io/tags/ftp/"
                 />
   </url><url>
     <loc>https://re-toor.github.io/tags/fuel-cms/</loc>
@@ -93,6 +119,19 @@
                 href="https://re-toor.github.io/"
                 />
   </url><url>
+    <loc>https://re-toor.github.io/tags/ssh/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://re-toor.github.io/vi/tags/ssh/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://re-toor.github.io/tags/ssh/"
+                />
+  </url><url>
     <loc>https://re-toor.github.io/tags/</loc>
     <lastmod>2021-09-30T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -104,6 +143,19 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://re-toor.github.io/tags/"
+                />
+  </url><url>
+    <loc>https://re-toor.github.io/categories/tryhackme/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://re-toor.github.io/vi/categories/tryhackme/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://re-toor.github.io/categories/tryhackme/"
                 />
   </url><url>
     <loc>https://re-toor.github.io/posts/thm-ignite/</loc>
@@ -119,6 +171,32 @@
                 href="https://re-toor.github.io/posts/thm-ignite/"
                 />
   </url><url>
+    <loc>https://re-toor.github.io/posts/thm-startup/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://re-toor.github.io/vi/posts/thm-startup/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://re-toor.github.io/posts/thm-startup/"
+                />
+  </url><url>
+    <loc>https://re-toor.github.io/posts/wgel-ctf/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://re-toor.github.io/vi/posts/wgel-ctf/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://re-toor.github.io/posts/wgel-ctf/"
+                />
+  </url><url>
     <loc>https://re-toor.github.io/tags/web/</loc>
     <lastmod>2021-09-30T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -132,17 +210,30 @@
                 href="https://re-toor.github.io/tags/web/"
                 />
   </url><url>
-    <loc>https://re-toor.github.io/tags/ssh/</loc>
-    <lastmod>2021-09-22T00:00:00+00:00</lastmod>
+    <loc>https://re-toor.github.io/tags/wget/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="https://re-toor.github.io/vi/tags/ssh/"
+                href="https://re-toor.github.io/vi/tags/wget/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://re-toor.github.io/tags/ssh/"
+                href="https://re-toor.github.io/tags/wget/"
+                />
+  </url><url>
+    <loc>https://re-toor.github.io/tags/wireshark/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://re-toor.github.io/vi/tags/wireshark/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://re-toor.github.io/tags/wireshark/"
                 />
   </url><url>
     <loc>https://re-toor.github.io/posts/thm-lazyadmin/</loc>
@@ -169,19 +260,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://re-toor.github.io/tags/brute-force/"
-                />
-  </url><url>
-    <loc>https://re-toor.github.io/tags/ftp/</loc>
-    <lastmod>2021-09-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="https://re-toor.github.io/vi/tags/ftp/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://re-toor.github.io/tags/ftp/"
                 />
   </url><url>
     <loc>https://re-toor.github.io/tags/hydra/</loc>
