@@ -72,6 +72,7 @@ work:
 #     highlights:
 education:
   - institution: "FPT University Ha Noi"
+    website: "https://hanoi.fpt.edu.vn/"
     area: "Information Assurance"
     studyType: "Bachelor"
     startDate: "2017-09-17"
