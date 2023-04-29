@@ -1,0 +1,176 @@
+basics:
+  name: "Ha Tuan Anh"
+  label: "Security Engineer"
+  picture: /assets/img/AVT.jpeg
+  email: "tuanha241999@gmail.com"
+  phone: "(+84) 326-982-485"
+  website: "https://re-toor.me/"
+  summary: >
+    Information security enthusiast and security engineer with about 2 years' experience in cybersecurity, has knowledge of web application, network security, network solutions (Firewall, IPS, WAF, ...), actively hone skills on the Hackthebox (HTB) and Tryhackme (THM) platforms
+  # location:
+  profiles:
+    - network: "Github"
+      username: "Neo Alderson"
+      url: "https://github.com/re-toor/"
+    - network: "LinkedIn"
+      username: "Ha Tuan Anh"
+      url: "https://www.linkedin.com/in/ha-tuan-anh/"
+work:
+  - company: "BAOVIET Bank"
+    position: "Security Engineer"
+    website: "https://baovietbank.vn"
+    startDate: "2021-07-19"
+    endDate: ""
+    summary: 
+    highlights:
+      - "Participate in building, configuring Nginx reverse proxy server."
+      - "Scripting Performance testing, Load Balancing and pentesting for SOTP, eKYC, Temenos T24-R21."
+      - "Operate the company's security systems such as: Firewall, IPS, Mail Gateway, etc."
+      - "Pentesting for company products such as: web, applications, etc."
+      - "Build the Security Information and Event Management (SIEM) system for Center of Information and Technology."
+  - company: "FPT Polytechnic Ha Noi"
+    position: "Visiting Lecturer"
+    website: "https://caodang.fpt.edu.vn/"
+    startDate: "2022-12-26"
+    endDate: ""
+    summary: 
+    highlights:
+      - "Responsibility for teaching courses on computer networks and information security."
+      - "Responsible for teaching course on UX/UI design." 
+  - company: "VCCorp Corporation"
+    position: "Intern"
+    website: "https://vccorp.vn/"
+    startDate: "2021-04-03"
+    endDate: "2021-06-24"
+    summary: 
+    highlights:
+      - "Researching and pentesting vulnerabilities: OSWAP Top Ten, Portswinger, etc."
+      - "Using common tools to pentest, forensics: Burp Suite, Splunk, etc." 
+  - company: "National Cyber Security Center of Vietnam"
+    position: "Intern"
+    website: "https://khonggianmang.vn/"
+    startDate: "2020-05-15"
+    endDate: "2020-08-30"
+    summary:
+    highlights:
+      - "System management, learn and exploit information security vulnerabilities."
+      - "Having the opportunity to study and learn about specialized fields: Pentesting, Forensic, Threat Hunting, etc."
+# volunteer:
+#   - organization: 
+#     position: 
+#     website: 
+#     startDate: 
+#     endDate: 
+#     summary:
+#     highlights:
+#   - organization: 
+#     position:
+#     website: 
+#     startDate: 
+#     endDate:
+#     summary: 
+#     highlights:
+education:
+  - institution: "FPT University Ha Noi"
+    area: "Information Assurance"
+    studyType: "Bachelor"
+    startDate: "2017-09-17"
+    endDate: "2021-07-21"
+    gpa: "6.8"
+    courses:
+      - "Ethical Hacking and Offensive Security"
+      - "Web Security"
+      - "Network Forensics"
+      - "Incident Response"
+      - "Malware Analysis and Reverse Engineering"
+      - "Python Programming"
+      - "And More"
+  # - certificate: 
+# projects:
+#   - title: 
+#     startDate: 
+#     endDate: 
+#     summary: 
+#     url:
+#     highlights:
+#   - title: 
+#     startDate: 
+#     endDate: 
+#     summary: 
+#     url:
+#     highlights:
+awards:
+  - title: "Certified Ethical Hacker v12"
+    awarder: "EC-Council"
+    date: "2022-12-15"
+    summary: "The Certified Ethical Hacker Credential is the most trusted certification across the globe, and is the baseline measurement of ones grasp on the concepts in ethical hacking and security testing."
+    highlights:
+# publications:
+#   - name: 
+#     publisher: 
+#     releaseDate: 
+#     website: 
+#     summary: 
+skills:
+  - name: "Kali Linux"
+    level: "2/3"
+    keywords:
+      - "Pentest"
+      - "Bug Bounty"
+      - "Hacking"
+  - name: "SOC"
+    level: "Intermediate"
+    keywords:
+      - "SIEM"
+      - "Wazuh"
+      - "Grafana"
+  - name: "Network Security"
+    level: "Intermediate"
+    keywords:
+      - "Firewall"
+      - "IPS"
+      - "WAF"
+      - "Reverse Proxy"
+      - "Gateway"
+  - name: "Programming Language"
+    level: "Intermediate"
+    keywords:
+      - "Python"
+      - "Bash"
+      - "Powershell"
+  - name: "Performance Testing"
+    level: "Junior"
+    keywords:
+      - "Jmeter"
+      - "Selenium"
+languages:
+  - language: "Vietnamese"
+    fluency: "Native speaker"
+  - language: "English"
+    fluency: "3/5"
+interests:
+  - name: "Activity"
+    keywords:
+      - "Running"
+      - "Workout"
+      - "Cycling"
+  - name: "Movies"
+    keywords:
+      - "Action"
+      - "Horror"
+      - "Criminal Psychology"
+  - name: "Listening"
+    keywords:
+      - "Music"
+      - "Podcast"
+      - "Audio Book"
+  - name: "Gaming"
+    keywords:
+      - "Board Game"
+      - "League Of Legends"
+      - "CSGO"
+# references:
+#   - name: 
+#     reference: >
+
+# <https://jsonresume.org/>
