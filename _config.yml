@@ -39,14 +39,14 @@ keywords:              ["Information Security", "RedTeam", "BlueTeam", "SOC"]
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
 # It also used by the `jekyll-seo-tag` plugin.
-logo:                  /assets/img/IMG_7741.JPG
+logo:                  /assets/img/avt1.png
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
   # Used by `jekyll-feed`:
   name:                Ha Tuan Anh
   email:               tuanha241999@gmail.com
-  picture:             /assets/img/IMG_7741.JPG
+  picture:             /assets/img/avt1.png
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
