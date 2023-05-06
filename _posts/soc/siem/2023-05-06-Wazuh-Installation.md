@@ -376,7 +376,7 @@ bash wazuh-passwords-tool.sh -u admin -p <mật khẩu>
 
 > _**Lưu ý: Nếu hệ thống có proxy (internet gateway) thì phải đặt proxy trước khi cài đặt**_
 > 
-> Set proxy cho apt để tải các package trên trang chủ Ubuntu
+> - Set proxy cho apt để tải các package trên trang chủ Ubuntu
 > 	
 > `nano /etc/apt/apt.conf`
 > 		
@@ -386,7 +386,7 @@ bash wazuh-passwords-tool.sh -u admin -p <mật khẩu>
 > 		
 > Lưu file và login lại vào account
 > 	
-> Set proxy cho server
+> - Set proxy cho server
 > 	
 > `nano /etc/environment`
 > 		
