@@ -14,7 +14,7 @@ categories: soc
 
 Do đặc thù công việc nên từ một người làm Pentest tôi phải chuyển sang làm SOC và đảm nhiệm việc xây dựng hệ thống SIEM. Mặc dù thời điểm hiện tại có rất nhiều sản phẩm thương mại đã hoàn thiện, chỉ chờ doanh nghiệp mua về và vận hành thôi. Tuy nhiên chi phí cho các sản phẩm này là một trở ngại đối với các doanh nghiệp vừa và nhỏ (nó đắt :laughing:). 
 
-Vậy nên vừa để có thêm kiến thức và để tiết kiệm chi phí, tôi sẽ tự xây dựng hệ thống SIEM dựa trên open source. Một trong những open source mạnh mẽ nhất (hoặc là do tôi nghĩ thế) là [WAZUH]([Getting started with Wazuh · Wazuh documentation](https://documentation.wazuh.com/current/getting-started/index.html)). 
+Vậy nên vừa để có thêm kiến thức và để tiết kiệm chi phí, tôi sẽ tự xây dựng hệ thống SIEM dựa trên open source. Một trong những open source mạnh mẽ nhất (hoặc là do tôi nghĩ thế) là [WAZUH](https://documentation.wazuh.com/current/getting-started/index.html)
 
 *Wazuh là một nền tảng bảo mật mã nguồn mở và miễn phí, hợp nhất các khả năng của XDR và ​​SIEM, không chỉ cho phép các công ty phát hiện các mối đe dọa tinh vi mà còn có thể giúp ngăn ngừa vi phạm và rò rỉ dữ liệu xảy ra.*
 
@@ -24,7 +24,7 @@ Hiện tại thì tôi đang triển khai nó trên môi trường thực tế, 
 
 ![kiến trúc](/assets/img/2023-05-06-Wazuh-Installation/2.png)
 
-Đọc thêm về cấu trúc tại [đây]([Architecture - Getting started with Wazuh · Wazuh documentation](https://documentation.wazuh.com/current/getting-started/architecture.html)) hoặc là [đây]([ghichep-SOC/ghichep-overview-wazuh.md at master · hocchudong/ghichep-SOC · GitHub](https://github.com/hocchudong/ghichep-SOC/blob/master/ghichep-wazuh/ghichep-overview-wazuh.md))
+Đọc thêm về cấu trúc tại [đây](https://documentation.wazuh.com/current/getting-started/architecture.html) hoặc là [đây](https://github.com/hocchudong/ghichep-SOC/blob/master/ghichep-wazuh/ghichep-overview-wazuh.md)
 
 *Hiện tại thì WAZUH đang ở phiên bản 4.4 vậy nên tất cả cài đặt và cấu hình trong bài này cũng sẽ ở phiên bản 4.4, trong trường hợp có các cập nhật mới, chỉ cần thay đổi tên phiên bản (nếu) xuất hiện trong các link cài đặt. *
 
