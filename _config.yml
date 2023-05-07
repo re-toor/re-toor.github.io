@@ -77,7 +77,7 @@ excerpt_separator:     <!--more-->
 # ---------------------------------------------------------------------------------------
 
 # theme: jekyll-theme-hydejack
-remote_theme: hydecorp/hydejack@v9.1.6
+# remote_theme: hydecorp/hydejack@v9.1.6
 
 
 # Customization
@@ -101,7 +101,9 @@ google_fonts:          Roboto+Slab:700|Noto+Sans:400,400i,700,700i
 
 # The text font. Expects a string that is a valid CSS font-family value.
 # To change font-weight, see _sass/variables.scss
+#font:                  Inconsolata, monospace; #Roboto, Helvetica, Arial, sans-serif
 font:                  Noto Sans, Helvetica, Arial, sans-serif
+#font:                   JetBrains Mono, monospace;
 
 # The font used for headings. Expects a string that is a valid CSS font-family value.
 # To change font-weight, see _sass/variables.scss
@@ -128,11 +130,11 @@ defaults:
       sitemap:         false
 
   # Don't include licenses in sitemap (feel free to delete)
-  - scope:
-      path:            licenses/**
-    values:
-      layout:          plain
-      sitemap:         false
+  # - scope:
+  #     path:            licenses/
+  #   values:
+  #     layout:          plain
+  #     sitemap:         false
 
   # You can use the following to enable comments on all posts.
   # - scope:

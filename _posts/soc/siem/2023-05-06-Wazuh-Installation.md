@@ -26,7 +26,7 @@ Hiện tại thì tôi đang triển khai nó trên môi trường thực tế, 
 
 Đọc thêm về cấu trúc tại [đây](https://documentation.wazuh.com/current/getting-started/architecture.html) hoặc là [đây](https://github.com/hocchudong/ghichep-SOC/blob/master/ghichep-wazuh/ghichep-overview-wazuh.md)
 
-*Hiện tại thì WAZUH đang ở phiên bản 4.4 vậy nên tất cả cài đặt và cấu hình trong bài này cũng sẽ ở phiên bản 4.4, trong trường hợp có các cập nhật mới, chỉ cần thay đổi tên phiên bản (nếu) xuất hiện trong các link cài đặt. *
+*Hiện tại thì WAZUH đang ở phiên bản 4.4 vậy nên tất cả cài đặt và cấu hình trong bài này cũng sẽ ở phiên bản 4.4, trong trường hợp có các cập nhật mới, chỉ cần thay đổi tên phiên bản (nếu) xuất hiện trong các link cài đặt.*
 
 ## WAZUH INDEXER
 
@@ -37,8 +37,8 @@ Hiện tại thì tôi đang triển khai nó trên môi trường thực tế, 
 Tải tool tạo cert và file config của wazuh về
 
 ```python
-curl -sO https://packages.wazuh.com/4.4/wazuh-certs-tool.sh_
-curl -sO https://packages.wazuh.com/4.4/config.yml_
+curl -sO https://packages.wazuh.com/4.4/wazuh-certs-tool.sh
+curl -sO https://packages.wazuh.com/4.4/config.yml
 ```
 
 Vào `config.yml` 

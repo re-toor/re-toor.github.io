@@ -81,7 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 344.5
   },
   "right": {
     "id": "5c1286e73371ea3f",
@@ -160,6 +160,7 @@
   },
   "active": "ca5c469f9b157b71",
   "lastOpenFiles": [
+    "_site/assets/css/style.css",
     "_site/assets/img/2023-05-06-Wazuh-Installation/3.png",
     "assets/img/2023-05-06-Wazuh-Installation/3.png",
     "assets/img/2023-05-06-Wazuh-Installation/2.png.crdownload",

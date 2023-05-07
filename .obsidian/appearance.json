@@ -1,4 +1,5 @@
 {
-  "accentColor": "#1dfc55",
-  "cssTheme": "Dracula Official"
+  "accentColor": "#39ff14",
+  "cssTheme": "Dracula Official",
+  "textFontFamily": "Source Code Pro"
 }
