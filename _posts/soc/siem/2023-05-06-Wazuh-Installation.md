@@ -83,7 +83,7 @@ nodes:
 Chạy *wazuh-certs-tool.sh* để tạo cert
 
 ```python
-bash ./wazuh-certs-tool.sh –A
+bash ./wazuh-certs-tool.sh -A
 tar -cvf ./wazuh-certificates.tar -C ./wazuh-certificates/ .
 ```
 
@@ -259,7 +259,7 @@ Tạo keystore
 ```python
 filebeat keystore create
 echo admin | filebeat keystore add username --stdin --force
-echo admin | filebeat keystore add password --stdin –force
+echo admin | filebeat keystore add password --stdin --force
 ```
 
 Tải template cho indexer
@@ -278,7 +278,7 @@ curl -s https://packages.wazuh.com/4.x/filebeat/wazuh-filebeat-0.2.tar.gz | tar 
 Tạo cert cho filebeat, đặt tên NODE_NAME giống với tên của server trong file *config.yml*
 
 ```python
-NODE_NAME=dc-server
+NODE_NAME=dc-manager
 mkdir /etc/filebeat/certs
 tar -xf ./wazuh-certificates.tar -C /etc/filebeat/certs/ ./$NODE_NAME.pem ./$NODE_NAME-key.pem ./root-ca.pem
 mv -n /etc/filebeat/certs/$NODE_NAME.pem /etc/filebeat/certs/filebeat.pem
