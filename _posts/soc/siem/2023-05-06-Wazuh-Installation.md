@@ -251,6 +251,10 @@ curl -so /etc/filebeat/filebeat.yml https://packages.wazuh.com/4.4/tpl/wazuh/fil
 Sửa cấu hình filebeat với hosts là ip của indexer node
 
 ```python
+nano /etc/filebeat/filebeat.yml
+```
+
+```python
 hosts: ["10.10.24.1:9200"]
 ```
 
@@ -339,6 +343,12 @@ Sửa cấu hình dashboard
 
 ```python
 nano /etc/wazuh-dashboard/opensearch_dashboards.yml
+```
+
+```python
+server.host: 10.10.24.1
+server.port: 443
+opensearch.hosts: https://10.10.24.1:9200
 ```
 
 Tạo cert cho dashboard, đặt tên NODE_NAME giống với tên của dashboard trong file config.yml
