@@ -8,24 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ca5c469f9b157b71",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_posts/soc/siem/2023-05-06-Wazuh-Installation.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "76bb8fe78f6b803c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/ctf/hackthebox/2022-10-24-HTB-RedPanda.md",
+                "file": "_posts/soc/siem/2023-05-09-Wazuh-Configuration.md",
                 "mode": "source",
                 "source": false
               }
@@ -76,6 +64,14 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "1ce7cfac1bf62300",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
@@ -97,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/soc/siem/2023-05-06-Wazuh-Installation.md",
+                "file": "_posts/soc/siem/2023-05-09-Wazuh-Configuration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/soc/siem/2023-05-06-Wazuh-Installation.md",
+                "file": "_posts/soc/siem/2023-05-09-Wazuh-Configuration.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/soc/siem/2023-05-06-Wazuh-Installation.md"
+                "file": "_posts/soc/siem/2023-05-09-Wazuh-Configuration.md"
               }
             }
           }
@@ -158,13 +154,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ca5c469f9b157b71",
+  "active": "76bb8fe78f6b803c",
   "lastOpenFiles": [
+    "_site/soc/Wazuh-Configuration.html",
+    "[.md",
+    "_posts/soc/siem/2023-05-06-Wazuh-Installation.md",
+    "_posts/soc/siem/2023-05-09-Wazuh-Configuration.md",
+    "_posts/ctf/hackthebox/2022-10-24-HTB-RedPanda.md",
     "_site/assets/css/style.css",
     "_site/assets/img/2023-05-06-Wazuh-Installation/3.png",
     "assets/img/2023-05-06-Wazuh-Installation/3.png",
-    "assets/img/2023-05-06-Wazuh-Installation/2.png.crdownload",
-    "_posts/ctf/hackthebox/2022-10-24-HTB-RedPanda.md",
-    "_posts/soc/siem/2023-05-06-Wazuh-Installation.md"
+    "assets/img/2023-05-06-Wazuh-Installation/2.png.crdownload"
   ]
 }
