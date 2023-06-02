@@ -2,7 +2,7 @@
 layout: post
 author: "Neo"
 title: "Cài đặt và cấu hình hệ thống WAZUH"
-date: "2022-05-06"
+date: "2023-05-06"
 tags: siem
 categories: soc
 ---
