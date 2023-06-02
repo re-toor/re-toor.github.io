@@ -202,7 +202,7 @@ systemctl restart cron
 
 ## Offline update sample
 
-Sau khi đã thực hiện các bước tải và định vị trí cho các file, tôi sẽ cấu hình lại đường dẫn trong file *_ossec.conf_* giống như bên dưới
+Sau khi đã thực hiện các bước tải và định vị trí cho các file, tôi sẽ cấu hình lại đường dẫn trong file *__ossec.conf__* giống như bên dưới
 
 ```python
   <vulnerability-detector>
