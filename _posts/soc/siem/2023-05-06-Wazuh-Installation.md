@@ -110,7 +110,11 @@ Cài đặt wazuh-indexer
 apt-get -y install wazuh-indexer
 ```
 
-Sửa _/etc/wazuh-indexer/opensearch.yml_ với các thông số sau
+Cấu hình các thông số trong _opensearch_
+
+```python
+nano /etc/wazuh-indexer/opensearch.yml
+```
 
 ```python
 network.host: “10.10.24.1”
