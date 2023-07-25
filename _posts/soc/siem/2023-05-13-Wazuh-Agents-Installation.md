@@ -26,7 +26,7 @@ Trong một các môi trường doanh nghiệp, việc sử dụng proxy server 
 
 Việc đầu tiên là tải Sysmon từ trang chủ của [Micorsoft](https://download.sysinternals.com/files/SysinternalsSuite.zip) và giải nén nó
 
-Sau đó tải [file config](https://raw.githubusercontent.com/olafhartong/sysmon-modular/master/sysmonconfig.xml) ở github repo phía trên về và lưu nó vào thư mục vừa giải nén phía trên.
+Sau đó tải [file config](https://raw.githubusercontent.com/pcsg-community/sysmon-config/main/sysmon-pcsg-daena-default.xml) ở github repo phía trên về và lưu nó vào thư mục vừa giải nén phía trên.
 
 Tiếp theo tôi sẽ tạo 1 file Powershell để chạy Sysmon với cấu hình của file config phía trên.
 
