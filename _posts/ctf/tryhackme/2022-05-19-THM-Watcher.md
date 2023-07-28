@@ -259,7 +259,7 @@ www-data@watcher:/home$
 
 ## Privilege escalation
 
-### flag 4
+### Flag 4
 
 Tiếp tục phân tích máy này bằng các lệnh đơn giản, tôi có `sudo -l`
 
@@ -290,7 +290,7 @@ cat flag_4.txt
 FLAG{chad_lifestyle}
 ```
 
-### flag 5
+### Flag 5
 
 Ở user **toby** tôi có thêm 1 file txt và 1 folder khác
 
