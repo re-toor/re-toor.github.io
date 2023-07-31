@@ -174,7 +174,7 @@ CEF:0|Imperva Inc.|SecureSphere|10.6.0|Recommended Signatures Policy for Web App
 
 Phase 2 không có gì.
 
-Phân tích qua về các phần có trong log này. Phần đầu tiên là các đoạn được phân tách với nhau bằng "|", phần còn lại là các trường được phân tách bằng "=". Phần số 2 tôi đã có sẵn tên trường do log định nghĩa. Với phần đầu tiên thì có thể dựa vào nội dung của các đoạn để định nghĩa tên các trường. 
+Phân tích qua về các phần có trong log này. Phần đầu tiên là các đoạn được phân tách với nhau bằng "\|", phần còn lại là các trường được phân tách bằng "=". Phần số 2 tôi đã có sẵn tên trường do log định nghĩa. Với phần đầu tiên thì có thể dựa vào nội dung của các đoạn để định nghĩa tên các trường. 
 
 Đầu tiên tạo `decoder` cha với `prematch` 
 
