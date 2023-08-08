@@ -164,10 +164,10 @@ root@dc-siemtest:/home/siemadmin# /var/ossec/bin/wazuh-logtest
 Starting wazuh-logtest v4.4.5
 Type one log per line
 
-CEF:0|Imperva Inc.|SecureSphere|10.6.0|Recommended Signatures Policy for Web Applications|Recommended Signatures Policy for Web Applications|High|act=Block dst=10.11.12.13 dpt=443 duser=n/a src=103.187.191.141 spt=36614 proto=TCP rt=Apr 26 2023 13:08:12 cat=Alert cs1=Recommended Signatures Policy for Web Applications cs1Label=Policy cs2=mail.re-toor.vn cs2Label=ServerGroup cs3=mail cs3Label=ServiceName cs4=mail.re-toor.vn cs4Label=ApplicationName cs5===Nmap== scanner cs5Label=Description
+CEF:0|Imperva Inc.|SecureSphere|10.6.0|Recommended Signatures Policy for Web Applications|Recommended Signatures Policy for Web Applications|High|act=Block dst=10.11.12.13 dpt=443 duser=n/a src=103.187.191.141 spt=36614 proto=TCP rt=Apr 26 2023 13:08:12 cat=Alert cs1=Recommended Signatures Policy for Web Applications cs1Label=Policy cs2=mail.re-toor.vn cs2Label=ServerGroup cs3=mail cs3Label=ServiceName cs4=mail.re-toor.vn cs4Label=ApplicationName cs5=Nmap scanner cs5Label=Description
 
 **Phase 1: Completed pre-decoding.
-        full event: 'CEF:0|Imperva Inc.|SecureSphere|10.6.0|Recommended Signatures Policy for Web Applications|Recommended Signatures Policy for Web Applications|High|act=Block dst=10.11.12.13 dpt=443 duser=n/a src=103.187.191.141 spt=36614 proto=TCP rt=Apr 26 2023 13:08:12 cat=Alert cs1=Recommended Signatures Policy for Web Applications cs1Label=Policy cs2=mail.re-toor.vn cs2Label=ServerGroup cs3=mail cs3Label=ServiceName cs4=mail.re-toor.vn cs4Label=ApplicationName cs5===Nmap== scanner cs5Label=Description'
+        full event: 'CEF:0|Imperva Inc.|SecureSphere|10.6.0|Recommended Signatures Policy for Web Applications|Recommended Signatures Policy for Web Applications|High|act=Block dst=10.11.12.13 dpt=443 duser=n/a src=103.187.191.141 spt=36614 proto=TCP rt=Apr 26 2023 13:08:12 cat=Alert cs1=Recommended Signatures Policy for Web Applications cs1Label=Policy cs2=mail.re-toor.vn cs2Label=ServerGroup cs3=mail cs3Label=ServiceName cs4=mail.re-toor.vn cs4Label=ApplicationName cs5=Nmap scanner cs5Label=Description'
 
 **Phase 2: Completed decoding.
 ```
@@ -483,10 +483,10 @@ root@dc-siemtest:/home/siemadmin# /var/ossec/bin/wazuh-logtest
 Starting wazuh-logtest v4.4.5
 Type one log per line
 
-CEF:0|Imperva Inc.|SecureSphere|10.6.0|Recommended Signatures Policy for Web Applications|Recommended Signatures Policy for Web Applications|High|act=Block dst=10.11.12.13 dpt=443 duser=n/a src=103.187.191.141 spt=36614 proto=TCP rt=Apr 26 2023 13:08:12 cat=Alert cs1=Recommended Signatures Policy for Web Applications cs1Label=Policy cs2=mail.re-toor.vn cs2Label=ServerGroup cs3=mail cs3Label=ServiceName cs4=mail.re-toor.vn cs4Label=ApplicationName cs5===Nmap== scanner cs5Label=Description
+CEF:0|Imperva Inc.|SecureSphere|10.6.0|Recommended Signatures Policy for Web Applications|Recommended Signatures Policy for Web Applications|High|act=Block dst=10.11.12.13 dpt=443 duser=n/a src=103.187.191.141 spt=36614 proto=TCP rt=Apr 26 2023 13:08:12 cat=Alert cs1=Recommended Signatures Policy for Web Applications cs1Label=Policy cs2=mail.re-toor.vn cs2Label=ServerGroup cs3=mail cs3Label=ServiceName cs4=mail.re-toor.vn cs4Label=ApplicationName cs5=Nmap scanner cs5Label=Description
 
 **Phase 1: Completed pre-decoding.
-        full event: 'CEF:0|Imperva Inc.|SecureSphere|10.6.0|Recommended Signatures Policy for Web Applications|Recommended Signatures Policy for Web Applications|High|act=Block dst=10.11.12.13 dpt=443 duser=n/a src=103.187.191.141 spt=36614 proto=TCP rt=Apr 26 2023 13:08:12 cat=Alert cs1=Recommended Signatures Policy for Web Applications cs1Label=Policy cs2=mail.re-toor.vn cs2Label=ServerGroup cs3=mail cs3Label=ServiceName cs4=mail.re-toor.vn cs4Label=ApplicationName cs5===Nmap== scanner cs5Label=Description'
+        full event: 'CEF:0|Imperva Inc.|SecureSphere|10.6.0|Recommended Signatures Policy for Web Applications|Recommended Signatures Policy for Web Applications|High|act=Block dst=10.11.12.13 dpt=443 duser=n/a src=103.187.191.141 spt=36614 proto=TCP rt=Apr 26 2023 13:08:12 cat=Alert cs1=Recommended Signatures Policy for Web Applications cs1Label=Policy cs2=mail.re-toor.vn cs2Label=ServerGroup cs3=mail cs3Label=ServiceName cs4=mail.re-toor.vn cs4Label=ApplicationName cs5=Nmap scanner cs5Label=Description'
 
 **Phase 2: Completed decoding.
         name: 'Imperva'
@@ -501,7 +501,7 @@ CEF:0|Imperva Inc.|SecureSphere|10.6.0|Recommended Signatures Policy for Web App
         cs3Label: 'ServiceName'
         cs4: 'mail.re-toor.vn'
         cs4Label: 'ApplicationName'
-        cs5: '==Nmap== scanner'
+        cs5: 'Nmap scanner'
         dpt: '443'
         dst: '10.11.12.13'
         duser: 'n/a'
