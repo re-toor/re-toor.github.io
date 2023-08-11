@@ -132,7 +132,7 @@ skills:
       - "IPS"
       - "WAF"
       - "Reverse Proxy"
-      - "Gateway"
+      - "VPN"
   - name: "Programming Language"
     level: "Intermediate"
     keywords:
