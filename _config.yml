@@ -128,6 +128,11 @@ defaults:
     values:
       sitemap:         false
 
+  - scope:
+      path:            googlea87ebe48281e01cc.html
+    values:
+      sitemap:         false
+
   # Don't include licenses in sitemap (feel free to delete)
   # - scope:
   #     path:            licenses/
