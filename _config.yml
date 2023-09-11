@@ -359,7 +359,7 @@ plugins:
 # Where you proof that you own this site (used by jekyll-seo-tag)
 # -- or --
 # webmaster_verifications:
-#   google:              <verification-id>
+   google:              1SrZKSHd82TJBbAQUQHiETfCL9gFqP0JneGjCV7VgHk
 #   bing:                <verification-id>
 #   alexa:               <verification-id>
 #   yandex:              <verification-id>
