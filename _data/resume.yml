@@ -25,18 +25,18 @@ work:
     highlights:
       - "Participate in building, configuring Nginx reverse proxy server."
       - "Scripting Performance testing, Load Balancing and pentesting for SOTP, eKYC, Temenos T24-R21."
-      - "Operate the company's security systems such as: Firewall, IPS, Mail Gateway, etc."
       - "Pentesting for company products such as: web, applications, etc."
+      - "Operate the company's security systems such as: Firewall, IPS, Mail Gateway, Anti-malware."
       - "Build the Security Information and Event Management (SIEM) system for Center of Information and Technology."
-  - company: "FPT Polytechnic Ha Noi"
-    position: "Visiting Lecturer"
-    website: "https://caodang.fpt.edu.vn/"
-    startDate: "2022-12-26"
-    endDate: ""
-    summary: 
-    highlights:
-      - "Responsible for teaching courses on computer networks and information security."
-      - "Responsible for teaching course on UX/UI design." 
+  # - company: "FPT Polytechnic Ha Noi"
+  #   position: "Visiting Lecturer"
+  #   website: "https://caodang.fpt.edu.vn/"
+  #   startDate: "2022-12-26"
+  #   endDate: ""
+  #   summary: 
+  #   highlights:
+  #     - "Responsible for teaching courses on computer networks and information security."
+  #     - "Responsible for teaching course on UX/UI design." 
   - company: "VCCorp Corporation"
     position: "Intern"
     website: "https://vccorp.vn/"
@@ -116,23 +116,24 @@ skills:
   - name: "Kali Linux"
     level: "2/3"
     keywords:
-      - "Pentest"
-      - "Bug Bounty"
-      - "Hacking"
+      - "Pentesting Tools"
+      - "CTF"
   - name: "SOC"
     level: "Intermediate"
     keywords:
-      - "SIEM"
+      - "ELK"
       - "Wazuh"
       - "Grafana"
+      - "Trend Micro"
   - name: "Network Security"
     level: "Intermediate"
     keywords:
       - "Firewall"
       - "IPS"
       - "WAF"
-      - "Reverse Proxy"
+      - "Nginx"
       - "VPN"
+      - "Wireshark"
   - name: "Programming Language"
     level: "Intermediate"
     keywords:
