@@ -102,6 +102,8 @@ Dùng netcat để get shell
 
 Rooted.
 
+Tìm được rồi!
+ftpuser:ftpuser@123
 
 
 
