@@ -149,7 +149,7 @@ Thử nhập input vào 2 trường và bắt request bằng burp
 
 Thử [bypass without space](https://swisskyrepo.github.io/PayloadsAllTheThings/Command%20Injection/#bypass-without-space)
 
-![ping](/assets/img/2023-10-07-HTB-Cozyhosting/6.png)
+![ping](/assets/img/2023-10-07-HTB-CozyHosting/6.png)
 
 Thử thêm [dấu nháy ngược](https://swisskyrepo.github.io/PayloadsAllTheThings/Command%20Injection/#inside-a-command)
 
