@@ -6,11 +6,11 @@ date: 2023-10-07
 tags:
   - web
   - linux
-  - spring
+  - spring boot
   - ssh
   - gtfobins
   - burpsuite
-  - injection
+  - command injection
   - hackthebox
 categories: ctf
 ---
