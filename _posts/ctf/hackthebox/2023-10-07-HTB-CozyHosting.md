@@ -259,7 +259,7 @@ listening on [any] 1234 ...
 connect to [10.10.14.65] from (UNKNOWN) [10.10.11.230] 33940
 ```
 
-Sử dụng [jadx | Kali Linux Tools](https://www.kali.org/tools/jadx/) để mở file jar này. Tôi tìm thấy thông tin đăng nhập vào database postgresql
+Sử dụng [jadx](https://www.kali.org/tools/jadx/) để mở file jar này. Tôi tìm thấy thông tin đăng nhập vào database postgresql
 
 ![postgresql](/assets/img/2023-10-07-HTB-CozyHosting/9.png)
 
