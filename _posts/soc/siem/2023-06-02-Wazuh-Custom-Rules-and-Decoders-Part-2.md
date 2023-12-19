@@ -180,4 +180,4 @@ Phần custom là các `decoders` và `rule` được người quản trị tự
 
 > Lưu ý: `decoders` và `rules` chỉ có thể được kích hoạt nếu nằm đúng vị trí trong các thư mục phía trên.
 
-Mỗi rule và decoder khi được tạo mới hay có bất kỳ thay đổi gì đều phải restart lại Wazuh-manager. Tôi đã tạo và cập nhật custom `decoders` - `rules` của mình ở [đây](https://github.com/re-toor/Wazuh-Custom-rules-and-decoders).
+Mỗi rule và decoder khi được tạo mới hay có bất kỳ thay đổi gì đều phải restart lại Wazuh-manager. Tôi đã tạo và cập nhật custom `decoders` - `rules` của mình ở [đây](https://github.com/re-toor/Wazuh-Rules).
