@@ -63,8 +63,3 @@ cover: true
 
 - *I'll tell you what you get! You get what you fucking deserve!*
 
-<br>
-<div align="center">
-<img src="/assets/img/joker.gif" />
-</div>
-
