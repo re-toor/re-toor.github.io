@@ -163,7 +163,7 @@ Tăng kích thước không gian heap
 nano /etc/wazuh-indexer/jvm.options
 ```
 
-Sửa 1 thành 4
+Tài liệu Wazuh khuyến cáo không gian heap sử dụng tối thiểu bằng nửa tổng dung lượng RAM hiện có. Ví dụ RAM của tôi hiện có là 8Gb thì tôi sẽ sửa 1 thành 4 
 
 ```python
 # Xms represents the initial size of total heap space
