@@ -22,7 +22,7 @@ lang:                  vn-VN, en-US
 # The title of your blog. Used in the sidebar and the browser tab.
 title:                 RE-TOOR
 
-timezone:              Asia/Ho_Chi_Minh
+timezone:              Asia/Ho_Chi_Minh      
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
