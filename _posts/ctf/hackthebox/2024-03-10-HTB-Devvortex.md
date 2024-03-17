@@ -10,8 +10,8 @@ tags:
   - mysql
   - ssh
   - command injection
-  - hackthebox
   - apport-cli
+  - hackthebox
 categories: ctf
 ---
 0. this unordered seed list will be replaced by toc as unordered list
