@@ -2,7 +2,7 @@
 layout: post
 author: Neo
 title: HackTheBox - Devvortex
-date: 2024-04-11
+date: 2024-03-10
 tags:
   - web
   - joomla
