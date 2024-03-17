@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Neo
-title: Hackthebox - Devvortex
+title: HackTheBox - Devvortex
 date: 2024-04-11
 tags:
   - web
