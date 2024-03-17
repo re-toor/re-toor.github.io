@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Neo
-title: Hackthebox - CozyHosting
+title: HackTheBox - CozyHosting
 date: 2023-10-07
 tags:
   - web
