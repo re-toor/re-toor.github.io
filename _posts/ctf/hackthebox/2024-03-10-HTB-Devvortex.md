@@ -146,7 +146,7 @@ uid=33(www-data) gid=33(www-data) groups=33(www-data)
 www-data@devvortex:~/dev.devvortex.htb/templates/cassiopeia$ 
 ```
 
-### User Flag
+## User Flag
 
 Quay lại các thông tin ban đầu, tôi có được một thông tin đăng nhập dựa trên mysql. Vậy thì tôi sẽ thử đăng nhập vào mysql trên shell này.
 
@@ -235,7 +235,7 @@ final  getroot  new  user.txt
 logan@devvortex:~$ 
 ```
 
-### Privilege Escalation
+## Privilege Escalation
 
 ```python
 logan@devvortex:~$ sudo -l
