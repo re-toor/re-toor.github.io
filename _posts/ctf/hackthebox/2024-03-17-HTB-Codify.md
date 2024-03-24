@@ -18,7 +18,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro]()
+![intro](/assets/img/2024-03-17-HTB-Codify/Codify.png)
 
 Codify là một machine mức độ easy dựa trên lỗ hổng của thư viện trong Node.js để thực hiện RCE, cũng như lợi dụng các lỗ hổng trong **bash** để thực hiện leo thang đặc quyền lên `root`
 
