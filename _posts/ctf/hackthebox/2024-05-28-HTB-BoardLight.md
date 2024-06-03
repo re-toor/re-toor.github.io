@@ -191,7 +191,7 @@ $dolibarr_main_db_port='3306';
 $dolibarr_main_db_name='dolibarr';
 $dolibarr_main_db_prefix='llx_';
 $dolibarr_main_db_user='dolibarrowner';
-$dolibarr_main_db_pass='serverfun2$2023!!';
+$dolibarr_main_db_pass='*************';
 $dolibarr_main_db_type='mysqli';
 $dolibarr_main_db_character_set='utf8';
 $dolibarr_main_db_collation='utf8_unicode_ci';
@@ -235,8 +235,7 @@ Và boom! Password của mysql cũng là password của user
 ```python
 www-data@boardlight:~/html/crm.board.htb/htdocs/public/website$ su larissa
 su larissa
-Password: serverfun2$2023!!
-
+Password: 
 larissa@boardlight:/var/www/html/crm.board.htb/htdocs/public/website$ id
 id
 uid=1000(larissa) gid=1000(larissa) groups=1000(larissa),4(adm)
