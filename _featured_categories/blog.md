@@ -1,10 +1,10 @@
 ---
 layout: list
 type: category
-title: CTF
-slug: ctf
+title: Blog
+slug: blog
 sidebar: true
-order: 3
+order: 1
 description: >
-  CTF writeup and more
+  My infosec experiences
 ---
