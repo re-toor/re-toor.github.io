@@ -1,6 +1,5 @@
 ---
-layout:
-  - post
+layout: post
 author: Neo
 title: Hackthebox - UnderPass
 date: 2025-02-01
