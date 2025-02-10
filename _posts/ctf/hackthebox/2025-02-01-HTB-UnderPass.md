@@ -15,7 +15,7 @@ tags:
   - hackthebox
 categories: ctf
 ---
-1. this unordered seed list will be replaced by toc as unordered list
+0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
 ![intro](/assets/img/2025-02-01-HTB-UnderPass/UnderPass.png)
