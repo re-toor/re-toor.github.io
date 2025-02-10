@@ -65,7 +65,7 @@ Nmap done: 1 IP address (1 host up) scanned in 14.68 seconds
 
 Vậy là tôi có port 161 đang mở
 
-## Enumeration
+## Enumeration and Gaining access
 
 Sử dụng `snmpwalk`
 
