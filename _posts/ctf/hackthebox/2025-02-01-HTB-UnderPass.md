@@ -69,7 +69,7 @@ Vậy là tôi có port 161 đang mở
 
 Sử dụng `snmpwalk`
 
-```
+```bash
 ┌──(kali㉿kali)-[~/htb-overpass]
 └─$ snmpwalk -v 1 -c public underpass.htb
 iso.3.6.1.2.1.1.1.0 = STRING: "Linux underpass 5.15.0-126-generic #136-Ubuntu SMP Wed Nov 6 10:38:22 UTC 2024 x86_64"
