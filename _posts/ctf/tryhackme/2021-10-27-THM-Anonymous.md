@@ -15,7 +15,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![Anonymous](/assets/img/2021-10-27-THM-Anonymous/1.png)
+![Anonymous](/assets/img/2021-10-27-THM-Anonymous/1.webp)
 
 Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF [Tryhackme - Anonymous](https://tryhackme.com/room/anonymous).
 

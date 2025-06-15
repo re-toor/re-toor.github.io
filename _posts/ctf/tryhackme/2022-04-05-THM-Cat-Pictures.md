@@ -17,7 +17,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro](/assets/img/2022-04-05-THM-Cat-Pictures.png)
+![intro](/assets/img/2022-04-05-THM-Cat-Pictures.webp)
 
 Xin chào, lại là tôi đây. Hôm nay tôi sẽ giải CTF [TryHackMe | Cat Pictures](https://tryhackme.com/room/catpictures)
 ## Reconnaissance

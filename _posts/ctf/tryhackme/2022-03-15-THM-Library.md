@@ -18,7 +18,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro](/assets/img/2022-03-15-THM-Library.png)
+![intro](/assets/img/2022-03-15-THM-Library.webp)
 
 Xin chào, lại là tôi đây. Hôm nay tôi sẽ giải CTF [TryHackMe | Library](https://tryhackme.com/room/bsidesgtlibrary)
 ## Reconnaissance

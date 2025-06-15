@@ -18,7 +18,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro](/assets/img/2022-03-06-THM-Thompson/1.png)
+![intro](/assets/img/2022-03-06-THM-Thompson/1.webp)
 
 Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF [Tryhackme - Thompson](https://tryhackme.com/room/bsidesgtthompson)
 ## Reconnaissance
@@ -115,11 +115,11 @@ Task Completed
 
 Truy cập vào */manager/html* thì tôi phải login mới có thể xem được file này
 
-![html](/assets/img/2022-03-06-THM-Thompson/2.png)
+![html](/assets/img/2022-03-06-THM-Thompson/2.webp)
 
 Dùng *BurpSuite* để bắt request
 
-![burp](/assets/img/2022-03-06-THM-Thompson/3.png)
+![burp](/assets/img/2022-03-06-THM-Thompson/3.webp)
 
 Vậy là tôi có uername và password. Quay trở lại Metasploit, hướng dẫn setup ở [đây](https://null-byte.wonderhowto.com/how-to/hack-apache-tomcat-via-malicious-war-file-upload-0202593/)
 

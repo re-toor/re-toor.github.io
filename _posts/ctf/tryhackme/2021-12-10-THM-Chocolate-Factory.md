@@ -17,7 +17,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro](/assets/img/2021-12-10-THM-Chocolate-Factory/1.png)
+![intro](/assets/img/2021-12-10-THM-Chocolate-Factory/1.webp)
 
 Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF [Tryhackme - Chocolate Factory](https://tryhackme.com/room/chocolatefactory)
 
@@ -25,7 +25,7 @@ Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF [Tryhackme - Chocolate Fac
 
 Vẫn như thông thường, việc đầu tiên cần làm là quét các cổng đang mở.
 
-![scan-port](/assets/img/2021-12-10-THM-Chocolate-Factory/2.png)
+![scan-port](/assets/img/2021-12-10-THM-Chocolate-Factory/2.webp)
 
 Ở đây tôi có 3 port đáng chú ý là 
 
@@ -165,19 +165,19 @@ Sử dụng __*unshadow*__ và __*john*__ để xem có crack được passwd c�
 
 Sử dụng BurpSuite để lấy request. 
 
-![ls -la](/assets/img/2021-12-10-THM-Chocolate-Factory/4.png)
+![ls -la](/assets/img/2021-12-10-THM-Chocolate-Factory/4.webp)
 
 Có 1 file tên là *key_rev_key*, đây là file binary. Sử dụng command `strings`
 
-![strings key_rev_key](/assets/img/2021-12-10-THM-Chocolate-Factory/5.png)
+![strings key_rev_key](/assets/img/2021-12-10-THM-Chocolate-Factory/5.webp)
 
 Vậy là tôi đã tìm được key. Tiếp theo tôi để ý ở bên trên còn có *validate.php*. 
 
-![validate.php](/assets/img/2021-12-10-THM-Chocolate-Factory/6.png)
+![validate.php](/assets/img/2021-12-10-THM-Chocolate-Factory/6.webp)
 
 Tôi tìm được pass của user *charlie* ở đây. Bây giờ thì thử các payload để lấy RCE. Trước đó tôi kiểm tra xem server có python hay không
 
-![python--version](/assets/img/2021-12-10-THM-Chocolate-Factory/7.png)
+![python--version](/assets/img/2021-12-10-THM-Chocolate-Factory/7.webp)
 
 Tạo listener: `nc -lnvp 2402`, sau đó tạo payload với python3 và dán nó phần command
 

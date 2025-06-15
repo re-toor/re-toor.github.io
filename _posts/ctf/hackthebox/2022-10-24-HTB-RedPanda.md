@@ -21,7 +21,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro](/assets/img/2022-10-24-HTB-RedPanda/1.png)
+![intro](/assets/img/2022-10-24-HTB-RedPanda/1.webp)
 
 Song song với việc reup lại những writeup cũ, tôi vẫn tiếp tục giải các CTF mới khi có thời gian. Và hôm nay, có thời gian rảnh 1 chút thì tôi thử sức với [Hackthebox - RedPanda](https://app.hackthebox.com/machines/481)
 
@@ -146,11 +146,11 @@ Truy cập vào web với port 8080
 
 Trang web có 1 phần input, tôi thử ngay với các XSS hay XXE, nhưng đều thất bại. 
 
-![web](/assets/img/2022-10-24-HTB-RedPanda/2.png)
+![web](/assets/img/2022-10-24-HTB-RedPanda/2.webp)
 
 Khi nhập thử `id`, tôi nhận được thông tin của 1 loại gấu trúc, nhưng thử các command khác thì đều không có kết quả. Tuy nhiên dưới phần "Author", tôi có 1 cái tên "woodenk", click vào nó và tôi có 2 thư mục chứa ảnh về gấu trúc. Không có gì đặc biệt để có thể khai thác ở đây.
 
-![url](/assets/img/2022-10-24-HTB-RedPanda/3.png)
+![url](/assets/img/2022-10-24-HTB-RedPanda/3.webp)
 
 Tôi nhận ra url này giống với form của PHP LFI payload nên đã thử các trường hợp nhưng đều không có kết quả.
 
@@ -172,7 +172,7 @@ Còn rất nhiều những payload đơn giản khác để kiểm tra, và tôi
 
 Với payload tìm được phía trên, tôi sẽ thử thay $ bằng * ở đầu payload
 
-![payload](/assets/img/2022-10-24-HTB-RedPanda/4.png)
+![payload](/assets/img/2022-10-24-HTB-RedPanda/4.webp)
 
 Nhưng làm cách nào để hiểu được payload này? 
 
@@ -254,7 +254,7 @@ Tôi cũng không thể nào gọi được shell về, đành phải ngồi gõ
 
 Với cách trên thì tôi cũng đã có thể lấy *user flag* thành công vì hiện tại tôi đang ở truy cập với user *woodenk* và *user flag* nằm trong thư mục user này.
 
-![user-flag](/assets/img/2022-10-24-HTB-RedPanda/5.png)
+![user-flag](/assets/img/2022-10-24-HTB-RedPanda/5.webp)
 
 Chuyển đổi câu lệnh `cat /home/woodenk/user.txt` thành code java và thử lại, tôi sẽ có *user flag*.
 
@@ -283,7 +283,7 @@ woodenk@redpanda:/tmp/hsperfdata_woodenk$
 
 Sau khi thử qua các phương pháp đơn giản như `sudo -l` hay `find` đều không có kết quả, tôi sẽ thử tải lên `linpeas.sh` để phân tích machine này 
 
-![linpeas.sh](/assets/img/2022-10-24-HTB-RedPanda/6.png)
+![linpeas.sh](/assets/img/2022-10-24-HTB-RedPanda/6.webp)
 
 Sau khi phân tích qua kết quả, tôi để ý thấy user *root* thực thi file jar trong thư mục */opt* 
 

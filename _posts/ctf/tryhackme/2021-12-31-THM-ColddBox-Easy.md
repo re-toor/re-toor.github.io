@@ -17,7 +17,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro](/assets/img/2021-12-31-THM-ColddBox-Easy/1.png)
+![intro](/assets/img/2021-12-31-THM-ColddBox-Easy/1.webp)
 
 Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF [Tryhackme - ColddBox: Easy](https://tryhackme.com/room/colddboxeasy)
 
@@ -201,7 +201,7 @@ Trying c0ldd / pink123 Time: 00:02:10 <==                                       
 
 Thử đăng nhập vào Wordpress và tôi nhận ra đây là user admin. Vào plugin editor để thử upload reverse shell
 
-![upload-shell](/assets/img/2021-12-31-THM-ColddBox-Easy/2.png)
+![upload-shell](/assets/img/2021-12-31-THM-ColddBox-Easy/2.webp)
 
 ## RCE
 
@@ -300,7 +300,7 @@ c0ldd@ColddBox-Easy:~$
 
 Vào [GTFOBins](https://gtfobins.github.io) để tìm leo thang đặc quyền với `vim`
 
-![vim-gtfobins](/assets/img/2021-12-31-THM-ColddBox-Easy/3.png)
+![vim-gtfobins](/assets/img/2021-12-31-THM-ColddBox-Easy/3.webp)
 
 Thử với command đầu tiên
 

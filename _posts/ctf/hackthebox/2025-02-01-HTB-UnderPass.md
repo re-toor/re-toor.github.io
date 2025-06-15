@@ -17,7 +17,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro](/assets/img/2025-02-01-HTB-UnderPass/UnderPass.png)
+![intro](/assets/img/2025-02-01-HTB-UnderPass/UnderPass.webp)
 
 ## Reconnaissance and Scanning
 
@@ -128,7 +128,7 @@ Kiểm tra mã nguồn của nó, tôi tìm thấy 1 số path mà có thể h�
 
 Thử một số path khác thì tôi nhận được 
 
-![forbidden](/assets/img/2025-02-01-HTB-UnderPass/403.png)
+![forbidden](/assets/img/2025-02-01-HTB-UnderPass/403.webp)
 
 Sử dụng `feroxbuster`
 
@@ -189,19 +189,19 @@ Về cơ bản thì mã nguồn được chứa trong thư mục `/daloradius/`
 
 Sau khi ngụp lặn trong mã nguồn thì tôi nhận thấy các config cũng như các phần quản lý nằm trong `/operators/`
 
-![login](/assets/img/2025-02-01-HTB-UnderPass/login.png)
+![login](/assets/img/2025-02-01-HTB-UnderPass/login.webp)
 
 Vẫn là trong mã nguồn và cả trong các Issues, tôi tìm thấy thông tin đăng nhập mặc định `administrator:radius` và thử đăng nhập vào nó
 
 Boom...
 
-![radius](/assets/img/2025-02-01-HTB-UnderPass/radius.png)
+![radius](/assets/img/2025-02-01-HTB-UnderPass/radius.webp)
 
 ## SSH and User flag
 
 Kiểm tra users list, tôi có 1 user và password
 
-![svcmosh](/assets/img/2025-02-01-HTB-UnderPass/svcmosh.png)
+![svcmosh](/assets/img/2025-02-01-HTB-UnderPass/svcmosh.webp)
 
 Copy password này vào Crackstation và tôi nhận được pass của user svcMosh
 

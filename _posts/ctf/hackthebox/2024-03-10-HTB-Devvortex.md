@@ -17,7 +17,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![info](/assets/img/2024-03-10-HTB-Devvortex/Devvortex.png)
+![info](/assets/img/2024-03-10-HTB-Devvortex/Devvortex.webp)
 
 Devvortex là một machine đơn giản xoay quanh kỹ thuật áp dụng các lỗ hổng đã có PoC để tải RCE lên Joomla CMS, lấy user password trong mysql và nâng cao đặc quyền với `apport-cli`
 
@@ -81,13 +81,13 @@ Thêm subdomain vào file hosts
 
 Truy cập *http://dev.devvotex.htb*. Sử dụng Wappalyzer để check các thành phần cấu tạo nên web này.
 
-![1.png](/assets/img/2024-03-10-HTB-Devvortex/1.jpg)
+![1.webp](/assets/img/2024-03-10-HTB-Devvortex/1.jpg)
 
 ## Enumeration
 
 Kiểm tra phiên bản của Joomla
 
-![2.png](/assets/img/2024-03-10-HTB-Devvortex/2.jpg)
+![2.webp](/assets/img/2024-03-10-HTB-Devvortex/2.jpg)
 
 Tìm kiếm các lỗ hổng Joomla phiên bản 4.2.6, tôi tìm thấy [CVE-2023-23752](https://github.com/Acceis/exploit-CVE-2023-23752), thử git clone nó về và chạy
 
@@ -129,7 +129,7 @@ Bật nc: `nc -lnvp 9001`
 
 Lưu file và truy cập đường dẫn đến file vừa thay đổi 
 
-![3.png](/assets/img/2024-03-10-HTB-Devvortex/3.jpg)
+![3.webp](/assets/img/2024-03-10-HTB-Devvortex/3.jpg)
 
 `http://dev.devvortex.htb/templates/cassiopeia/error.php`
 

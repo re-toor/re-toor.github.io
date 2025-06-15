@@ -18,7 +18,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro](/assets/img/2021-12-25-THM-dogcat/1.png)
+![intro](/assets/img/2021-12-25-THM-dogcat/1.webp)
 
 Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF [Tryhackme - dogcat](https://tryhackme.com/room/dogcat)
 
@@ -41,19 +41,19 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Ngay từ đầu khi đọc tiêu đề tôi tưởng đây là web server thì ít nhất sẽ có port 80, nhưng chỉ có port 22 - SSH đang mở mặc dù tôi đã thử quét lại vài lần. Sau vài phút thì tôi thử thêm IP vào file host để xem nó có ra được port 80 hay không. Và đúng là nó ra thật :unamused:
 
-![port 80](/assets/img/2021-12-25-THM-dogcat/2.png)
+![port 80](/assets/img/2021-12-25-THM-dogcat/2.webp)
 
 Khi click vào "A dog" hay "A cat" thì nó sẽ hiện random 1 bức ảnh về chó mèo và url sẽ hiện filter `?view=...`
 
 Với filter này cộng thêm tiêu đề của machine này thì tôi nghĩ có thể dùng [LFI - PHP filter](https://book.hacktricks.xyz/pentesting-web/file-inclusion) để khai thác. Tôi sẽ dùng BurpSuite để phân tích request
 
-![php-lfi](/assets/img/2021-12-25-THM-dogcat/3.png)
+![php-lfi](/assets/img/2021-12-25-THM-dogcat/3.webp)
 
 Điều này có nghĩa là trong request phải có "dog" hoặc "cat". Từ đây tôi có 1 vài suy đoán, trong web server có 2 thư mục là "dog" và "cat" chứa các bức ảnh, khi chọn dog hoặc cat từ client, server sẽ trỏ vào thư mục và chọn 1 trong các bức ảnh chó(mèo). 
 
 Và vì "dog" hay "cat" là thư mục nên tôi sẽ để nó ngay sau base64 encoder.
 
-![index-encode](/assets/img/2021-12-25-THM-dogcat/4.png)
+![index-encode](/assets/img/2021-12-25-THM-dogcat/4.webp)
 
 Giải mã đoạn base64 này và tôi có source của trang *index.php*
 
@@ -100,7 +100,7 @@ Giải mã đoạn base64 này và tôi có source của trang *index.php*
 
 Với trang *index.php* này, sau khi lấy ảnh từ thư mục, server sẽ thêm biến "ext" vào cuối. Tôi sẽ thử mở những file không phải php và thêm "ext" vào sau như thế này
 
-![/etc/passwd](/assets/img/2021-12-25-THM-dogcat/5.png)
+![/etc/passwd](/assets/img/2021-12-25-THM-dogcat/5.webp)
 
 Giải mã nó và tôi có nội dung file *passwd*
 
@@ -133,7 +133,7 @@ _apt:x:100:65534::/nonexistent:/usr/sbin/nologin
 
 Trong khi tìm cách tạo RCE từ LFI thì tôi tìm được vài cách khác để khai thác thông tin, đó là khai thác thông tin từ *access.log*. Thử kiểm tra qua đường dẫn apache hoặc apache2 xem có thu được kết quả nào không. 
 
-![access.log](/assets/img/2021-12-25-THM-dogcat/6.png)
+![access.log](/assets/img/2021-12-25-THM-dogcat/6.webp)
 
 ```python
 127.0.0.1 - - [22/Aug/2022:08:09:03 +0000] "GET / HTTP/1.1" 200 615 "-" "curl/7.64.0"
@@ -224,7 +224,7 @@ Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 
 Thêm đoạn code PHP đẩy file reverse shell PHP lên server. Tôi thường dùng shell của [pentestmonkey](https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php) 
 
-![upload-shell](/assets/img/2021-12-25-THM-dogcat/7.png)
+![upload-shell](/assets/img/2021-12-25-THM-dogcat/7.webp)
 
 Sau đó tạo listener với port đã cấu hình bên trong file shell. Cuối cùng là truy cập file shell vừa tải lên `http://10.10.36.162/shell.php`
 

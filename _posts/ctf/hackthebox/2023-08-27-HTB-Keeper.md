@@ -37,20 +37,20 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Truy cập thử vào web với port 80
 
-![web](/assets/img/2023-08-27-HTB-Keeper/1.png)
+![web](/assets/img/2023-08-27-HTB-Keeper/1.webp)
 
 Tôi sẽ thêm hosts để truy cập domain này
 
-![ticket](/assets/img/2023-08-27-HTB-Keeper/2.png)
+![ticket](/assets/img/2023-08-27-HTB-Keeper/2.webp)
 
 Tôi có một vài thông tin về page này: `best practical`, `RT 4.4.4+dfsg-2ubuntu1 (Debian)`. Tìm kiếm thông tin trên gu gồ và tôi có tài khoản mặc định ở [đây](https://docs.bestpractical.com/rt/4.4.4/README.html)
 Thử đăng nhập với tài khoản mặc định `root`:`password`
 
-![rt](/assets/img/2023-08-27-HTB-Keeper/3.png)
+![rt](/assets/img/2023-08-27-HTB-Keeper/3.webp)
 
 Dạo quanh page này, tôi tìm thấy user khác ở *Admin -> Users -> Select*
 
-![lnorgaard](/assets/img/2023-08-27-HTB-Keeper/4.png)
+![lnorgaard](/assets/img/2023-08-27-HTB-Keeper/4.webp)
 
 Thử đăng nhập ssh bằng user mới
 
@@ -171,23 +171,23 @@ Tôi không hiểu lắm về các password này, tìm kiếm về các tool kee
 └─# keepass2
 ```
 
-![keepass](/assets/img/2023-08-27-HTB-Keeper/5.png)
+![keepass](/assets/img/2023-08-27-HTB-Keeper/5.webp)
 
-![password](/assets/img/2023-08-27-HTB-Keeper/6.png)
+![password](/assets/img/2023-08-27-HTB-Keeper/6.webp)
 
 Sau khi add file kdbx, tôi cần phải nhập password. Vậy thì tôi sẽ thử nhập từng password ở phần dump đã tìm được phía trên. Tuy nhiên thì không có cái nào được. Tôi thử sao chép cái password đó lên Gu gồ và được Gu gồ gợi ý sang 1 kết quả khác
 
-![ideas](/assets/img/2023-08-27-HTB-Keeper/7.png)
+![ideas](/assets/img/2023-08-27-HTB-Keeper/7.webp)
 
-![ideas](/assets/img/2023-08-27-HTB-Keeper/8.png)
+![ideas](/assets/img/2023-08-27-HTB-Keeper/8.webp)
 
 Đoạn đầu tiên rất giống với password của tôi nên tôi sẽ thử nó
 
-![pass](/assets/img/2023-08-27-HTB-Keeper/9.png)
+![pass](/assets/img/2023-08-27-HTB-Keeper/9.webp)
 
 Vẫn không được. Nhưng tôi thử viết thường tất cả thì được
 
-![key](/assets/img/2023-08-27-HTB-Keeper/10.png)
+![key](/assets/img/2023-08-27-HTB-Keeper/10.webp)
 
 Tôi có 1 PuTTY key ở đây. Lưu nó về dưới tên root.ppk và sử dụng `puttygen` để generate được private key của root.
 

@@ -437,7 +437,7 @@ Content-Type: text/html
 
 ...........RMO.0...WX..UpDi.Bp.0!qFI....$$.>.=I..m P........|c}.BQgM.:S.a.R...H..K.l V-.x..@i.Bl..e
 .....X.9.^....	..n.L.@h*.c...al....\-.(~.k!QC.[....Y.e...../d...2.1n .........Baku.....z..3H...<~...:...va...Q....ob7u.J.>.G....Z.D.Lpa.}..x.Mg"s...g..D...V.C.}...Rxb..c/...m
-..#..l.....:.I......o..../7......i<....F..dX....)..f..V.X.X.....)..U...x!.7...|^.'_...Q?.%....GET /img_avatar2.png HTTP/1.1
+..#..l.....:.I......o..../7......i<....F..dX....)..f..V.X.X.....)..U...x!.7...|^.'_...Q?.%....GET /img_avatar2.webp HTTP/1.1
 Host: 192.168.111.136
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0
 Accept: image/avif,image/webp,*/*

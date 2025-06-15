@@ -15,7 +15,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro](/assets/img/2022-04-13-THM-VulnNet-Roasted.png)
+![intro](/assets/img/2022-04-13-THM-VulnNet-Roasted.webp)
 
 Xin chào, lại là tôi đây. Hôm nay tôi sẽ giải CTF [TryHackMe | VulnNet: Roasted](https://tryhackme.com/room/vulnnetroasted)
 ## Reconnaissance

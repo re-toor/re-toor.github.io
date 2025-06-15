@@ -18,7 +18,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro](/assets/img/2022-03-20-THM-Jack-of-All-Trades/1.png)
+![intro](/assets/img/2022-03-20-THM-Jack-of-All-Trades/1.webp)
 
 Xin chào, lại là tôi đây. Hôm nay tôi sẽ giải CTF [TryHackMe | Jack-of-All-Trades](https://tryhackme.com/room/jackofalltrades)
 ## Reconnaissance
@@ -114,11 +114,11 @@ Tuy nhiên tôi để ý còn có một path nữa khá thú vị là */recovery
 
 Sử dụng *_CyberChef_*
 
-![cyberchef](/assets/img/2022-03-20-THM-Jack-of-All-Trades/2.png)
+![cyberchef](/assets/img/2022-03-20-THM-Jack-of-All-Trades/2.webp)
 
 Thử link trong phần hint này thì đó là wiki về Stegosauria - 1 loài khủng long. Khi đọc đến Steg tôi đã nghĩ đến `steghide`, tôi sẽ tải tất cả các ảnh có trên web về và thử extract nó bằng `steghide`, còn passphrase thì tôi sẽ thử với đoạn code vừa tìm được phía trên.
 
-![assets](/assets/img/2022-03-20-THM-Jack-of-All-Trades/3.png)
+![assets](/assets/img/2022-03-20-THM-Jack-of-All-Trades/3.webp)
 
 `stego.jpg`
 
@@ -165,21 +165,21 @@ Password: TplFxiSHjY
 
 Quay trở lại path */recovery.php* và login thử
 
-![recovery](/assets/img/2022-03-20-THM-Jack-of-All-Trades/4.png)
+![recovery](/assets/img/2022-03-20-THM-Jack-of-All-Trades/4.webp)
 
 Theo như lời nhắn, tôi sẽ thử 1 cmd đơn giản như thế này
 
-![cmd](/assets/img/2022-03-20-THM-Jack-of-All-Trades/5.png)
+![cmd](/assets/img/2022-03-20-THM-Jack-of-All-Trades/5.webp)
 
 Khi thử `cat /etc/passwd`, tôi để ý thấy url sẽ bị mã hóa rồi sau đó mới trả về kết quả, điều này có nghĩa là để command được thực thi thì tôi phải chuyển nó về url encode
 
-![url encode](/assets/img/2022-03-20-THM-Jack-of-All-Trades/6.png)
+![url encode](/assets/img/2022-03-20-THM-Jack-of-All-Trades/6.webp)
 
 Tạo listener với port 9001 và tạo shell với `bash`. Sau 1 lúc thử các shell thì không RCE được nên tôi quyết định sẽ tìm thủ công.
 
 Trong thư mục */home* có 1 thư mục của user *jack* và 1 file *jacks_password_list*. Khi mở file này thì nó là 1 list các password, tôi sẽ lưu nó về và thử brute-force bằng `hydra` với user *jack*
 
-![password_list](/assets/img/2022-03-20-THM-Jack-of-All-Trades/7.png)
+![password_list](/assets/img/2022-03-20-THM-Jack-of-All-Trades/7.webp)
 
 ```python
 ┌──(neo㉿kali)-[~]

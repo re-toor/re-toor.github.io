@@ -17,7 +17,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro](/assets/img/2022-03-30-THM-All-in-One/1.png)
+![intro](/assets/img/2022-03-30-THM-All-in-One/1.webp)
 
 Xin chào, lại là tôi đây. Hôm nay tôi sẽ giải CTF [TryHackMe | All in One](https://tryhackme.com/room/allinonemj)
 ## Reconnaissance
@@ -82,11 +82,11 @@ Quay lại với web ở port 80, dùng *dirsearch* để tìm path ẩn
 
 Sử dụng *CyberChef* với key là *KeepGoing*
 
-![decode](/assets/img/2022-03-30-THM-All-in-One/2.png)
+![decode](/assets/img/2022-03-30-THM-All-in-One/2.webp)
 
 Lưu đoạn text này và quay trở lại với wordpress
 
-![wp](/assets/img/2022-03-30-THM-All-in-One/3.png)
+![wp](/assets/img/2022-03-30-THM-All-in-One/3.webp)
 
 Tôi có 1 cái tên ở đây là elyana, cũng có thể là username luôn.
 
@@ -199,7 +199,7 @@ Tiếp theo là user *elyana* đúng như tôi dự đoán phía trên. Vậy th
 
 Tôi thành công với *elyana - H@ckme@123*. Truy cập vào theme *twentytwenty* và sửa nó với shell php của tôi, thay đổi địa chỉ ip và port bằng địa chỉ máy của tôi và update file.
 
-![get shell](/assets/img/2022-03-30-THM-All-in-One/4.png)
+![get shell](/assets/img/2022-03-30-THM-All-in-One/4.webp)
 
 Sau đó tạo listener với netcat: `nc -lnvp 2402`
 

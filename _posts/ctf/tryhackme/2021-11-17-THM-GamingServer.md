@@ -16,7 +16,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro](/assets/img/2021-11-17-THM-GamingServer/1.png)
+![intro](/assets/img/2021-11-17-THM-GamingServer/1.webp)
 
 Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF [Tryhackme - GamingServer](https://tryhackme.com/room/gamingserver)
 
@@ -44,7 +44,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Chỉ có 2 port nên tôi sẽ bắt đầu với web server. Có vẻ đây là trang web của 1 tựa game, tôi thử check qua các path đơn giản thì tôi tìm được */robots.txt* và bên trong đó là */uploads*. 
 
-![uploads](/assets/img/2021-11-17-THM-GamingServer/2.png)
+![uploads](/assets/img/2021-11-17-THM-GamingServer/2.webp)
 
 Tôi có 1 file dict là 1 list các từ thì có thể sẽ được dùng làm wordlist để bruteforce, 1 file txt và 1 bức ảnh. Cũng không có gì đặc biệt ở đây. Thử dùng [dirsearch](https://github.com/maurosoria/dirsearch) để check xem còn path nào nữa không, tôi tìm được */secret/*. Trong này có 1 file rsa key. Tôi có thể dùng key này để login ssh chăng. Nhưng hiện tại tôi chưa có username nào. 
 

@@ -15,7 +15,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro](/assets/img/2022-02-04-THM-Source.png)
+![intro](/assets/img/2022-02-04-THM-Source.webp)
 
 Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF [Tryhackme - Source](https://tryhackme.com/room/source)
 

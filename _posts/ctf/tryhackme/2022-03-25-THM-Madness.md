@@ -19,7 +19,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro](/assets/img/2022-03-25-THM-Madness/1.png)
+![intro](/assets/img/2022-03-25-THM-Madness/1.webp)
 
 Xin chào, lại là tôi đây. Hôm nay tôi sẽ giải CTF [TryHackMe | Madness](https://tryhackme.com/room/madness)
 ## Reconnaissance
@@ -84,15 +84,15 @@ Warning                         : PNG image did not start with IHDR
 
 Có vẻ như ảnh đang bị sai định dạng nên không thể mở được - đuôi là jpg nhưng warning lại nói là png. Tôi sẽ dùng *hexed.it* để phân tích nó
 
-![hexed.it](/assets/img/2022-03-25-THM-Madness/2.png)
+![hexed.it](/assets/img/2022-03-25-THM-Madness/2.webp)
 
 Với 8 byte đầu này thì đúng là của file png nhưng theo như warning phía trên thì IHDR sẽ phải là jpg mới. Vậy nên tôi sẽ đổi 8 byte đầu thành signatures của jpg
 
-![jpg-sig](/assets/img/2022-03-25-THM-Madness/3.png)
+![jpg-sig](/assets/img/2022-03-25-THM-Madness/3.webp)
 
 Export ảnh này về, và bên trong nó là 1 path ẩn
 
-![hidden-path](/assets/img/2022-03-25-THM-Madness/4.png)
+![hidden-path](/assets/img/2022-03-25-THM-Madness/4.webp)
 
 Xem qua source của trang này tôi tìm thấy 1 hint nữa
 
@@ -106,7 +106,7 @@ Xem qua source của trang này tôi tìm thấy 1 hint nữa
 
 Vậy là tôi có thể điền 1 số nào đó từ 0-99 vào phần *Secret Entered:*, nhưng lại không có phần input nào. Vậy nên tôi nghĩ rằng tôi có thể điền trên url. 
 
-![?secret](/assets/img/2022-03-25-THM-Madness/5.png)
+![?secret](/assets/img/2022-03-25-THM-Madness/5.webp)
 
 Việc đầu tiên tôi sẽ tạo wordlist số 0-99 với `crunch`, cách tạo wordlist với `crunch` thì nó ở [đây](https://www.securitynewspaper.com/2018/11/28/create-your-own-wordlist-with-crunch/)
 
@@ -151,13 +151,13 @@ ________________________________________________
 
 Sau khi chạy hết, tôi để ý thấy có 1 path mà Size của nó cao hơn nhiều so với các số khác đó là 73 với Size: 445, nghĩa là ký tự của trang này nhiều hơn hẳn các trang khác (407 hoặc 408).
 
-![secret=73](/assets/img/2022-03-25-THM-Madness/6.png)
+![secret=73](/assets/img/2022-03-25-THM-Madness/6.webp)
 
 Tôi còn 1 phương pháp nữa chưa thử đó là dùng `steghide` với bức ảnh phía trên. Thử extract nó với pass vừa tìm được
 
 ```python
 ┌──(neo㉿kali)-[~]
-└─$ steghide extract -sf thm.png
+└─$ steghide extract -sf thm.webp
 Enter passphrase: 
 wrote extracted data to "hidden.txt".
 

@@ -18,7 +18,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro](/assets/img/2022-05-01-THM-HA-Joker-CTF/1.png)
+![intro](/assets/img/2022-05-01-THM-HA-Joker-CTF/1.webp)
 
 Xin chào, lại là tôi đây. Hôm nay tôi sẽ giải CTF [TryHackMe | HA Joker CTF](https://tryhackme.com/room/jokerctf)
 ## Reconnaissance
@@ -61,7 +61,7 @@ Cũng bằng cách này tôi tìm được file hệ thống là __phpinfo.php__
 
 Khi chuyển sang port 8080, tôi có username *joker* và phải tìm password để đăng nhập. Sau khi dùng Burp để bắt request thì tôi nhận ra phương thức được sử dụng là http-get chứ không phải post
 
-![burp](/assets/img/2022-05-01-THM-HA-Joker-CTF/2.png)
+![burp](/assets/img/2022-05-01-THM-HA-Joker-CTF/2.webp)
 
 Sử dụng *hydra* để bruteforce password của user *joker*
 
@@ -79,7 +79,7 @@ Hydra v9.4 (c) 2022 by van Hauser/THC & David Maciejak - Please do not use in mi
 
 Sau khi đăng nhập thành công, tôi được đưa đến 1 trang blog sử dụng Joomla CMS. 
 
-![blog-joomla](/assets/img/2022-05-01-THM-HA-Joker-CTF/3.png)
+![blog-joomla](/assets/img/2022-05-01-THM-HA-Joker-CTF/3.webp)
 
 Thử truy cập vào *robots.txt* tôi tìm thấy các path hệ thống, 1 trong số đó là */administrator/*
 
@@ -123,7 +123,7 @@ Sau khi đăng nhập, tôi có giao diện quản trị joomla. Bây giờ thì
 
 *Extensions -> Templates -> Templates -> beez3*
 
-![beez3](/assets/img/2022-05-01-THM-HA-Joker-CTF/4.png)
+![beez3](/assets/img/2022-05-01-THM-HA-Joker-CTF/4.webp)
 
 Tôi sẽ xóa hết nội dung và thay đổi bằng code shell của mình. Vẫn là shell php thần thánh của *pentestmonkey* thôi. 
 

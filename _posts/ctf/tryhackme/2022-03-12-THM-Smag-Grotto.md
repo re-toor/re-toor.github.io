@@ -18,7 +18,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro](/assets/img/2022-03-12-THM-Smag-Grotto/1.png)
+![intro](/assets/img/2022-03-12-THM-Smag-Grotto/1.webp)
 
 Xin chào, Lẩu đây. Hôm nay tôi sẽ giải 1 Easy CTF [Tryhackme - Smag Grotto](https://tryhackme.com/room/smaggrotto)
 ## Reconnaissance
@@ -49,15 +49,15 @@ Ngắm nghía qua web trên port 80, tôi có 1 trang default với nội dung t
 
 Với path */mail/* tôi có 1 đoạn hội thoại với 3 người qua mail
 
-![/mail](/assets/img/2022-03-12-THM-Smag-Grotto/2.png)
+![/mail](/assets/img/2022-03-12-THM-Smag-Grotto/2.webp)
 
 Tôi có thêm 1 file pcap nữa ở đây, tải nó về và phân tích 
 
-![wireshark](/assets/img/2022-03-12-THM-Smag-Grotto/3.png)
+![wireshark](/assets/img/2022-03-12-THM-Smag-Grotto/3.webp)
 
 Vậy là tôi phải thêm domain vào file hosts và sau đó có thể đăng nhập với username và password.
 
-![dev](/assets/img/2022-03-12-THM-Smag-Grotto/4.png)
+![dev](/assets/img/2022-03-12-THM-Smag-Grotto/4.webp)
 
 Tôi cũng không biết command này theo format gì, thử các lệnh của linux hay windows đều không có kết quả.
 

@@ -17,7 +17,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro](/assets/img/2022-03-08-THM-Willow/1.png)
+![intro](/assets/img/2022-03-08-THM-Willow/1.webp)
 
 Xin chào, lại là tôi đây. Hôm nay tôi sẽ giải CTF [Tryhackme - Willow](https://tryhackme.com/room/willow)
 ## Reconnaissance
@@ -63,13 +63,13 @@ Nhìn qua dãy số dài vô cùng này, đoạn đầu có bao gồm cả chữ
 
 Đầu tiên tôi xác định điểm cuối của đoạn có chữ. Vì ngay sau chữ `a` cuối cùng thì 10 chữ số `3233363720` sẽ được lặp lại, vậy thì có khả năng chữ `a` cuối cùng cũng là điểm cuối của đoạn mã này. Sao chép đoạn mã từ đầu đến chữ `a` cuối cùng và dán nó vào __`CyberChef`__ 
 
-![decode](/assets/img/2022-03-08-THM-Willow/2.png)
+![decode](/assets/img/2022-03-08-THM-Willow/2.webp)
 
 Ở đây tôi đã có 1 cái tên, có thể dùng nó làm username, và với gợi ý về ssh key thì rất có thể đoạn số phía sau là ssh key đã mã hóa.
 
 Tiếp tục dán đoạn còn lại vào đây để thử generate
 
-![ssh_key](/assets/img/2022-03-08-THM-Willow/3.png)
+![ssh_key](/assets/img/2022-03-08-THM-Willow/3.webp)
 
 SSH key này không thể dùng được, nên tôi sẽ để lại đó. Quay lại với port 111 và 2049. Tìm exploit nfs với port 2049 và 111, tôi tìm được cách khai thác bằng Nmap ở [đây](https://spreadsecurity.github.io/2017/02/19/reconnaissance-with-nmap-scripting-engine.html)
 
@@ -116,9 +116,9 @@ Vậy là tôi có
 
 Nhưng Ciphertext ở đây yêu cầu phải là numberic form nên tôi sẽ dùng __`CyberChef`__ thêm 1 lần nữa để 
 
-![numberic](/assets/img/2022-03-08-THM-Willow/4.png)
+![numberic](/assets/img/2022-03-08-THM-Willow/4.webp)
 
-![ssh key](/assets/img/2022-03-08-THM-Willow/5.png)
+![ssh key](/assets/img/2022-03-08-THM-Willow/5.webp)
 
 Sao chép key này về và login ssh. 
 

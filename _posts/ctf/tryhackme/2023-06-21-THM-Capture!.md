@@ -25,7 +25,7 @@ Bài này cũng không cần thiết phải scan port vì ở phần mô tả đ
 
 Sau khi chạy máy và truy cập vào web tôi được 1 site login. 
 
-![login](/assets/img/2023-07-21-THM-Capture!/1.png)
+![login](/assets/img/2023-07-21-THM-Capture!/1.webp)
 
 Sau khi thử login vài lần thì tôi bị dính captcha. Vậy là web có cơ chế rate limit để tránh brute-force. Tuy nhiên, captcha này chỉ là các phép tính cộng trừ nhân chia các số tự nhiên, vậy nên tôi có thể nghĩ đến việc viết python script để bypass captcha này trong mỗi phiên brute-force.
 
@@ -53,7 +53,7 @@ passwords = open('passwords.txt','r').read().splitlines()
 
 Khi đăng nhập sai, trang web hiện ***Error: The user does not exist***. 
 
-![error](/assets/img/2023-07-21-THM-Capture!/3.png)
+![error](/assets/img/2023-07-21-THM-Capture!/3.webp)
 
 Vậy thì tôi sẽ brute force username trước bằng cách kiểm tra xem khi nào dữ liệu trả về không chứa đoạn ký tự ***does not exist***, đó là username hợp lệ cần tìm.
 
@@ -177,5 +177,5 @@ Kết quả
 
 Login site
 
-![flag](/assets/img/2023-07-21-THM-Capture!/2.png)
+![flag](/assets/img/2023-07-21-THM-Capture!/2.webp)
 

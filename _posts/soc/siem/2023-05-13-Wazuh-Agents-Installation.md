@@ -95,7 +95,7 @@ Sau khi tạo group với tên __OS-WINDOWS__, tôi sẽ sửa đổi cấu hìn
 		<directories recursion_level="0" restrict="winrm.vbs$">%WINDIR%\System32</directories>
 		<directories realtime="yes">%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\Startup</directories>
 		<ignore>%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\Startup\desktop.ini</ignore>
-		<ignore type="sregex">.log$|.htm$|.jpg$|.png$|.chm$|.pnf$|.evtx$</ignore>
+		<ignore type="sregex">.log$|.htm$|.jpg$|.webp$|.chm$|.pnf$|.evtx$</ignore>
 		<!-- Windows registry entries to monitor. -->
 		<windows_registry>HKEY_LOCAL_MACHINE\Software\Classes\batfile</windows_registry>
 		<windows_registry>HKEY_LOCAL_MACHINE\Software\Classes\cmdfile</windows_registry>
@@ -339,7 +339,7 @@ Tôi sẽ sửa đổi nó 1 chút để có thể nhận IP của Wazuh-manager
 
     <ignore>%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\Startup\desktop.ini</ignore>
 
-    <ignore type="sregex">.log$|.htm$|.jpg$|.png$|.chm$|.pnf$|.evtx$</ignore>
+    <ignore type="sregex">.log$|.htm$|.jpg$|.webp$|.chm$|.pnf$|.evtx$</ignore>
 
     <!-- Windows registry entries to monitor. -->
     <windows_registry>HKEY_LOCAL_MACHINE\Software\Classes\batfile</windows_registry>

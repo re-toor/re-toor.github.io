@@ -17,7 +17,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro](/assets/img/2021-12-31-THM-Mustacchio/1.png)
+![intro](/assets/img/2021-12-31-THM-Mustacchio/1.webp)
 
 Xin chào, Lẩu đây. Hôm nay tôi quyết định làm thêm 1 machine dễ nữa: [Tryhackme - Mustacchio](https://tryhackme.com/room/mustacchio) 
 
@@ -78,11 +78,11 @@ Vào thư mục */custom/* tôi có 2 file là *moblie.js* và *users.bak*. Tôi
 
 Sau *admin* có thể là password, nhìn sơ qua đoạn mã này giống md5. Decode nó và tôi có password của *admin*. Thử login vào port 8765
 
-![login-port-8765](/assets/img/2021-12-31-THM-Mustacchio/2.png)
+![login-port-8765](/assets/img/2021-12-31-THM-Mustacchio/2.webp)
 
 Sử dụng BurpSuite để phân tích request xem có gì thú vị không
 
-![burp](/assets/img/2021-12-31-THM-Mustacchio/3.png)
+![burp](/assets/img/2021-12-31-THM-Mustacchio/3.webp)
 
 Source web có 1 đoạn script ở đây và 1 dòng ẩn:
 
@@ -105,7 +105,7 @@ Với đoạn script, tôi có thêm 1 path mới: `/auth/dontfoget.bak`. Dùng 
 
 Có vẻ như đây chính là form của comment ở web. Thử sao chép đoạn này vào comment và server trả về đúng như form
 
-![form-comment](/assets/img/2021-12-31-THM-Mustacchio/4.png)
+![form-comment](/assets/img/2021-12-31-THM-Mustacchio/4.webp)
 
 Sau 1 lúc tìm kiếm cách khai thác lỗi sử dụng XXE, tôi tìm được payload ở [đây](https://github.com/payloadbox/xxe-injection-payload-list). Sửa đoạn xml mẫu 1 chút, tôi sẽ lấy file từ server và thay comment là 1 câu lệnh để server đọc và in nội dung file ra cho tôi.
 
@@ -119,11 +119,11 @@ Sau 1 lúc tìm kiếm cách khai thác lỗi sử dụng XXE, tôi tìm đượ
 </comment>
 ```
 
-![comment](/assets/img/2021-12-31-THM-Mustacchio/5.png)
+![comment](/assets/img/2021-12-31-THM-Mustacchio/5.webp)
 
 Có vẻ là hơi khó đọc, tôi sẽ quay lại Burp
 
-![cat /etc/passwd](/assets/img/2021-12-31-THM-Mustacchio/6.png)
+![cat /etc/passwd](/assets/img/2021-12-31-THM-Mustacchio/6.webp)
 
 Để thực thi được lệnh, tôi phải chuyển nó về dạng url. Sau 1 lúc bế tắc thì tôi nhận ra còn 1 hint nữa mà tôi chưa dùng đến, là ssh key của Barry. Thông thường ssh key sẽ nằm trong thư mục *.ssh* trong thư mục user, vậy thì đường dẫn file có thể sẽ giống như thế này: 
 
@@ -131,7 +131,7 @@ Có vẻ là hơi khó đọc, tôi sẽ quay lại Burp
 
 Thay path này vào */etc/passwd* và encode nó thành url
 
-![id_rsa](/assets/img/2021-12-31-THM-Mustacchio/7.png)
+![id_rsa](/assets/img/2021-12-31-THM-Mustacchio/7.webp)
 
 ## SSH
 

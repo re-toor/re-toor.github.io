@@ -17,7 +17,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro](/assets/img/2025-03-03-HTB-Titanic/Titanic.png)
+![intro](/assets/img/2025-03-03-HTB-Titanic/Titanic.webp)
 
 ## Reconnaissance and Scanning
 
@@ -123,21 +123,21 @@ Thêm vào file host
 
 Quay trở lại với domain chính, lướt qua 1 chút về trang này, đây là 1 trang để book chỗ trên tàu titanic. 
 
-![one](/assets/img/2025-03-03-HTB-Titanic/1.png)
+![one](/assets/img/2025-03-03-HTB-Titanic/1.webp)
 
 Thử nhập các thông tin và submit, vé sẽ được tải về máy của tôi dưới dạng file json. Xem qua file json được tải về thì tôi thấy đúng là những gì tôi đã nhập, suy ra là dữ liệu được server xử lý -> có method POST.
 
 Sử dụng burpsuite để phân tích request
 
-![two](/assets/img/2025-03-03-HTB-Titanic/2.png)
+![two](/assets/img/2025-03-03-HTB-Titanic/2.webp)
 
 Nhìn thấy kiểu format này làm tôi nghĩ ngay đến LFI, thử inject một số payload đơn giản
 
-![three](/assets/img/2025-03-03-HTB-Titanic/3.png)
+![three](/assets/img/2025-03-03-HTB-Titanic/3.webp)
 
 Vậy là có lỗ hổng LFI ở đây và có 1 user tồn tại trong server là *developer*. Thử truy cập vào thư mục của user này xem có lấy được user flag không.
 
-![four](/assets/img/2025-03-03-HTB-Titanic/4.png)
+![four](/assets/img/2025-03-03-HTB-Titanic/4.webp)
 
 Tìm một số file mặc định như crontab hay access.log nhưng không có kết quả mong đợi, tôi sẽ để nó ở đây và sang tiếp con đường thứ 2 là vhost `dev.titanic.htb`
 
@@ -152,33 +152,33 @@ Mất gần nửa tiếng để đi theo hướng đầu tiên, nhưng với phi
 
 Tập trung vào cách thứ 2. Đầu tiên tôi sẽ thử đăng ký 1 tài khoản để xem có gì bên trong Gitea này không
 
-![five](/assets/img/2025-03-03-HTB-Titanic/5.png)
+![five](/assets/img/2025-03-03-HTB-Titanic/5.webp)
 
 Tìm đến Explore, tôi có 2 repo của user *developer*, mỗi repo đều cho tôi một số thông tin có giá trị.
 
 *docker-config*
 
-![five](/assets/img/2025-03-03-HTB-Titanic/6.png)
+![five](/assets/img/2025-03-03-HTB-Titanic/6.webp)
 
-![six](/assets/img/2025-03-03-HTB-Titanic/7.png)
+![six](/assets/img/2025-03-03-HTB-Titanic/7.webp)
 
 Tôi tìm được thư mục của gitea nằm trong `/home/developer`. Bỏ ra chút thời gian để nghiên cứu source code của Gitea trên Github, tôi tìm được file conf sẽ được lưu tại `/conf/app.ini`. Kết hợp với lỗ hổng LFI đã có và thử một số khả năng
 
-![seven](/assets/img/2025-03-03-HTB-Titanic/8.png)
+![seven](/assets/img/2025-03-03-HTB-Titanic/8.webp)
 
-![eight](/assets/img/2025-03-03-HTB-Titanic/9.png)
+![eight](/assets/img/2025-03-03-HTB-Titanic/9.webp)
 
 Đây rồi! Mở file `gitea.db`
 
-![nine](/assets/img/2025-03-03-HTB-Titanic/10.png)
+![nine](/assets/img/2025-03-03-HTB-Titanic/10.webp)
 
 Ngay ở dòng đầu tôi đã có SQLite format nên tôi sẽ tải file này về và mở nó bằng sqlitebrowser
 
-![ten](/assets/img/2025-03-03-HTB-Titanic/11.png)
+![ten](/assets/img/2025-03-03-HTB-Titanic/11.webp)
 
 Tìm đến bảng user
 
-![eleven](/assets/img/2025-03-03-HTB-Titanic/12.png)
+![eleven](/assets/img/2025-03-03-HTB-Titanic/12.webp)
 
 Sau một lúc lần mò thì tôi tìm thấy cách crack ở [đây](https://www.unix-ninja.com/p/cracking_giteas_pbkdf2_password_hashes). Thử làm như trong bài xem có được không.
 

@@ -16,7 +16,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro](/assets/img/2021-10-24-THM-Daily-Bugle/1.png)
+![intro](/assets/img/2021-10-24-THM-Daily-Bugle/1.webp)
 
 Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF [Tryhackme - Daily Bugle](https://tryhackme.com/room/dailybugle). Géc gô!!!
 
@@ -80,7 +80,7 @@ Login vào joomla để upload shell. Dạo quanh 1 lúc thì tôi thấy templa
 
 Sửa file php có sẵn trong template thành reverse shell php, shell này tôi lấy từ [pentestmonkey](https://pentestmonkey.net/tools/web-shells/php-reverse-shell), sửa listen host và port thành ip machine của mình.
 
-![upload-shell](/assets/img/2021-10-24-THM-Daily-Bugle/2.png)
+![upload-shell](/assets/img/2021-10-24-THM-Daily-Bugle/2.webp)
 
 Tạo listener bằng netcat: `nc -lnvp 2402` sau đó truy cập vào file vừa sửa: `http://IP-MACHINE/templates/beez3/index.php`
 
@@ -100,7 +100,7 @@ Config lại shell bằng python nhưng không được, trong thư mục __/hom
 
 Sau khi lần mò trong thư mục lưu trữ web (thường là `/var/www/html/`) tôi tìm thấy 2 file `configuration.php` và `web.config.php`
 
-![jjameson](/assets/img/2021-10-24-THM-Daily-Bugle/3.png)
+![jjameson](/assets/img/2021-10-24-THM-Daily-Bugle/3.webp)
 
 ```python
 su jjameson

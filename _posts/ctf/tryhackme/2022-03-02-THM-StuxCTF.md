@@ -19,7 +19,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro](/assets/img/2022-03-02-THM-StuxCTF/1.png)
+![intro](/assets/img/2022-03-02-THM-StuxCTF/1.webp)
 
 Xin chào, Lẩu đây, dạo này bận quá nên bây giờ tôi mới quay lại làm CTF được. Hôm nay tôi sẽ trở lại với 1 CTF mức Easy [Tryhackme - StuxCTF](https://tryhackme.com/room/stuxctf)
 
@@ -66,7 +66,7 @@ Có vẻ như đây là một dạng thuật toán nào đó, nhưng vì chưa c
 
 Tiếp theo thì vào */robots.txt* 
 
-![robots.txt](/assets/img/2022-03-02-THM-StuxCTF/2.png)
+![robots.txt](/assets/img/2022-03-02-THM-StuxCTF/2.webp)
 
 Khi truy cập thử vào */StuxCTF/* thì web báo không tìm thấy path này. Dừng khoảng chừng là 2s thì tôi để ý thấy _*Diffie_Hellman*_, nghe giống 1 cái tên. Thử tìm kiếm nó trên mạng và hóa ra đây là tên 1 phương pháp trao đổi khóa, nó ở [đây](https://vi.wikipedia.org/wiki/Trao_%C4%91%E1%BB%95i_kh%C3%B3a_Diffie-Hellman)
 
@@ -87,17 +87,17 @@ print (str(gcab)[:128])
 
 Truy cập web với path là kết quả vừa tìm được.
 
-![stuxctf](/assets/img/2022-03-02-THM-StuxCTF/3.png)
+![stuxctf](/assets/img/2022-03-02-THM-StuxCTF/3.webp)
 
 Lại thử kiểm tra source web xem có hint nào nữa không
 
-![source](/assets/img/2022-03-02-THM-StuxCTF/4.png)
+![source](/assets/img/2022-03-02-THM-StuxCTF/4.webp)
 
 `<!-- hint: /?file= -->`
 
 Với hint này thì khả năng cao là [PHP LFI](https://github.com/qazbnm456/awesome-security-trivia/blob/master/Tricky-ways-to-exploit-PHP-Local-File-Inclusion.md) exploit. Tôi sẽ dùng *BurpSuite* để sửa request dễ hơn. Sau 1 lúc thử các kiểu LFI đều không có kết quả, tôi nhận ra mình đã hiểu sai hint này. Với PHP LFI tôi phải để *index.php* ở đầu và sau đó là */?file=*, nhưng thực ra trong hint không đề cập đến *index.php* nên path sẽ chỉ có */?file=* và tên file đằng sau
 
-![index.php](https://imgur.com/f9hWbkT.png)
+![index.php](https://imgur.com/f9hWbkT.webp)
 
 Sao chép đoạn hex này vào [CyberChef](https://gchq.github.io/CyberChef/) và tôi có 1 đoạn mã trông giống base64 nhưng bị đảo ngược vì dấu = xuất hiện ở đầu đoạn mã chứ không phải phần đuôi như thông thường.
 
@@ -201,7 +201,7 @@ Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 
 Sau đó thực hiện request lấy file *test.txt* về server. Tôi dùng *BurpSuite*
 
-![get file](/assets/img/2022-03-02-THM-StuxCTF/5.png)
+![get file](/assets/img/2022-03-02-THM-StuxCTF/5.webp)
 
 Tuy web hiện *File no Exist!* nhưng khi kiểm tra lại http server thì tôi thấy file đã được tải lên
 

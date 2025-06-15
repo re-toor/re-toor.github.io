@@ -16,7 +16,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro](/assets/img/2022-03-18-THM-Lian-Yu/1.png)
+![intro](/assets/img/2022-03-18-THM-Lian-Yu/1.webp)
 
 Xin chào, lại là tôi đây. Hôm nay tôi sẽ giải CTF [TryHackMe | Lian_Yu](https://tryhackme.com/room/lianyu)
 ## Reconnaissance
@@ -51,11 +51,11 @@ Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 
 Tôi thử qua ftp với user Anonymous nhưng không có kết quả, vậy nên tôi sẽ bắt đầu với web - port 80
 
-![web](/assets/img/2022-03-18-THM-Lian-Yu/2.png)
+![web](/assets/img/2022-03-18-THM-Lian-Yu/2.webp)
 
 Sử dụng *dirsearch* thì tôi tìm thấy path ẩn là */island/*
 
-![island](/assets/img/2022-03-18-THM-Lian-Yu/3.png)
+![island](/assets/img/2022-03-18-THM-Lian-Yu/3.webp)
 
 Vào phần source web thì tôi tìm được Code Word là `vigilante`, tôi cũng chưa biết code này để làm gì nhưng cứ lưu nó lại đã
 
@@ -89,7 +89,7 @@ Vậy là file ẩn có đuôi `.ticket`. Tôi sẽ sử dụng *dirsearch* thê
 
 Tôi tìm được `green_arrow`
 
-![green_arrow](/assets/img/2022-03-18-THM-Lian-Yu/4.png)
+![green_arrow](/assets/img/2022-03-18-THM-Lian-Yu/4.webp)
 
 Với Hint sử dụng CyberChef, tôi tìm decode được mã trên với base58.
 
@@ -109,8 +109,8 @@ Using binary mode to transfer files.
 ftp> dir
 229 Entering Extended Passive Mode (|||38540|).
 150 Here comes the directory listing.
--rw-r--r--    1 0        0          511720 May 01  2020 Leave_me_alone.png
--rw-r--r--    1 0        0          549924 May 05  2020 Queen's_Gambit.png
+-rw-r--r--    1 0        0          511720 May 01  2020 Leave_me_alone.webp
+-rw-r--r--    1 0        0          549924 May 05  2020 Queen's_Gambit.webp
 -rw-r--r--    1 0        0          191026 May 01  2020 aa.jpg
 226 Directory send OK.
 ftp> 
@@ -118,11 +118,11 @@ ftp>
 
 Lấy cả 3 ảnh này về để phân tích. Trong này có 2 ảnh Quenn và aa là có thể xem được còn ảnh Leave_me_alone thì không. Tôi sẽ up nó lên *hexed.it để phân tích 
 
-![leave](/assets/img/2022-03-18-THM-Lian-Yu/5.png)
+![leave](/assets/img/2022-03-18-THM-Lian-Yu/5.webp)
 
 8 byte ký hiệu đầu tiên của file png này không đúng (hoặc đã bị thay đổi). Tôi sẽ sửa lại nó và export ra ảnh mới
 
-![pass](/assets/img/2022-03-18-THM-Lian-Yu/6.png)
+![pass](/assets/img/2022-03-18-THM-Lian-Yu/6.webp)
 
 Ảnh này và aa đều có điểm chung là về những tay súng, nên tôi nghĩ chúng có thể liên quan đến nhau chăng?
 

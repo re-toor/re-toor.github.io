@@ -18,13 +18,13 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![Intro](/assets/img/THM-Bounty-Hacker/Intro.png)
+![Intro](/assets/img/THM-Bounty-Hacker/Intro.webp)
 
 Xin chào, Lẩu đây. Hôm nay tôi sẽ giải CTF [Tryhackme - Bounty Hacker](https://tryhackme.com/room/cowboyhacker). Géc gô!!!
 
 Vẫn như thông thường thôi, việc đầu tiên cần làm là quét cổng. Tôi sẽ dùng rustscan cho nhanh và thêm vài tùy chọn của nmap.
 
-![scan-port](/assets/img/THM-Bounty-Hacker/scan-port.png?style=center)
+![scan-port](/assets/img/THM-Bounty-Hacker/scan-port.webp?style=center)
 
 Có 3 port đang mở:
 - Port 21 chạy ftp-vsftpd 3.0.3 có thể login với Anonymous
@@ -33,7 +33,7 @@ Có 3 port đang mở:
 
 Tôi thử login vào ftp server với anonymous.
 
-![ftp](/assets/img/THM-Bounty-Hacker/ftp-server.png?style=centerme)
+![ftp](/assets/img/THM-Bounty-Hacker/ftp-server.webp?style=centerme)
 
 Tôi có 2 file txt ở đây. Clone nó về máy để xem có thông tin gì không.
 
@@ -41,7 +41,7 @@ Tôi có 2 file txt ở đây. Clone nó về máy để xem có thông tin gì 
 
 `get task.txt /home/neo/task.txt`
 
-![task-txt](/assets/img/THM-Bounty-Hacker/task-txt.png?style=centerme)
+![task-txt](/assets/img/THM-Bounty-Hacker/task-txt.webp?style=centerme)
 
 Tôi có 1 cái tên ở đây: __lin__
 
@@ -51,22 +51,22 @@ Tôi có 1 trang html về 1 cuộc hội thoại và vài cái tên. Không có
 
 Vậy thì login vào đâu? Chỉ còn ssh thôi. Hail Hydra!!!
 
-![Hydra](/assets/img/THM-Bounty-Hacker/hydra.png?style=centerme)
+![Hydra](/assets/img/THM-Bounty-Hacker/hydra.webp?style=centerme)
 
 Login vào ssh và tôi có user flag nằm trong desktop.
 
-![user-flag](/assets/img/THM-Bounty-Hacker/user-flag.png?style=centerme)
+![user-flag](/assets/img/THM-Bounty-Hacker/user-flag.webp?style=centerme)
 
 Thử tìm xem có thư mục nào chạy với quyền root không.
 
-![sudo-l](/assets/img/THM-Bounty-Hacker/sudo-l.png?style=centerme)
+![sudo-l](/assets/img/THM-Bounty-Hacker/sudo-l.webp?style=centerme)
 
 Vào [GTFOBins](https://gtfobins.github.io/) xem có tar trong đó không.
 
-![gtfobins](/assets/img/THM-Bounty-Hacker/gtfobins.png?style=centerme)
+![gtfobins](/assets/img/THM-Bounty-Hacker/gtfobins.webp?style=centerme)
 
 Thử xem có get root được không nào.
 
-![rooted](/assets/img/THM-Bounty-Hacker/rooted.png?style=centerme)
+![rooted](/assets/img/THM-Bounty-Hacker/rooted.webp?style=centerme)
 
 Done.

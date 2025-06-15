@@ -42,33 +42,33 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Tôi sẽ bắt đầu với web server. 
 
-![index.html](/assets/img/2021-11-30-THM-Wonderland/1.png)
+![index.html](/assets/img/2021-11-30-THM-Wonderland/1.webp)
 
 Chỉ là 1 trang html đơn giản. Tôi thử qua các path đơn giản và phổ biến như *robots.txt* hay thử check qua *index.php* đều không có kết quả. Vẫn phải dùng tool để tìm web path thôi, tôi sẽ dùng [dirsearch](https://github.com/maurosoria/dirsearch.git). 
 
 `[05:44:38] 301 -    0B  - /r  ->  r/`
 
-![path r](/assets/img/2021-11-30-THM-Wonderland/2.png)
+![path r](/assets/img/2021-11-30-THM-Wonderland/2.webp)
 
 Cũng không có gì đặc biệt. Tôi sẽ thử 1 lần dùng dirsearch nữa để xem đằng sau path */r* này có gì không.
 
 `[05:45:23] 301 -    0B  - /r/a  ->  a/`
 
-![path /a](/assets/img/2021-11-30-THM-Wonderland/3.png)
+![path /a](/assets/img/2021-11-30-THM-Wonderland/3.webp)
 
 Vẫn chưa có gì để khai thác ở đây. Nhưng tôi có 1 ý tưởng về mấy cái path này, tôi sẽ thử thêm 1 lần dirsearch nữa cho chắc chắn.
 
 `[05:56:29] 301 -    0B  - /r/a/b  ->  b/`
 
-![path /b](/assets/img/2021-11-30-THM-Wonderland/4.png)
+![path /b](/assets/img/2021-11-30-THM-Wonderland/4.webp)
 
 Vậy thì rất có thể những path sau là các chữ cái tạo nên từ rabbit. Để tránh mất thời gian thì tôi sẽ thử luôn.
 
-![path /b](/assets/img/2021-11-30-THM-Wonderland/5.png)
+![path /b](/assets/img/2021-11-30-THM-Wonderland/5.webp)
 
-![path /i](/assets/img/2021-11-30-THM-Wonderland/6.png)
+![path /i](/assets/img/2021-11-30-THM-Wonderland/6.webp)
 
-![path /r](/assets/img/2021-11-30-THM-Wonderland/7.png)
+![path /r](/assets/img/2021-11-30-THM-Wonderland/7.webp)
 
 Check qua source web thì tôi tìm được 1 thứ hay ho có thể là username và password để đăng nhập SSH.
 
@@ -88,7 +88,7 @@ Check qua source web thì tôi tìm được 1 thứ hay ho có thể là userna
     <p>"In that direction,"" the Cat said, waving its right paw round, "lives a Hatter: and in that direction," waving
         the other paw, "lives a March Hare. Visit either you like: they’re both mad."</p>
     <p style="display: none;">alice:***************************************</p>
-    <img src="[/img/alice_door.png](view-source:http://10.10.185.15/img/alice_door.png)" style="height: 50rem;">
+    <img src="[/img/alice_door.webp](view-source:http://10.10.185.15/img/alice_door.webp)" style="height: 50rem;">
 </body>
 ```
 
@@ -433,7 +433,7 @@ hatter@wonderland:~$ ll /usr/bin/perl /usr/bin/perl5.26.1
 
 Điều này có nghĩa là user *hatter* có quyền thực thi cũng như quản lý nó. Thử vào [GTFOBins](https://gtfobins.github.io) để tìm perl với Capabilities.
 
-![perl capabilities](/assets/img/2021-11-30-THM-Wonderland/8.png)
+![perl capabilities](/assets/img/2021-11-30-THM-Wonderland/8.webp)
 
 ```python
 hatter@wonderland:~$ /usr/bin/perl -e 'use POSIX qw(setuid); POSIX::setuid(0); exec "/bin/sh";'

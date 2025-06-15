@@ -10,7 +10,7 @@ categories: soc
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro](/assets/img/2023-05-06-Wazuh-Installation/1.png)
+![intro](/assets/img/2023-05-06-Wazuh-Installation/1.webp)
 
 Do đặc thù công việc nên từ một người làm Pentest tôi phải chuyển sang làm SOC và đảm nhiệm việc xây dựng hệ thống SIEM. Mặc dù thời điểm hiện tại có rất nhiều sản phẩm thương mại đã hoàn thiện, chỉ chờ doanh nghiệp mua về và vận hành thôi. Tuy nhiên chi phí cho các sản phẩm này là một trở ngại đối với các doanh nghiệp vừa và nhỏ (nó đắt :laughing:). 
 
@@ -22,7 +22,7 @@ Hiện tại thì tôi đang triển khai nó trên môi trường thực tế, 
 
 ## Kiến trúc
 
-![kiến trúc](/assets/img/2023-05-06-Wazuh-Installation/2.png)
+![kiến trúc](/assets/img/2023-05-06-Wazuh-Installation/2.webp)
 
 Đọc thêm về cấu trúc tại [đây](https://documentation.wazuh.com/current/getting-started/architecture.html) hoặc là [đây](https://github.com/hocchudong/ghichep-SOC/blob/master/ghichep-wazuh/ghichep-overview-wazuh.md)
 

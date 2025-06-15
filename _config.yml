@@ -39,14 +39,14 @@ keywords:              ["Information Security", "RedTeam", "BlueTeam", "SOC"]
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
 # It also used by the `jekyll-seo-tag` plugin.
-logo:                  /assets/img/avt1.png
+logo:                  /assets/img/avt1.webp
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
   # Used by `jekyll-feed`:
   name:                Ha Tuan Anh
   email:               tuanha241999@gmail.com
-  picture:             /assets/img/avt1.png
+  picture:             /assets/img/avt1.webp
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
@@ -68,7 +68,7 @@ copyright:             © 2025. All rights reserved.
 permalink:             none
 
 # Pagination configuration (used by the `blog` layout)
-paginate:              10
+paginate:              5
 paginate_path:         /page-:num/
 excerpt_separator:     <!--more-->
 

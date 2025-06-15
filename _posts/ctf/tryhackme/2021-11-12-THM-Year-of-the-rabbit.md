@@ -51,19 +51,19 @@ Port 21 không thể login, port 80 thì tôi có 1 default page. Không có gì
 
 Ở __/assets/__ tôi có 1 quả meme huyền thoại [này](https://www.youtube.com/watch?v=dQw4w9WgXcQ) và 1 file *style.css*. Xem qua file css này thì tôi tìm được 1 path mới.
 
-![new-path](/assets/img/2021-11-12-THM-Year-of-the-rabbit/1.png)
+![new-path](/assets/img/2021-11-12-THM-Year-of-the-rabbit/1.webp)
 
 Vào path này thì tôi có 1 popup
 
-![popup](/assets/img/2021-11-12-THM-Year-of-the-rabbit/2.png)
+![popup](/assets/img/2021-11-12-THM-Year-of-the-rabbit/2.webp)
 
 Nếu ấn OK thì nó sẽ quay trở lại cái meme bên trên :expressionless: Tuy nhiên nếu không ấn OK thì page vẫn loading, tôi nghĩ rằng nó đang chờ để redirect, thử mở BurpSuite và kiểm tra và tôi tìm ra hidden_directory 
 
-![hidden_directory](/assets/img/2021-11-12-THM-Year-of-the-rabbit/3.png)
+![hidden_directory](/assets/img/2021-11-12-THM-Year-of-the-rabbit/3.webp)
 
 Trong dir ẩn này tôi có 1 bức ảnh, cũng không để làm gì, dùng *binwalk* hay *steghide* cũng không ra gì, mất vài phút bế tắc thì tôi đáp nó lên [hexed.it](http://hexed.it) và tìm ra user ftp server.
 
-![ftpuser](/assets/img/2021-11-12-THM-Year-of-the-rabbit/4.png)
+![ftpuser](/assets/img/2021-11-12-THM-Year-of-the-rabbit/4.webp)
 
 Vậy là tôi có ftp username và 1 list password. Copy list này vào 1 file wordlist và burteforce nó với __hydra__.
 

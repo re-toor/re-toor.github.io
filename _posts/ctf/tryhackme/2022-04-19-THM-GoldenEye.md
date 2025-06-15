@@ -19,7 +19,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro](/assets/img/2022-04-19-THM-GoldenEye/1.png)
+![intro](/assets/img/2022-04-19-THM-GoldenEye/1.webp)
 
 Xin chào, lại là tôi đây. Hôm nay tôi sẽ giải CTF [TryHackMe | GoldenEye](https://tryhackme.com/room/goldeneye)
 ## Reconnaissance
@@ -138,7 +138,7 @@ Có __4 port__ đang mở.
 
 Vì có port 80 nên tôi sẽ bắt đầu với web trước.
 
-![web](/assets/img/2022-04-19-THM-GoldenEye/2.png)
+![web](/assets/img/2022-04-19-THM-GoldenEye/2.webp)
 
 Tìm kiếm trong source web tôi có 1 file js
 
@@ -205,7 +205,7 @@ Và khi giải mã đoạn code với HTML decoder, tôi tìm được password 
 
 Truy cập vào path */sev-home/* và login bằng username và password vừa tìm được
 
-![sev-home](/assets/img/2022-04-19-THM-GoldenEye/3.png)
+![sev-home](/assets/img/2022-04-19-THM-GoldenEye/3.webp)
 
 Thử vào source web xem có gì đặc biệt không
 
@@ -320,13 +320,13 @@ Since you're a Linux user just point this servers IP to severnaya-station.com in
 
 Theo như message 2, tôi phải thêm domain vào file hosts và vào domain *severnaya-station.com/gnocertdir* để login với user và password phía trên
 
-![moodle](/assets/img/2022-04-19-THM-GoldenEye/4.png)
+![moodle](/assets/img/2022-04-19-THM-GoldenEye/4.webp)
 
 Sau khi đã thêm domain và hosts và truy cập url, tôi được 1 trang web sử dụng  *Moodle* LMS.
 
 Đăng nhập bằng user và pass ở phía trên, vào được user này tôi có 1 message chưa đọc
 
-![doak](/assets/img/2022-04-19-THM-GoldenEye/5.png)
+![doak](/assets/img/2022-04-19-THM-GoldenEye/5.webp)
 
 Ở đây tôi còn có thêm 1 user nữa tên là *Doak*. Thử bruteforce user này luôn
 
@@ -432,7 +432,7 @@ Tiếp theo phải tìm cách để lấy RCE.
 
 Theo như trong phần hướng dẫn trong task, tìm đến Aspell, sau đó đổi *Spell engine* thành PSpellShell và thay đổi *Path to aspell* thành reverse shell chứa IP và port mà tôi muốn gọi về máy local.
 
-![aspell](/assets/img/2022-04-19-THM-GoldenEye/6.png)
+![aspell](/assets/img/2022-04-19-THM-GoldenEye/6.webp)
 
 Bây giờ để kích hoạt được shell này, tôi phải thực hiện spell check và server sẽ gọi spellpath mà tôi đã thay đổi thành shell ban nãy.
 
@@ -440,7 +440,7 @@ Trước khi spell check thì cần tạo listener với port vừa cấu hình 
 
 `Navigation -> Home -> My Profile -> Blogs -> Add a new entry`
 
-![spellcheck](/assets/img/2022-04-19-THM-GoldenEye/7.png)
+![spellcheck](/assets/img/2022-04-19-THM-GoldenEye/7.webp)
 
 Ấn vào dấu tích xanh ABC trên thanh công cụ và quay lại listener 
 
