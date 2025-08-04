@@ -560,6 +560,8 @@ User jacob may run the following commands on outbound:
 
 Tìm hiểu một chút về `below`, đây là một trình theo dõi hiệu năng hệ thống (system performance monitor) như CPU, memory, IO, process, v.v...
 
+### CVE-2025-27591
+
 Thử tìm kiếm lỗ hổng của `below` tôi tìm thấy [CVE-2025-27591](https://nvd.nist.gov/vuln/detail/CVE-2025-27591). `Below` chạy như một hệ thống dịch vụ dưới quyền root và tạo thư mục `/var/log/below` với quyền world-writable (0777), cho phép người dùng không đặc quyền vẫn có thể thao tác vào thư mục này. Attacker có thể tạo symlink độc hại để trỏ đến các file hệ thống nhạy cảm (ví dụ `/etc/shadow`), từ đó chiếm quyền ghi file và có thể leo lên root.
 
 Tìm kiếm Poc trên github, tôi tìm thấy phiên bản đầu tiên được up lên ở [đây](https://github.com/obamalaolu/CVE-2025-27591)
