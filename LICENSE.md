@@ -1,8 +1,3 @@
----
-layout: plain
-sitemap: false
----
-
 # LICENSE
 
 * this list will be replaced by the toc
