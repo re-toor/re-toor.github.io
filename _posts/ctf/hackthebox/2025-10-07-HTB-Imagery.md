@@ -18,7 +18,7 @@ categories: ctf
 {:toc}
 
 
-![](/assets/img/2025-10-07-HTB-Imagery/1.png)
+![](/assets/img/2025-10-07-HTB-Imagery/intro.png)
 ## Reconnaissance and Scanning
 
 ```bash
