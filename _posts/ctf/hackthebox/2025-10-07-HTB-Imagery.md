@@ -10,6 +10,7 @@ tags:
   - burpsuite
   - web
   - python
+  - brute-force
   - linux
   - hackthebox
 categories: ctf
