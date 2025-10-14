@@ -1,7 +1,7 @@
 ---
 layout: tag-list
 type: tag
-title: Command Injection
+title: Command injection
 slug: command injection
 category: ctf
 sidebar: false
