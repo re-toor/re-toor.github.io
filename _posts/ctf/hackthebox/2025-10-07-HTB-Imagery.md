@@ -4,11 +4,11 @@ author: Neo
 title: Hackthebox - Imagery
 date: 2025-10-07
 tags:
+  - web
   - xss
   - LFI
   - command injection
   - burpsuite
-  - web
   - python
   - brute-force
   - linux
@@ -20,6 +20,7 @@ categories: ctf
 
 
 ![](/assets/img/2025-10-07-HTB-Imagery/intro.png)
+
 ## Reconnaissance and Scanning
 
 ```bash

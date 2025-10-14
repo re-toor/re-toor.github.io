@@ -169,13 +169,16 @@
   },
   "active": "03bdeb4d61bb0596",
   "lastOpenFiles": [
+    "_posts/ctf/hackthebox/2025-07-27-HTB-Outbound.md",
+    "_posts/ctf/hackthebox/2025-10-07-HTB-Imagery.md",
+    "_posts/ctf/hackthebox/2025-04-01-HTB-Dog.md",
+    "_posts/ctf/hackthebox/2023-10-07-HTB-CozyHosting.md",
+    "_featured_tags/spring boot.md",
+    "_featured_tags/command injection.md",
     "assets/img/2025-10-07-HTB-Imagery/intro.png",
     "assets/img/2025-10-07-HTB-Imagery/4.jpg",
     "assets/img/2025-10-07-HTB-Imagery/1.jpg",
     "assets/img/2025-10-07-HTB-Imagery/3.jpg",
-    "_posts/ctf/hackthebox/2025-10-07-HTB-Imagery.md",
-    "_posts/ctf/hackthebox/2025-07-27-HTB-Outbound.md",
-    "_featured_tags/command injection.md",
     "_featured_categories/soc.md",
     "_featured_categories/ctf.md",
     "_featured_categories/blog.md",
@@ -190,9 +193,7 @@
     "assets/img/2025-10-07-HTB-Imagery/20.jpg",
     "assets/img/2025-10-07-HTB-Imagery/19.jpg",
     "assets/img/2025-10-07-HTB-Imagery/18.jpg",
-    "assets/img/2025-10-07-HTB-Imagery/17.jpg",
     "assets/img/2025-10-07-HTB-Imagery",
-    "_posts/ctf/hackthebox/2025-04-01-HTB-Dog.md",
     "Untitled.base"
   ]
 }
