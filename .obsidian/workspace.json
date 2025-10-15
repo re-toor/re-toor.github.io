@@ -167,8 +167,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "3ab58e7b76c89f1c",
+  "active": "03bdeb4d61bb0596",
   "lastOpenFiles": [
+    "assets/img/error.gif",
+    "assets/img/error2.gif",
     "offline.md",
     "posts.md",
     "projects.md",
@@ -179,7 +181,6 @@
     "about.md",
     "404.md",
     "_posts/ctf/hackthebox/2025-10-07-HTB-Imagery.md",
-    "assets/img/error.gif",
     "_featured_tags/xss.md",
     "_featured_tags/lfi.md",
     "_posts/ctf/hackthebox/2025-07-27-HTB-Outbound.md",
