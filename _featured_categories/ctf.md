@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog
 type: category
 title: CTF
 slug: ctf
