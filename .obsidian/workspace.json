@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tags.md",
+                "file": "about.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "tags"
+              "title": "about"
             }
           }
         ]
@@ -169,6 +169,8 @@
   },
   "active": "03bdeb4d61bb0596",
   "lastOpenFiles": [
+    "tags.md",
+    "index.md",
     "assets/img/loading.gif",
     "assets/img/3910770.gif",
     "assets/img/error-404.jpg",
@@ -181,9 +183,7 @@
     "posts.md",
     "projects.md",
     "resume.md",
-    "tags.md",
     "LICENSE.md",
-    "index.md",
     "about.md",
     "404.md",
     "_posts/ctf/hackthebox/2025-10-07-HTB-Imagery.md",
@@ -196,7 +196,6 @@
     "_featured_tags/command injection.md",
     "assets/img/2025-10-07-HTB-Imagery/intro.png",
     "assets/img/2025-10-07-HTB-Imagery/4.jpg",
-    "assets/img/2025-10-07-HTB-Imagery/1.jpg",
     "_featured_categories/soc.md",
     "_featured_categories/ctf.md",
     "_featured_categories/blog.md",
