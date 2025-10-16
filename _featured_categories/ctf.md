@@ -1,5 +1,5 @@
 ---
-layout: list
+layout: gird
 type: category
 title: CTF
 slug: ctf
