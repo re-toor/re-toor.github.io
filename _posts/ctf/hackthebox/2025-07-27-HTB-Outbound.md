@@ -2,7 +2,7 @@
 layout: post
 author: Neo
 title: Hackthebox - Outbound
-image: /assets/img/2025-07-27-HTB-Outbound/Outbound.webp
+image: /assets/img/2025-07-27-HTB-Outbound/Outbound.png
 date: 2025-07-27
 tags:
   - Roundcube Webmail
@@ -17,7 +17,7 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro](/assets/img/2025-07-27-HTB-Outbound/Outbound.webp)
+![intro](/assets/img/2025-07-27-HTB-Outbound/Outbound.png)
 
 ## Reconnaissance and Scanning
 
