@@ -14,9 +14,9 @@ tags:
   - xxe
   - ssh
   - hackthebox
-categories: ctf
 image: 
 	path: /assets/img/2022-10-24-HTB-RedPanda/1.webp
+categories: ctf
 ---
 
 0. this unordered seed list will be replaced by toc as unordered list
