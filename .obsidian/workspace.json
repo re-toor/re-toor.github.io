@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "about.md",
+                "file": "_posts/ctf/hackthebox/2022-10-24-HTB-RedPanda.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "about"
+              "title": "2022-10-24-HTB-RedPanda"
             }
           }
         ]
@@ -169,6 +169,9 @@
   },
   "active": "03bdeb4d61bb0596",
   "lastOpenFiles": [
+    "assets/img/2022-10-24-HTB-RedPanda/1.webp",
+    "_posts/ctf/hackthebox/2022-10-24-HTB-RedPanda.md",
+    "about.md",
     "tags.md",
     "index.md",
     "assets/img/loading.gif",
@@ -184,7 +187,6 @@
     "projects.md",
     "resume.md",
     "LICENSE.md",
-    "about.md",
     "404.md",
     "_posts/ctf/hackthebox/2025-10-07-HTB-Imagery.md",
     "_featured_tags/xss.md",
