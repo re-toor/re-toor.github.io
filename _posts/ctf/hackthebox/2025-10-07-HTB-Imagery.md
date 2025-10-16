@@ -2,12 +2,7 @@
 layout: post
 author: Neo
 title: Hackthebox - Imagery
-image: 
-	path: /assets/img/2025-10-07-HTB-Imagery/intro.png
-	srcset: 
-		1920w: /assets/img/2025-10-07-HTB-Imagery/intro.png 
-		960w: /assets/img/2025-10-07-HTB-Imagery/intro@0,5x.png 
-		480w: /assets/img/2025-10-07-HTB-Imagery/intro@0,25x.png
+image: /assets/img/2025-10-07-HTB-Imagery/intro.png
 date: 2025-10-07
 tags:
   - web

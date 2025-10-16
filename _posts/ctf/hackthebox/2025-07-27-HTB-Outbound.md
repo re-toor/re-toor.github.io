@@ -2,6 +2,7 @@
 layout: post
 author: Neo
 title: Hackthebox - Outbound
+image: /assets/img/2025-07-27-HTB-Outbound/Outbound.webp
 date: 2025-07-27
 tags:
   - Roundcube Webmail
