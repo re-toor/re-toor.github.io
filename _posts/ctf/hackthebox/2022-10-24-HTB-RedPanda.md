@@ -17,9 +17,6 @@ tags:
 categories: ctf
 image: 
 	path: /assets/img/2022-10-24-HTB-RedPanda/1.webp
-	srcset: 1920w: /assets/img/2022-10-24-HTB-RedPanda/1.webp
-			960w: /assets/img/2022-10-24-HTB-RedPanda/1@0,5x.webp 
-			480w: /assets/img/2022-10-24-HTB-RedPanda/1@0,25x.webp
 ---
 
 0. this unordered seed list will be replaced by toc as unordered list
