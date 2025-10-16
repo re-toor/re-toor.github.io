@@ -1,11 +1,11 @@
 ---
 layout: post
-author: "Neo"
-title: "Đơn giản hóa việc ghi chú khi chơi CTF"
-date: "2025-06-15"
-tags: [
-    "blog"
-]
+author: Neo
+title: Đơn giản hóa việc ghi chú khi chơi CTF
+image: /assets/img/error.jpg
+date: 2025-06-15
+tags:
+  - blog
 categories: blog
 ---
 
