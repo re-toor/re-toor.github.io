@@ -85,7 +85,7 @@ excerpt_separator:     <!--more-->
 
 # Sidebar image and theme color of the site.
 accent_image:
-  background:          top / cover url(/assets/img/loading.gif)
+  background:          center / cover url(/assets/img/loading.gif)
   overlay:             false
 accent_color:          rgb(0,255,43)
 
