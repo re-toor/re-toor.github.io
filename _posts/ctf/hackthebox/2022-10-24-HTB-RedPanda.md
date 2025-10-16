@@ -2,7 +2,6 @@
 layout: post
 author: Neo
 title: HackTheBox - RedPanda
-image: /assets/img/2022-10-24-HTB-RedPanda/1.webp
 date: 2022-10-24
 tags:
   - web

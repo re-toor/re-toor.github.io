@@ -2,6 +2,7 @@
 layout: post
 author: Neo
 title: Hackthebox - Imagery
+image: /assets/img/2025-10-07-HTB-Imagery/intro.png
 date: 2025-10-07
 tags:
   - web
