@@ -17,8 +17,6 @@ categories: ctf
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-![intro](/assets/img/2025-07-27-HTB-Outbound/Outbound.png)
-
 ## Reconnaissance and Scanning
 
 ```bash

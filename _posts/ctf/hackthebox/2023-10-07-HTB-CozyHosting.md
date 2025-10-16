@@ -2,6 +2,7 @@
 layout: post
 author: Neo
 title: HackTheBox - CozyHosting
+image: /assets/img/2023-10-07-HTB-CozyHosting/1.png
 date: 2023-10-07
 tags:
   - web
@@ -16,8 +17,6 @@ categories: ctf
 ---
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
-
-![intro](/assets/img/2023-10-07-HTB-CozyHosting/1.webp)
 
 ## Reconnaissance and Scanning
 

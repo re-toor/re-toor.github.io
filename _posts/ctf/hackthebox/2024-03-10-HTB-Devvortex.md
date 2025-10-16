@@ -2,6 +2,7 @@
 layout: post
 author: Neo
 title: HackTheBox - Devvortex
+image: /assets/img/2024-03-10-HTB-Devvortex/Devvortex.png
 date: 2024-03-10
 tags:
   - web
@@ -16,8 +17,6 @@ categories: ctf
 ---
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
-
-![info](/assets/img/2024-03-10-HTB-Devvortex/Devvortex.webp)
 
 Devvortex là một machine đơn giản xoay quanh kỹ thuật áp dụng các lỗ hổng đã có PoC để tải RCE lên Joomla CMS, lấy user password trong mysql và nâng cao đặc quyền với `apport-cli`
 

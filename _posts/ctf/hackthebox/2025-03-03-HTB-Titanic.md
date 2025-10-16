@@ -2,6 +2,7 @@
 layout: post
 author: Neo
 title: Hackthebox - Titanic
+image: /assets/img/2025-03-03-HTB-Titanic/Titanic.png
 date: 2025-03-03
 tags:
   - LFI
@@ -16,8 +17,6 @@ categories: ctf
 ---
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
-
-![intro](/assets/img/2025-03-03-HTB-Titanic/Titanic.webp)
 
 ## Reconnaissance and Scanning
 

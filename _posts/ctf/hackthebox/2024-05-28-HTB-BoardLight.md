@@ -2,6 +2,7 @@
 layout: post
 author: Neo
 title: HackTheBox - BoardLight
+image: /assets/img/2024-05-28-HTB-BoardLight/intro.png
 date: 2024-05-28
 tags:
   - web
@@ -15,8 +16,6 @@ categories: ctf
 ---
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
-
-![intro](/assets/img/2024-05-28-HTB-BoardLight/intro.webp)
 
 BroadLight là một máy đơn giản tập trung vào cách tìm kiếm lỗ hổng và sử dụng các PoC của nó để thực hiện tấn công và leo thang đặc quyền. Ngoài ra nội dung của máy này cũng đưa ra cảnh báo về sự nguy hiểm của việc sử dụng thông tin đăng nhập mặc định và sử dụng chung password giữa các service khác nhau trong hệ thống.
 

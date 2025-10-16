@@ -2,6 +2,7 @@
 layout: post
 author: Neo
 title: HackTheBox - RedPanda
+image: /assets/img/2022-10-24-HTB-RedPanda/1.png
 date: 2022-10-24
 tags:
   - web
@@ -19,8 +20,6 @@ categories: ctf
 
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
-
-![intro](/assets/img/2022-10-24-HTB-RedPanda/1.webp)
 
 Song song với việc reup lại những writeup cũ, tôi vẫn tiếp tục giải các CTF mới khi có thời gian. Và hôm nay, có thời gian rảnh 1 chút thì tôi thử sức với [Hackthebox - RedPanda](https://app.hackthebox.com/machines/481)
 

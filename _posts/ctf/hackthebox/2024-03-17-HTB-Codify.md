@@ -2,6 +2,7 @@
 layout: post
 author: Neo
 title: HackTheBox - Codify
+image: /assets/img/2024-03-17-HTB-Codify/Codify.png
 date: 2024-03-17
 tags:
   - web
@@ -16,8 +17,6 @@ categories: ctf
 ---
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
-
-![intro](/assets/img/2024-03-17-HTB-Codify/Codify.webp)
 
 Codify là một machine mức độ easy dựa trên lỗ hổng của thư viện trong Node.js để thực hiện RCE, cũng như lợi dụng các lỗ hổng trong **bash** để thực hiện leo thang đặc quyền lên `root`
 

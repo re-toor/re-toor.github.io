@@ -2,6 +2,7 @@
 layout: post
 author: Neo
 title: HackTheBox - Keeper
+image: /assets/img/2023-08-27-HTB-Keeper/intro.png
 date: 2023-08-27
 tags:
   - web

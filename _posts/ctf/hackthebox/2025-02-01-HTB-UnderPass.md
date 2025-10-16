@@ -2,6 +2,7 @@
 layout: post
 author: Neo
 title: Hackthebox - UnderPass
+image: /assets/img/2025-02-01-HTB-UnderPass/UnderPass.png
 date: 2025-02-01
 tags:
   - web
@@ -16,8 +17,6 @@ categories: ctf
 ---
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
-
-![intro](/assets/img/2025-02-01-HTB-UnderPass/UnderPass.webp)
 
 ## Reconnaissance and Scanning
 
