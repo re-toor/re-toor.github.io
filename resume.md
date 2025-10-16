@@ -5,7 +5,7 @@ permalink: /resume/
 description: >
   Hello world!!!
 hide_description: true
-sidebar: true
+sidebar: false
 order: 4 
 left_column:
  - work
