@@ -1,5 +1,5 @@
 ---
-layout: gird
+layout: post
 type: category
 title: CTF
 slug: ctf
