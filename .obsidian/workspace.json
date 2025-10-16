@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/ctf/hackthebox/2022-10-24-HTB-RedPanda.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "2022-10-24-HTB-RedPanda"
+              "title": "index"
             }
           }
         ]
@@ -169,11 +169,11 @@
   },
   "active": "03bdeb4d61bb0596",
   "lastOpenFiles": [
-    "assets/img/2022-10-24-HTB-RedPanda/1.webp",
     "_posts/ctf/hackthebox/2022-10-24-HTB-RedPanda.md",
+    "index.md",
+    "assets/img/2022-10-24-HTB-RedPanda/1.webp",
     "about.md",
     "tags.md",
-    "index.md",
     "assets/img/loading.gif",
     "assets/img/3910770.gif",
     "assets/img/error-404.jpg",
@@ -197,7 +197,6 @@
     "_featured_tags/spring boot.md",
     "_featured_tags/command injection.md",
     "assets/img/2025-10-07-HTB-Imagery/intro.png",
-    "assets/img/2025-10-07-HTB-Imagery/4.jpg",
     "_featured_categories/soc.md",
     "_featured_categories/ctf.md",
     "_featured_categories/blog.md",
