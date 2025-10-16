@@ -2,7 +2,12 @@
 layout: post
 author: Neo
 title: Hackthebox - Imagery
-image: /assets/img/2025-10-07-HTB-Imagery/intro.png
+image: 
+	path: /assets/img/2025-10-07-HTB-Imagery/intro.png
+	srcset: 
+		1920w: /assets/img/2025-10-07-HTB-Imagery/intro.png 
+		960w: /assets/img/2025-10-07-HTB-Imagery/intro@0,5x.png 
+		480w: /assets/img/2025-10-07-HTB-Imagery/intro@0,25x.png
 date: 2025-10-07
 tags:
   - web
@@ -18,9 +23,6 @@ categories: ctf
 ---
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
-
-
-![](/assets/img/2025-10-07-HTB-Imagery/intro.png)
 
 ## Reconnaissance and Scanning
 
