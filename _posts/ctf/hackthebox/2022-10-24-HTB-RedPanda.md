@@ -2,6 +2,8 @@
 layout: post
 author: Neo
 title: HackTheBox - RedPanda
+image: 
+	path: /assets/img/2022-10-24-HTB-RedPanda/1.webp
 date: 2022-10-24
 tags:
   - web
@@ -14,8 +16,6 @@ tags:
   - xxe
   - ssh
   - hackthebox
-image: 
-	path: /assets/img/2022-10-24-HTB-RedPanda/1.webp
 categories: ctf
 ---
 
