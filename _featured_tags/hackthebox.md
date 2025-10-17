@@ -1,5 +1,5 @@
 ---
-layout: tag-list
+layout: grid
 type: tag
 title: Hackthebox
 slug: hackthebox
