@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: grid
 title: <span style="color:#16F529">neo@infosec:~$</span> cat root.txt
 description: >
   HTA's blog. A security engineer who want to be better every day.
