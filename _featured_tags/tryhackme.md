@@ -1,5 +1,5 @@
 ---
-layout: grid
+layout: tag-list
 type: tag
 title: Tryhackme
 slug: tryhackme
