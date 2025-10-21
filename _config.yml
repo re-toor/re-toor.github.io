@@ -64,7 +64,8 @@ author:
 copyright:             © 2025. All rights reserved.
 
 # Format of the permalinks
-permalink:             /blog/:categories/:year-:month-:day-:title/
+# permalink:             /blog/:categories/:year-:month-:day-:title/
+permalink:             /blog/:categories/:title/
 # permalink:             none
 
 # Pagination configuration (used by the `blog` layout)
