@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/ctf/hackthebox/2025-11-12-HTB-Guardian.md",
+                "file": "_posts/ctf/hackthebox/2025-11-02-HTB-DarkZero.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-11-12-HTB-Guardian"
+              "title": "2025-11-02-HTB-DarkZero"
             }
           }
         ]
@@ -169,6 +169,7 @@
   },
   "active": "03bdeb4d61bb0596",
   "lastOpenFiles": [
+    "_posts/ctf/hackthebox/2025-11-12-HTB-Guardian.md",
     "assets/img/2025-11-12-HTB-Guardian/29.png",
     "assets/img/2025-11-12-HTB-Guardian/28.png",
     "assets/img/2025-11-12-HTB-Guardian/27.png",
@@ -179,9 +180,7 @@
     "assets/img/2025-11-12-HTB-Guardian/22.png",
     "assets/img/2025-11-12-HTB-Guardian/21.png",
     "assets/img/2025-11-12-HTB-Guardian/20.png",
-    "assets/img/2025-11-12-HTB-Guardian/19.png",
     "_posts/ctf/hackthebox/2025-10-07-HTB-Imagery.md",
-    "_posts/ctf/hackthebox/2025-11-12-HTB-Guardian.md",
     "_posts/ctf/hackthebox/2025-11-02-HTB-DarkZero.md",
     "assets/img/2025-11-12-HTB-Guardian",
     "assets/img/New folder",

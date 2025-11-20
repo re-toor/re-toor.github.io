@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Neo
-title: Hackthebox - Signed
+title: Hackthebox - DarkZero
 image: /assets/img/2025-11-02-HTB-DarkZero/intro.png
 date: 2025-11-02
 tags:
