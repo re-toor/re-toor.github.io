@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Neo
-title: Hackthebox - Signed
+title: Hackthebox - Guardian
 image: /assets/img/2025-11-12-HTB-Guardian/intro.png
 date: 2025-11-12
 tags:
