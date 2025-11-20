@@ -311,7 +311,7 @@ Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 
 Mặc dù đã thử thay revershell và upload thành công lên server nhưng tôi không thể kích hoạt được nó chỉ bằng SSRF. Vậy nên chuyển sang 1 hướng khác đó là dựa vào role của user.
 
-Dựa vào source code trên `gitea` thì `portal` chỉ có 3 quyền cho user là `student`, `lecture` và `admin`. Vậy thay vì tìm cách để lấy `admin` user thì tôi có thể tìm cách tạo 1 user với quyền `admin`, vì sao thì tôi cũng nắm source code trong tay.
+Dựa vào source code trên `gitea` thì `portal` chỉ có 3 quyền cho user là `student`, `lecture` và `admin`. Vậy thay vì tìm cách để lấy `admin` user thì tôi có thể tìm cách tạo 1 user với quyền `admin`, vì dù sao thì tôi cũng nắm source code trong tay.
 
 Tìm kiếm trong repo, có `admin/createuser.php`
 
