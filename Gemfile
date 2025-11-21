@@ -19,4 +19,4 @@ end
 gem 'wdm' if Gem.win_platform?
 gem 'tzinfo-data' if Gem.win_platform?
 
-gem "webrick", "~> 1.8"
+gem "webrick", "~> 1.9"
