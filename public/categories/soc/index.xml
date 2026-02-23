@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Soc on Re-toor</title>
+    <link>http://localhost:1313/categories/soc/</link>
+    <description>Recent content in Soc on Re-toor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>ne024@proton.me (TAH)</managingEditor>
+    <webMaster>ne024@proton.me (TAH)</webMaster>
+    <copyright>© 2026 TAH</copyright>
+    <lastBuildDate>Tue, 09 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/soc/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cấu hình Wazuh vulnerability detection</title>
+      <link>http://localhost:1313/soc/wazuh-configuration/</link>
+      <pubDate>Tue, 09 May 2023 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/soc/wazuh-configuration/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

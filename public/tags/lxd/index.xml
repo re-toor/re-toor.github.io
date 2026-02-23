@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lxd on Re-toor</title>
+    <link>http://localhost:1313/tags/lxd/</link>
+    <description>Recent content in Lxd on Re-toor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>ne024@proton.me (TAH)</managingEditor>
+    <webMaster>ne024@proton.me (TAH)</webMaster>
+    <copyright>© 2026 TAH</copyright>
+    <lastBuildDate>Sun, 01 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/lxd/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Tryhackme - HA Joker CTF</title>
+      <link>http://localhost:1313/ctf/tryhackme/ha-joker-ctf/</link>
+      <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/tryhackme/ha-joker-ctf/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/tryhackme/ha-joker-ctf/feature.png" />
+    </item>
+    
+    <item>
+      <title>Tryhackme - GamingServer</title>
+      <link>http://localhost:1313/ctf/tryhackme/gamingserver/</link>
+      <pubDate>Wed, 17 Nov 2021 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/tryhackme/gamingserver/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/tryhackme/gamingserver/feature.png" />
+    </item>
+    
+  </channel>
+</rss>

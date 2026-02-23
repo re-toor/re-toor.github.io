@@ -1,0 +1,1436 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Viết Decoders và Rules cho hệ thống Wazuh - Part 2 &middot; Re-toor</title>
+    <meta name="title" content="Viết Decoders và Rules cho hệ thống Wazuh - Part 2 &middot; Re-toor">
+  
+
+  
+  
+  
+    <meta name="keywords" content="siem,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/soc/wazuh-custom-rules-and-decoders-part-2/">
+  
+
+  
+  
+    <meta name="author" content="TAH">
+  
+  
+    
+      
+        
+          <link href="https://github.com/re-toor" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://www.linkedin.com/in/ha-tuan-anh" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/soc/wazuh-custom-rules-and-decoders-part-2/">
+  <meta property="og:site_name" content="Re-toor">
+  <meta property="og:title" content="Viết Decoders và Rules cho hệ thống Wazuh - Part 2">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="soc">
+    <meta property="article:published_time" content="2023-06-02T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-06-02T00:00:00+00:00">
+    <meta property="article:tag" content="Siem">
+    <meta property="og:image" content="http://localhost:1313/soc/wazuh-custom-rules-and-decoders-part-2/feature.png">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/soc/wazuh-custom-rules-and-decoders-part-2/feature.png">
+  <meta name="twitter:title" content="Viết Decoders và Rules cho hệ thống Wazuh - Part 2">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+    <meta name="google-site-verification" content="1SrZKSHd82TJBbAQUQHiETfCL9gFqP0JneGjCV7VgHk">
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.dee52a50de99867dcf702b61813409684375e1531029925e3bf93a18ce5e9b90966dda9f19fd79daeca29df901c7b5408766f123540a0db92714d31fe7c3bdb1.css"
+    integrity="sha512-3uUqUN6Zhn3PcCthgTQJaEN14VMQKZJeO/k6GM5em5CWbdqfGf152uyinfkBx7VAh2bxI1QKDbknFNMf58O9sQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.bdda7dece6cbaf08deef7d254f7f842f3261c2524d247905127c9a20decc03f1011a2950048464c79272c1ce0705a49a41147f39f2b95163bb71d404b33263ef.js"
+      integrity="sha512-vdp97ObLrwje730lT3&#43;ELzJhwlJNJHkFEnyaIN7MA/EBGilQBIRkx5Jywc4HBaSaQRR/OfK5UWO7cdQEszJj7w=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "SOC",
+    "name": "Viết Decoders và Rules cho hệ thống Wazuh - Part 2",
+    "headline": "Viết Decoders và Rules cho hệ thống Wazuh - Part 2",
+    
+    "inLanguage": "en",
+    "url" : "http://localhost:1313/soc/wazuh-custom-rules-and-decoders-part-2/",
+    "author" : {
+      "@type": "Person",
+      "name": "TAH"
+    },
+    "copyrightYear": "2023",
+    "dateCreated": "2023-06-02T00:00:00\u002b00:00",
+    "datePublished": "2023-06-02T00:00:00\u002b00:00",
+    
+    "dateModified": "2023-06-02T00:00:00\u002b00:00",
+    
+    "keywords": ["siem"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1487"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+            "@type": "ListItem",
+            "position":  1 ,
+            "name": "SOC",
+            "item": "http://localhost:1313/soc/"
+          },{
+        "@type": "ListItem",
+        "position":  2 ,
+        "name": "Viết Decoders và Rules cho hệ thống Wazuh - Part 2",
+        "item": "http://localhost:1313/soc/wazuh-custom-rules-and-decoders-part-2/"
+      }
+    ]
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Re-toor
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/blog/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Blog"
+      title="Blog">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Blog
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/soc/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="SOC"
+      title="SOC">
+      
+      
+        <span class="text-base font-medium break-normal">
+          SOC
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <div class="nested-menu">
+      <div class="cursor-pointer flex items-center">
+        <a
+          
+            href="/ctf/"
+            
+          
+          aria-label="CTF"
+          class="flex items-center text-base font-medium bf-icon-color-hover"
+          title="Ctf">
+          
+          <span class="text-bg font-bg break-normal" title="Ctf">
+            CTF
+          </span>
+          <span>
+            <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+          </span>
+        </a>
+      </div>
+      <div class="menuhide">
+        <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl bg-neutral/25 dark:bg-neutral-800/25">
+          <div class="flex flex-col space-y-3">
+            
+              <a
+                href="/ctf/hackthebox/"
+                
+                aria-label="HackTheBox"
+                class="flex items-center bf-icon-color-hover">
+                
+                <span class="text-sm font-sm" title="HackTheBox">
+                  HackTheBox
+                </span>
+              </a>
+            
+              <a
+                href="/ctf/tryhackme/"
+                
+                aria-label="TryHackMe"
+                class="flex items-center bf-icon-color-hover">
+                
+                <span class="text-sm font-sm" title="TryHackMe">
+                  TryHackMe
+                </span>
+              </a>
+            
+              <a
+                href="/ctf/selfdev/"
+                
+                aria-label="Self-dev"
+                class="flex items-center bf-icon-color-hover">
+                
+                <span class="text-sm font-sm" title="Self-dev">
+                  Self-dev
+                </span>
+              </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+    
+      
+  
+    <a
+      href="/about/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="About"
+      title="About">
+      
+      
+        <span class="text-base font-medium break-normal">
+          About
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/blog/"
+        aria-label="Blog"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Blog" class="text-2xl font-bold tracking-tight">
+          Blog
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/soc/"
+        aria-label="SOC"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="SOC" class="text-2xl font-bold tracking-tight">
+          SOC
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/ctf/"
+        aria-label="CTF"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Ctf" class="text-2xl font-bold tracking-tight">
+          CTF
+        </span>
+        
+          <label
+            for="fullscreen-submenu-ctf"
+            class="ms-auto flex items-center justify-center h-10 w-10 cursor-pointer rounded-lg bf-icon-color-hover border bf-border-color bf-border-color-hover">
+            <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+          </label>
+        
+      </a>
+
+      
+        <input checked type="checkbox" id="fullscreen-submenu-ctf" autocomplete="off" class="hidden peer/full">
+
+        <div
+          class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 peer-checked/full:grid-rows-[1fr]">
+          <div class="overflow-hidden">
+            <div class="ms-7 mt-4">
+              
+                <a
+                  href="/ctf/hackthebox/"
+                  aria-label="HackTheBox"
+                  
+                  class="flex items-center gap-3 p-2 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+                  
+                  <span title="HackTheBox" class="text-lg">
+                    HackTheBox
+                  </span>
+                </a>
+              
+                <a
+                  href="/ctf/tryhackme/"
+                  aria-label="TryHackMe"
+                  
+                  class="flex items-center gap-3 p-2 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+                  
+                  <span title="TryHackMe" class="text-lg">
+                    TryHackMe
+                  </span>
+                </a>
+              
+                <a
+                  href="/ctf/selfdev/"
+                  aria-label="Self-dev"
+                  
+                  class="flex items-center gap-3 p-2 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+                  
+                  <span title="Self-dev" class="text-lg">
+                    Self-dev
+                  </span>
+                </a>
+              
+            </div>
+          </div>
+        </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/about/"
+        aria-label="About"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="About" class="text-2xl font-bold tracking-tight">
+          About
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+      
+      
+      
+      
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+
+
+
+  
+    
+    
+      
+      
+    
+  
+
+
+
+
+
+    <div id="hero" class="h-[150px] md:h-[200px]"></div>
+  
+  <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom">
+    
+    
+    
+    <img
+      id="background-image"
+      src="/soc/wazuh-custom-rules-and-decoders-part-2/feature_hu_96bc0ed6bff01ec7.png"
+      role="presentation"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="absolute inset-0 w-full h-full object-cover"
+      >
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal"></div>
+    <div
+      class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal"></div>
+  </div>
+
+  
+    <div
+      id="background-blur"
+      class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-xl bg-neutral-100/75 dark:bg-neutral-800/60"></div>
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/background-blur.min.605b3b942818f0ab5a717ae446135ec46b8ee5a2ad12ae56fb90dc2a76ce30c388f9fec8bcc18db15bd47e3fa8a09d779fa12aa9c184cf614a315bc72c6c163d.js"
+      integrity="sha512-YFs7lCgY8KtacXrkRhNexGuO5aKtEq5W&#43;5DcKnbOMMOI&#43;f7IvMGNsVvUfj&#43;ooJ13n6EqqcGEz2FKMVvHLGwWPQ=="
+      data-blur-id="background-blur"
+      data-image-id="background-image"
+      data-image-url="/soc/wazuh-custom-rules-and-decoders-part-2/feature_hu_96bc0ed6bff01ec7.png"></script>
+  
+      
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Viết Decoders và Rules cho hệ thống Wazuh - Part 2
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2023-06-02T00:00:00&#43;00:00">2 June 2023</time><span class="px-2 text-primary-500">&middot;</span><span>1487 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">7 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-10">
+            <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain bf-scrollbar rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#ruleset">Ruleset</a>
+      <ul>
+        <li><a href="#là-gì-để-làm-gì">Là gì? Để làm gì?</a></li>
+        <li><a href="#viết-như-thế-nào">Viết như thế nào?</a></li>
+      </ul>
+    </li>
+    <li><a href="#phần-kết">Phần kết</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#ruleset">Ruleset</a>
+      <ul>
+        <li><a href="#là-gì-để-làm-gì">Là gì? Để làm gì?</a></li>
+        <li><a href="#viết-như-thế-nào">Viết như thế nào?</a></li>
+      </ul>
+    </li>
+    <li><a href="#phần-kết">Phần kết</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+<script>
+  (function () {
+    'use strict'
+
+    const SCROLL_OFFSET_RATIO = 0.33
+    const TOC_SELECTOR = '#TableOfContents'
+    const ANCHOR_SELECTOR = '.anchor'
+    const TOC_LINK_SELECTOR = 'a[href^="#"]'
+    const NESTED_LIST_SELECTOR = 'li ul'
+    const ACTIVE_CLASS = 'active'
+    let isJumpingToAnchor = false
+
+    function getActiveAnchorId(anchors, offsetRatio) {
+      const threshold = window.scrollY + window.innerHeight * offsetRatio
+      const tocLinks = [...document.querySelectorAll('#TableOfContents a[href^="#"]')]
+      const tocIds = new Set(tocLinks.map(link => link.getAttribute('href').substring(1)))
+
+      if (isJumpingToAnchor) {
+        for (let i = 0; i < anchors.length; i++) {
+          const anchor = anchors[i]
+          if (!tocIds.has(anchor.id)) continue
+          const top = anchor.getBoundingClientRect().top + window.scrollY
+          if (Math.abs(window.scrollY - top) < 100) {
+            return anchor.id
+          }
+        }
+      }
+
+      for (let i = anchors.length - 1; i >= 0; i--) {
+        const top = anchors[i].getBoundingClientRect().top + window.scrollY
+        if (top <= threshold && tocIds.has(anchors[i].id)) {
+          return anchors[i].id
+        }
+      }
+      return anchors.find(anchor => tocIds.has(anchor.id))?.id || ''
+    }
+
+    function updateTOC({ toc, anchors, links, scrollOffset, collapseInactive }) {
+      const activeId = getActiveAnchorId(anchors, scrollOffset)
+      if (!activeId) return
+
+      links.forEach(link => {
+        const isActive = link.getAttribute('href') === `#${activeId}`
+        link.classList.toggle(ACTIVE_CLASS, isActive)
+
+        if (collapseInactive) {
+          const ul = link.closest('li')?.querySelector('ul')
+          if (ul) ul.style.display = isActive ? '' : 'none'
+        }
+      })
+
+      if (collapseInactive) {
+        const activeLink = toc.querySelector(`a[href="#${CSS.escape(activeId)}"]`)
+        let el = activeLink
+        while (el && el !== toc) {
+          if (el.tagName === 'UL') el.style.display = ''
+          if (el.tagName === 'LI') el.querySelector('ul')?.style.setProperty('display', '')
+          el = el.parentElement
+        }
+      }
+    }
+
+    function initTOC() {
+      const toc = document.querySelector(TOC_SELECTOR)
+      if (!toc) return
+
+      const collapseInactive = false
+      const anchors = [...document.querySelectorAll(ANCHOR_SELECTOR)]
+      const links = [...toc.querySelectorAll(TOC_LINK_SELECTOR)]
+
+      if (collapseInactive) {
+        toc.querySelectorAll(NESTED_LIST_SELECTOR).forEach(ul => ul.style.display = 'none')
+      }
+
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          isJumpingToAnchor = true
+        })
+      })
+
+      const config = {
+        toc,
+        anchors,
+        links,
+        scrollOffset: SCROLL_OFFSET_RATIO,
+        collapseInactive
+      }
+
+      window.addEventListener('scroll', () => updateTOC(config), { passive: true })
+      window.addEventListener('hashchange', () => updateTOC(config), { passive: true })
+
+      updateTOC(config)
+    }
+
+    document.readyState === 'loading'
+      ? document.addEventListener('DOMContentLoaded', initTOC)
+      : initTOC()
+  })()
+</script>
+
+
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">Ruleset
+    <div id="ruleset" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ruleset" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">Là gì? Để làm gì?
+    <div id="là-gì-để-làm-gì" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#l%c3%a0-g%c3%ac-%c4%91%e1%bb%83-l%c3%a0m-g%c3%ac" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Sau khi đã biên dịch log để Wazuh có thể hiểu được log của chúng ta đang &ldquo;nói&rdquo; gì, việc tiếp theo là làm cho nó hiện lên màn hình (dashboard) của chúng ta. Không phải tất cả các log Wazuh nhận được sẽ đều hiển thị lên màn hình, việc này sẽ gây loãng thông tin, làm cho quản trị viên mất rất nhiều thời gian để quản lý cũng như xác định đúng hiểm họa đang xảy ra đối với tổ chức của mình.</p>
+<p>Việc viết rule chính là để &ldquo;nói&rdquo; cho Wazuh biết log nào cần hiển thị, hiển thị nó như thế nào và quan trọng nhất là dựa vào <em><strong>decoder</strong></em> nào.</p>
+<p>Cũng giống như <code>decoder</code> con phụ thuộc vào <code>decoder</code> cha, <code>rule</code> khi được viết ra cũng phải dựa trên <code>decoder</code> cha. Vì Wazuh &ldquo;làm việc&rdquo; với <code>decoder</code> chứ không phải log, vậy nên nếu không theo <code>decoder</code> nào thì <code>rule</code> đó không có nội dung và cũng không có ý nghĩa.</p>
+<p>Giống như <strong><a href="https://re-toor.me/soc/Wazuh-Custom-Rules-and-Decoders-Part-1.html"  target="_blank" rel="noreferrer">Decoder</a></strong>, <em><strong>Rules</strong></em> cũng có những tùy chọn để định cấu hình. <a href="https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html"  target="_blank" rel="noreferrer">Documentation của Wazuh</a> đã định nghĩa tất cả các tùy chọn có thể được sử dụng trong khi viết rules. Tuy nhiên tôi cũng sẽ liệt kê những gì tôi hay dùng nhất.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Values</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><a href="https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html#rules-rule"  target="_blank" rel="noreferrer">rule</a></td>
+          <td><a href="https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html#rules-rule"  target="_blank" rel="noreferrer">bảng</a></td>
+          <td>Tạo rule mới và các tùy chọn bên trong nó</td>
+      </tr>
+      <tr>
+          <td><a href="https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html#rules-match"  target="_blank" rel="noreferrer">match</a></td>
+          <td><a href="https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/regex.html#os-regex-syntax"  target="_blank" rel="noreferrer">regex</a></td>
+          <td>Kiểm tra xem trong log có chứa ký tự (sử dụng <a href="https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/regex.html#sregex-os-match-syntax"  target="_blank" rel="noreferrer">sregex</a>) trùng với ký tự được xác định hay không</td>
+      </tr>
+      <tr>
+          <td><a href="https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html#regex-rules"  target="_blank" rel="noreferrer">regex</a></td>
+          <td><a href="https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/regex.html#os-regex-syntax"  target="_blank" rel="noreferrer">regex</a>,<a href="https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/regex.html#sregex-os-match-syntax"  target="_blank" rel="noreferrer">sregex</a> hoặc <a href="https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/regex.html#pcre2-syntax"  target="_blank" rel="noreferrer">pcre2</a></td>
+          <td>Giống với <code>match</code>, nhưng sử dụng <a href="https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/regex.html#os-regex-syntax"  target="_blank" rel="noreferrer">regex</a></td>
+      </tr>
+      <tr>
+          <td><a href="https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html#decoded-as"  target="_blank" rel="noreferrer">decoded_as</a></td>
+          <td>Tên của decoder cha</td>
+          <td>Khớp với <code>decoder</code> cha</td>
+      </tr>
+      <tr>
+          <td><a href="https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html#rules-field"  target="_blank" rel="noreferrer">field</a></td>
+          <td><a href="https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/regex.html"  target="_blank" rel="noreferrer">regex</a></td>
+          <td>So sánh một trường trong phần <a href="https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/decoders.html#decoders-order"  target="_blank" rel="noreferrer">order</a> đã được định nghĩa trong <code>decoder</code></td>
+      </tr>
+      <tr>
+          <td><a href="https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html#description"  target="_blank" rel="noreferrer">description</a></td>
+          <td>Ký tự bất kỳ</td>
+          <td>Mô tả về nội dung cảnh báo</td>
+      </tr>
+      <tr>
+          <td><a href="https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html#group"  target="_blank" rel="noreferrer">group</a></td>
+          <td>Ký tự bất kỳ</td>
+          <td>Phân loại cảnh báo theo nhóm</td>
+      </tr>
+      <tr>
+          <td><a href="https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html#if-sid"  target="_blank" rel="noreferrer">if_sid</a></td>
+          <td>Danh sách ID được phân tách bằng dấu phẩy</td>
+          <td>Giống như rule con phụ thuộc vào rule cha</td>
+      </tr>
+  </tbody>
+</table>
+<p>Các tùy chọn khác có thể được dùng trong các trường hợp nhất định tùy thuộc vào đặc điểm nội dung của các loại log có trong hệ thống.</p>
+
+<h3 class="relative group">Viết như thế nào?
+    <div id="viết-như-thế-nào" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vi%e1%ba%bft-nh%c6%b0-th%e1%ba%bf-n%c3%a0o" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Tương tự như <code>decoder</code>, các <code>rules</code> cũng được viết dưới dạng XML, và như có đề cập ở trên, <code>rule</code> được viết dựa trên các trường của <code>decoder</code>, ngoài ra chúng ta cũng có thể dựa vào nội dung của log làm điều kiện để viết <code>rule</code> một cách chi tiết nhất.</p>
+<p>Các rule này không nhất thiết phải sinh theo dạng cha-con, chúng có thể được tạo độc lập với nhau và đại diện cho một đặc điểm nào đó xuất hiện trong <code>decoder</code>.</p>
+<p>Tôi sẽ quay lại ví dụ như đã làm ở <code>decoder</code> cho có tính thống nhất.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">CEF</span><span class="p">:</span><span class="mi">0</span><span class="o">|</span><span class="n">Imperva</span> <span class="n">Inc</span><span class="o">.|</span><span class="n">SecureSphere</span><span class="o">|</span><span class="mf">10.6.0</span><span class="o">|</span><span class="n">Recommended</span> <span class="n">Signatures</span> <span class="n">Policy</span> <span class="k">for</span> <span class="n">Web</span> <span class="n">Applications</span><span class="o">|</span><span class="n">Recommended</span> <span class="n">Signatures</span> <span class="n">Policy</span> <span class="k">for</span> <span class="n">Web</span> <span class="n">Applications</span><span class="o">|</span><span class="n">High</span><span class="o">|</span><span class="n">act</span><span class="o">=</span><span class="n">Block</span> <span class="n">dst</span><span class="o">=</span><span class="mf">10.11.12.13</span> <span class="n">dpt</span><span class="o">=</span><span class="mi">443</span> <span class="n">duser</span><span class="o">=</span><span class="n">n</span><span class="o">/</span><span class="n">a</span> <span class="n">src</span><span class="o">=</span><span class="mf">103.187.191.141</span> <span class="n">spt</span><span class="o">=</span><span class="mi">36614</span> <span class="n">proto</span><span class="o">=</span><span class="n">TCP</span> <span class="n">rt</span><span class="o">=</span><span class="n">Apr</span> <span class="mi">26</span> <span class="mi">2023</span> <span class="mi">13</span><span class="p">:</span><span class="mi">08</span><span class="p">:</span><span class="mi">12</span> <span class="n">cat</span><span class="o">=</span><span class="n">Alert</span> <span class="n">cs1</span><span class="o">=</span><span class="n">Recommended</span> <span class="n">Signatures</span> <span class="n">Policy</span> <span class="k">for</span> <span class="n">Web</span> <span class="n">Applications</span> <span class="n">cs1Label</span><span class="o">=</span><span class="n">Policy</span> <span class="n">cs2</span><span class="o">=</span><span class="n">mail</span><span class="o">.</span><span class="n">re</span><span class="o">-</span><span class="n">toor</span><span class="o">.</span><span class="n">vn</span> <span class="n">cs2Label</span><span class="o">=</span><span class="n">ServerGroup</span> <span class="n">cs3</span><span class="o">=</span><span class="n">mail</span> <span class="n">cs3Label</span><span class="o">=</span><span class="n">ServiceName</span> <span class="n">cs4</span><span class="o">=</span><span class="n">mail</span><span class="o">.</span><span class="n">re</span><span class="o">-</span><span class="n">toor</span><span class="o">.</span><span class="n">vn</span> <span class="n">cs4Label</span><span class="o">=</span><span class="n">ApplicationName</span> <span class="n">cs5</span><span class="o">=</span><span class="n">Nmap</span> <span class="n">scanner</span> <span class="n">cs5Label</span><span class="o">=</span><span class="n">Description</span></span></span></code></pre></div></div>
+<p>Đầu tiên tôi sẽ cho nó vào 1 group nhằm mục đích tập hợp nhóm các loại rule dựa trên log có cùng đặc điểm chung. Ví dụ như log trên nhận được dưới dạng CEF (Common Event Format) và đây là log của Imperva, nên tôi sẽ cho các rule này vào nhóm Imperva và CEF</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&lt;</span><span class="n">group</span> <span class="n">name</span><span class="o">=</span><span class="s2">&#34;Imperva,CEF,&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&lt;/</span><span class="n">group</span><span class="o">&gt;</span></span></span></code></pre></div></div>
+<p>Bây giờ các rule về Imperva sẽ được viết bên trong group này.</p>
+<p>Mặc dù <code>rule</code> không cần thiết phải viết dưới dạng cha-con, nhưng để cho rõ ràng và có hệ thống, tôi vẫn sẽ tạo rule đầu tiên chứa <code>decoder</code> mà rule sẽ phụ thuộc và thêm mô tả cho nó, coi nó giống như <code>rule</code> cha. Tất cả các <code>rule</code> tiếp theo chỉ cần phụ thuộc vào cha thì sẽ không cần khai báo lại <code>decoder</code> nữa.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="n">rule</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&#34;82002&#34;</span> <span class="n">level</span><span class="o">=</span><span class="s2">&#34;0&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">decoded_as</span><span class="o">&gt;</span><span class="n">Imperva</span><span class="o">&lt;/</span><span class="n">decoded_as</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">description</span><span class="o">&gt;</span><span class="n">WAF</span> <span class="n">messages</span> <span class="n">grouped</span><span class="o">.&lt;/</span><span class="n">description</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;/</span><span class="n">rule</span><span class="o">&gt;</span></span></span></code></pre></div></div>
+<p>Mỗi rule khi sinh ra đều phải có <code>id</code> và level - mức độ nghiêm trọng. Level sẽ quyết định xem rule nào được coi là cảnh báo (alert) xuất hiện trên dashboard còn rule nào thì không. Tiếp theo, <code>&lt;decoder_as&gt;</code> là trường dùng dể xác định rule này dựa tren <code>decoder</code> nào. Cuối cùng là <code>&lt;description&gt;</code> là mô tả của <code>rule</code>, trên dashboard của tôi sẽ sẽ hiện mô tả này.</p>
+<p><a href="https://documentation.wazuh.com/current/user-manual/manager/alert-threshold.html"  target="_blank" rel="noreferrer">Cấu hình mặc định của Wazuh</a> cho chúng ta cảnh báo từ level 3, nghĩa là các log thuộc level 0 - 2 sẽ không được coi là alert và không hiện trên dashboard. Tôi sẽ cũng để theo cấu hình mặc định của Wazuh. Thực ra việc để cấu hình level bao nhiêu không quan trọng vì tôi có thể sửa được level của rule theo mức độ nghiêm trọng và theo cấu hình của Wazuh.</p>
+<p>Bây giờ tôi sẽ xác định xem log này có những gì để có thể là điều kiện để viết rule cảnh báo. Để ý 1 chút thì tôi có trường <code>cs5Label</code> có giá trị là <em>Description</em>, có thể suy ra trường này là miêu tả cho trường <code>cs5</code>. <code>cs5</code> có giá trị là <em>Nmap scanner</em>, vậy thì trường có thể là đại diện cho nội dung của log này, tôi có thể dựa vào <code>cs5</code> làm điều kiện phụ thuộc để viết rule.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="n">rule</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&#34;82023&#34;</span> <span class="n">level</span><span class="o">=</span><span class="s2">&#34;12&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">if_sid</span><span class="o">&gt;</span><span class="mi">82002</span><span class="o">&lt;/</span><span class="n">if_sid</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="k">match</span><span class="o">&gt;</span><span class="n">Nmap</span> <span class="n">scanner</span><span class="o">&lt;/</span><span class="k">match</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">description</span><span class="o">&gt;</span><span class="err">$</span><span class="p">(</span><span class="n">cs5</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">description</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">mitre</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="o">&lt;</span><span class="nb">id</span><span class="o">&gt;</span><span class="n">T1046</span><span class="o">&lt;/</span><span class="nb">id</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;/</span><span class="n">mitre</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;/</span><span class="n">rule</span><span class="o">&gt;</span></span></span></code></pre></div></div>
+<p>Tôi đặt id của rule này là 82023. Với level 12 thì rule này sẽ sinh ra alert ở mức Critical - nghiêm trọng và sẽ báo đỏ trên dashboard, nhằm thông báo cho quản trị viên biết hệ thống đang bị rò quét port.</p>
+<p>Với <code>&lt;if_sid&gt;</code> 82002 nghĩa là rule 82023 này sẽ phụ thuộc vào rule 82002, nếu log không được phát hiện bởi 82002 thì 82023 cũng sẽ không được kích hoạt.</p>
+<p>Trường <code>&lt;match&gt;</code> dùng để xác định ký tự tồn tại trong log. Nếu như trong log có xuất hiện text &ldquo;Nmap scanner&rdquo; thì rule này sẽ được kích hoạt.</p>
+<p><code>&lt;description&gt;</code> sử dụng <code>$(cs5)</code> chỉ định rằng nếu rule này được kích hoạt thì mô tả của cảnh báo này sẽ xuất hiện với nội dung của trường <code>cs5</code></p>
+<p>Còn <code>&lt;mitre&gt;</code> là trường dùng để gắn các kỹ thuật được định nghĩa tại <a href="https://attack.mitre.org/"  target="_blank" rel="noreferrer">MITRE ATT&amp;CK®</a>. Để gắn được giá trị này cần có hiểu biết về nó. Tôi sẽ viết về phần này trong 1 bài riêng.</p>
+<p>Cuối cùng tôi có rule cơ bản như sau:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&lt;</span><span class="n">group</span> <span class="n">name</span><span class="o">=</span><span class="s2">&#34;Imperva,CEF,&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="n">rule</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&#34;82002&#34;</span> <span class="n">level</span><span class="o">=</span><span class="s2">&#34;0&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">decoded_as</span><span class="o">&gt;</span><span class="n">Imperva</span><span class="o">&lt;/</span><span class="n">decoded_as</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">description</span><span class="o">&gt;</span><span class="n">WAF</span> <span class="n">messages</span> <span class="n">grouped</span><span class="o">.&lt;/</span><span class="n">description</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;/</span><span class="n">rule</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="n">rule</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&#34;82023&#34;</span> <span class="n">level</span><span class="o">=</span><span class="s2">&#34;12&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">if_sid</span><span class="o">&gt;</span><span class="mi">82002</span><span class="o">&lt;/</span><span class="n">if_sid</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="k">match</span><span class="o">&gt;</span><span class="n">Nmap</span> <span class="n">scanner</span><span class="o">&lt;/</span><span class="k">match</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">description</span><span class="o">&gt;</span><span class="err">$</span><span class="p">(</span><span class="n">cs5</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">description</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="n">mitre</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="o">&lt;</span><span class="nb">id</span><span class="o">&gt;</span><span class="n">T1046</span><span class="o">&lt;/</span><span class="nb">id</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;/</span><span class="n">mitre</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;/</span><span class="n">rule</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;/</span><span class="n">group</span><span class="o">&gt;</span></span></span></code></pre></div></div>
+<p>Kiểm tra <code>rule</code> với <a href="https://documentation.wazuh.com/current/user-manual/ruleset/testing.html?highlight=logtest#using-the-wazuh-dashboard-and-the-command-line-tool"  target="_blank" rel="noreferrer">wazuh-logtest</a></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">root</span><span class="nd">@dc</span><span class="o">-</span><span class="n">siemtest</span><span class="p">:</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">siemadmin</span><span class="c1"># /var/ossec/bin/wazuh-logtest</span>
+</span></span><span class="line"><span class="cl"><span class="n">Starting</span> <span class="n">wazuh</span><span class="o">-</span><span class="n">logtest</span> <span class="n">v4</span><span class="mf">.4.5</span>
+</span></span><span class="line"><span class="cl"><span class="n">Type</span> <span class="n">one</span> <span class="n">log</span> <span class="n">per</span> <span class="n">line</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">CEF</span><span class="p">:</span><span class="mi">0</span><span class="o">|</span><span class="n">Imperva</span> <span class="n">Inc</span><span class="o">.|</span><span class="n">SecureSphere</span><span class="o">|</span><span class="mf">10.6.0</span><span class="o">|</span><span class="n">Recommended</span> <span class="n">Signatures</span> <span class="n">Policy</span> <span class="k">for</span> <span class="n">Web</span> <span class="n">Applications</span><span class="o">|</span><span class="n">Recommended</span> <span class="n">Signatures</span> <span class="n">Policy</span> <span class="k">for</span> <span class="n">Web</span> <span class="n">Applications</span><span class="o">|</span><span class="n">High</span><span class="o">|</span><span class="n">act</span><span class="o">=</span><span class="n">Block</span> <span class="n">dst</span><span class="o">=</span><span class="mf">10.11.12.13</span> <span class="n">dpt</span><span class="o">=</span><span class="mi">443</span> <span class="n">duser</span><span class="o">=</span><span class="n">n</span><span class="o">/</span><span class="n">a</span> <span class="n">src</span><span class="o">=</span><span class="mf">103.187.191.141</span> <span class="n">spt</span><span class="o">=</span><span class="mi">36614</span> <span class="n">proto</span><span class="o">=</span><span class="n">TCP</span> <span class="n">rt</span><span class="o">=</span><span class="n">Apr</span> <span class="mi">26</span> <span class="mi">2023</span> <span class="mi">13</span><span class="p">:</span><span class="mi">08</span><span class="p">:</span><span class="mi">12</span> <span class="n">cat</span><span class="o">=</span><span class="n">Alert</span> <span class="n">cs1</span><span class="o">=</span><span class="n">Recommended</span> <span class="n">Signatures</span> <span class="n">Policy</span> <span class="k">for</span> <span class="n">Web</span> <span class="n">Applications</span> <span class="n">cs1Label</span><span class="o">=</span><span class="n">Policy</span> <span class="n">cs2</span><span class="o">=</span><span class="n">mail</span><span class="o">.</span><span class="n">re</span><span class="o">-</span><span class="n">toor</span><span class="o">.</span><span class="n">vn</span> <span class="n">cs2Label</span><span class="o">=</span><span class="n">ServerGroup</span> <span class="n">cs3</span><span class="o">=</span><span class="n">mail</span> <span class="n">cs3Label</span><span class="o">=</span><span class="n">ServiceName</span> <span class="n">cs4</span><span class="o">=</span><span class="n">mail</span><span class="o">.</span><span class="n">re</span><span class="o">-</span><span class="n">toor</span><span class="o">.</span><span class="n">vn</span> <span class="n">cs4Label</span><span class="o">=</span><span class="n">ApplicationName</span> <span class="n">cs5</span><span class="o">=</span><span class="n">Nmap</span> <span class="n">scanner</span> <span class="n">cs5Label</span><span class="o">=</span><span class="n">Description</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">**</span><span class="n">Phase</span> <span class="mi">1</span><span class="p">:</span> <span class="n">Completed</span> <span class="n">pre</span><span class="o">-</span><span class="n">decoding</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl">        <span class="n">full</span> <span class="n">event</span><span class="p">:</span> <span class="s1">&#39;CEF:0|Imperva Inc.|SecureSphere|10.6.0|Recommended Signatures Policy for Web Applications|Recommended Signatures Policy for Web Applications|High|act=Block dst=10.11.12.13 dpt=443 duser=n/a src=103.187.191.141 spt=36614 proto=TCP rt=Apr 26 2023 13:08:12 cat=Alert cs1=Recommended Signatures Policy for Web Applications cs1Label=Policy cs2=mail.re-toor.vn cs2Label=ServerGroup cs3=mail cs3Label=ServiceName cs4=mail.re-toor.vn cs4Label=ApplicationName cs5=Nmap scanner cs5Label=Description&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">**</span><span class="n">Phase</span> <span class="mi">2</span><span class="p">:</span> <span class="n">Completed</span> <span class="n">decoding</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl">        <span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Imperva&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">action</span><span class="p">:</span> <span class="s1">&#39;Block&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">application</span><span class="p">:</span> <span class="s1">&#39;SecureSphere&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cat</span><span class="p">:</span> <span class="s1">&#39;Alert&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cs1</span><span class="p">:</span> <span class="s1">&#39;Recommended Signatures Policy for Web Applications&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cs1Label</span><span class="p">:</span> <span class="s1">&#39;Policy&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cs2</span><span class="p">:</span> <span class="s1">&#39;mail.re-toor.vn&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cs2Label</span><span class="p">:</span> <span class="s1">&#39;ServerGroup&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cs3</span><span class="p">:</span> <span class="s1">&#39;mail&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cs3Label</span><span class="p">:</span> <span class="s1">&#39;ServiceName&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cs4</span><span class="p">:</span> <span class="s1">&#39;mail.re-toor.vn&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cs4Label</span><span class="p">:</span> <span class="s1">&#39;ApplicationName&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cs5</span><span class="p">:</span> <span class="s1">&#39;Nmap scanner&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dpt</span><span class="p">:</span> <span class="s1">&#39;443&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dst</span><span class="p">:</span> <span class="s1">&#39;10.11.12.13&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">duser</span><span class="p">:</span> <span class="s1">&#39;n/a&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">event</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Recommended Signatures Policy for Web Applications&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">event</span><span class="o">.</span><span class="n">type</span><span class="p">:</span> <span class="s1">&#39;Recommended Signatures Policy for Web Applications&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">protocol</span><span class="p">:</span> <span class="s1">&#39;TCP&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">rt</span><span class="p">:</span> <span class="s1">&#39;Apr 26 2023 13:08:12&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">severity</span><span class="p">:</span> <span class="s1">&#39;High&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">src</span><span class="p">:</span> <span class="s1">&#39;103.187.191.141&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">version</span><span class="p">:</span> <span class="s1">&#39;10.6.0&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">**</span><span class="n">Phase</span> <span class="mi">3</span><span class="p">:</span> <span class="n">Completed</span> <span class="n">filtering</span> <span class="p">(</span><span class="n">rules</span><span class="p">)</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">id</span><span class="p">:</span> <span class="s1">&#39;82023&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">level</span><span class="p">:</span> <span class="s1">&#39;12&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">description</span><span class="p">:</span> <span class="s1">&#39;Nmap scanner&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">groups</span><span class="p">:</span> <span class="s1">&#39;[&#39;</span><span class="n">Imperva</span><span class="s1">&#39;, &#39;</span><span class="n">CEF</span><span class="s1">&#39;]&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">firedtimes</span><span class="p">:</span> <span class="s1">&#39;1&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">mail</span><span class="p">:</span> <span class="s1">&#39;True&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">mitre</span><span class="o">.</span><span class="n">id</span><span class="p">:</span> <span class="s1">&#39;[&#39;</span><span class="n">T1046</span><span class="s1">&#39;]&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">mitre</span><span class="o">.</span><span class="n">tactic</span><span class="p">:</span> <span class="s1">&#39;[&#39;</span><span class="n">Discovery</span><span class="s1">&#39;]&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">mitre</span><span class="o">.</span><span class="n">technique</span><span class="p">:</span> <span class="s1">&#39;[&#39;</span><span class="n">Network</span> <span class="n">Service</span> <span class="n">Discovery</span><span class="s1">&#39;]&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="o">**</span><span class="n">Alert</span> <span class="n">to</span> <span class="n">be</span> <span class="n">generated</span><span class="o">.</span></span></span></code></pre></div></div>
+<p>Như vậy là rule đã được tạo thành công.</p>
+
+<h2 class="relative group">Phần kết
+    <div id="phần-kết" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ph%e1%ba%a7n-k%e1%ba%bft" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Với Wazuh, <code>decoder</code> và <code>rule</code> đều được chia làm 2 phần là mặc định và tùy chỉnh.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Path</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Default</td>
+          <td>/var/ossec/ruleset</td>
+      </tr>
+      <tr>
+          <td>Custom</td>
+          <td>/var/ossec/etc</td>
+      </tr>
+  </tbody>
+</table>
+<p>Phần mặc định (default) là các <code>decoders</code> và <code>rules</code> được Wazuh viết sẵn, không thể thay đổi hay ghi đè các file này ở trên dashboard. Và cho dù tôi có cố gắng thay đổi nó bằng việc chỉnh sửa file trong server, thì khi cập nhật các phiên bản mới của Wazuh, mọi thay đổi của tôi cũng sẽ quay về mặc định. Tôi chỉ có thể tạo rule mới và ghi đề vào rule cũ với lệnh <a href="https://documentation.wazuh.com/current/user-manual/ruleset/custom.html#changing-an-existing-rule"  target="_blank" rel="noreferrer">overwrite</a></p>
+<p>Phần custom là các <code>decoders</code> và <code>rule</code> được người quản trị tự tạo.</p>
+<blockquote><p>Lưu ý: <code>decoders</code> và <code>rules</code> chỉ có thể được kích hoạt nếu nằm đúng vị trí trong các thư mục phía trên.</p>
+</blockquote><p>Mỗi rule và decoder khi được tạo mới hay có bất kỳ thay đổi gì đều phải restart lại Wazuh-manager. Tôi đã tạo và cập nhật custom <code>decoders</code> - <code>rules</code> của mình ở <a href="https://github.com/re-toor/Wazuh-Rules"  target="_blank" rel="noreferrer">đây</a>.</p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/soc/wazuh-custom-rules-and-decoders-part-1/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Viết Decoders và Rules cho hệ thống Wazuh - Part 1
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2023-06-01T00:00:00&#43;00:00">1 June 2023</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+          
+          
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 ">
+        <ul class="flex list-none flex-col sm:flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/tags/"
+                title="Tags">
+                
+                Tags
+              </a>
+            </li>
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href=""
+                title="">
+                
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          TAH
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

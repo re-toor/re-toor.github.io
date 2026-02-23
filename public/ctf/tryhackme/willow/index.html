@@ -1,0 +1,1510 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Tryhackme - Willow &middot; Re-toor</title>
+    <meta name="title" content="Tryhackme - Willow &middot; Re-toor">
+  
+
+  
+  
+  
+    <meta name="keywords" content="web,linux,mount,steghide,ssh,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/ctf/tryhackme/willow/">
+  
+
+  
+  
+    <meta name="author" content="TAH">
+  
+  
+    
+      
+        
+          <link href="https://github.com/re-toor" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://www.linkedin.com/in/ha-tuan-anh" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/ctf/tryhackme/willow/">
+  <meta property="og:site_name" content="Re-toor">
+  <meta property="og:title" content="Tryhackme - Willow">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="ctf">
+    <meta property="article:published_time" content="2022-03-08T00:00:00+00:00">
+    <meta property="article:modified_time" content="2022-03-08T00:00:00+00:00">
+    <meta property="article:tag" content="Web">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Mount">
+    <meta property="article:tag" content="Steghide">
+    <meta property="article:tag" content="Ssh">
+    <meta property="og:image" content="http://localhost:1313/ctf/tryhackme/willow/feature.png">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/ctf/tryhackme/willow/feature.png">
+  <meta name="twitter:title" content="Tryhackme - Willow">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+    <meta name="google-site-verification" content="1SrZKSHd82TJBbAQUQHiETfCL9gFqP0JneGjCV7VgHk">
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.dee52a50de99867dcf702b61813409684375e1531029925e3bf93a18ce5e9b90966dda9f19fd79daeca29df901c7b5408766f123540a0db92714d31fe7c3bdb1.css"
+    integrity="sha512-3uUqUN6Zhn3PcCthgTQJaEN14VMQKZJeO/k6GM5em5CWbdqfGf152uyinfkBx7VAh2bxI1QKDbknFNMf58O9sQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.bdda7dece6cbaf08deef7d254f7f842f3261c2524d247905127c9a20decc03f1011a2950048464c79272c1ce0705a49a41147f39f2b95163bb71d404b33263ef.js"
+      integrity="sha512-vdp97ObLrwje730lT3&#43;ELzJhwlJNJHkFEnyaIN7MA/EBGilQBIRkx5Jywc4HBaSaQRR/OfK5UWO7cdQEszJj7w=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Ctf",
+    "name": "Tryhackme - Willow",
+    "headline": "Tryhackme - Willow",
+    
+    "inLanguage": "en",
+    "url" : "http://localhost:1313/ctf/tryhackme/willow/",
+    "author" : {
+      "@type": "Person",
+      "name": "TAH"
+    },
+    "copyrightYear": "2022",
+    "dateCreated": "2022-03-08T00:00:00\u002b00:00",
+    "datePublished": "2022-03-08T00:00:00\u002b00:00",
+    
+    "dateModified": "2022-03-08T00:00:00\u002b00:00",
+    
+    "keywords": ["web","linux","mount","steghide","ssh"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1070"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+            "@type": "ListItem",
+            "position":  1 ,
+            "name": "TryHackMe",
+            "item": "http://localhost:1313/ctf/tryhackme/"
+          },{
+            "@type": "ListItem",
+            "position":  2 ,
+            "name": "Ctf",
+            "item": "http://localhost:1313/ctf/"
+          },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "name": "Tryhackme - Willow",
+        "item": "http://localhost:1313/ctf/tryhackme/willow/"
+      }
+    ]
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Re-toor
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/blog/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Blog"
+      title="Blog">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Blog
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/soc/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="SOC"
+      title="SOC">
+      
+      
+        <span class="text-base font-medium break-normal">
+          SOC
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <div class="nested-menu">
+      <div class="cursor-pointer flex items-center">
+        <a
+          
+            href="/ctf/"
+            
+          
+          aria-label="CTF"
+          class="flex items-center text-base font-medium bf-icon-color-hover"
+          title="Ctf">
+          
+          <span class="text-bg font-bg break-normal" title="Ctf">
+            CTF
+          </span>
+          <span>
+            <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+          </span>
+        </a>
+      </div>
+      <div class="menuhide">
+        <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl bg-neutral/25 dark:bg-neutral-800/25">
+          <div class="flex flex-col space-y-3">
+            
+              <a
+                href="/ctf/hackthebox/"
+                
+                aria-label="HackTheBox"
+                class="flex items-center bf-icon-color-hover">
+                
+                <span class="text-sm font-sm" title="HackTheBox">
+                  HackTheBox
+                </span>
+              </a>
+            
+              <a
+                href="/ctf/tryhackme/"
+                
+                aria-label="TryHackMe"
+                class="flex items-center bf-icon-color-hover">
+                
+                <span class="text-sm font-sm" title="TryHackMe">
+                  TryHackMe
+                </span>
+              </a>
+            
+              <a
+                href="/ctf/selfdev/"
+                
+                aria-label="Self-dev"
+                class="flex items-center bf-icon-color-hover">
+                
+                <span class="text-sm font-sm" title="Self-dev">
+                  Self-dev
+                </span>
+              </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+    
+      
+  
+    <a
+      href="/about/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="About"
+      title="About">
+      
+      
+        <span class="text-base font-medium break-normal">
+          About
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/blog/"
+        aria-label="Blog"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Blog" class="text-2xl font-bold tracking-tight">
+          Blog
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/soc/"
+        aria-label="SOC"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="SOC" class="text-2xl font-bold tracking-tight">
+          SOC
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/ctf/"
+        aria-label="CTF"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Ctf" class="text-2xl font-bold tracking-tight">
+          CTF
+        </span>
+        
+          <label
+            for="fullscreen-submenu-ctf"
+            class="ms-auto flex items-center justify-center h-10 w-10 cursor-pointer rounded-lg bf-icon-color-hover border bf-border-color bf-border-color-hover">
+            <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+          </label>
+        
+      </a>
+
+      
+        <input checked type="checkbox" id="fullscreen-submenu-ctf" autocomplete="off" class="hidden peer/full">
+
+        <div
+          class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 peer-checked/full:grid-rows-[1fr]">
+          <div class="overflow-hidden">
+            <div class="ms-7 mt-4">
+              
+                <a
+                  href="/ctf/hackthebox/"
+                  aria-label="HackTheBox"
+                  
+                  class="flex items-center gap-3 p-2 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+                  
+                  <span title="HackTheBox" class="text-lg">
+                    HackTheBox
+                  </span>
+                </a>
+              
+                <a
+                  href="/ctf/tryhackme/"
+                  aria-label="TryHackMe"
+                  
+                  class="flex items-center gap-3 p-2 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+                  
+                  <span title="TryHackMe" class="text-lg">
+                    TryHackMe
+                  </span>
+                </a>
+              
+                <a
+                  href="/ctf/selfdev/"
+                  aria-label="Self-dev"
+                  
+                  class="flex items-center gap-3 p-2 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+                  
+                  <span title="Self-dev" class="text-lg">
+                    Self-dev
+                  </span>
+                </a>
+              
+            </div>
+          </div>
+        </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/about/"
+        aria-label="About"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="About" class="text-2xl font-bold tracking-tight">
+          About
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+      
+      
+      
+      
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+
+
+
+  
+    
+    
+      
+      
+    
+  
+
+
+
+
+
+    <div id="hero" class="h-[150px] md:h-[200px]"></div>
+  
+  <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom">
+    
+    
+    
+    <img
+      id="background-image"
+      src="/ctf/tryhackme/willow/feature_hu_abbc1b1f98a31e10.png"
+      role="presentation"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="absolute inset-0 w-full h-full object-cover"
+      >
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal"></div>
+    <div
+      class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal"></div>
+  </div>
+
+  
+    <div
+      id="background-blur"
+      class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-xl bg-neutral-100/75 dark:bg-neutral-800/60"></div>
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/background-blur.min.605b3b942818f0ab5a717ae446135ec46b8ee5a2ad12ae56fb90dc2a76ce30c388f9fec8bcc18db15bd47e3fa8a09d779fa12aa9c184cf614a315bc72c6c163d.js"
+      integrity="sha512-YFs7lCgY8KtacXrkRhNexGuO5aKtEq5W&#43;5DcKnbOMMOI&#43;f7IvMGNsVvUfj&#43;ooJ13n6EqqcGEz2FKMVvHLGwWPQ=="
+      data-blur-id="background-blur"
+      data-image-id="background-image"
+      data-image-url="/ctf/tryhackme/willow/feature_hu_abbc1b1f98a31e10.png"></script>
+  
+      
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Tryhackme - Willow
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2022-03-08T00:00:00&#43;00:00">8 March 2022</time><span class="px-2 text-primary-500">&middot;</span><span>1070 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">6 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-10">
+            <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain bf-scrollbar rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#reconnaissance">Reconnaissance</a></li>
+    <li><a href="#ssh">SSH</a></li>
+    <li><a href="#privilege-escalation">Privilege escalation</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#reconnaissance">Reconnaissance</a></li>
+    <li><a href="#ssh">SSH</a></li>
+    <li><a href="#privilege-escalation">Privilege escalation</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+<script>
+  (function () {
+    'use strict'
+
+    const SCROLL_OFFSET_RATIO = 0.33
+    const TOC_SELECTOR = '#TableOfContents'
+    const ANCHOR_SELECTOR = '.anchor'
+    const TOC_LINK_SELECTOR = 'a[href^="#"]'
+    const NESTED_LIST_SELECTOR = 'li ul'
+    const ACTIVE_CLASS = 'active'
+    let isJumpingToAnchor = false
+
+    function getActiveAnchorId(anchors, offsetRatio) {
+      const threshold = window.scrollY + window.innerHeight * offsetRatio
+      const tocLinks = [...document.querySelectorAll('#TableOfContents a[href^="#"]')]
+      const tocIds = new Set(tocLinks.map(link => link.getAttribute('href').substring(1)))
+
+      if (isJumpingToAnchor) {
+        for (let i = 0; i < anchors.length; i++) {
+          const anchor = anchors[i]
+          if (!tocIds.has(anchor.id)) continue
+          const top = anchor.getBoundingClientRect().top + window.scrollY
+          if (Math.abs(window.scrollY - top) < 100) {
+            return anchor.id
+          }
+        }
+      }
+
+      for (let i = anchors.length - 1; i >= 0; i--) {
+        const top = anchors[i].getBoundingClientRect().top + window.scrollY
+        if (top <= threshold && tocIds.has(anchors[i].id)) {
+          return anchors[i].id
+        }
+      }
+      return anchors.find(anchor => tocIds.has(anchor.id))?.id || ''
+    }
+
+    function updateTOC({ toc, anchors, links, scrollOffset, collapseInactive }) {
+      const activeId = getActiveAnchorId(anchors, scrollOffset)
+      if (!activeId) return
+
+      links.forEach(link => {
+        const isActive = link.getAttribute('href') === `#${activeId}`
+        link.classList.toggle(ACTIVE_CLASS, isActive)
+
+        if (collapseInactive) {
+          const ul = link.closest('li')?.querySelector('ul')
+          if (ul) ul.style.display = isActive ? '' : 'none'
+        }
+      })
+
+      if (collapseInactive) {
+        const activeLink = toc.querySelector(`a[href="#${CSS.escape(activeId)}"]`)
+        let el = activeLink
+        while (el && el !== toc) {
+          if (el.tagName === 'UL') el.style.display = ''
+          if (el.tagName === 'LI') el.querySelector('ul')?.style.setProperty('display', '')
+          el = el.parentElement
+        }
+      }
+    }
+
+    function initTOC() {
+      const toc = document.querySelector(TOC_SELECTOR)
+      if (!toc) return
+
+      const collapseInactive = false
+      const anchors = [...document.querySelectorAll(ANCHOR_SELECTOR)]
+      const links = [...toc.querySelectorAll(TOC_LINK_SELECTOR)]
+
+      if (collapseInactive) {
+        toc.querySelectorAll(NESTED_LIST_SELECTOR).forEach(ul => ul.style.display = 'none')
+      }
+
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          isJumpingToAnchor = true
+        })
+      })
+
+      const config = {
+        toc,
+        anchors,
+        links,
+        scrollOffset: SCROLL_OFFSET_RATIO,
+        collapseInactive
+      }
+
+      window.addEventListener('scroll', () => updateTOC(config), { passive: true })
+      window.addEventListener('hashchange', () => updateTOC(config), { passive: true })
+
+      updateTOC(config)
+    }
+
+    document.readyState === 'loading'
+      ? document.addEventListener('DOMContentLoaded', initTOC)
+      : initTOC()
+  })()
+</script>
+
+
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <p>Xin chào, lại là tôi đây. Hôm nay tôi sẽ giải CTF <a href="https://tryhackme.com/room/willow"  target="_blank" rel="noreferrer">Tryhackme - Willow</a></p>
+
+<h2 class="relative group">Reconnaissance
+    <div id="reconnaissance" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#reconnaissance" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Vẫn như thông thường, việc đầu tiên cần làm quét các cổng đang mở trên máy chủ mục tiêu.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">PORT</span>     <span class="n">STATE</span> <span class="n">SERVICE</span> <span class="n">VERSION</span>
+</span></span><span class="line"><span class="cl"><span class="mi">22</span><span class="o">/</span><span class="n">tcp</span>   <span class="nb">open</span>  <span class="n">ssh</span>     <span class="n">OpenSSH</span> <span class="mf">6.7</span><span class="n">p1</span> <span class="n">Debian</span> <span class="mi">5</span> <span class="p">(</span><span class="n">protocol</span> <span class="mf">2.0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span> <span class="n">ssh</span><span class="o">-</span><span class="n">hostkey</span><span class="p">:</span> 
+</span></span><span class="line"><span class="cl"><span class="o">|</span>   <span class="mi">1024</span> <span class="mi">43</span><span class="p">:</span><span class="n">b0</span><span class="p">:</span><span class="mi">87</span><span class="p">:</span><span class="n">cd</span><span class="p">:</span><span class="n">e5</span><span class="p">:</span><span class="mi">54</span><span class="p">:</span><span class="mi">09</span><span class="p">:</span><span class="n">b1</span><span class="p">:</span><span class="n">c1</span><span class="p">:</span><span class="mi">1</span><span class="n">e</span><span class="p">:</span><span class="mi">78</span><span class="p">:</span><span class="mi">65</span><span class="p">:</span><span class="n">d9</span><span class="p">:</span><span class="mi">78</span><span class="p">:</span><span class="mi">5</span><span class="n">e</span><span class="p">:</span><span class="mi">1</span><span class="n">e</span> <span class="p">(</span><span class="n">DSA</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span>   <span class="mi">2048</span> <span class="n">c2</span><span class="p">:</span><span class="mi">65</span><span class="p">:</span><span class="mi">91</span><span class="p">:</span><span class="n">c8</span><span class="p">:</span><span class="mi">38</span><span class="p">:</span><span class="n">c9</span><span class="p">:</span><span class="n">cc</span><span class="p">:</span><span class="n">c7</span><span class="p">:</span><span class="n">f9</span><span class="p">:</span><span class="mi">09</span><span class="p">:</span><span class="mi">20</span><span class="p">:</span><span class="mi">61</span><span class="p">:</span><span class="n">e5</span><span class="p">:</span><span class="mi">54</span><span class="p">:</span><span class="n">bd</span><span class="p">:</span><span class="n">cf</span> <span class="p">(</span><span class="n">RSA</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span>   <span class="mi">256</span> <span class="n">bf</span><span class="p">:</span><span class="mi">3</span><span class="n">e</span><span class="p">:</span><span class="mi">4</span><span class="n">b</span><span class="p">:</span><span class="mi">3</span><span class="n">d</span><span class="p">:</span><span class="mi">78</span><span class="p">:</span><span class="n">b6</span><span class="p">:</span><span class="mi">79</span><span class="p">:</span><span class="mi">41</span><span class="p">:</span><span class="n">f4</span><span class="p">:</span><span class="mi">7</span><span class="n">d</span><span class="p">:</span><span class="mi">90</span><span class="p">:</span><span class="mi">63</span><span class="p">:</span><span class="mi">5</span><span class="n">e</span><span class="p">:</span><span class="n">fb</span><span class="p">:</span><span class="mi">2</span><span class="n">a</span><span class="p">:</span><span class="mi">40</span> <span class="p">(</span><span class="n">ECDSA</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">_</span>  <span class="mi">256</span> <span class="mi">2</span><span class="n">c</span><span class="p">:</span><span class="n">c8</span><span class="p">:</span><span class="mi">87</span><span class="p">:</span><span class="mi">4</span><span class="n">a</span><span class="p">:</span><span class="n">d8</span><span class="p">:</span><span class="n">f6</span><span class="p">:</span><span class="mi">4</span><span class="n">c</span><span class="p">:</span><span class="n">c3</span><span class="p">:</span><span class="mi">03</span><span class="p">:</span><span class="mi">8</span><span class="n">d</span><span class="p">:</span><span class="mi">4</span><span class="n">c</span><span class="p">:</span><span class="mi">09</span><span class="p">:</span><span class="mi">22</span><span class="p">:</span><span class="mi">83</span><span class="p">:</span><span class="mi">66</span><span class="p">:</span><span class="mi">64</span> <span class="p">(</span><span class="n">ED25519</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="mi">80</span><span class="o">/</span><span class="n">tcp</span>   <span class="nb">open</span>  <span class="n">http</span>    <span class="n">Apache</span> <span class="n">httpd</span> <span class="mf">2.4.10</span> <span class="p">((</span><span class="n">Debian</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">_http</span><span class="o">-</span><span class="n">title</span><span class="p">:</span> <span class="n">Recovery</span> <span class="n">Page</span>
+</span></span><span class="line"><span class="cl"><span class="o">|</span><span class="n">_http</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="n">header</span><span class="p">:</span> <span class="n">Apache</span><span class="o">/</span><span class="mf">2.4.10</span> <span class="p">(</span><span class="n">Debian</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="mi">111</span><span class="o">/</span><span class="n">tcp</span>  <span class="nb">open</span>  <span class="n">rpcbind</span> <span class="mi">2</span><span class="o">-</span><span class="mi">4</span> <span class="p">(</span><span class="n">RPC</span> <span class="c1">#100000)</span>
+</span></span><span class="line"><span class="cl"><span class="mi">2049</span><span class="o">/</span><span class="n">tcp</span> <span class="nb">open</span>  <span class="n">nfs</span>     <span class="mi">2</span><span class="o">-</span><span class="mi">4</span> <span class="p">(</span><span class="n">RPC</span> <span class="c1">#100003)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Service</span> <span class="n">Info</span><span class="p">:</span> <span class="n">OS</span><span class="p">:</span> <span class="n">Linux</span><span class="p">;</span> <span class="n">CPE</span><span class="p">:</span> <span class="n">cpe</span><span class="p">:</span><span class="o">/</span><span class="n">o</span><span class="p">:</span><span class="n">linux</span><span class="p">:</span><span class="n">linux_kernel</span></span></span></code></pre></div></div>
+<p>Xem qua web xem có gì đặc biệt không</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&lt;</span><span class="n">html</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="n">Recovery</span> <span class="n">Page</span><span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="o">&lt;</span><span class="n">style</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="n">body</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="n">word</span><span class="o">-</span><span class="n">wrap</span><span class="p">:</span> <span class="k">break</span><span class="o">-</span><span class="n">word</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="o">&lt;/</span><span class="n">style</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="mi">4865792057696</span><span class="n">c6c6f772c2068657265277320796f7572205353482050726976617465206b6579202d2d20796f75206b6e6f77207768657265207468652064656372797074696f6e206b6579206973210a323336372032333637203233363720323336372032333637203937303920383630302032383633382031383431302031373335203333303239203136313836203238333734203337323438203333303239203236383432203136313836203138343130203233323139203337323438203131333339203836303020333330323920333536373020383630302033313133312032333637203233363720323336372032333637203233363720313434323220323638343220393435302031343630352031393237362032333637203131333339203333303036203336353030203431393820333337383120333330323920313134303520353236372038363030203137333520313736333220313631383620333131333120323638343220313133333920383630302033353733342031343432322033353733342038363030203335363730203233363720313834313020333532343320333734333820313436303520333337383120333330323920333732343820383630302032383337342032333637203232313439203237353832203330373820323336372031373633322039373039203137363332203532363720323735383220383630302032373538322032333732312031313430352031333235362033333938352033373234382031383237382033333938352032373538322032363737352032333732312032363737352032373538322032323134392033303738203330373820393730392031313430352033333938352031383237382031373633322033373234382033373234382033333434332038363030203138323738203138323738203237353832203138333330203133323536203134343232203134343232203238303631203130333836203233323139203130333836203333333920323531313120323230353320323138383920333131333120333338353620333333392031363138362032383036312037343936203134363035203232313439203538353120333532343320313133333920333339383520333532343320323238373220333334343320333338353620333334343320323231343920333338353620383435322031313333392037353638203232303533203232313439203339343720323936303920393730392033353234332035383531203131343035203138313939203133323536203333323135203333393835203735363820333332313520313232343420353434342032323035332031343630352031303338362037343936203333323135203333333920393730392031303338362032313838392038343532203238303631203238333734203834393920313237393220313831393920323031373220313932373620383439392031343432322032323130322031393339362031323234342032383036312032333732312038343532203237353832203538353120313932373620323833373420313232343420323337323120323637373520323833373420313831393920333532343320313332353620323839323720323332313920333532343320333537333420333333392033333231352033333339203232313439203336353030203134363035203231343034203237353832203137333520333532343320323836333820313237393220373439362032373538322032383036312033333835362033333835362032383932372037353638203131333339203337343338203337343338203834353220333037382032383337342032383633382033333339203937303920323839323720323836333820333532343320313932373620333537333420343139382037393134203138323738203836303020333732343820393730392031383139392031393237362032303137322032323134392031343432322035343434203131333339203734393620313237393220323836333820373536382031383139392032393635352033353234332032313838392031383139392031323739322032303137322033313133312032313430342032303137322033373234382033333434332032323035332032313838392031313333392037333538203131333339203231383839203235313131203538353120313736333220323134303420383439392031323234342032373538322032313838392037343936203337343338203337323438203231383839203335373334203333323135203132323434203834393920323332313920313831393920313237393220333131333120333536373020313232343420323836333820333732343820323839323720323833373420313733352034313938203139333936203836303020383630302032373538322031373633322032303137322032333231392032393630392032373538322038343939203236373735203237353832203134343232203133323536203138313939203937303920323936303920313733352038363030203230313732203238363338203735363820323839323720333537333420383630302031383431302033333339203734393620313932373620333037382032323134392032393635352031383237382031383237382031373633322033313133312037353638203331313331203733353820313134303520393435302038343532203232303533203934353020313332353620333338353620373931342038343532203336353030203137363332203733353820333934372033333231352032383633382031313333392031383237382033353733342032383337342032333732312031313333392035343434203239363039203237353832203137363332203333323135203232383732203231383839203138313939203330373820313133333920313736333220353434342033333030362038343532203238333734203333323135203834393920313434323220323833373420333338353620313232343420333536373020323231343920313033383620333635303020323231303220313232343420373536382035343434203131343035203236373735203133323536203131333339203331313331203230313732203239353020373335382031363138362032313838392033333231352033333339203834393920373536382032333231392032323035332033353637302033333030362032393635352032323837322032333732312032333738372033353234332032363834322037353638203236373735203139333936203132323434203139333936203339343720323735383220313033383620373439362032373538322033353733342033333231352035343434203333383536203239363535203230313732203132323434203134363035203235313131203239353020323337383720383439392032383036312033393437203231343034203138313939203331313331203733353820313833333020313434323220323830363120333037382032313838392032323837322032383932372033333938352031333235362033333434332033353733342038343939203337323438203834393920323231303220313832373820313933393620333339383520393435302032363737352032383337342031313333392031343630352033313133312032323837322031323739322032353131312038343939203739313420313834313020323830363120323531313120323332313920383630302033333231352032323134392031313430352033333938352039373039203239353020373335382031373633322032383337342031313333392031383139392038343939203733353820333332313520313232343420323735383220313831393920313436303520323231303220323833373420373335382033393437203236383432203237353832203836303020313831393920383630302031383333302032373538322031383333302032383932372032323035332031343432322032323035332032323035332033333434332033333030362035383531203131333339203335363730203333323135203138313939203231383839203333303036203331313331203237353832203333333920373931342037343936203133323536203236373735203331313331203734393620323637373520333536373020313932373620333934372032333732312033313133312033393437203333303036203336353030203236373735203139333936203132373932203534343420313133333920373335382031373633322037343936203134363035203336353030203238363338203834353220333536373020323138383920323231343920313932373620333338353620373536382034313938203330373820333732343820313232343420333339383520383435322031383333302039373039203733353820393730392031383333302032323130322032353131312037333538203130333836203739313420373335382031343432322033313133312031363138362033303738203236373735203232313439203137333520323138383920393730392031383237382031383431302031383431302032393635352035383531203138313939203236383432203232303533203238333734203139333936203333343433203231383839203232383732203236383432203734393620313133333920383439392032323130322033333938352032383932372035383531203336353030203134363035203238393237203331313331203336353030203236383432203238363338203239363039203238333734203132323434203937303920313733352037333538203337323438203232313032203333393835203233323139203137333520323332313920333536373020333330303620343139382031363138362032393630392032323035332032383036312033373433382037333538203232303533203834353220323638343220313833333020373931342033353637302032363834322031343432322032393635352033303738203538353120383630302032313430342033333231352031363138362035383531203239363535203137363332203237353832203335373334203335363730203233373837203138323738203335363730203232383732203538353120323134303420383435322033333339203230313732203138323738203734393620373335382033363530302031393339362033333030362031373633322031303338362031303338362038343532203238363338203239363039203937303920323230353320333934372032373538322032363737352032313838392032323134392033373234382037343936203138333330203330373820373536382031383139392031323739322037333538203337343338203336353030203336353030203337343338203232313439203138323738203331313331203139333936203232313439203138323738203333323135203339343720333536373020313833333020333536373020313434323220313033383620383435322033353234332033373433382033303738203238393237203139333936203337323438203137333520333339383520323231343920323134303420323936303920323936353520343139382033373433382032383337342033353733342031343630352038363030203137363332203138323738203734393620323836333820393730392034313938203132323434203235313131203834353220383435322032323134392031383333302032333231392031313333392031393339362033353234332032333738372033393437203237353832203232313439203333383536203735363820383630302031383333302033333434332031343630352033333231352031373335203239363039203236373735203337343338203431393820333934372031383139392031383333302033313133312033303738203137363332203336353030203333343433203937303920333536373020383435322031313430352031343432322032383633382035383531203335323433203331313331203130333836203333383536203834353220313134303520333537333420333333392033393437203139323736203238303631203238363338203836303020323337323120393435302032313838392032383633382031383139392032333231392031373335203138313939203231343034203333333920313134303520353835312038363030203232313439203131333339203238333734203138343130203339343720313332353620393435302031313430352032323837322033373433382034313938203538353120313232343420313831393920323230353320393435302031383237382032313838392031383431302031383139392034313938203131333339203232303533203233323139203138343130203333393835203237353832203236383432203232383732203235313131203137363332203431393820313831393920323833373420313933393620313232343420313434323220313232343420333332313520333934372032373538322031323234342032383337342031323234342032323837322038363030203137333520353434342032383337342032323035332031383237382037353638203134363035203834393920323134303420323134303420323337383720333338353620313831393920393435302031313430352033353733342032383337342032303137322032393630392032383036312031303338362031383431302033353234332032383036312032393630392032363737352033393437203333393835203339343720373536382035383531203538353120353434342032313838392033353733342039343530203139333936203238393237203836303020313831393920313436303520313831393920343139382031383237382033313133312033333030362032333231392038343532203333393835203333333920323332313920333338353620333334343320353835312034313938203134343232203138323738203138323738203333303036203834353220323935302031393339362033333231352032303137322033333231352031383431302033333434332033333835362032383337342033313133312033313133312031373335203137333520333734333820333333392033393437203330373820313033383620333934372032323134392034313938203431393820323138383920323735383220313831393920373536382033333339203834393920313436303520373536382032303137322031323234342033333938352031383333302031393237362032393530203139333936203233373837203333323135203734393620333334343320323138383920383630302032393530203333333920323238373220333532343320383630302031393237362032333732312038363030203132323434203138333330203131343035203137333520323134303420353434342033333339203231383839203138343130203134343232203335373334203138313939203836303020323031373220323332313920313733352031383139392032333732312032383633382033313133312032313838392032393630392032373538322037353638203230313732203137363332203333333920313436303520323836333820313232343420313332353620313933393620333332313520323332313920333037382031393237362032303137322032333231392031313333392032383337342033353733342038343939203734393620313232343420313733352033333339203333393835203337343338203339343720323936303920313832373820313232343420373335382032393635352031373335203138323738203337323438203834353220373335382031373335203138323738203734393620333333392033333835362032383036312038343939203131333339203337323438203236383432203233373837203333323135203138343130203232313439203131333339203134343232203937303920383439392032393630392032323134392032353131312033353733342032383337342033333434332032313430342032313838392032383932372033333434332034313938203139323736203335363730203735363820333330303620313232343420373335382032333231392033393437203239363535203230313732203335323433203134363035203834353220323836333820333037382032313838392032393635352033353733342039343530203238393237203238393237203233323139203131343035203335373334203236383432203333303036203131333339203333323135203139333936203335323433203734393620333635303020343139382039373039203538353120323830363120333635303020323833373420313733352034313938203739313420373335382031313430352037333538203239363535203834353220323134303420313133333920313831393920373536382032323134392031343432322032363834322031373633322035383531203335373334203232383732203337343338203937303920383439392038363030203337323438203836303020333732343820333934372038343532203337343338203230313732203836303020323231343920313436303520323238373220383439392037333538203137333520353434342032333738372033333030362031383237382032303137322032393530203230313732203335363730203335323433203330373820323833373420353835312032363737352032323837322034313938203333393835203337343338203239353020323138383920373439362038363030203937303920323031373220323638343220373536382032363834322031373335203238333734203232383732203934353020383630302031383139392035383531203238393237203238303631203131343035203239363039203232303533203232383732203238333734203132373932203134343232203232303533203733353820383630302033333030362032323837322037393134203339343720333732343820323134303420313133333920333532343320313831393920333537333420323337323120373931342033333231352032313838392031383237382033333835362031333235362038363030203134363035203230313732203232313032203131343035203232313439203734393620323936353520393435302034313938203937303920313033383620323735383220323833373420333334343320333333392031323234342033313133312032383932372032353131312032363737352033333231352033333231352033373234382037393134203937303920333532343320333537333420333338353620323238373220333532343320323735383220333338353620313332353620333131333120333338353620333732343820323231303220323833373420313332353620333334343320313832373820333334343320313933393620313434323220313733352032323035332031333235362033373234382033333030362031313430352031393339362032313838392037393134203231343034203337343338203331313331203239363039203231383839203233373231203339343720333339383520313436303520323332313920333333392031323234342038343532203230313732203335373334203134363035203834393920333532343320333333392031373633322033333231352033333938352033303738203333383536203137333520333131333120323830363120323830363120323935302033353733342032333231392037343936203335373334203339343720323735383220323231343920323531313120373536382032323134392032313838392031363138362037343936203134363035203331313331203231343034203238333734203834393920323735383220333734333820333934372037353638203231343034203137363332203834393920373439362031343432322033373234382037333538203233373231203330373820323637373520313332353620333635303020323839323720323936303920383630302032333738372035343434203538353120323138383920333338353620383435322031363138362032393630392032393630392033333434332031383139392031373633322032303137322033353733342034313938203232313032203333383536203937303920323238373220353835312035343434203834353220393435302032393630392034313938203136313836203836303020383630302033333835362032333738372032323837322033373234382032333732312035383531203333333920323238373220323332313920333934372031383237382035343434203233323139203239363535203733353820333635303020323833373420323936353520373439362034313938203232383732203733353820313833333020333131333120313834313020333333392031343432322037333538203231343034203538353120333330303620313033383620373335382032383932372031313430352037353638203333383536203232313032203230313732203337323438203131343035203538353120373439362031323739322033353234332031313333392032333231392031373335203232313439203538353120333536373020313833333020323332313920333732343820373439362035383531203138343130203130333836203235313131203330373820323138383920313033383620323337383720323332313920313033383620333734333820313932373620383435322033353637302033363530302033333339203333333920373536382032323130322033363530302031323234342032383633382035343434203337343338203239363535203733353820393435302031393237362032323035332034313938203333393835203333393835203734393620333332313520323936353520353835312031343432322037333538203138333330203333383536203238333734203236383432203339343720373536382033373234382032393530203236373735203132323434203834393920323935302033363530302033333030362037393134203538353120373335382038343532203934353020323839323720323936353520353835312032333231392033333030362031373335203336353030203233373231203734393620333338353620323230353320313033383620333037382038363030203238363338203232303533203131343035203230313732203333393835203238363338203239353020333333392031323739322031303338362033353733342032333738372033333030362032383337342039373039203137363332203739313420323231303220313932373620323936303920313833333020323134303420333334343320323337383720313832373820383435322033363530302033353733342032383633382032313838392031343432322033393437203231383839203333393835203137333520333734333820333037382031313430352032373538322031383237382033353733342033333030362033393437203739313420333732343820383435322032383337342032323837322033373234382037353638203134363035203239363039203335373334203138323738203937303920323936353520353835312031393339362033353234332033373433382031323234342037353638203739313420323231343920353434342031313430352032393635352031373335203934353020323230353320333532343320323830363120313831393920333532343320313436303520323936303920323531313120323936303920323134303420323031373220323134303420323839323720313332353620323830363120333333392038363030203739313420333934372031373335203139323736203333323135203836303020333338353620313134303520343139382031343432322032323837322031333235362033363530302033333030362033353733342032393635352033373234382033303738203238393237203134363035203133323536203132373932203538353120313133333920313133333920323936353520313833333020353434342033333835362033333434332032323837322032333732312032353131312039343530203733353820313833333020333330303620323231303220323836333820343139382031393237362033333938352039343530203834393920313332353620333037382035343434203131333339203333393835203230313732203138323738203239363535203335373334203331313331203132323434203236383432203337323438203131343035203333343433203139333936203232303533203233323139203336353030203934353020373439362033373234382032313838392033353733342031383237382033333030362033333835362034313938203136313836203131343035203134343232203239353020313832373820323134303420373335382032383036312033333434332031363138362033353733342033373433382031323739322032333732312031383431302032333732312032353131312033333434332037333538203232383732203238333734203330373820333330303620313736333220333536373020333334343320313833333020333635303020313833333020333338353620323638343220323134303420323833373420333734333820323830363120323031373220313736333220333339383520313733352033353733342037333538203333323135203137333520333333392033393437203337343338203132373932203231383839203138333330203337343338203333323135203138323738203339343720333635303020373536382033353637302039373039203331313331203239363039203331313331203139333936203233373837203139323736203834353220333635303020353835312031313430352031343432322031313333392032383932372031383139392033333434332032353131312033313133312031313430352033333339203132323434203534343420333532343320383630302037333538203233373837203337323438203231383839203836303020393435302039343530203132323434203339343720323337383720333734333820333934372033333938352037333538203337323438203834353220323238373220333537333420373335382032383036312031393339362039373039203834353220373931342031313430352032373538322035383531203231343034203235313131203834393920323936303920323231343920343139382031383237382032393630392037333538203132373932203237353832203336353030203431393820333532343320313736333220323936303920323337323120333734333820333934372033353234332031343630352033373433382031323234342031393339362031393237362031343432322032333637203233363720323336372032333637203233363720383630302031373335203335373334203333303239203136313836203238333734203337323438203333303239203236383432203136313836203138343130203233323139203337323438203131333339203836303020333330323920333536373020383630302033313133312032333637203233363720323336372032333637203233363720</span>	
+</span></span><span class="line"><span class="cl">		<span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span></span></span></code></pre></div></div>
+<p>Nhìn qua dãy số dài vô cùng này, đoạn đầu có bao gồm cả chữ cái và số, sau đó chỉ toàn số và có cả những đoạn số lặp lại, tôi sẽ thử tách đoạn có chữ ra để giải mãi.</p>
+<p>Đầu tiên tôi xác định điểm cuối của đoạn có chữ. Vì ngay sau chữ <code>a</code> cuối cùng thì 10 chữ số <code>3233363720</code> sẽ được lặp lại, vậy thì có khả năng chữ <code>a</code> cuối cùng cũng là điểm cuối của đoạn mã này. Sao chép đoạn mã từ đầu đến chữ <code>a</code> cuối cùng và dán nó vào <strong><code>CyberChef</code></strong></p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="decode"
+    width="1913"
+    height="900"
+    src="/ctf/tryhackme/willow/2_hu_c4c49400ab072123.png"
+    srcset="/ctf/tryhackme/willow/2_hu_c4c49400ab072123.png 800w, /ctf/tryhackme/willow/2_hu_6a13c526e2cb5332.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/ctf/tryhackme/willow/2.png"></figure>
+<p>Ở đây tôi đã có 1 cái tên, có thể dùng nó làm username, và với gợi ý về ssh key thì rất có thể đoạn số phía sau là ssh key đã mã hóa.</p>
+<p>Tiếp tục dán đoạn còn lại vào đây để thử generate</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="ssh_key"
+    width="1916"
+    height="899"
+    src="/ctf/tryhackme/willow/3_hu_c10ed9cf33a904d2.png"
+    srcset="/ctf/tryhackme/willow/3_hu_c10ed9cf33a904d2.png 800w, /ctf/tryhackme/willow/3_hu_ce3a2203ddeb9a8e.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/ctf/tryhackme/willow/3.png"></figure>
+<p>SSH key này không thể dùng được, nên tôi sẽ để lại đó. Quay lại với port 111 và 2049. Tìm exploit nfs với port 2049 và 111, tôi tìm được cách khai thác bằng Nmap ở <a href="https://spreadsecurity.github.io/2017/02/19/reconnaissance-with-nmap-scripting-engine.html"  target="_blank" rel="noreferrer">đây</a></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">┌──</span><span class="p">(</span><span class="n">neo</span><span class="err">㉿</span><span class="n">kali</span><span class="p">)</span><span class="o">-</span><span class="p">[</span><span class="o">~</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="err">└─$</span> <span class="n">showmount</span> <span class="o">-</span><span class="n">e</span> <span class="mf">10.10.81.195</span>  
+</span></span><span class="line"><span class="cl"><span class="n">Export</span> <span class="nb">list</span> <span class="k">for</span> <span class="mf">10.10.81.195</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">failsafe</span> <span class="o">*</span>
+</span></span><span class="line"><span class="cl">                    
+</span></span><span class="line"><span class="cl"><span class="err">┌──</span><span class="p">(</span><span class="n">neo</span><span class="err">㉿</span><span class="n">kali</span><span class="p">)</span><span class="o">-</span><span class="p">[</span><span class="o">~</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="err">└─$</span> <span class="n">mkdir</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">nfs</span>
+</span></span><span class="line"><span class="cl">                                      
+</span></span><span class="line"><span class="cl"><span class="err">┌──</span><span class="p">(</span><span class="n">neo</span><span class="err">㉿</span><span class="n">kali</span><span class="p">)</span><span class="o">-</span><span class="p">[</span><span class="o">~</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="err">└─$</span> <span class="n">sudo</span> <span class="n">mount</span> <span class="o">-</span><span class="n">o</span> <span class="n">nolock</span> <span class="o">-</span><span class="n">t</span> <span class="n">nfs</span> <span class="mf">10.10.81.195</span><span class="p">:</span><span class="o">/</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">nfs</span> 
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="n">sudo</span><span class="p">]</span> <span class="n">password</span> <span class="k">for</span> <span class="n">neo</span><span class="p">:</span> 
+</span></span><span class="line"><span class="cl">                    
+</span></span><span class="line"><span class="cl"><span class="err">┌──</span><span class="p">(</span><span class="n">neo</span><span class="err">㉿</span><span class="n">kali</span><span class="p">)</span><span class="o">-</span><span class="p">[</span><span class="o">~</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="err">└─$</span> <span class="n">ll</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">nfs</span> 
+</span></span><span class="line"><span class="cl"><span class="n">total</span> <span class="mi">4</span>
+</span></span><span class="line"><span class="cl"><span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span> <span class="mi">14</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">4096</span> <span class="n">Jan</span> <span class="mi">30</span>  <span class="mi">2020</span> <span class="n">var</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">┌──</span><span class="p">(</span><span class="n">neo</span><span class="err">㉿</span><span class="n">kali</span><span class="p">)</span><span class="o">-</span><span class="p">[</span><span class="o">~</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="err">└─$</span> <span class="n">ll</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">nfs</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">failsafe</span> 
+</span></span><span class="line"><span class="cl"><span class="n">total</span> <span class="mi">4</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">62</span> <span class="n">Jan</span> <span class="mi">30</span>  <span class="mi">2020</span> <span class="n">rsa_keys</span>
+</span></span><span class="line"><span class="cl">                   
+</span></span><span class="line"><span class="cl"><span class="err">┌──</span><span class="p">(</span><span class="n">neo</span><span class="err">㉿</span><span class="n">kali</span><span class="p">)</span><span class="o">-</span><span class="p">[</span><span class="o">~</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="err">└─$</span> <span class="n">cat</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">nfs</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">failsafe</span><span class="o">/</span><span class="n">rsa_keys</span>                         
+</span></span><span class="line"><span class="cl"><span class="n">Public</span> <span class="n">Key</span> <span class="n">Pair</span><span class="p">:</span> <span class="p">(</span><span class="mi">23</span><span class="p">,</span> <span class="mi">37627</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Private</span> <span class="n">Key</span> <span class="n">Pair</span><span class="p">:</span> <span class="p">(</span><span class="mi">61527</span><span class="p">,</span> <span class="mi">37627</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    
+</span></span><span class="line"><span class="cl"><span class="err">┌──</span><span class="p">(</span><span class="n">neo</span><span class="err">㉿</span><span class="n">kali</span><span class="p">)</span><span class="o">-</span><span class="p">[</span><span class="o">~</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="err">└─$</span> </span></span></code></pre></div></div>
+<p>Có lẽ đây là 1 phương pháp toán học hay thuật toán nào đó để tính ra ssh key, tôi chưa từng biết đến dạng này. Và thú thực thì tôi đã phải lướt qua giải đáp 1 chút để tìm được phương pháp giải các số này. Đó là <a href="https://www.cs.drexel.edu/~jpopyack/Courses/CSP/Fa17/notes/10.1_Cryptography/RSA_Express_EncryptDecrypt_v2.html"  target="_blank" rel="noreferrer">RSA Express Encryption/Decryption Calculator</a></p>
+<p>Vậy là tôi có</p>
+<ul>
+<li>e = 23</li>
+<li>d = 61527</li>
+<li>N = 37627</li>
+<li>Ciphertext là phần RSA key tôi đã generate được ở phần phía trên</li>
+</ul>
+<p>Nhưng Ciphertext ở đây yêu cầu phải là numberic form nên tôi sẽ dùng <strong><code>CyberChef</code></strong> thêm 1 lần nữa để</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="numberic"
+    width="1915"
+    height="854"
+    src="/ctf/tryhackme/willow/4_hu_848671bd338cacdc.png"
+    srcset="/ctf/tryhackme/willow/4_hu_848671bd338cacdc.png 800w, /ctf/tryhackme/willow/4_hu_275bd3f5e12b1203.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/ctf/tryhackme/willow/4.png"></figure>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="ssh key"
+    width="989"
+    height="495"
+    src="/ctf/tryhackme/willow/5_hu_b3103372144dac56.png"
+    srcset="/ctf/tryhackme/willow/5_hu_b3103372144dac56.png 800w, /ctf/tryhackme/willow/5.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/ctf/tryhackme/willow/5.png"></figure>
+<p>Sao chép key này về và login ssh.</p>
+
+<h2 class="relative group">SSH
+    <div id="ssh" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ssh" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">┌──</span><span class="p">(</span><span class="n">neo</span><span class="err">㉿</span><span class="n">kali</span><span class="p">)</span><span class="o">-</span><span class="p">[</span><span class="o">~/</span><span class="n">THM</span><span class="o">-</span><span class="n">willow</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="err">└─$</span> <span class="n">ssh</span> <span class="o">-</span><span class="n">i</span> <span class="n">id_rsa</span> <span class="n">willow</span><span class="o">@</span><span class="mf">10.10.81.195</span>
+</span></span><span class="line"><span class="cl"><span class="n">Load</span> <span class="n">key</span> <span class="s2">&#34;id_rsa&#34;</span><span class="p">:</span> <span class="n">Permission</span> <span class="n">denied</span>
+</span></span><span class="line"><span class="cl"><span class="n">willow</span><span class="o">@</span><span class="mf">10.10.81.195</span><span class="s1">&#39;s password: </span>
+</span></span><span class="line"><span class="cl"><span class="n">Permission</span> <span class="n">denied</span><span class="p">,</span> <span class="n">please</span> <span class="k">try</span> <span class="n">again</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">willow</span><span class="o">@</span><span class="mf">10.10.81.195</span><span class="s1">&#39;s password: </span>
+</span></span><span class="line"><span class="cl"><span class="n">Permission</span> <span class="n">denied</span><span class="p">,</span> <span class="n">please</span> <span class="k">try</span> <span class="n">again</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">willow</span><span class="o">@</span><span class="mf">10.10.81.195</span><span class="s1">&#39;s password: </span>
+</span></span><span class="line"><span class="cl"><span class="n">willow</span><span class="o">@</span><span class="mf">10.10.81.195</span><span class="p">:</span> <span class="n">Permission</span> <span class="n">denied</span> <span class="p">(</span><span class="n">publickey</span><span class="p">,</span><span class="n">password</span><span class="p">,</span><span class="n">hostbased</span><span class="p">)</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl">                    
+</span></span><span class="line"><span class="cl"><span class="err">┌──</span><span class="p">(</span><span class="n">neo</span><span class="err">㉿</span><span class="n">kali</span><span class="p">)</span><span class="o">-</span><span class="p">[</span><span class="o">~/</span><span class="n">THM</span><span class="o">-</span><span class="n">willow</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="err">└─$</span> </span></span></code></pre></div></div>
+<p>Có vẻ như key này được bảo vệ bởi passphrase. Tôi sẽ thử crack nó</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">┌──</span><span class="p">(</span><span class="n">neo</span><span class="err">㉿</span><span class="n">kali</span><span class="p">)</span><span class="o">-</span><span class="p">[</span><span class="o">~/</span><span class="n">THM</span><span class="o">-</span><span class="n">willow</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="err">└─$</span> <span class="n">ssh2john</span> <span class="n">id_rsa</span> <span class="o">&gt;</span> <span class="nb">hash</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">┌──</span><span class="p">(</span><span class="n">neo</span><span class="err">㉿</span><span class="n">kali</span><span class="p">)</span><span class="o">-</span><span class="p">[</span><span class="o">~/</span><span class="n">THM</span><span class="o">-</span><span class="n">willow</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="err">└─$</span> <span class="n">john</span> <span class="nb">hash</span> <span class="o">--</span><span class="n">wordlist</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">seclists</span><span class="o">/</span><span class="n">Passwords</span><span class="o">/</span><span class="n">Leaked</span><span class="o">-</span><span class="n">Databases</span><span class="o">/</span><span class="n">rockyou</span><span class="o">-</span><span class="mf">75.</span><span class="n">txt</span> 
+</span></span><span class="line"><span class="cl"><span class="n">Note</span><span class="p">:</span> <span class="n">This</span> <span class="nb">format</span> <span class="n">may</span> <span class="n">emit</span> <span class="n">false</span> <span class="n">positives</span><span class="p">,</span> <span class="n">so</span> <span class="n">it</span> <span class="n">will</span> <span class="n">keep</span> <span class="n">trying</span> <span class="n">even</span> <span class="n">after</span> <span class="n">finding</span> <span class="n">a</span>
+</span></span><span class="line"><span class="cl"><span class="n">possible</span> <span class="n">candidate</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">Using</span> <span class="n">default</span> <span class="nb">input</span> <span class="n">encoding</span><span class="p">:</span> <span class="n">UTF</span><span class="o">-</span><span class="mi">8</span>
+</span></span><span class="line"><span class="cl"><span class="n">Loaded</span> <span class="mi">1</span> <span class="n">password</span> <span class="nb">hash</span> <span class="p">(</span><span class="n">SSH</span> <span class="p">[</span><span class="n">RSA</span><span class="o">/</span><span class="n">DSA</span><span class="o">/</span><span class="n">EC</span><span class="o">/</span><span class="n">OPENSSH</span> <span class="p">(</span><span class="n">SSH</span> <span class="n">private</span> <span class="n">keys</span><span class="p">)</span> <span class="mi">32</span><span class="o">/</span><span class="mi">64</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="n">Cost</span> <span class="mi">1</span> <span class="p">(</span><span class="n">KDF</span><span class="o">/</span><span class="n">cipher</span> <span class="p">[</span><span class="mi">0</span><span class="o">=</span><span class="n">MD5</span><span class="o">/</span><span class="n">AES</span> <span class="mi">1</span><span class="o">=</span><span class="n">MD5</span><span class="o">/</span><span class="mi">3</span><span class="n">DES</span> <span class="mi">2</span><span class="o">=</span><span class="n">Bcrypt</span><span class="o">/</span><span class="n">AES</span><span class="p">])</span> <span class="ow">is</span> <span class="mi">0</span> <span class="k">for</span> <span class="nb">all</span> <span class="n">loaded</span> <span class="n">hashes</span>
+</span></span><span class="line"><span class="cl"><span class="n">Cost</span> <span class="mi">2</span> <span class="p">(</span><span class="n">iteration</span> <span class="n">count</span><span class="p">)</span> <span class="ow">is</span> <span class="mi">1</span> <span class="k">for</span> <span class="nb">all</span> <span class="n">loaded</span> <span class="n">hashes</span>
+</span></span><span class="line"><span class="cl"><span class="n">Will</span> <span class="n">run</span> <span class="mi">8</span> <span class="n">OpenMP</span> <span class="n">threads</span>
+</span></span><span class="line"><span class="cl"><span class="n">Press</span> <span class="s1">&#39;q&#39;</span> <span class="ow">or</span> <span class="n">Ctrl</span><span class="o">-</span><span class="n">C</span> <span class="n">to</span> <span class="n">abort</span><span class="p">,</span> <span class="n">almost</span> <span class="nb">any</span> <span class="n">other</span> <span class="n">key</span> <span class="k">for</span> <span class="n">status</span>
+</span></span><span class="line"><span class="cl"><span class="n">wildflower</span>       <span class="p">(</span><span class="n">id_rsa</span><span class="p">)</span></span></span></code></pre></div></div>
+<p>Thử login lại với pass này</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">┌──</span><span class="p">(</span><span class="n">neo</span><span class="err">㉿</span><span class="n">kali</span><span class="p">)</span><span class="o">-</span><span class="p">[</span><span class="o">~/</span><span class="n">THM</span><span class="o">-</span><span class="n">willow</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="err">└─$</span> <span class="n">sudo</span> <span class="n">ssh</span> <span class="o">-</span><span class="n">o</span> <span class="s1">&#39;PubkeyAcceptedKeyTypes +ssh-rsa&#39;</span> <span class="o">-</span><span class="n">i</span> <span class="n">id_rsa</span> <span class="n">willow</span><span class="o">@</span><span class="mf">10.10.81.195</span>
+</span></span><span class="line"><span class="cl"><span class="n">Enter</span> <span class="n">passphrase</span> <span class="k">for</span> <span class="n">key</span> <span class="s1">&#39;id_rsa&#39;</span><span class="p">:</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;O take me in your arms, love</span>
+</span></span><span class="line"><span class="cl">        <span class="n">For</span> <span class="n">keen</span> <span class="n">doth</span> <span class="n">the</span> <span class="n">wind</span> <span class="n">blow</span>
+</span></span><span class="line"><span class="cl">        <span class="n">O</span> <span class="n">take</span> <span class="n">me</span> <span class="ow">in</span> <span class="n">your</span> <span class="n">arms</span><span class="p">,</span> <span class="n">love</span>
+</span></span><span class="line"><span class="cl">        <span class="n">For</span> <span class="n">bitter</span> <span class="ow">is</span> <span class="n">my</span> <span class="n">deep</span> <span class="n">woe</span><span class="o">.</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">                 <span class="o">-</span><span class="n">The</span> <span class="n">Willow</span> <span class="n">Tree</span><span class="p">,</span> <span class="n">English</span> <span class="n">Folksong</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">willow</span><span class="nd">@willow</span><span class="o">-</span><span class="n">tree</span><span class="p">:</span><span class="o">~</span><span class="err">$</span> <span class="nb">id</span>
+</span></span><span class="line"><span class="cl"><span class="n">uid</span><span class="o">=</span><span class="mi">1000</span><span class="p">(</span><span class="n">willow</span><span class="p">)</span> <span class="n">gid</span><span class="o">=</span><span class="mi">1000</span><span class="p">(</span><span class="n">willow</span><span class="p">)</span> <span class="n">groups</span><span class="o">=</span><span class="mi">1000</span><span class="p">(</span><span class="n">willow</span><span class="p">),</span><span class="mi">24</span><span class="p">(</span><span class="n">cdrom</span><span class="p">),</span><span class="mi">25</span><span class="p">(</span><span class="n">floppy</span><span class="p">),</span><span class="mi">29</span><span class="p">(</span><span class="n">audio</span><span class="p">),</span><span class="mi">30</span><span class="p">(</span><span class="n">dip</span><span class="p">),</span><span class="mi">44</span><span class="p">(</span><span class="n">video</span><span class="p">),</span><span class="mi">46</span><span class="p">(</span><span class="n">plugdev</span><span class="p">),</span><span class="mi">108</span><span class="p">(</span><span class="n">netdev</span><span class="p">),</span><span class="mi">110</span><span class="p">(</span><span class="n">lpadmin</span><span class="p">),</span><span class="mi">113</span><span class="p">(</span><span class="n">scanner</span><span class="p">),</span><span class="mi">119</span><span class="p">(</span><span class="n">bluetooth</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">willow</span><span class="nd">@willow</span><span class="o">-</span><span class="n">tree</span><span class="p">:</span><span class="o">~</span><span class="err">$</span> </span></span></code></pre></div></div>
+<p>Bên trong này có 1 file <em>user.jpg</em>, nội dung ảnh này chính là <em>user flag</em></p>
+
+<h2 class="relative group">Privilege escalation
+    <div id="privilege-escalation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#privilege-escalation" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">willow</span><span class="nd">@willow</span><span class="o">-</span><span class="n">tree</span><span class="p">:</span><span class="o">~</span><span class="err">$</span> <span class="n">find</span> <span class="o">/</span> <span class="o">-</span><span class="nb">type</span> <span class="n">f</span> <span class="o">-</span><span class="n">perm</span> <span class="o">-</span><span class="n">u</span><span class="o">=</span><span class="n">s</span> <span class="mi">2</span><span class="o">&gt;/</span><span class="n">dev</span><span class="o">/</span><span class="n">null</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">eject</span><span class="o">/</span><span class="n">dmcrypt</span><span class="o">-</span><span class="n">get</span><span class="o">-</span><span class="n">device</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">openssh</span><span class="o">/</span><span class="n">ssh</span><span class="o">-</span><span class="n">keysign</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">dbus</span><span class="o">-</span><span class="mf">1.0</span><span class="o">/</span><span class="n">dbus</span><span class="o">-</span><span class="n">daemon</span><span class="o">-</span><span class="n">launch</span><span class="o">-</span><span class="n">helper</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">policykit</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">polkit</span><span class="o">-</span><span class="n">agent</span><span class="o">-</span><span class="n">helper</span><span class="o">-</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">spice</span><span class="o">-</span><span class="n">gtk</span><span class="o">/</span><span class="n">spice</span><span class="o">-</span><span class="n">client</span><span class="o">-</span><span class="n">glib</span><span class="o">-</span><span class="n">usb</span><span class="o">-</span><span class="n">acl</span><span class="o">-</span><span class="n">helper</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">pt_chown</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">exim4</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">pppd</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">chfn</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">vmware</span><span class="o">-</span><span class="n">user</span><span class="o">-</span><span class="n">suid</span><span class="o">-</span><span class="n">wrapper</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">pkexec</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">gpasswd</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">X</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">procmail</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">newgrp</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">sudo</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">passwd</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">at</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">chsh</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">mount</span><span class="o">.</span><span class="n">nfs</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">su</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">ntfs</span><span class="o">-</span><span class="mi">3</span><span class="n">g</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">umount</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">fusermount</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">mount</span>
+</span></span><span class="line"><span class="cl"><span class="n">willow</span><span class="nd">@willow</span><span class="o">-</span><span class="n">tree</span><span class="p">:</span><span class="o">~</span><span class="err">$</span> 
+</span></span><span class="line"><span class="cl"><span class="n">willow</span><span class="nd">@willow</span><span class="o">-</span><span class="n">tree</span><span class="p">:</span><span class="o">~</span><span class="err">$</span> <span class="n">sudo</span> <span class="o">-</span><span class="n">l</span>
+</span></span><span class="line"><span class="cl"><span class="n">Matching</span> <span class="n">Defaults</span> <span class="n">entries</span> <span class="k">for</span> <span class="n">willow</span> <span class="n">on</span> <span class="n">willow</span><span class="o">-</span><span class="n">tree</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">env_reset</span><span class="p">,</span> <span class="n">mail_badpass</span><span class="p">,</span> <span class="n">secure_path</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">sbin</span>\<span class="p">:</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="nb">bin</span>\<span class="p">:</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">sbin</span>\<span class="p">:</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span>\<span class="p">:</span><span class="o">/</span><span class="n">sbin</span>\<span class="p">:</span><span class="o">/</span><span class="nb">bin</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">User</span> <span class="n">willow</span> <span class="n">may</span> <span class="n">run</span> <span class="n">the</span> <span class="n">following</span> <span class="n">commands</span> <span class="n">on</span> <span class="n">willow</span><span class="o">-</span><span class="n">tree</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="n">ALL</span> <span class="p">:</span> <span class="n">ALL</span><span class="p">)</span> <span class="n">NOPASSWD</span><span class="p">:</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">mount</span> <span class="o">/</span><span class="n">dev</span><span class="o">/*</span>
+</span></span><span class="line"><span class="cl"><span class="n">willow</span><span class="nd">@willow</span><span class="o">-</span><span class="n">tree</span><span class="p">:</span><span class="o">~</span><span class="err">$</span></span></span></code></pre></div></div>
+<p>Xem qua thư mục <em>/dev/</em> tồi tìm thấy <em>hidden_backup</em> nhưng không có quyền để xem file này. Tuy nhiên tôi có thể &lsquo;mount&rsquo; nó sang 1 thư mục khác với quyền của user <em>willow</em></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">willow</span><span class="nd">@willow</span><span class="o">-</span><span class="n">tree</span><span class="p">:</span><span class="o">~</span><span class="err">$</span> <span class="n">mkdir</span> <span class="n">backup</span>
+</span></span><span class="line"><span class="cl"><span class="n">willow</span><span class="nd">@willow</span><span class="o">-</span><span class="n">tree</span><span class="p">:</span><span class="o">~</span><span class="err">$</span> <span class="n">sudo</span> <span class="n">mount</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">hidden_backup</span> <span class="n">backup</span>
+</span></span><span class="line"><span class="cl"><span class="n">willow</span><span class="nd">@willow</span><span class="o">-</span><span class="n">tree</span><span class="p">:</span><span class="o">~</span><span class="err">$</span> <span class="n">ls</span> <span class="o">-</span><span class="n">la</span> <span class="n">backup</span><span class="o">/</span>
+</span></span><span class="line"><span class="cl"><span class="n">total</span> <span class="mi">6</span>
+</span></span><span class="line"><span class="cl"><span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span>  <span class="mi">2</span> <span class="n">root</span>   <span class="n">root</span>   <span class="mi">1024</span> <span class="n">Jan</span> <span class="mi">30</span>  <span class="mi">2020</span> <span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span> <span class="mi">17</span> <span class="n">willow</span> <span class="n">willow</span> <span class="mi">4096</span> <span class="n">Oct</span>  <span class="mi">7</span> <span class="mi">09</span><span class="p">:</span><span class="mi">31</span> <span class="o">..</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">root</span>   <span class="n">root</span>     <span class="mi">42</span> <span class="n">Jan</span> <span class="mi">30</span>  <span class="mi">2020</span> <span class="n">creds</span><span class="o">.</span><span class="n">txt</span>
+</span></span><span class="line"><span class="cl"><span class="n">willow</span><span class="nd">@willow</span><span class="o">-</span><span class="n">tree</span><span class="p">:</span><span class="o">~</span><span class="err">$</span> <span class="n">cat</span> <span class="n">backup</span><span class="o">/</span><span class="n">creds</span><span class="o">.</span><span class="n">txt</span> 
+</span></span><span class="line"><span class="cl"><span class="n">root</span><span class="p">:</span><span class="mi">7</span><span class="n">QvbvBTvwPspUK</span>
+</span></span><span class="line"><span class="cl"><span class="n">willow</span><span class="p">:</span><span class="n">U0ZZJLGYhNAT2s</span>
+</span></span><span class="line"><span class="cl"><span class="n">willow</span><span class="nd">@willow</span><span class="o">-</span><span class="n">tree</span><span class="p">:</span><span class="o">~</span><span class="err">$</span> <span class="n">su</span> <span class="n">root</span>
+</span></span><span class="line"><span class="cl"><span class="n">Password</span><span class="p">:</span> 
+</span></span><span class="line"><span class="cl"><span class="n">root</span><span class="nd">@willow</span><span class="o">-</span><span class="n">tree</span><span class="p">:</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">willow</span><span class="c1">#</span>
+</span></span><span class="line"><span class="cl"><span class="n">root</span><span class="nd">@willow</span><span class="o">-</span><span class="n">tree</span><span class="p">:</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">willow</span><span class="c1"># cd</span>
+</span></span><span class="line"><span class="cl"><span class="n">root</span><span class="nd">@willow</span><span class="o">-</span><span class="n">tree</span><span class="p">:</span><span class="o">~</span><span class="c1"># ls -la</span>
+</span></span><span class="line"><span class="cl"><span class="n">total</span> <span class="mi">36</span>
+</span></span><span class="line"><span class="cl"><span class="n">drwx</span><span class="o">------</span>  <span class="mi">5</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">4096</span> <span class="n">Jan</span> <span class="mi">30</span>  <span class="mi">2020</span> <span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span> <span class="mi">23</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">4096</span> <span class="n">Jan</span> <span class="mi">30</span>  <span class="mi">2020</span> <span class="o">..</span>
+</span></span><span class="line"><span class="cl"><span class="n">lrwxrwxrwx</span>  <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span>    <span class="mi">9</span> <span class="n">Jan</span> <span class="mi">30</span>  <span class="mi">2020</span> <span class="o">.</span><span class="n">bash_history</span> <span class="o">-&gt;</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">null</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span>  <span class="mi">570</span> <span class="n">Jan</span> <span class="mi">31</span>  <span class="mi">2010</span> <span class="o">.</span><span class="n">bashrc</span>
+</span></span><span class="line"><span class="cl"><span class="n">drwx</span><span class="o">------</span>  <span class="mi">3</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">4096</span> <span class="n">Jan</span> <span class="mi">30</span>  <span class="mi">2020</span> <span class="o">.</span><span class="n">config</span>
+</span></span><span class="line"><span class="cl"><span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span>  <span class="mi">3</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">4096</span> <span class="n">Jan</span> <span class="mi">30</span>  <span class="mi">2020</span> <span class="o">.</span><span class="n">local</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span>  <span class="mi">140</span> <span class="n">Nov</span> <span class="mi">19</span>  <span class="mi">2007</span> <span class="o">.</span><span class="n">profile</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span>  <span class="mi">139</span> <span class="n">Jan</span> <span class="mi">30</span>  <span class="mi">2020</span> <span class="n">root</span><span class="o">.</span><span class="n">txt</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span>   <span class="mi">74</span> <span class="n">Jan</span> <span class="mi">30</span>  <span class="mi">2020</span> <span class="o">.</span><span class="n">selected_editor</span>
+</span></span><span class="line"><span class="cl"><span class="n">drwx</span><span class="o">------</span>  <span class="mi">2</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">4096</span> <span class="n">Mar</span>  <span class="mi">1</span>  <span class="mi">2020</span> <span class="o">.</span><span class="n">ssh</span>
+</span></span><span class="line"><span class="cl"><span class="n">root</span><span class="nd">@willow</span><span class="o">-</span><span class="n">tree</span><span class="p">:</span><span class="o">~</span><span class="c1"># cat root.txt </span>
+</span></span><span class="line"><span class="cl"><span class="n">This</span> <span class="n">would</span> <span class="n">be</span> <span class="n">too</span> <span class="n">easy</span><span class="p">,</span> <span class="n">don</span><span class="s1">&#39;t you think? I actually gave you the root flag some time ago.</span>
+</span></span><span class="line"><span class="cl"><span class="n">You</span><span class="s1">&#39;ve got my password now -- go find your flag!</span>
+</span></span><span class="line"><span class="cl"><span class="n">root</span><span class="nd">@willow</span><span class="o">-</span><span class="n">tree</span><span class="p">:</span><span class="o">~</span><span class="c1">#</span></span></span></code></pre></div></div>
+<p>Tôi đã mất nửa tiếng đồng hồ để rà soát lại xem mình có bỏ qua thứ gì đặc biệt không, và rồi đến phần <em>user flag</em>, tôi nhận ra là tại sao nó lại là file ảnh mà không phải file txt như thông thường, thêm nữa là trong gợi ý phía trên 1 lần nữa nhắc đến password của user <em>root</em>, vậy thì có thể đây là passphrase cho file ảnh</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">┌──</span><span class="p">(</span><span class="n">neo</span><span class="err">㉿</span><span class="n">kali</span><span class="p">)</span><span class="o">-</span><span class="p">[</span><span class="o">~</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="err">└─$</span> <span class="n">steghide</span> <span class="n">extract</span> <span class="o">-</span><span class="n">sf</span> <span class="n">user</span><span class="o">.</span><span class="n">jpg</span>
+</span></span><span class="line"><span class="cl"><span class="n">Enter</span> <span class="n">passphrase</span><span class="p">:</span> 
+</span></span><span class="line"><span class="cl"><span class="n">wrote</span> <span class="n">extracted</span> <span class="n">data</span> <span class="n">to</span> <span class="s2">&#34;root.txt&#34;</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="err">┌──</span><span class="p">(</span><span class="n">neo</span><span class="err">㉿</span><span class="n">kali</span><span class="p">)</span><span class="o">-</span><span class="p">[</span><span class="o">~</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="err">└─$</span></span></span></code></pre></div></div>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/ctf/tryhackme/thompson/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Tryhackme - Thompson
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2022-03-06T00:00:00&#43;00:00">6 March 2022</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/ctf/tryhackme/smag-grotto/">
+              <span class="leading-6">
+                Tryhackme - Smag Grotto&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2022-03-12T00:00:00&#43;00:00">12 March 2022</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+          
+          
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 ">
+        <ul class="flex list-none flex-col sm:flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/tags/"
+                title="Tags">
+                
+                Tags
+              </a>
+            </li>
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href=""
+                title="">
+                
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          TAH
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

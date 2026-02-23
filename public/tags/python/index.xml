@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Re-toor</title>
+    <link>http://localhost:1313/tags/python/</link>
+    <description>Recent content in Python on Re-toor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>ne024@proton.me (TAH)</managingEditor>
+    <webMaster>ne024@proton.me (TAH)</webMaster>
+    <copyright>© 2026 TAH</copyright>
+    <lastBuildDate>Wed, 12 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hackthebox - Guardian</title>
+      <link>http://localhost:1313/ctf/hackthebox/guardian/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/hackthebox/guardian/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/hackthebox/guardian/feature.png" />
+    </item>
+    
+    <item>
+      <title>Hackthebox - Imagery</title>
+      <link>http://localhost:1313/ctf/hackthebox/imagery/</link>
+      <pubDate>Tue, 07 Oct 2025 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/hackthebox/imagery/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/hackthebox/imagery/feature.png" />
+    </item>
+    
+    <item>
+      <title>HackTheBox - Codify</title>
+      <link>http://localhost:1313/ctf/hackthebox/codify/</link>
+      <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/hackthebox/codify/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/hackthebox/codify/feature.png" />
+    </item>
+    
+    <item>
+      <title>Tryhackme - Valley</title>
+      <link>http://localhost:1313/ctf/tryhackme/valley/</link>
+      <pubDate>Sun, 23 Jul 2023 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/tryhackme/valley/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/tryhackme/valley/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>Tryhackme - Capture!</title>
+      <link>http://localhost:1313/ctf/tryhackme/capture/</link>
+      <pubDate>Wed, 21 Jun 2023 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/tryhackme/capture/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/tryhackme/capture/feature.png" />
+    </item>
+    
+    <item>
+      <title>Tryhackme - Watcher</title>
+      <link>http://localhost:1313/ctf/tryhackme/watcher/</link>
+      <pubDate>Thu, 19 May 2022 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/tryhackme/watcher/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/tryhackme/watcher/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>Tryhackme - 0day</title>
+      <link>http://localhost:1313/ctf/tryhackme/0day/</link>
+      <pubDate>Mon, 16 May 2022 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/tryhackme/0day/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/tryhackme/0day/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>Tryhackme - Library</title>
+      <link>http://localhost:1313/ctf/tryhackme/library/</link>
+      <pubDate>Tue, 15 Mar 2022 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/tryhackme/library/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/tryhackme/library/feature.png" />
+    </item>
+    
+  </channel>
+</rss>

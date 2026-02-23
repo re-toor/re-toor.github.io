@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cron on Re-toor</title>
+    <link>http://localhost:1313/tags/cron/</link>
+    <description>Recent content in Cron on Re-toor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>ne024@proton.me (TAH)</managingEditor>
+    <webMaster>ne024@proton.me (TAH)</webMaster>
+    <copyright>© 2026 TAH</copyright>
+    <lastBuildDate>Sat, 01 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/cron/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hackthebox - UnderPass</title>
+      <link>http://localhost:1313/ctf/hackthebox/underpass/</link>
+      <pubDate>Sat, 01 Feb 2025 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/hackthebox/underpass/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/hackthebox/underpass/feature.png" />
+    </item>
+    
+    <item>
+      <title>Tryhackme - Valley</title>
+      <link>http://localhost:1313/ctf/tryhackme/valley/</link>
+      <pubDate>Sun, 23 Jul 2023 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/tryhackme/valley/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/tryhackme/valley/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>Tryhackme - Watcher</title>
+      <link>http://localhost:1313/ctf/tryhackme/watcher/</link>
+      <pubDate>Thu, 19 May 2022 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/tryhackme/watcher/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/tryhackme/watcher/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>Tryhackme - Smag Grotto</title>
+      <link>http://localhost:1313/ctf/tryhackme/smag-grotto/</link>
+      <pubDate>Sat, 12 Mar 2022 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/tryhackme/smag-grotto/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/tryhackme/smag-grotto/feature.png" />
+    </item>
+    
+    <item>
+      <title>Tryhackme - Startup</title>
+      <link>http://localhost:1313/ctf/tryhackme/startup/</link>
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/tryhackme/startup/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/tryhackme/startup/feature.png" />
+    </item>
+    
+  </channel>
+</rss>

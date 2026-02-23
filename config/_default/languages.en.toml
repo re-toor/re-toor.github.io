@@ -1,0 +1,24 @@
+disabled = false
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "Re-toor"
+
+[params]
+displayName = "EN"
+isoCode = "en"
+rtl = false
+dateFormat = "2 January 2006"
+
+[[params.author.links]]
+github = "https://github.com/re-toor"
+
+[[params.author.links]]
+linkedin = "https://www.linkedin.com/in/ha-tuan-anh"
+
+["params.author"]
+name = "TAH"
+email = "ne024@proton.me"
+image = "avt1.jpg"
+headline = "Just a blog about information security."
+bio = ""

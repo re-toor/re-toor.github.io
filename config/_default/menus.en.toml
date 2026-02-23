@@ -1,0 +1,46 @@
+[[main]]
+name = "Blog"
+pageRef = "blog"
+weight = 1
+
+[[main]]
+name = "SOC"
+pageRef = "soc"
+weight = 2
+
+[[main]]
+name = "CTF"
+pageRef = "ctf"
+weight = 3
+
+[[main]]
+name = "About"
+pageRef = "about"
+weight = 4
+
+[[main]]
+name = "HackTheBox"
+pageRef = "ctf/hackthebox"
+parent = "CTF"
+weight = 1
+
+[[main]]
+name = "TryHackMe"
+pageRef = "ctf/tryhackme"
+parent = "CTF"
+weight = 2
+
+[[main]]
+name = "Self-dev"
+pageRef = "ctf/selfdev"
+parent = "CTF"
+weight = 3
+
+[[footer]]
+none = "none"
+
+[[footer]]
+name = "Tags"
+pageRef = "tags"
+identifier = "DwR39DM4Hp"
+weight = 9_999

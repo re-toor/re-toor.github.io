@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apt-Get on Re-toor</title>
+    <link>http://localhost:1313/tags/apt-get/</link>
+    <description>Recent content in Apt-Get on Re-toor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>ne024@proton.me (TAH)</managingEditor>
+    <webMaster>ne024@proton.me (TAH)</webMaster>
+    <copyright>© 2026 TAH</copyright>
+    <lastBuildDate>Sat, 12 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/apt-get/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Tryhackme - Smag Grotto</title>
+      <link>http://localhost:1313/ctf/tryhackme/smag-grotto/</link>
+      <pubDate>Sat, 12 Mar 2022 00:00:00 +0000</pubDate>
+      <author>ne024@proton.me (TAH)</author>
+      <guid>http://localhost:1313/ctf/tryhackme/smag-grotto/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/tryhackme/smag-grotto/feature.png" />
+    </item>
+    
+  </channel>
+</rss>

