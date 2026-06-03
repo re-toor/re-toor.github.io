@@ -102,11 +102,11 @@ Truy cập vào web với port 3000
 
 ![](1.jpg)
 
-![[2.png]]
+![](2.png)
 
 Từ Wappalyzer, tìm được phiên bản của NextJS là `15.0.3`, tìm kiếm các lỗ hổng của phiên bản này trên `sploitus.com`
 
-![[3.jpg]]
+![](3.jpg)
 
 Đọc thêm về `Exploit for CVE-2025-55182`, tìm đến Source của Exploit này để đọc thêm, ở [source code](https://github.com/jctommasi/react2shellVulnApp), tôi tìm được CVE của phiên bản NextJS này là `CVE-2025-66478`.
 
@@ -161,7 +161,7 @@ SCAN SUMMARY
 
 Tìm kiếm PoC của `CVE-2025-66478`
 
-![[4.jpg]]
+![](4.jpg)
 
 https://github.com/Malayke/Next.js-RSC-RCE-Scanner-CVE-2025-66478
 
@@ -175,15 +175,15 @@ Tuy nhiên, việc quá tin tưởng vào Client, không có cơ chế kiểm tr
 
 Để thực hiện được PoC này, cần gọi POST request đã được thêm body chứa payload đến NextJS server. Bật Burp Suite và bắt request lần đầu.
 
-![[5.jpg]]
+![](5.jpg)
 
 Sử dụng [payload mặc định](https://github.com/Malayke/Next.js-RSC-RCE-Scanner-CVE-2025-66478#payload-that-can-see-command-execution-result-in-response-body-most-useful) có trong repo để kiểm tra.
 
-![[6.jpg]]
+![](6.jpg)
 
 Thay payload để lấy revershell. Tôi sử dụng `revshells.com`
 
-![[7.jpg]]
+![](7.jpg)
 
 Bật listener trên kali.
 
